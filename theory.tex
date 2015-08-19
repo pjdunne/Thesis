@@ -4,21 +4,21 @@ This chapter will explain the theory of the Higgs boson. It will start with an i
 
 \section{The standard model of particle physics}
 \label{sec:SM}
-The SM describes the interaction of the particles currently thought to be fundamental with the strong, weak and electromagnetic forces. Its predictions, which come solely from specifying the particles in the theory, the symmetries the theory respects, how they are broken and 18 free parameters have been tested in many different experiments in some cases up to one part in a trillion \cite{PhysRevLett.100.120801}. However, it does face challenges, described in section \SectionRef{sec:SMchallenges}, one example being that it does not describe gravity. 
+The SM describes the interaction of the particles currently thought to be fundamental with the strong, weak and electromagnetic forces. Its predictions, which come solely from specifying the particles in the theory, the symmetries the theory respects, how they are broken and 18 free parameters have been tested in many different experiments in some cases up to one part in a trillion \cite{PhysRevLett.100.120801}. However, it does face challenges, described in section \SectionRef{sec:SMchallenges}, one example being that it does not describe dark matter. 
 
 The SM is a gauge invariant quantum field theory (QFT). In order to construct a QFT the symmetries that are respected by the theory and the fields it describes must be specified. Symmetries are important because of Noether's theorem, which states that for every continuously differentiable symmetry of the Lagrangian of a theory there is a corresponding conservation law~\cite{Noether:1918zz,doi:10.1080/00411457108231446}. An example of this is that we observe that the laws of physics are invariant under translations and rotations in space and time, this is known as Poincar\'e invariance. These simple requirements lead through Noether's theorem to the conservation of energy, linear momentum and angular momentum. In addition to giving rise to conservation laws, some types of symmetry lead to additional fields being required to preserve invariance \cite{PhysRev.96.191}.
 
-The particles must be specified, because in a QFT they correspond to the quantised excitations of fields. Specifically, scalar fields correspond to spin zero bosons, spinor fields correspond to spin half fermions, and vector fields correspond to spin 1 bosons. Therefore, the fields that can be present are limited by the particles that are observed. In order to add a new field an explanation for why the corresponding particle has not yet been observed must, therefore, be provided. 
+The particles must be specified, because in a QFT they correspond to the quantised excitations of fields. Specifically, scalar fields correspond to spin zero bosons, spinor fields correspond to spin half fermions, and vector fields correspond to spin 1 bosons. Therefore, the fields that can be present are limited by the particles that are observed. In order to add a new field an explanation for why the corresponding particle has not yet been observed must, therefore, be provided.
 
 \subsection{Particles and forces in nature}
 \label{sec:symmetriesandfields}
-As discussed in \SectionRef{sec:SM}, the properties of the universe place powerful constraints on the terms that enter the Lagrangian of any theory describing it. The observed particles in the universe fall into two types, fermions and bosons. 
+As discussed in \SectionRef{sec:SM}, the properties of the universe place powerful constraints on the terms that enter the Lagrangian of any theory describing it. The observed particles in the universe fall into two types, fermions and bosons.
 
-%!!Say what particles and forces in nature
+%!!Say what particles and forces in nature give representations of fermions
 
 \subsection{Introduction to gauge symmetries}
 \label{sec:gaugesym}
-As the SM is a gauge invariant gauge symmetries will now be introduced. Gauge symmetries are local transformations, i.e. the transformation can be different at different points in space and time, that form a symmetry group. To see the effect of imposing such a symmetry on a theory consider imposing local invariance under U(1) transformations on the Dirac Lagrangian for a masssive fermion:
+As the SM is a gauge invariant QFT gauge symmetries will now be introduced. Gauge symmetries are local transformations, i.e. the transformation can be different at different points in space and time, that form a symmetry group. To see the effect of imposing such a symmetry on a theory consider imposing local invariance under U(1) transformations on the Dirac Lagrangian for a masssive fermion:
 \begin{equation}
   \label{eq:globaldiraclagrangian}
   \mathcal{L}=i\bar{\psi}\slashed{\partial}\psi-m\bar{\psi}\psi.
@@ -51,14 +51,34 @@ This can be rewritten as:
 \end{equation}
 where $\mathcal{D}_{\mu}=\partial_{\mu}+iqA_{\mu}$ and is referred to as the covariant derivative. Comparing \EquationRef{eq:globaldiraclagrangian} and \EquationRef{eq:localdiraclagrangian} it can be seen that in order to go from a globally invariant Lagrangian to a locally invariant one we have substituted the normal spacetime derivative for the covariant derivative.
 
-$U(1)$ transformations have one degree of freedom and can be described by one parameter, in the above case $\theta$, and in order to make the Lagrangian locally invariant one interacting gauge boson had to be added. This correspondence between the number of degrees of freedom and the number of gauge bosons holds generally. For each degree of freedom of a group's transformations there exists a generator of the group, and for each generator one interacting gauge boson must be added to achieve local invariance. 
+$U(1)$ transformations have one degree of freedom and can be described by one parameter, in the above case $\theta$, and in order to make the Lagrangian locally invariant one interacting gauge boson had to be added. This correspondence between the number of degrees of freedom and the number of gauge bosons holds generally. For each degree of freedom of a group's transformations there exists a generator of the group, and for each generator one interacting gauge boson must be added to achieve local invariance.
+
+%!!give SM gauge group and vector representations maybe move first bit of next section here
+
+\subsection{Mass and spontaneous symmetry breaking}
+%!!Introduce SSB
+%!!Describe electroweak symmetry breaking in the Standard Model
+In \EquationRef{eq:localdiraclagrangian} we ignored the free term for the gauge field. The free term for a general vector field is:
+
+\begin{equation}
+  \label{eq:vectorlagrangian}
+  \mathcal{L}_{V}=-\frac{1}{4}F_{\mu\nu}F^{\mu\nu}+m_{V}A_{\mu}A^{\mu},
+\end{equation}
+where $F_{\mu\nu}$ is the field strength tensor of the field and $m_{V}$ is its mass. While the first term in this Lagrangian is gauge invariant, the second term is not. Therefore, massive vector bosons are not possible on their own in gauge invariant theories.
+
+In the SM fermion mass terms are also not possible as 
+%!!ALSO CONSIDER FERMION MASS, NOT GAUGE INVARIANT
+
+%!!SOLUTION SSB
+
 
 \subsection{Gauge symmetries in the SM}
-%!!Describe representation of fermions
 %!!Introduce SM gauge group
-%!!Covariant derivative of SM, how it gives forces talk about kinetic term
-%!!Talk about mass term
-%!!Relate back to above particles
+%!!Describe representation of fermions
+%!!Covariant derivative of SM, how it gives forces, briefly
+%!!Talk about mass term and Higgs
+The SM is gauge invariant under the group $SU\left(3\right)_{C}\otimes SU\left(2\right)_{L}\otimes U\left(1\right)_{Y}$. 
+
 Fermions in the SM are spin half representations of the above symmetry groups.
 
 The vector bosons in the standard model emerge as a result of the gauge invariance described above 
@@ -66,18 +86,10 @@ The vector bosons in the standard model emerge as a result of the gauge invarian
 
 
 
-\subsection{Spontaneous symmetry breaking}
-%!!Introduce SSB
-%!!Describe electroweak symmetry breaking in the Standard Model
+
 
 \subsection{Higgs boson production and decay at the LHC}
 %!!Detail Higgs production and decays in order to motivate searching for invisible decays in the VBF channel
-
-
-
-The Lagrangian of the SM is globally invariant under Poincar\'e group transformations and locally gauge invariant under the group $SU\left(3\right)_{C}\otimes SU\left(2\right)_{L}\otimes U\left(1\right)_{Y}$. 
-
-
 
 %!!DISCUSS HIGGS
 
