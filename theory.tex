@@ -1,24 +1,62 @@
 \chapter{Introduction and theory}
 \label{chap:theory}
-This chapter will explain the theory of the Higgs boson. It will start with an introduction to the standard model (SM), focussing on the Higgs mechanism, before outlining the motivations behind and some candidates for physics beyond the SM (BSM). Natural units, where $\hbar=c=1$, Einstein summation convention and Feynman slash notation are used throughout. Four vector indices are labelled using greek letters, SU(2) generators are labelled using i,j and k, and SU(3) generators are labelled using a,b and c.
+This chapter will explain the theory of the Higgs boson. It will start with an introduction to the standard model (SM), focussing on the Higgs mechanism, before outlining the motivations behind and some candidates for physics beyond the SM (BSM). Natural units, where $\hbar=c=1$, Einstein summation convention and Feynman slash notation are used throughout. Four vector indices are labelled using greek letters, and gauge group generators using roman letters.
 
 \section{The standard model of particle physics}
 \label{sec:SM}
-The SM describes the interaction of the particles currently thought to be fundamental with the strong, weak and electromagnetic forces. Its predictions, which come solely from specifying the particles in the theory, the symmetries the theory respects, how they are broken and 18 free parameters have been tested in many different experiments in some cases up to one part in a trillion \cite{PhysRevLett.100.120801}. However, it does face challenges, described in section \SectionRef{sec:SMchallenges}, one example being that it does not describe dark matter. 
+The SM describes the interaction of the particles currently thought to be fundamental with the strong, weak and electromagnetic forces. Its predictions, which come solely from specifying the symmetries the theory respects and how they are broken, the particles in the theory, and 18 free parameters have been tested in many different experiments in some cases up to one part in a trillion \cite{PhysRevLett.100.120801}. However, it does face challenges, described in section \SectionRef{sec:SMchallenges}, one example being that it does not describe dark matter. 
 
-The SM is a gauge invariant quantum field theory (QFT). In order to construct a QFT the symmetries that are respected by the theory and the fields it describes must be specified. Symmetries are important because of Noether's theorem, which states that for every continuously differentiable symmetry of the Lagrangian of a theory there is a corresponding conservation law~\cite{Noether:1918zz,doi:10.1080/00411457108231446}. An example of this is that we observe that the laws of physics are invariant under translations and rotations in space and time, this is known as Poincar\'e invariance. These simple requirements lead through Noether's theorem to the conservation of energy, linear momentum and angular momentum. In addition to giving rise to conservation laws, some types of symmetry lead to additional fields being required to preserve invariance \cite{PhysRev.96.191}.
+The SM is a gauge invariant quantum field theory (QFT). To construct a QFT the symmetries that are respected by the theory and the fields it describes must be specified. Symmetries are important because of Noether's theorem, which states that for every continuously differentiable symmetry of the Lagrangian of a theory there is a corresponding conservation law~\cite{Noether:1918zz,doi:10.1080/00411457108231446}. An example of this is that we observe that the laws of physics are invariant under translations and rotations in space and time, this is known as Poincar\'e invariance. These simple requirements lead through Noether's theorem to the conservation of energy, linear momentum and angular momentum. In addition to giving rise to conservation laws, some types of symmetry lead to additional fields being required to preserve invariance \cite{PhysRev.96.191}.
 
-The particles must be specified, because in a QFT they correspond to the quantised excitations of fields. Specifically, scalar fields correspond to spin zero bosons, spinor fields correspond to spin half fermions, and vector fields correspond to spin 1 bosons. Therefore, the fields that can be present are limited by the particles that are observed. In order to add a new field an explanation for why the corresponding particle has not yet been observed must, therefore, be provided.
+The fields described by the QFT are constrained by the fundamental particles seen in nature, this is because the particles correspond to the quantised excitations of fields. Specifically, scalar fields correspond to spin zero bosons, spinor fields correspond to spin half fermions, and vector fields correspond to spin 1 bosons. In order to add a new field an explanation for why the corresponding particle has not yet been observed must, therefore, be provided. We will now go through the particles observed in nature and how they are represented in the SM.
 
-\subsection{Particles and forces in nature}
-\label{sec:symmetriesandfields}
-As discussed in \SectionRef{sec:SM}, the properties of the universe place powerful constraints on the terms that enter the Lagrangian of any theory describing it. The observed particles in the universe fall into two types, fermions and bosons.
+\subsection{Fundamental particles in nature}
+There are two types of fundamental particles in nature, fermions and bosons. The fermions observed in nature that are currently thought to be fundamental are then divided into those which interact via the strong nuclear force (the quarks), and those which don't (the leptons). Both the quarks and leptons have two further types: charged and neutral in the case of the leptons, and up type and down type in the case of the fermions. Another interesting feature of the fermions is that they are arranged in three generations. Each generation has a fermion of each type with the same quantum numbers as those in the other generations, except that the mass is different. \TableRef{tab:fermions} Shows this structure.
 
-%!!Say what particles and forces in nature give representations of fermions
+\begin{table}
+  \caption{The fundamental fermions observed in nature separated into their three generations. Each particle shown also has an antiparticle with opposite charge and identical mass.}
+  \label{tab:fermions}
+  \begin{tabular}{|c|c|c|c|c|c|c|}
+  \hline
+  &\multicolumn{3}{|c|}{Leptons}& \multicolumn{3}{|c|}{Hadrons} \\
+  \cline{2-7}
+  Generation & Particle & Mass & Charge & Particle & Mass & Charge \\
+  \hline
+  \multirow{2}{*}{1} & \Pem & 511 \keV & -1 & \Pqu & 2.3 \MeV & $+\frac{2}{3}$ \\
+  & \Pgne & $\sim$0 & 0 & \Pqd & 4.8 \MeV & $-\frac{1}{3}$ \\
+  \hline
+  \multirow{2}{*}{2} & \Pgmm & 105.7 \MeV & -1 & \Pqc & 1.275 \GeV & $+\frac{2}{3}$ \\
+  & \Pgngm & $\sim$0 & 0 & \Pqs & 95 \MeV & $-\frac{1}{3}$ \\
+  \hline
+  \multirow{3}{*}{2} & \Pgtm & 1.777 \GeV & -1 & \Pqt & 173.2 \GeV & $+\frac{2}{3}$ \\
+  & \Pgngt & $\sim$0 & 0 & \Pqb & 4.18 \GeV & $-\frac{1}{3}$ \\
+  \hline
+  \end{tabular}
+\end{table}
 
-\subsection{Introduction to gauge symmetries}
+The bosons in nature also have two types, the vector bosons which mediate the three fundamental interactions described by the SM, and the scalar Higgs boson, which  is necessary to provide mass to the other fundamental particles. The vector bosons are summarised in \TableRef{tab:bosons}, where it can be seen that there masses are very different, the photon and the eight gluons being massless, while the \PWpm and \PZ bosons are very massive. As we will see in \SectionRef{sec:ssb} explaining these masses requires the Higgs mechanism. In order to see how all of the above particles are represented in the SM an introduction to gauge theories is necessary.
+
+\begin{table}
+  \caption{}
+  \label{tab:bosons}
+  \begin{tabular}{|l|c|c|c|}
+    \hline
+    Force & Particle & Mass & Charge \\
+    \hline
+    Electromagnetism & \Pgg & 0 & 0 \\
+    \hline
+    \multirow{2}{*}{Weak} & \PWpm & 80.4 \GeV & $\pm 1$ \\
+    \cline{2-4}
+    & \PZ & 91.2 \GeV & 0 \\
+    \hline
+    Strong & g & 0 & 0 \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\subsection{Introduction to gauge theories}
 \label{sec:gaugesym}
-As the SM is a gauge invariant QFT gauge symmetries will now be introduced. Gauge symmetries are local transformations, i.e. the transformation can be different at different points in space and time, that form a symmetry group. To see the effect of imposing such a symmetry on a theory consider imposing local invariance under U(1) transformations on the Dirac Lagrangian for a masssive fermion:
+Gauge symmetries are local transformations, i.e. the transformation can be different at different points in space and time, that form a symmetry group. To see the effect of imposing such a symmetry on a theory consider imposing local invariance under U(1) transformations on the Dirac Lagrangian for a masssive fermion:
 \begin{equation}
   \label{eq:globaldiraclagrangian}
   \mathcal{L}=i\bar{\psi}\slashed{\partial}\psi-m\bar{\psi}\psi.
@@ -40,52 +78,85 @@ In order to restore invariance a vector field, $A_{\mu}$, referred to as a gauge
 \end{equation}
 which cancels out the non-gauge invariance seen in \EquationRef{eq:gaugeviolating}.
 
-Ignoring the free term of the new gauge field the Lagrangian is now:
+Assuming the new gauge field to be massless the Lagrangian is now:
 \begin{equation}
-  \mathcal{L}=i\bar{\psi}\slashed{\partial}\psi-m\bar{\psi}\psi+q(\bar{\psi}\gamma^{\mu}\psi) A_{\mu}.
+  \label{eq:diraclag}
+  \mathcal{L}=i\bar{\psi}\slashed{\partial}\psi-m\bar{\psi}\psi+q(\bar{\psi}\gamma^{\mu}\psi) A_{\mu}-\frac{1}{4}F_{\mu\nu}F^{\mu\nu},
 \end{equation}
-This can be rewritten as:
+where $F_{\mu\nu}$ is the field strength tensor of the vector field and for a gauge boson from a general gauge group is written as:
+\begin{equation}
+F_{\mu\nu}^a=\partial_{\mu}A_{\nu}^a-\partial_{\nu}A_{\mu}^a+gf&{abc}A_{\mu}^{b}A_{\nu}^{c},
+\end{equation}
+where $f^{abc}$ are the structure constants of the gauge group, which are a representation of the comutation relations between the group's generators. For $U(1)$ which only has one self-commuting generator the single structure constant is 0, however for non-Abelian gauge groups (i.e. those with non-commuting generators) they can be non-zero and the $F_{\mu\nu}F^{\mu\nu}$ term in the Lagrangian therefore includes self-interaction terms of the vector bosons.
+
+It is also interesting to note that \EquationRef{eq:diraclag} can be rewritten as:
 \begin{equation}
   \label{eq:localdiraclagrangian}
-  \mathcal{L}=i\bar{\psi}\gamma^{\mu}\mathcal{D}_{\mu}\psi-m\bar{\psi}\psi,
+  \mathcal{L}=i\bar{\psi}\gamma^{\mu}\mathcal{D}_{\mu}\psi-m\bar{\psi}\psi-\frac{1}{4}F_{\mu\nu}F^{\mu\nu},
 \end{equation}
-where $\mathcal{D}_{\mu}=\partial_{\mu}+iqA_{\mu}$ and is referred to as the covariant derivative. Comparing \EquationRef{eq:globaldiraclagrangian} and \EquationRef{eq:localdiraclagrangian} it can be seen that in order to go from a globally invariant Lagrangian to a locally invariant one we have substituted the normal spacetime derivative for the covariant derivative.
+where $\mathcal{D}_{\mu}=\partial_{\mu}+iqA_{\mu}$ and is referred to as the covariant derivative. Comparing \EquationRef{eq:globaldiraclagrangian} and \EquationRef{eq:localdiraclagrangian} it can be seen that in order to go from a globally invariant Lagrangian to a locally invariant one we have substituted the normal spacetime derivative for the covariant derivative and added the stress energy tensor of the vector field.
 
 $U(1)$ transformations have one degree of freedom and can be described by one parameter, in the above case $\theta$, and in order to make the Lagrangian locally invariant one interacting gauge boson had to be added. This correspondence between the number of degrees of freedom and the number of gauge bosons holds generally. For each degree of freedom of a group's transformations there exists a generator of the group, and for each generator one interacting gauge boson must be added to achieve local invariance.
 
-%!!give SM gauge group and vector representations maybe move first bit of next section here
+%!!give SM gauge group and fermion and vector representations 
+\section{The SM gauge group and fundamental particle representations}
+\label{sec:smgauge}
+The SM is gauge invariant under the group $SU\left(3\right)_{C}\otimes SU\left(2\right)_{L}\otimes U\left(1\right)_{Y}$. Fermions in the SM are spin half spinor representations of these symmetry groups. These spinors can be split into chirally left and right handed components using the projection operators $P_{\substack{L \\R}}=\frac{1}{2}(1\mp \gamma^{5})$. Chirally left and right handed fermions transform differently under $SU\left(2\right)_{L}$. The right handed spinors are not charged under $SU\left(2\right)_{L}$ and thus are represented as a singlet, while the left handed spinors transform as a doublet.
 
-\subsection{Mass and spontaneous symmetry breaking}
-%!!Introduce SSB
-%!!Describe electroweak symmetry breaking in the Standard Model
-In \EquationRef{eq:localdiraclagrangian} we ignored the free term for the gauge field. The free term for a general vector field is:
+The first generation of leptons can, therefore, be written as:
+\begin{equation}
+  \Pe_{R},\,\left(\begin{array}{c} \Pgne \\ \Pe_{L}\end{array}\right).
+\end{equation}
+The SM treats neutrinos as massless and has no right handed neutrino. Similarly the first generation of quarks can be written as:
+\begin{equation}
+ \Pqu_{R},\,\Pqd_{R},\,\left(\begin{array}{c} \Pqu_{L} \\ \Pqd_{L}\end{array}\right).
+\end{equation}
 
+As we saw in \SectionRef{sec:gaugesym} gauge symmetries in theories with fermions require the addition of an interacting vector boson per symmetry generator to preserve gauge invariance. $SU\left(3\right)_{C}$ has eight generators whose eight vector bosons, $G_{\mu}$, correspond to the eight gluons which mediate the strong interaction. $SU\left(2\right)_{L}$ has three generators whose three vector bosons, $\PW^{i}_{\mu}$, mix with the one vector boson from $U\left(1\right)_{Y}$, $B_{\mu}$ unifying the electromagnetic and weak forces into one electroeak force. The physical states that result are:
+\begin{equation}
+  \begin{split}
+  \PWpm_{\mu}=\frac{1}{\sqrt{2}}\left(\PW^{1}_{\mu}\mp i\PW^{2}_{\mu}\right) \\
+  \PZ_{\mu}=cos\left(\theta_{W}\right)\PW^{3}_{\mu}-sin\left(\theta_{W}\right)B_{\mu} \\
+  A_{\mu}=sin\left(\theta_{W}\right)\PW^{3}_{\mu}+cos\left(\theta_{W}\right)B_{\mu},
+  \end{split}
+\end{equation}
+where $\theta_{W}$ is the Weinberg angle and $A_{\mu}$ is the photon field. Also, as described in \SectionRef{sec:gaugesym} the interaction between these vector bosons and the fermion fields occurs through their presence in the covariant derivative, and interactions between the vector bosons occur because $SU\left(3\right)_{C}$ and $SU\left(2\right)_{L}$ are non-Abelian.
+
+If we now try to construct a Lagrangian for these fields a problem occurs. For fermions we know that some of the fermions have mass, and consequently we should have mass terms in our Lagrangian:
+\begin{equation}
+  \begin{split}
+    \mathcal{L}_{m_{f}}&=-m_{f}\bar{f}{f} \\
+    &=-m_{f}\bar{f}\left[\frac{1}{2}\left(1-\gamma^{5}\right)+\frac{1}{2}\left(1+\gamma^{5}\right)\right]f \\
+    &=-m_{f}\left(\bar{f}_{R}f_{L}+\bar{f}_{L}f_{R}\right).
+  \end{split}
+\end{equation}
+However, as the left and right handed fields do not transform in the same way under $SU\left(2\right)_{L}$ this term breaks the gauge symmetry of the Lagrangian and can't be present. 
+
+A similar problem occurs for vector fields. In \SectionRef{sec:gaugesym} we didn't consider the mass term of these vector fields:
 \begin{equation}
   \label{eq:vectorlagrangian}
-  \mathcal{L}_{V}=-\frac{1}{4}F_{\mu\nu}F^{\mu\nu}+m_{V}A_{\mu}A^{\mu},
+  \mathcal{L}_{m_V}=\frac{1}{2}m_{V}^{2}A_{\mu}A^{\mu}.
 \end{equation}
-where $F_{\mu\nu}$ is the field strength tensor of the field and $m_{V}$ is its mass. While the first term in this Lagrangian is gauge invariant, the second term is not. Therefore, massive vector bosons are not possible on their own in gauge invariant theories.
+This term is not gauge invariant, so massive vector bosons are not possible on their own in gauge invariant theories either. The additional piece of the SM required to allow particles to have mass is the Higgs mechanism.
 
-In the SM fermion mass terms are also not possible as 
-%!!ALSO CONSIDER FERMION MASS, NOT GAUGE INVARIANT
+\begin{equation}
+\end{equation}
+
+\subsection{Spontaneous symmetry breaking and the Higgs mechanism}
+\label{sec:ssb}
+%!!Introduce SSB
+The Higgs mechanism is a form of spontaneous symmetry breaking. A symmetry is said to be spontaneously broken when the Lagrangian remains invariant while the vacuum state, i.e. that with lowest energy, does not. Terms which are not gauge invariant can then be incorporated into the theory by adding a field which has a non-zero vacuum expectation value and coupling it to the other fields present in the term. For the Higgs mechanism this field is a complex scalar field which is an $SU\left(2\right)_{L}$ doublet:
+\begin{equation}
+\phi=\left(\begin{array}{c}\phi^+ \\ \phi^0 \end{array}\right).
+\end{equation}
+The Lagrangian for this field 
+%!!Higgs mechanism
+%!!Describe electroweak symmetry breaking in the Standard Model
+
+
+
 
 %!!SOLUTION SSB
-
-
-\subsection{Gauge symmetries in the SM}
-%!!Introduce SM gauge group
-%!!Describe representation of fermions
-%!!Covariant derivative of SM, how it gives forces, briefly
-%!!Talk about mass term and Higgs
-The SM is gauge invariant under the group $SU\left(3\right)_{C}\otimes SU\left(2\right)_{L}\otimes U\left(1\right)_{Y}$. 
-
-Fermions in the SM are spin half representations of the above symmetry groups.
-
-The vector bosons in the standard model emerge as a result of the gauge invariance described above 
-
-
-
-
 
 
 \subsection{Higgs boson production and decay at the LHC}
