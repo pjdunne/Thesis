@@ -16,7 +16,7 @@ There are two types of fundamental particles in nature, fermions and bosons. The
 \begin{table}
   \caption{The fundamental fermions observed in nature separated into their three generations. Each particle shown also has an antiparticle with opposite charge and identical mass.}
   \label{tab:fermions}
-  \begin{tabular}{|c|c|c|c|c|c|c|}
+  \begin{tabular}{|c|ccc|ccc|}
   \hline
   &\multicolumn{3}{|c|}{Leptons}& \multicolumn{3}{|c|}{Hadrons} \\
   \cline{2-7}
@@ -39,7 +39,7 @@ The bosons in nature also have two types, the vector bosons which mediate the th
 \begin{table}
   \caption{}
   \label{tab:bosons}
-  \begin{tabular}{|l|c|c|c|}
+  \begin{tabular}{|l|ccc|}
     \hline
     Force & Particle & Mass & Charge \\
     \hline
@@ -87,14 +87,14 @@ where $F_{\mu\nu}$ is the field strength tensor of the vector field and for a ga
 \begin{equation}
 F_{\mu\nu}^a=\partial_{\mu}A_{\nu}^a-\partial_{\nu}A_{\mu}^a+gf&{abc}A_{\mu}^{b}A_{\nu}^{c},
 \end{equation}
-where $f^{abc}$ are the structure constants of the gauge group, which are a representation of the comutation relations between the group's generators. For $U(1)$ which only has one self-commuting generator the single structure constant is 0, however for non-Abelian gauge groups (i.e. those with non-commuting generators) they can be non-zero and the $F_{\mu\nu}F^{\mu\nu}$ term in the Lagrangian therefore includes self-interaction terms of the vector bosons.
+where $f^{abc}$ are the structure constants of the gauge group, which are a representation of the comutation relations between the group's generators. For $U(1)$ which only has one self-commuting generator the single structure constant is 0. However, for non-Abelian gauge groups (i.e. those with non-commuting generators) they can be non-zero causing the $F_{\mu\nu}F^{\mu\nu}$ term in the Lagrangian to include self-interaction terms of the vector bosons.
 
 It is also interesting to note that \EquationRef{eq:diraclag} can be rewritten as:
 \begin{equation}
   \label{eq:localdiraclagrangian}
   \mathcal{L}=i\bar{\psi}\gamma^{\mu}\mathcal{D}_{\mu}\psi-m\bar{\psi}\psi-\frac{1}{4}F_{\mu\nu}F^{\mu\nu},
 \end{equation}
-where $\mathcal{D}_{\mu}=\partial_{\mu}+iqA_{\mu}$ and is referred to as the covariant derivative. Comparing \EquationRef{eq:globaldiraclagrangian} and \EquationRef{eq:localdiraclagrangian} it can be seen that in order to go from a globally invariant Lagrangian to a locally invariant one we have substituted the normal spacetime derivative for the covariant derivative and added the stress energy tensor of the vector field.
+where $\mathcal{D}_{\mu}=\partial_{\mu}+iqA_{\mu}$ and is referred to as the covariant derivative. Comparing \EquationRef{eq:globaldiraclagrangian} and \EquationRef{eq:localdiraclagrangian} it can be seen that to go from a globally invariant Lagrangian to a locally invariant one we have substituted the normal spacetime derivative for the covariant derivative and added free term of the vector field.
 
 $U(1)$ transformations have one degree of freedom and can be described by one parameter, in the above case $\theta$, and in order to make the Lagrangian locally invariant one interacting gauge boson had to be added. This correspondence between the number of degrees of freedom and the number of gauge bosons holds generally. For each degree of freedom of a group's transformations there exists a generator of the group, and for each generator one interacting gauge boson must be added to achieve local invariance.
 
@@ -105,14 +105,14 @@ The SM is gauge invariant under the group $SU\left(3\right)_{C}\otimes SU\left(2
 
 The first generation of leptons can, therefore, be written as:
 \begin{equation}
-  \Pe_{R},\,\left(\begin{array}{c} \Pgne \\ \Pe_{L}\end{array}\right).
+  \psi_{1}=\Pe_{R},\,\psi_{2}=L=\left(\begin{array}{c} \Pgne \\ \Pe_{L}\end{array}\right).
 \end{equation}
 The SM treats neutrinos as massless and has no right handed neutrino. Similarly the first generation of quarks can be written as:
 \begin{equation}
- \Pqu_{R},\,\Pqd_{R},\,\left(\begin{array}{c} \Pqu_{L} \\ \Pqd_{L}\end{array}\right).
+  \psi_{3}=\Pqu_{R},\,\psi_{4}=\Pqd_{R},\,\psi_{5}=\left(\begin{array}{c} \Pqu_{L} \\ \Pqd_{L}\end{array}\right).
 \end{equation}
 
-As we saw in \SectionRef{sec:gaugesym} gauge symmetries in theories with fermions require the addition of an interacting vector boson per symmetry generator to preserve gauge invariance. $SU\left(3\right)_{C}$ has eight generators whose eight vector bosons, $G_{\mu}$, correspond to the eight gluons which mediate the strong interaction. $SU\left(2\right)_{L}$ has three generators whose three vector bosons, $\PW^{i}_{\mu}$, mix with the one vector boson from $U\left(1\right)_{Y}$, $B_{\mu}$ unifying the electromagnetic and weak forces into one electroeak force. The physical states that result are:
+As we saw in \SectionRef{sec:gaugesym} gauge symmetries in theories with fermions require the addition of an interacting vector boson per symmetry generator to preserve gauge invariance. $SU\left(3\right)_{C}$ has eight generators whose eight vector bosons, $G_{a\mu}$, correspond to the eight gluons which mediate the strong interaction. $SU\left(2\right)_{L}$ has three generators whose three vector bosons, $\PW^{i}_{\mu}$, mix with the one vector boson from $U\left(1\right)_{Y}$, $B_{\mu}$ unifying the electromagnetic and weak forces into one electroeak force. The physical states that result are:
 \begin{equation}
   \begin{split}
   \PWpm_{\mu}=\frac{1}{\sqrt{2}}\left(\PW^{1}_{\mu}\mp i\PW^{2}_{\mu}\right) \\
@@ -122,46 +122,76 @@ As we saw in \SectionRef{sec:gaugesym} gauge symmetries in theories with fermion
 \end{equation}
 where $\theta_{W}$ is the Weinberg angle and $A_{\mu}$ is the photon field. Also, as described in \SectionRef{sec:gaugesym} the interaction between these vector bosons and the fermion fields occurs through their presence in the covariant derivative, and interactions between the vector bosons occur because $SU\left(3\right)_{C}$ and $SU\left(2\right)_{L}$ are non-Abelian.
 
-If we now try to construct a Lagrangian for these fields a problem occurs. For fermions we know that some of the fermions have mass, and consequently we should have mass terms in our Lagrangian:
+Now let us try to construct a Lagrangian for these fields. First ignoring the masses we find:
+\begin{equation}
+  \mathcal{L}=i\bar{\psi}_{i}\slashed{\mathcal{D}}\psi_{i}-\frac{1}{4}F_{\mu\nu j}F^{\mu\nu}_{j},
+\end{equation}
+where the sum over all $\psi$ also includes the second and third generations, $F_{\mu\nu j}F^{\mu\nu}_{j}$ is a sum of the free terms of all the SM gauge bosons and $\mathcal{D}$ is the SM covariant derivative:
+\begin{equation}
+  \mathcal{D_{\mu}}=\partial_{\mu}+ig_{1}\frac{Y}{2}B_{\mu}+ig_{2}\frac{\tau_{i}}{2}W_{\mu}^{i}+ig_{3}\frac{\lambda_{a}}{2}G_{\mu}^{a},
+\end{equation}
+with Y being the constant generator of $U\left(1\right)$, $\tau_{i}$ the generators of $SU\left(2\right)_{L}$, $\lambda_{a}$ the generators of $SU\left(3\right)_{C}$ and $g_{i}$ the coupling constants of the fields. It should be noted that $\frac{g_{1}}{g_{2}}$ is equal to $\tan\left(\theta_{W}\right)$.
+
+When we try to include mass a problem occurs. We know that some of the fermions have mass, and consequently we should have fermion mass terms of the form:
 \begin{equation}
   \begin{split}
     \mathcal{L}_{m_{f}}&=-m_{f}\bar{f}{f} \\
     &=-m_{f}\bar{f}\left[\frac{1}{2}\left(1-\gamma^{5}\right)+\frac{1}{2}\left(1+\gamma^{5}\right)\right]f \\
-    &=-m_{f}\left(\bar{f}_{R}f_{L}+\bar{f}_{L}f_{R}\right).
+    &=-m_{f}\left(\bar{f}_{R}f_{L}+\bar{f}_{L}f_{R}\right),
   \end{split}
 \end{equation}
-However, as the left and right handed fields do not transform in the same way under $SU\left(2\right)_{L}$ this term breaks the gauge symmetry of the Lagrangian and can't be present. 
+in our Lagrangian. However, as the left and right handed fields do not transform in the same way under $SU\left(2\right)_{L}$ this term breaks the gauge symmetry of the Lagrangian and can't be present. 
 
 A similar problem occurs for vector fields. In \SectionRef{sec:gaugesym} we didn't consider the mass term of these vector fields:
 \begin{equation}
   \label{eq:vectorlagrangian}
-  \mathcal{L}_{m_V}=\frac{1}{2}m_{V}^{2}A_{\mu}A^{\mu}.
+  \mathcal{L}_{m_V}=\frac{1}{2}m_{V}^{2}A_{\mu}A^{\mu},
 \end{equation}
-This term is not gauge invariant, so massive vector bosons are not possible on their own in gauge invariant theories either. The additional piece of the SM required to allow particles to have mass is the Higgs mechanism.
-
-\begin{equation}
-\end{equation}
+which is not gauge invariant, so massive vector bosons are not possible on their own in gauge invariant theories either. The additional piece of the SM required to allow particles to have mass is the Higgs mechanism.
 
 \subsection{Spontaneous symmetry breaking and the Higgs mechanism}
 \label{sec:ssb}
 %!!Introduce SSB
-The Higgs mechanism is a form of spontaneous symmetry breaking. A symmetry is said to be spontaneously broken when the Lagrangian remains invariant while the vacuum state, i.e. that with lowest energy, does not. Terms which are not gauge invariant can then be incorporated into the theory by adding a field which has a non-zero vacuum expectation value and coupling it to the other fields present in the term. For the Higgs mechanism this field is a complex scalar field which is an $SU\left(2\right)_{L}$ doublet:
+The Higgs mechanism is a form of spontaneous symmetry breaking. A symmetry is said to be spontaneously broken when the Lagrangian remains invariant while the vacuum state, i.e. that with lowest energy, does not. Terms which are not gauge invariant can then be incorporated into the theory by adding a field which has a non-zero vacuum expectation value and coupling it to the other fields present in the term. For the Higgs mechanism this field is a complex scalar $SU\left(2\right)_{L}$ doublet, called the Higgs field:
 \begin{equation}
 \phi=\left(\begin{array}{c}\phi^+ \\ \phi^0 \end{array}\right).
 \end{equation}
-The Lagrangian for this field 
-%!!Higgs mechanism
-%!!Describe electroweak symmetry breaking in the Standard Model
+The main part of the Higgs field Lagrangian is:
+\begin{equation}
+  \label{eq:higlag}
+\mathcal{L}=T-V=\left(\mathcal{D}_{\mu}\phi\right)^{\dag}\left(\mathcal{D}^{\mu}\phi\right)+\mu^{2}\phi^{\dag}\phi-\lambda\left(\phi^{\dag}\phi\right)^{2}.
+\end{equation}
+For $\mu^{2}>0$ the minima of the potential are non-zero and form a circle in phase space of $\phi$. All of these vacua are equivalent and a particular vucuum can be chosen with no physical effect. By convention we choose the following vacuum:
+\begin{equation}
+  \bra{0}\phi\ket{0}=\left(\begin{array}{c} 0 \\ \sqrt{\frac{\mu^{2}}{2\lambda}} \end{array}\right)=\frac{1}{\sqrt{2}}\left(\begin{array}{c} 0 \\ v \end{array}\right).
+\end{equation}
+Next we consider small perturbations around this vacuum, ignoring those that can be set to zero by gauge freedom gives:
+\begin{equation}
+  \phi=\left(\begin{array}{c}0 \\ v+H \end{array}\right).
+\end{equation}
+Inserting this into \EquationRef{eq:higlag} and ignoring terms with more than one type of field gives at leading order:
+\begin{equation}
+  \mathcal{L}=\frac{1}{2}\partial_{\mu}H\partial^{\mu}H-\frac{1}{2}\mu^{2}H^{2}+\frac{v^{2}}{8}\left[g_{2}^{2}W_{\mu}^{+}W^{+\mu}+g_{2}^{2}W_{\mu}^{-}W^{-\mu}+\left(g_{1}^{2}+g_{2}^{2}\right)Z_{\mu}Z^{\mu}\right].
+\end{equation}
+As expected, the weak vector bosons $W_{\mu}^{\pm}$ and $Z_{\mu}$ aquire masses $\frac{gv}{2}$ and $\frac{v}{2}\sqrt{g_{1}^{2}+g_{1}^{2}}$ respectively. We also see an additional massive scalar $H$, which is the Higgs boson, which has mass $\sqrt{2}\mu$. The photon and gluons do not aquire masses as the structure of the group generators leads to the terms in $A_{\mu}$ and $G_{\mu a}$ being zero.
+
+The final part of the Higgs field Lagrangian is that giving rise to the fermion masses. These are generated by a Yukawa term in the Lagrangian for each fermion as follows:
+\begin{equation}
+  \mathcal{L}_{Yuk}=k_{f}\left(\bar{f}_{L}\phi f_{R}+\bar{f}_{R}\phi^{\dag}f_{L}\right).
+\end{equation}
+The fermion's mass is then $\frac{k_{f}v}{\sqrt{2}}$.
+
+%!!note about which of the above params are known/predicted and which are free and how this leaves room for BSM
 
 
+%!!References in all of the above!!
 
 
-%!!SOLUTION SSB
 
 
 \subsection{Higgs boson production and decay at the LHC}
 %!!Detail Higgs production and decays in order to motivate searching for invisible decays in the VBF channel
-
+%!!Mention proportionality of higgs coupling and mass
 %!!DISCUSS HIGGS
 
 \subsection{Challenges for the SM}
