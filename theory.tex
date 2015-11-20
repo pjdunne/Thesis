@@ -1,20 +1,20 @@
 \chapter{Introduction and theory}
 \label{chap:theory}
-This chapter will explain the theory of invisible decays of the Higgs boson. It will start with an introduction to the standard model (SM), focussing on the Higgs mechanism, before outlining the motivations behind and some candidates for physics beyond the SM (BSM). Natural units, where $\hbar=c=1$, Einstein summation convention and Feynman slash notation are used throughout. Four vector indices are labelled using greek letters, and gauge group generators using roman letters.
+This chapter will explain the theory of invisible decays of the Higgs boson (``Higgs to invisible''). It will start with an introduction to the \ac{SM}, focussing on the Higgs mechanism, before outlining the motivations behind and some candidates for physics \ac{BSM}. Natural units, where $\hbar=c=1$, Einstein summation convention and Feynman slash notation are used throughout. Four vector indices are labelled using greek letters, and gauge group generators using roman letters.
 
 \section{The standard model of particle physics}
 \label{sec:SM}
 The SM describes the interaction of the particles currently thought to be fundamental with the strong, weak and electromagnetic forces. Its predictions, which come from specifying the symmetries the theory respects and how they are broken, the particles in the theory, and 18 free parameters, have been tested in many different experiments, in some cases up to one part in a trillion \cite{PhysRevLett.100.120801}. However, it does face challenges, described in section \SectionRef{sec:SMchallenges}, one example being that it does not describe dark matter. 
 
-The SM is a gauge invariant quantum field theory (QFT). To construct a QFT the symmetries that are respected by the theory and the fields it describes must be specified. The symmetries are important because of Noether's theorem, which states that for every continuously differentiable symmetry of the Lagrangian of a theory there is a corresponding conservation law~\cite{Noether:1918zz,doi:10.1080/00411457108231446}. An example of this is Poincar\'e invariance, the invariance of the laws of physics under translations and rotations in space and time, which leads through Noether's theorem to the conservation of energy, linear momentum and angular momentum. In addition to giving rise to conservation laws, some types of symmetry lead to additional fields being required to preserve invariance, this will be discussed further in \SectionRef{sec:gaugesym} \cite{PhysRev.96.191}.
+The SM is a gauge invariant \ac{QFT}. To construct a QFT the symmetries that are respected by the theory and the fields it describes must be specified. The symmetries are important because of Noether's theorem, which states that for every continuously differentiable symmetry of the Lagrangian of a theory there is a corresponding conservation law~\cite{Noether:1918zz,doi:10.1080/00411457108231446}. An example of this is Poincar\'e invariance, the invariance of the laws of physics under translations and rotations in space and time, which leads through Noether's theorem to the conservation of energy, linear momentum and angular momentum. In addition to giving rise to conservation laws, some types of symmetry lead to additional fields being required to preserve invariance, this will be discussed further in \SectionRef{sec:gaugesym} \cite{PhysRev.96.191}.
 
 It is important to specify the fields described by the QFT as these are constrained by the fundamental particles seen in nature. This is because particles correspond to the quantised excitations of fields. Specifically, scalar fields correspond to spin zero bosons, spinor fields correspond to spin half fermions, and vector fields correspond to spin 1 bosons. In order to add a new field an explanation for why the corresponding particle has not yet been observed must, therefore, be provided. We will now go through the particles observed in nature and how they are represented in the SM.
 
 \subsection{Fundamental particles in nature}
-There are two types of fundamental particles in nature, fermions and bosons. The fermions observed in nature that are currently thought to be fundamental are then divided into those which interact via the strong nuclear force (the quarks), and those which don't (the leptons). Both the quarks and leptons have two further types: charged and neutral in the case of the leptons, and up type and down type in the case of the fermions. Another interesting feature of the fermions is that they are arranged in three generations. Each generation has one fermion of each type with the same quantum numbers as those in the other generations, except that the mass is different. \TableRef{tab:fermions} Shows this structure.
+There are two types of fundamental particles in nature, fermions and bosons. The fermions observed in nature that are currently thought to be fundamental are then divided into those which interact via the strong nuclear force (the quarks), and those which don't (the leptons). Both the quarks and leptons have two further types: charged and neutral in the case of the leptons, and up type and down type in the case of the fermions. Another interesting feature of the fermions is that they are arranged in three generations. Each generation has one fermion of each type with the same quantum numbers as those in the other generations, except that the mass is different. \TableRef{tab:fermions} shows this structure.
 
 \begin{table}
-  \caption{The fundamental fermions observed in nature separated into their three generations. Each particle shown also has an antiparticle with opposite charge and identical mass.}
+  \caption{The fundamental fermions observed in nature separated into their three generations. Each particle shown also has an antiparticle with opposite charge and identical mass. Values taken from~\cite{Agashe:2014kda}}
   \label{tab:fermions}
   \begin{tabular}{|c|ccc|ccc|}
   \hline
@@ -37,7 +37,7 @@ There are two types of fundamental particles in nature, fermions and bosons. The
 The bosons in nature also have two types. The first type are vector bosons which mediate the three fundamental interactions described by the SM. The vector bosons are summarised in \TableRef{tab:bosons}, where it can be seen that their masses are very different, the photon and the eight gluons being massless, while the \PWpm and \PZ bosons are very massive. As we will see in \SectionRef{sec:ssb} explaining these masses requires the Higgs mechanism. The Higgs mechanism also gives rise to the other type of boson seen in nature, the scalar Higgs boson. In order to see how all of the above particles are represented in the SM an introduction to gauge theories is necessary.
 
 \begin{table}
-  \caption{}
+  \caption{The fundamental vector bosons observed in nature separated by the force which they mediate. Values taken from~\cite{Agashe:2014kda}.}
   \label{tab:bosons}
   \begin{tabular}{|l|ccc|}
     \hline
@@ -59,7 +59,7 @@ The bosons in nature also have two types. The first type are vector bosons which
 Gauge symmetries are local transformations, i.e. the transformation can be different at different points in space and time, that form a symmetry group. To see the effect of imposing such a symmetry on a theory consider imposing local invariance under U(1) transformations on the Dirac Lagrangian for a masssive fermion:
 \begin{equation}
   \label{eq:globaldiraclagrangian}
-  \mathcal{L}=i\bar{\psi}\slashed{\partial}\psi-m\bar{\psi}\psi.
+  \mathcal{L}=i\bar{\psi}\slashed{\partial}\psi-m\bar{\psi}\psi~\cite{griffiths2008introduction}.
 \end{equation}
 
 This Lagrangian is invariant under a global $U(1)$ transformation $\psi\rightarrow e^{iq\theta}\psi$, where q and $\theta$ are constant. However, if the $U(1)$ transformation is local i.e. $\theta$ is a function of spacetime position the Lagrangian is no longer invariant and transforms as:
@@ -190,10 +190,12 @@ The fermion's mass is then $\frac{k_{f}v}{\sqrt{2}}$.
 
 
 \subsection{Higgs boson production and decay at the LHC}
+\label{sec:higprod}
 %??Detail Higgs production and decays in order to motivate searching for invisible decays in the VBF channel
 %??Mention proportionality of higgs coupling and mass
 %??DISCUSS HIGGS
 %??Introduce cross-section
+%??VBF with two forward jets
 \subsection{Challenges for the SM}
 \label{sec:SMchallenges}
 
