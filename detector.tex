@@ -5,7 +5,7 @@ The purpose of this chapter is to introduce the \CMS experiment~\cite{Chatrchyan
 
 \section{The \LHC}
 \label{sec:lhc}
-The \LHC is situated 100m underground in a tunnel formerly built for the LEP accelerator~\cite{lepdesign} at CERN near Geneva, Switzerland. It is a 27km storage ring which accelerates both protons and heavy ions and collides them at the highest centre of mass energies of any collider built to date. The work contained in this thesis uses data from proton-proton collisions. These protons are obtained by taking hydrogen gas and stripping its atoms of their electrons with an electric field. The first accelerator in the \LHC accelerator sequence, Linac 2, accelerates the protons to 50 \MeV. The protons are then accelerated to 1.4 \GeV~by the next accelerator, the \ac{PSB}, which is followed by the \ac{PS} where they reach 25 \GeV. The beam energy is then increased to 450 \GeV~in the \ac{SPS}. Finally, the protons are injected into the \LHC where, at time of writing, the maximum energy the beams have been accelerated to is 6.5 \TeV, close to the design maximum of 7 \TeV.
+The \LHC is situated 100m underground in a tunnel formerly built for the LEP accelerator~\cite{lepdesign} at CERN near Geneva, Switzerland. It is a 27km storage ring which accelerates both protons and heavy ions and collides them at the highest centre of mass energies of any collider built to date. The work contained in this thesis uses data from proton-proton collisions (``events''). These protons are obtained by taking hydrogen gas and stripping its atoms of their electrons with an electric field. The first accelerator in the \LHC accelerator sequence, Linac 2, accelerates the protons to 50 \MeV. The protons are then accelerated to 1.4 \GeV~by the next accelerator, the \ac{PSB}, which is followed by the \ac{PS} where they reach 25 \GeV. The beam energy is then increased to 450 \GeV~in the \ac{SPS}. Finally, the protons are injected into the \LHC where, at time of writing, the maximum energy the beams have been accelerated to is 6.5 \TeV, close to the design maximum of 7 \TeV.
 
 When fully filled the \LHC contains two counter-rotating beams which are formed of up to 2808 bunches spaced either 25 or 50 ns apart and each containing $\mathcal{O}(10^{11})$ protons. The two beams are kept travelling in a cirlce by 1232 superconducting dipole magnets and steered to four collision points around the \LHC. Detectors are situated at these collision points to observe the collisions, the main four being: ALICE~\cite{Aamodt:2008zz}, ATLAS~\cite{Aad:1129811}, CMS~\cite{Chatrchyan:2008aa} and LHCb~\cite{Alves:2008zz}. A schematic of the LHC accelerator chain and the detectors can be seen in \FigureRef{fig:lhclayout}.
 
@@ -21,16 +21,16 @@ When studying a physical process occuring in particle collisions it is important
 \end{equation}
 where $\mathcal{L}$, the integrated luminosity, depends only on the parameters of the collisions, and the cross-section depends only on the process. In order to observe rare (i.e. low cross-section) processes, such as those studied at the LHC, it is, necessary to use very high luminosity datasets. The integrated luminosity is obtained by integrating the instantaneous luminosity over time, so large luminosities can be obtained either by running the accelerator for a long time, or by operating at high instantaneous luminosity. For collisions at the LHC the instantaneous luminosity is given by:
 \begin{equation}
-  \mathcal{L}=\frac{k_{b}N_{b}^{2}f_{rev}\gamma}{4\pi\epsilon_{n}\beta}, \cite{Benedikt:823808}
+  \mathcal{L}=\frac{k_{b}N_{b}^{2}f_{rev}\gamma}{4\pi\epsilon_{n}\beta} \cite{Benedikt:823808},
 \end{equation}
 where $k_{b}$ is the number of bunches per beam, $N_{b}$ the number of protons per bunch, $f_{rev}$ the revolution frequency, $\epsilon_{n}$ the normalised transverse beam emittance, $\beta^{*}$ the beta-function at the interaction point and $\gamma$ the Lorentz factor. The design instantaneous luminosity of the LHC is $10^{34}\,\cm^{-2}\rm{s}^{-1}$ with 25ns bunch spacing.
 
-The LHC started physics runs in 2010, during which it operated at a centre of mass energy of 7 \TeV~ and delivered an integrated luminosity of 44.2 \invpb ~to CMS. In 2011 the LHC also operated at 7 \TeV~ and delivered 6.1\invfb to CMS. The centre of mass energy was increased to 8 \TeV~ in 2012 and 23.3\invfb~of data were delivered to CMS. A summary of the luminosity delivered to CMS during the three runs can be seen in \FigureRef{fig:lumisummary}  %??Design and actual luminosity so far 
-%??13 TeV lumi
+The LHC started physics runs in 2010, during which it operated at a centre of mass energy of 7 \TeV~ and delivered an integrated luminosity of 44.2 \invpb ~to CMS. In 2011 the LHC also operated at 7 \TeV~ and delivered 6.1\invfb to CMS. The centre of mass energy was increased to 8 \TeV~ in 2012 and 23.3\invfb~of data were delivered to CMS. A summary of the luminosity delivered to CMS during the three periods of run 1 can be seen in \FigureRef{fig:lumisummary}. In run 2 the centre of mass energy was further increased to 13 \TeV~and during 2015 4.09\invfb~of data were delivered to CMS at this energy. In order to be used for physics analysis data must be certified. This certification ensures that the detector was fully operational when the data were recorded. In 2011 5.1\invfb~were certified, in 2012 19.7\invfb~were certified and in 2015 2.2\invfb~were certified.
+
 
 \begin{figure}
   \includegraphics[width=1.2\largefigwidth]{plots/detector/int_lumi_cumulative_pp_2.pdf}
-  \caption{A summary of the luminosity delivered to CMS during Run 1 of the LHC.\cite{CMSLumiPublic}}
+  \caption{A summary of the luminosity delivered to CMS during Run 1 of the LHC \cite{CMSLumiPublic}.}
   \label{fig:lumisummary}
 \end{figure}
 %??maybe figure for 13 TeV too
@@ -39,28 +39,39 @@ The cross-section for several processes is shown in \FigureRef{fig:xssummary} an
 
 \begin{figure}
   \includegraphics[width=1.2\largefigwidth]{plots/detector/crosssections2012HE_v4.pdf}
-  \caption{Cross sections for several processes in collisions of protons with protons or anti-protons as a function of centre of mass energy. The energies that the LHC and Tevatron ran at are highlighted.\cite{Stirlingppxs}}
+  \caption{Cross sections for several processes in collisions of protons with protons or anti-protons as a function of centre of mass energy. The energies that the LHC and Tevatron ran at are highlighted \cite{Stirlingppxs}.}
   \label{fig:xssummary}
 \end{figure}
 
 The large total cross-section combined with the high instantaneous luminosities that the LHC operates at leads to the probability for multiple proton-proton interactions per bunch crossing being high. The distribution of the number of interactions per bunch crossing can be seen in \FigureRef{fig:pusummary}. The additional interactions on top of the process of interest in a bunch crossing are called pile-up \ac{PU}.
-%??Define an event
 
 \begin{figure}
   \includegraphics[width=1.2\largefigwidth]{plots/detector/pileup_pp_2012.pdf}
-  \caption{Distribution of the number of interactions per bunch crossing in CMS during 2012 running of the LHC.\cite{CMSLumiPublic}}
+  \caption{Distribution of the number of interactions per bunch crossing in CMS during 2012 running of the LHC \cite{CMSLumiPublic}.}
   \label{fig:pusummary}
 \end{figure}
 
 
 \section{The \CMS experiment}
 \label{sec:CMSInDetail}
-%??Introduction - describe hermetic onion shell concept and introduce subsystems
+%Introduction - describe hermetic onion shell concept and introduce subsystems
 The CMS detector was designed to search for the SM Higgs and new physics at the TeV energy scale. Both because the nature of new physics is not known and the SM Higgs has a wide range of decays and production mechanisms CMS must be sensitive to many different types of final state particles and topologies. In order to achieve this it has a hermetic design comprising a barrel, endcaps and a forward calorimetry system, and is also composed of several layers of subdetectors each sensitive to different particles as shown in \FigureRef{fig:cmsschematic1}. The hermiticity of the detector is particularly important for the VBF Higgs to invisible search, because, as described in \SectionRef{sec:higprod}, the VBF final state is highly likely to have jets in the forward regions of the detector.
+
+\begin{figure}
+  \includegraphics[width=1.2\largefigwidth]{plots/detector/cms_120918_03.png}
+  \caption{A diagram of the subsystems making up the CMS detector, illustrating the hermeticity and layered structure of the experiment \cite{cmsschematic}.}
+  \label{fig:cmsschematic1}
+\end{figure}
 
 A central design feature of CMS is the superconducting magnet, inside which is generated a 3.8T axial field. This field bends the path of charged particles travelling through it allowing their momentum to be measured. Not all particles are charged however, and the path of several types of particles through the CMS detector is shown in \FigureRef{fig:cmsschematic2}. The first layer is the tracker which records the paths taken by charged particles, as well as providing a momentum measurement the tracks also allow the vertex the particle came from to be identified. The next layer is the \ac{ECAL} where electrons and photons deposit energy through electromagnetic showers. This is followed by the \ac{HCAL} where hadronic showers deposit most of their energy. After the calorimetry systems is the superconducting magnet which is not instrumented. Outside the magnet are the muon detection systems, which are interspersed with iron plates which form the return yoke for the magnet. Muons do not deposit much energy in the detector and often are not stopped, so the muon system is primarily a tracking detector.
 
-%??Coordinate system
+\begin{figure}
+  \includegraphics[width=1.2\largefigwidth]{plots/detector/CMS_Slice.png}
+  \caption{A schematic cross-section of the CMS experiment showing the path taken by several types of particles \cite{CMSSlice}.}
+  \label{fig:cmsschematic2}
+\end{figure}
+
+%Coordinate system
 The origin of the co-ordinate system used by CMS is at the nominal interaction point. It is a right handed cartesian system with the x axis pointing towards the centre of the LHC ring and the y-axis vertically upwards, the z axis then points along the beam line. The azimuthal angle $\phi$ and the polar angle $\theta$ are measured from the x and z axes respectively. It is common to describe the direction of outgoing particles using $\phi$ and their pseudo-rapidity, $\eta$ which is defined as:
 \begin{equation}
   \label{eq:eta}
@@ -68,26 +79,14 @@ The origin of the co-ordinate system used by CMS is at the nominal interaction p
 \end{equation}
 Distances in the $\eta-\phi$ plane are given by $\Delta R=\sqrt{\Delta\phi^2+\Delta\eta^2}$. Two other important quantities in hadron colliders are the projections of a particle's momentum and energy in the transverse plane, these are denoted \pt and \Et respectively.
 
-\begin{figure}
-  \includegraphics[width=1.2\largefigwidth]{plots/detector/cms_120918_03.png}
-  \caption{A diagram of the subsystems making up the CMS detector, illustrating the hermeticity and layered structure of the experiment.\cite{cmsschematic}}
-  \label{fig:cmsschematic1}
-\end{figure}
-
-\begin{figure}
-  \includegraphics[width=1.2\largefigwidth]{plots/detector/CMS_Slice.png}
-  \caption{A schematic cross-section of the CMS experiment showing the path taken by several types of particles.\cite{CMSSlice}}
-  \label{fig:cmsschematic2}
-\end{figure}
-
 \subsection{Tracker}
 \label{sec:tracker}
-%??Describe Tracker
-The tracker is designed to precisely measure the paths of charged particles coming from LHC collisions, this allows the particles' momentum along with the position of the vertex that they came from to be determined. In order to precisely measure the particles' positions high granularity is required. Additionally, due to the frequency of collsions at the LHC and the high instantaneous luminosity a radiation hard system with fast response is also necessary. This combination of requirements motivates the use of a silicon based system \cite{Chatrchyan:2008aa}.
+%??Describe Tracker http://dx.doi.org/10.1140/epjcd/s2004-03-1801-1 and jinst paper
+The tracker is designed to precisely measure the paths of charged particles from LHC collisions which curve in CMS's magnetic field \cite{Chatrchyan:2008aa}. The design transverse momentum resolution of the full tracker detector is 1-2\% at 100\GeV~. In order to precisely measure the particles' positions and ensure the occupance of the tracker is low a high granularity is required. Due to the frequency of collsions at the LHC and the high instantaneous luminosity a radiation hard system with fast response is also necessary. This combination of requirements motivates the use of a silicon based system. When traversing silicon charged particles create electron-hole pairs, which are then separated by an applied electric field, causing a current pulse.
 
-%??Submodules
-The tracker layout can be seen in \FigureRef{fig:trackerschematic}. It is made up of a pixel detector which has three layers in the barrel and two in the endcap, and a strip detector with 10 layers in the barrel and 9 layers in the endcap. The barrel and endcap detectors together have an acceptance of $|\eta|<2.5$.
-%??Resolution
+%Submodules
+%pixel
+The tracker layout can be seen in \FigureRef{fig:trackerschematic}. In order to keep the sensor occupancy below 1\% at design luminosity, the innermost component is a silicon pixel detector. This detector has three layers in the barrel, at radii of 4.7, 7.3 and 10.2 cm, and two in the endcap. Each pixel is 100\micron x 150\micron in size and in total there are 66 million of them. The resulting resolution of the pixel detector is approximately 10\micron in the $r-\phi$ plane and 17\micron in the $r-z$ plane \cite{trackerperformance}.
 
 \begin{figure}
   \includegraphics[width=1.2\largefigwidth]{plots/detector/TrackerSchematic.png}
@@ -95,15 +94,51 @@ The tracker layout can be seen in \FigureRef{fig:trackerschematic}. It is made u
   \label{fig:trackerschematic}
 \end{figure}
 
+
+
+%strip
+Surrounding the pixel detector is a silicon strip detector with 10 layers in the barrel, at radii of 20 to 116 cm, and 12 pairs of disks in the endcap. The strips are typically 10-20 cm long and 80-180\micron wide, with the strip size increasing with radius as the particle flux decreases. The strip detector's single point resolution is 230-530\micron in the $r-z$ plane and 23-52\micron in the $r-\phi$ plane.  The higher resolution in the $r-\phi$ plane allows a better measurement of $p_{T}$, as this is the direction in which the particle's tracks bend in the CMS magnetic field. The barrel and endcap detectors together have an acceptance of $|\eta|<2.5$ for both the pixel and strip detectors.
+
 \subsection{Electromagnetic calorimeter}
 \label{sec:ECAL}
-%??Describe ECAL
-%??Submodules
+%??Describe \ac{ECAL}
+The \ac{ECAL} is designed to provide accurate photon and electron reconstruction and precise measurement of the electromagnetic component of hadron jets \cite{Chatrchyan:2008aa}. It is a homogeneous calorimeter made of lead tungstate (PbWO$_{4}$) crystals, separated into a barrel (\ac{EB}) section, with 61200 crystals and two endcaps (\ac{EE}) each with 7234 crystals. These crystals are 25.8 radiation lengths in depth and instrumented with photodectors, avalanche photodiodes being used in the barrel and vacuum phototriodes in the endcap. 
+
+The layout of the \ac{ECAL} is shown in \FigureRef{fig:ecalschematic}. The \ac{EB} crystals have a 170x360 arrangement in $\eta-\phi$ space such that the gaps between crystals are offset by $3^{\circ}$ from the vector to the detector origin, thus avoiding particles travelling through the gaps. The \ac{EB} extends to $|\eta|=1.479$, with higher values of $\eta$ covered by the \ac{EE}. The crystals in the \ac{EE} are arranged in an $x-y$ grid pointing at a focus 1.3m from the nominal interaction point, giving a $2-8^{\circ}$ separation between the gaps between crystals and the vector to the detector origin. In addition to the main PbWO$_{4}$ detector the endcaps also have a preshower detector. This preshower is a lead silicon strip sampling calorimeter, which initiates the electromagnetic showers and provides sufficient position resolution to distinguish single photons from pairs produced in neutral pion decays. The total acceptance of the barrel and endcap detectors is $|\eta|<3.0$.
+
+\begin{figure}
+  \includegraphics[width=1.2\largefigwidth]{plots/detector/ecal_layout.png}
+  \caption{A schematic of the CMS \ac{ECAL}, indicating the subsystems that comprise it \cite{Chatrchyan:2008aa}.}
+  \label{fig:ecalschematic}
+\end{figure}
+
+ On entering the \ac{ECAL} high energy electrons or photons initiate an electromagnetic shower by undergoing Bremsstrahlung or pair production respectively. The resulting cascade of particles continues to lose energy by successive Bremsstrahlung and pair production until their energy is low enough that the photons no longer undergo pair-production and the electrons lose their energy mainly by ionisation. The ionisation of the PbWO$_{4}$ crystals leads to the emission of scintillation light, proportional to the amount of energy deposited, which is collected by the photodetectors.
+
+The choice of PbWO$_{4}$ is motivated by its high density (8.28 g/cm$^{3}$), short radiation length (0.89 cm) and small Moli\'{e}re radius (2.2cm), this leads to the showers being contained in a small area and allows the calorimeter to be compact and have fine granularity. Another advantage of PbWO$_{4}$ is that 80\% of the scintillation light is emitted within the LHC's 25ns design bunch crossing time, so particles can be properly associated with the bunch crossing they originate from.
+
 %??Resolution
+For particle energies below 500 GeV, where the resulting shower ceases to be contained in the full depth of the \ac{ECAL}, the \ac{ECAL} resolution can be parametrised as:
+\begin{equation}
+  \label{eq:ecalres}
+  \left(\frac{\sigma}{E}\right)^2=\left(\frac{S}{\sqrt{E}}\right)^2+\left(\frac{N}{E}\right)^2+C^2.
+\end{equation}
+Where $S$ is the stochastic term, $N$ the noise term and $C$ the constant term. The stochastic term is comprised of fluctuations in the lateral containment of showers and also in the amount of scintillation light. The noise term is made up of electronic and digital noise, and signals from other bunch crossings which do not fully dissipate in time. The constant term comes from non-uniformity of light collection along the crystals, errors in the calibration of crystals against each other and leakage of energy from the back of the calormiter. The energy resolution was measured without an applied magnetic field in an electron beam using particles with momenta between 20 and 250 \GeV. The stochastic, noise and constant terms were found to be 0.028 $\GeV^{1/2}$, 0.12 \GeV and 0.003 respectively.
+
+ 
 
 \subsection{Hadronic calorimeter}
 \label{sec:HCAL}
 %??Describe HCAL
+The \ac{HCAL} is designed to measure the energy of strongly interacting particles. It consists of a brass and scintillator plus wavelength shifting fibre sampling calorimeter split into a barrel (\ac{HB}) and endcap (\ac{HE}) section, and a radiation hard steel and quartz fibre Cherenkov forward calorimeter (\ac{HF}). The primary design consideration for the \ac{HCAL} is that it must fit between the outer edge of the \ac{ECAL} ($r=1.77$ m) and the inner edge of the magnet ($r=2.95$ m). In order to satisfy this requirement and achieve satisfactory containment of hadronic showers the magnet coil is also used as an absorber, and there is a further layer of scintillator outside the magnet coil (\ac{HO}). In total the \ac{HCAL} corresponds to 10-15 interaction legnths, depending on $\eta$.
+
+\begin{figure}
+  \includegraphics[width=1.2\largefigwidth]{plots/detector/hcal_layout1.png}
+  \caption{A schematic of a quadrant of the CMS \ac{HCAL} in the $r-z$ plane, indicating the subsystems that comprise it \cite{Chatrchyan:2008aa}.}
+  \label{fig:ecalschematic}
+\end{figure}
+
+%??why brass, how do technologies work, layout and HF 
+
 %??Submodules
 %??Resolution
 
