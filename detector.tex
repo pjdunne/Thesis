@@ -77,7 +77,7 @@ The origin of the co-ordinate system used by CMS is at the nominal interaction p
   \label{eq:eta}
   \eta=-\ln[\tan(\theta/2)].
 \end{equation}
-Distances in the $\eta-\phi$ plane are given by $\Delta R=\sqrt{\Delta\phi^2+\Delta\eta^2}$. Two other important quantities in hadron colliders are the projections of a particle's momentum and energy in the transverse plane, these are denoted \pt and \Et respectively.
+Distances in the $\eta-\phi$ plane are given by $\Delta R=\sqrt{\Delta\phi^2+\Delta\eta^2}$. Two other quantities often used at hadron colliders are the projections of a particle's momentum and energy in the transverse plane, these are denoted \pt and \Et respectively. The missing transverse energy, defined as the negative vector sum of the momentum of all particles in an event, is important in inferring the presence of invisible particles and is denoted \MET
 
 \subsection{Tracker}
 \label{sec:tracker}
@@ -129,12 +129,14 @@ Where $S$ is the stochastic term, $N$ the noise term and $C$ the constant term. 
 \subsection{Hadronic calorimeter}
 \label{sec:HCAL}
 %??Describe HCAL
-The \ac{HCAL} is designed to measure the energy of strongly interacting particles. It consists of a brass and scintillator plus wavelength shifting fibre sampling calorimeter split into a barrel (\ac{HB}) and endcap (\ac{HE}) section, and a radiation hard steel and quartz fibre Cherenkov forward calorimeter (\ac{HF}). The primary design consideration for the \ac{HCAL} is that it must fit between the outer edge of the \ac{ECAL} ($r=1.77$ m) and the inner edge of the magnet ($r=2.95$ m). In order to satisfy this requirement and achieve satisfactory containment of hadronic showers the magnet coil is also used as an absorber, and there is a further layer of scintillator outside the magnet coil (\ac{HO}). In total the \ac{HCAL} corresponds to 10-15 interaction legnths, depending on $\eta$.
+The \ac{HCAL} is designed to measure the energy of strongly interacting particles. This measurement is particularly important for neutral hadrons which do not leave tracks in the tracking system and deposit most of their energy in the \ac{HCAL}, and for the determination of \MET.  The \ac{HCAL} consists of a brass and scintillator plus wavelength shifting fibre sampling calorimeter split into barrel (\ac{HB}) and endcap (\ac{HE}) sections, and a steel and quartz fibre Cherenkov forward calorimeter (\ac{HF}). The primary design consideration for the \ac{HCAL} is that it must fit between the outer edge of the \ac{ECAL} ($r=1.77$ m) and the inner edge of the magnet ($r=2.95$ m). In order to satisfy this requirement and achieve satisfactory containment of hadronic showers the magnet coil is also used as an absorber, and there is a further layer of scintillator outside the magnet coil (\ac{HO}). In total the \ac{HCAL} corresponds to 10-15 interaction legnths, depending on $\eta$. A diagram of the \ac{HCAL} layout can be seen in \FigureRef{fig:hcalschematic}.
+
+Brass is chosen as the main \ac{HCAL} absorber because it is not magnetic and has a relatively short nuclear interaction length of 16.42 cm. The hadron showers initiated in the absorber
 
 \begin{figure}
   \includegraphics[width=1.2\largefigwidth]{plots/detector/hcal_layout1.png}
   \caption{A schematic of a quadrant of the CMS \ac{HCAL} in the $r-z$ plane, indicating the subsystems that comprise it \cite{Chatrchyan:2008aa}.}
-  \label{fig:ecalschematic}
+  \label{fig:hcalschematic}
 \end{figure}
 
 %??why brass, how do technologies work, layout and HF 
