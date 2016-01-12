@@ -4,15 +4,36 @@
 This chapter describes the reconstruction of physics objects from data collected by the CMS detector. The invisible Higgs analysis uses a wide range of objects from the jets and \MET that are present in the signal process, to charged leptons that are present in background processes. This range of objects means that information from all subdetectors of CMS must be used. The reconstruction of each object used is described, along with the overarching ``particle flow'' approach to data reconstruction used by CMS.
 %??Jets, MET, electrons, muons, taus 
 
+\section{Tracks}
+\label{sec:tracks}
+%??This and next section from http://iopscience.iop.org/article/10.1088/1748-0221/9/10/P10009/pdf
+The tracks reconstructed in the inner tracking detector of CMS are a key part of the reconstruction of most other objects used for physics analyses. For example the jet reconstruction algorithm combines information from the tracks and calorimeter energy deposits. The algorithm used by CMS is the the Kalman filter based \ac{CTF}, which is described in  \cite{1748-0221-9-10-P10009}. 
+
+The \ac{CTF} starts with seeds generated from either two or three hits in the pixel tracker. In the case of seeds with two hits the position of the beam spot is used to constrain the initial momentum of the track. The initial track fit from these seeds is then improved by iterating through the layers of the tracking detector from inside to outside and updating the estimate of the track's parameters based on the most compatible hit in each layer. After the outside of the detector is reached the algorithm checks for tracks which share more than 19\% of their hits and discards the track with the fewest hits. In the case of the two tracks having an equal number of hits the track with the best fit is kept. This process of reconstructing tracks starting from seeds is repeated up to six times, with hits associated to a successfully reconstructed track removed for the next iteration. 
+
+After the full set of iterations is complete the tracks are refitted again using a Kalman filter starting from the best fit from the innermost hits of the track and iterating outwards adding the hit associated to the track in each layer one by one. This refitting aims to reduce biases from the track's seed including those introduced for two hit seeds that include constraints from the beamspot. The refitted tracks are then smoothed by another Kalman filter, which is initialised with the current best fit track hypothesis and iterates from the outside of the detector inwards. 
+
+The smoothed tracks then have quality criteria, such as a requirement on the maximum number of layers the track traverses without leaving a hit, imposed to reject fake tracks. The efficiency of the \ac{CTF} is estimated in data using tracks from muons from Z decays, and is found to be greater than 99\%.
 
 \section{Primary vertex}
 \label{sec:PV}
 %??Describe PV reconstruction
 %??Relevance to analysis
 %??Check if hard scatter defined elsewhere
-The very high instantaneous luminosities present at the \LHC lead to a large probability of multiple proton-proton interactons occuring in each bunch crossing. It is therefore essential to identify the \ac{PV}, which relates to the highest energy interaction or ``hard scatter''. Once this vertex has been identified it can be used to separate particles from the hard scatter and those from pileup. %!!secondary vertices
+The very high instantaneous luminosities present at the \LHC lead to a large probability of multiple proton-proton interactons occuring in each bunch crossing. It is therefore essential to identify the \ac{PV}, which relates to the highest energy interaction or ``hard scatter''. It is also useful to identify the \ac{PV} to distinguish ``prompt'' particles directly from the hard scatter from those resulting from processes which occur later such as hadron decay or photon conversion.
 
 %??Algorithm
+The CMS \ac{PV} reconstruction algorithm has three steps, track selection, clustering of tracks into vertices and finally fitting the position of these vertices and is described in more detail in~\cite{1748-0221-9-10-P10009}. In the first step, track selection, the subset of tracks with non-significant transverse impact parameters is chosen. This selection removes tracks not coming from the primary interaction region.
+
+The next step of clustering tracks into prototype vertices uses a \ac{DA} algorithm~\cite{DetAnnealing}. These prototype vertices then have their best fit position determined by an adaptive vertex fitter~\cite{adaptivevertex}, where a fit to the position of the vertex is performed, then weights, $w_{i}$ are assigned to each track according to the probability that it belongs to the vertex, before the process is repeated iteratively. Both of these algorithms also use the concept of ``cooling,'' where the algorithm is performed repeatedly as a parameter is gradually reduced, to increase the chance of finding the global best fit solution.
+
+The number of degrees of freedom of the resulting vertex is defined as:
+\begin{equation}
+  \label{eq:vertdof}
+  n_{dof}=2\displaystyle\sum_{i=1}^{\# \rm{tracks}}w_i -3.
+\end{equation}
+This variable is highly correlated with the number of tracks compatible with the vertex and a requirement 
+
 %??Performance
 
 
