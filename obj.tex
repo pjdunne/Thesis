@@ -38,24 +38,24 @@ The \ac{PV} is defined to be the vertex with the highest sum of the squared \pt 
 %??Performance, make sure jet is defined in theory section
 The performance of the vertex reconstruction algorithm has been measured using events with at least one jet with $\pt>20$ GeV. The efficiency to reconstruct at least one primary vertex in these events is found to be greater than 99\% for vertices with at least three tracks. The position resolution is found to vary as a function of the number of tracks associated to the vertex, being approximately 100\micron\, for vertices with 5 tracks and approaching 10\micron\, for vertices with greater than 50 tracks.
 
-\section{Jets}
-\label{sec:jets}
-%??Describe jet reconstruction
-%??Relevance to analysis
-%??Algorithm
-%??Performance
+\section{Particle Flow}
+\label{sec:pf}
+%Describe pf reconstruction, Relevance to analysis
+\ac{PF} is an algorithm used by CMS to combine information from different sub-detectors into individual particles~\cite{CMS-PAS-PFT-09-001,CMS-PAS-PFT-10-001,CMS-PAS-PFT-10-002}. This approach is particularly beneficial for CMS as it allows the accurate momentum measurements of the inner tracker, and the excellent energy measuremetns and granularity of the \ac{ECAL} to be combined and used to improve the energy measurement of objects seen in the \ac{HCAL}. The \ac{PF} algorithm classifies particles as charged hadrons, neutral hadrons, photons, muons and electrons. These particles can then further be used to calculate the \MET, as input to the jet reconstruction, for reconstructing taus and to calculate the isolation of leptons.
 
+%Algorithm
+The \ac{PF} algorithm starts with tracks, reconstructed as described in \SectionRef{sec:tracks}, and calorimeter clusters, which are reconstructed separately in each sub-detector of the calorimeter system. Cluster-track pairs whose cluster position and track trajectory are compatible are then linked together to identify charged particles. Linking between tracks from the inner tracker and the muon system is also performed to identify muons. The information from tracks with associated \ac{ECAL} clusters, i.e. those compatible with electrons, is further used to search for clusters compatible with bremsstrahlung photons having been radiated from the track, this is described further in \SectionRef{sec:electrons}.
 
-\section{Missing transverse energy}
-\label{sec:MET}
-%??Describe MET reconstruction
-%??Relevance to analysis
-%??Algorithm
-%??Performance
+Once electrons, muons and charged hadrons have been identified, further calorimeter clusters are identified as neutral hadrons or photons if they are in the \ac{HCAL} or \ac{ECAL} respectively. Excess energy in a calorimeter cluster compared to that expected from associated tracks also allows the presence of neutral particles that would otherwise not have been identified to be determined.
 
 \section{Electrons}
 \label{sec:electrons}
 %??Describe electron reconstruction
+As described in \SectionRef{sec:electrons}, electrons are reconstructed by matching \ac{ECAL} deposits with tracks from the inner tracker. 
+%??supercluster forming
+%??gsf algorithm
+%??ID
+
 %??Relevance to analysis
 %??Algorithm
 %??Performance
@@ -63,6 +63,31 @@ The performance of the vertex reconstruction algorithm has been measured using e
 \section{Muons}
 \label{sec:muons}
 %??Describe muon reconstruction
+%??Relevance to analysis
+%??Algorithm
+%??Performance
+
+\section{Jets}
+\label{sec:jets}
+%Describe jet reconstruction %Relevance to analysis
+As it is a hadron collider quarks and gluons are very common at the \LHC. Furthermore, the presence of two final state quarks is one of the primary signatures of \ac{VBF} Higgs production which is one of the main focuses of this thesis. Ascertaining the momentum of these strongly interacting particles is therefore very important. As discussed in \SectionRef{sec:higprod}, the hadronisation of strongly interacting particles results in highly collimated jets of particles. The momentum of the original parton which gave rise to the jet can be reconstructed by combining all of the particles in the resulting jet.
+
+%??Algorithm
+%??Performance
+
+\subsection{Jet clustering}
+%??IR and colinear safety
+%??anti-kt
+
+\subsection{Jet identification}
+%??PF, PU and lepton cleaning
+
+\subsection{Jet energy corrections}
+%??JEC
+
+\section{Missing transverse energy}
+\label{sec:MET}
+%??Describe MET reconstruction
 %??Relevance to analysis
 %??Algorithm
 %??Performance
