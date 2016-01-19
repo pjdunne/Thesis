@@ -41,24 +41,38 @@ The performance of the vertex reconstruction algorithm has been measured using e
 \section{Particle Flow}
 \label{sec:pf}
 %Describe pf reconstruction, Relevance to analysis
-\ac{PF} is an algorithm used by CMS to combine information from different sub-detectors into individual particles~\cite{CMS-PAS-PFT-09-001,CMS-PAS-PFT-10-001,CMS-PAS-PFT-10-002}. This approach is particularly beneficial for CMS as it allows the accurate momentum measurements of the inner tracker, and the excellent energy measuremetns and granularity of the \ac{ECAL} to be combined and used to improve the energy measurement of objects seen in the \ac{HCAL}. The \ac{PF} algorithm classifies particles as charged hadrons, neutral hadrons, photons, muons and electrons. These particles can then further be used to calculate the \MET, as input to the jet reconstruction, for reconstructing taus and to calculate the isolation of leptons.
+\ac{PF} is an algorithm used by CMS to combine information from different sub-detectors into individual particles~\cite{CMS-PAS-PFT-09-001,CMS-PAS-PFT-10-001,CMS-PAS-PFT-10-002}. This approach is particularly beneficial for CMS as it allows the accurate momentum measurements of the inner tracker, and the excellent energy measuremetns and granularity of the \ac{ECAL} to be combined and used to improve the energy measurement of objects seen in the \ac{HCAL}. The \ac{PF} algorithm classifies particles as charged hadrons, neutral hadrons, photons, muons and electrons. This set of particles, referred to as \ac{PF} candidates, can then further be used to calculate the \MET, as input to the jet reconstruction, for reconstructing taus and to calculate the isolation of leptons.
 
 %Algorithm
-The \ac{PF} algorithm starts with tracks, reconstructed as described in \SectionRef{sec:tracks}, and calorimeter clusters, which are reconstructed separately in each sub-detector of the calorimeter system. Cluster-track pairs whose cluster position and track trajectory are compatible are then linked together to identify charged particles. Linking between tracks from the inner tracker and the muon system is also performed to identify muons. The information from tracks with associated \ac{ECAL} clusters, i.e. those compatible with electrons, is further used to search for clusters compatible with bremsstrahlung photons having been radiated from the track, this is described further in \SectionRef{sec:electrons}.
+The \ac{PF} algorithm starts with tracks, reconstructed as described in \SectionRef{sec:tracks}, and calorimeter clusters, which are reconstructed separately in each sub-detector of the calorimeter system. Clustering starts with seeds, which are the calorimeter cells which have the local maximum energy. Cells adjacent to the cluster are added if they have energy more than twice the expected calorimeter noise. Cluster-track pairs whose cluster position and track trajectory are compatible are then linked together to identify charged particles. Linking between tracks from the inner tracker and the muon system is also performed to identify muons. The information from tracks with associated \ac{ECAL} clusters, i.e. those compatible with electrons, is further used to search for clusters compatible with bremsstrahlung photons having been radiated from the track, this is described further in \SectionRef{sec:electrons}.
 
 Once electrons, muons and charged hadrons have been identified, further calorimeter clusters are identified as neutral hadrons or photons if they are in the \ac{HCAL} or \ac{ECAL} respectively. Excess energy in a calorimeter cluster compared to that expected from associated tracks also allows the presence of neutral particles that would otherwise not have been identified to be determined.
 
 \section{Electrons}
 \label{sec:electrons}
-%??Describe electron reconstruction
-As described in \SectionRef{sec:electrons}, electrons are reconstructed by matching \ac{ECAL} deposits with tracks from the inner tracker. 
-%??supercluster forming
-%??gsf algorithm
-%??ID
+%Describe electron reconstruction
+As described in \SectionRef{sec:pf}, electrons are reconstructed by matching \ac{ECAL} deposits with tracks from the inner tracker. This process is complicated by the fact that electrons can lose significant amounts of energy, in the form of bremsstrahlung photons, as they traverse the inner tracker. Approximately 35\% of electrons lose at least 70\% of their initial energy in this way~\cite{Baffioni:2006cd}. The bremsstrahlung photons often convert to electron-positron pairs which are then further spread in the $\phi$ direction by CMS's solenoidal magnetic field. The electron reconstruction, which is described in detail in Ref.~\cite{1748-0221-10-06-P06005}, employs so-called ``supercluster'' algorithms to combine \ac{ECAL} deposits from both the intial electron and the bremsstrahlung photons.
 
-%??Relevance to analysis
-%??Algorithm
-%??Performance
+%supercluster forming and tracking
+Due to their different geometries, different supercluster algorithms are used in the barrel and endcaps. In the barrel the ``hybrid'' clustering algorithm is used, this begins with seed crystals which are the crystals with local maximum energy which is greater than 1\GeV. Arrays of 5$\times$1 crystals in $\eta\times\phi$ are then added around the seed crystal if they are within 17 crystals of it in either direction in$\phi$ and have energy greater than 0.1\GeV. Contiguous arrays are grouped into clusters. The final supercluster consists of all clusters with energy greater than 0.35\GeV.
+
+In the endcap the ``multi-5$\times$5'' algorithm is used. This algorigthm also starts with seed crystals, in this case those with energy higher than their four direct neighbours and also greater than 0.18 \GeV. Clusters are then made up of the 5$\times$5 square of crystals centered on the seed. Individual clusters whose seeds are within 0.07 in $\eta$ and 0.3 radians in $\phi$ of each other are grouped and kept as a supercluster if their total energy is greater than 1\GeV. A reference position for the supercluster is taken to be the energy-weighted average position of all the clusters belonging to it, and the maximum difference in $\phi$ between any cluster and ther reference position is taken to be the size of the cluster in $\phi$. The individual clusters in a supercluster are then extrapolated to the preshower detector. Any preshower deposits within the supercluster's $\phi$ size plus 0.15 radians in $\phi$ and within $0.15$ in $\eta$ of the extrapolated cluster positions are added to the supercluster.
+
+The energy-weighted average position and energy of the final supercluster are then used to extrapolate the electron's track back to the innermost layers of the tracker for both electron charge hypotheses. This extrapolation is then matched to hits within a wide $\phi - z$ window of it. This matched hit is used to update the estimated electron trajectory so that a hit in the second layer of the inner tracker can be searched for in a much narrower window. Hits in both the first and second layers compatible with a supercluster are then used as seeds for dedicated electron track reconstruction, performed using a \ac{GSF} algorithm~\cite{GSFalgorithm}, which performs better for tracks with significant energy loss.
+
+%ID
+Electron identification criteria are applied to reject fake electrons caused by other particles such as pions. The variables used include:
+\begin{itemize}
+\item $\Delta\eta_{in}$ and $\Delta\phi_{in}$, the $\eta$ and $\phi$ distances between the electron track position extrapolated to the \ac{ECAL} and the supercluster position,
+\item $\sigma_{i\eta i\eta}$, the energy-weighted $\eta$ width of the cluster,
+\item $H/E$, the ratio between the energy deposited in the \ac{HCAL} and in the \ac{ECAL} in the region of the electron's seed cluster,
+\end{itemize}
+all of these are generally lower for real prompt electrons.
+
+We also require the electrons to be isolated, i.e. have a low amount of other activity present around them in the detector. The variable used for this requirement is the effective area corrected \ac{PF} isolation, $I_{PF}$. It is defined as the sum of the $p_{T}$ of the \ac{PF} candidates within a cone of $\Delta R<0.3$ minus the expected contribution from \ac{PU} across the area of the electron.
+
+%Performance
+In the \ac{VBF} invisible Higgs searches described later in this thesis two sets of requirements on the above variables are used to identify electrons. The ``veto'' set of identification criteria is looser and is used to veto events containing electrons. The other ``tight'' set of criteria is stricter and is used when it is wished to study events containing electrons. The veto (tight) criteria have an efficiency of 93\% (85\%) for reconstructing central electrons with $p_{T}>50$ GeV~\cite{eleeff}.
 
 \section{Muons}
 \label{sec:muons}
@@ -76,14 +90,30 @@ As it is a hadron collider quarks and gluons are very common at the \LHC. Furthe
 %??Performance
 
 \subsection{Jet clustering}
-%??IR and colinear safety
-%??anti-kt
+%IR and colinear safety and sequential recombination
+Jet clustering algorithms take the many different types of particles that are expected to be present in the particle showers from hadronisation, and combine them into jets~\cite{Salam:2009jx}. It is important that jet clustering algorithms do not produce different reconstructed jets if a jet undergoes soft QCD radiation (called infrared unsafety) or if a gluon in it splits in two (called colinear unsafety). The algorithm used by CMS is a so-called sequential recombination algorithm. This class of algorithms requires a metric for calculating the distance between particles in the event, $d_{ij}$, and a metric for calculating the distance to a nominal beamline particle, $d_{iB}$ to be defined. The algorithms then proceed as follows:
+\begin{itemize}
+\item[1] Calculate the distance between all pairs of particles in the event including the nominal beamline,
+\item[2] If the smallest distance is a $d_{ij}$ combine $i$ and $j$ together into a single new particle and return to step 1.
+\item[3] If the smallest distance is a $d_{iB}$, consider $i$ to be a final state jet and remove it from the list of particles. Return to step 1.
+\item[4] Stop when no particles remain.
+\end{itemize}
+
+%anti-kt algorithm 
+The particular algorithm used by CMS is the infrared and colinear safe anti-$k_{T}$ algorithm, its distances are defined as:
+\begin{align}
+d_{ij}&=\rm{min}\left(p_{Ti}^{-2},p_{Tj}^{-2}\right)\frac{\Delta R_{ij}^{2}}{R^{2}},\\
+d_{iB}&=p_{Ti}^{-2},
+\end{align}
+where $\Delta R_{ij}$ is the distance in the $\eta-\phi$ plane between particles $i$ and $j$ and $R$ is a parameter of the algorithm analogous to the maximum radius of the jet. This algorithm starts by clustering around the hardest particle in a region and therefore usually produces circular jets, with easy to calculate areas.
+
+The anti-$k_{T}$ algorithm is implemented using the \textsc{FastJet} package with the \ac{PF} candidates, described in \SectionRef{sec:pf}, used as input~\cite{Cacciari:fastjet1}. For analyses using data from \LHC Run 1 (Run 2) $R$ of 0.5 (0.4) is used.
 
 \subsection{Jet identification}
-%??PF, PU and lepton cleaning
+%??PF , PU \cite{CMS-PAS-JME-13-005} \cite{TMVA} for pu id bdt, and lepton cleaning ref previous sections
 
 \subsection{Jet energy corrections}
-%??JEC
+%??JEC \cite{CMS-JME-10-011}
 
 \section{Missing transverse energy}
 \label{sec:MET}
