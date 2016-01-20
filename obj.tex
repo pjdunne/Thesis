@@ -51,7 +51,7 @@ Once electrons, muons and charged hadrons have been identified, further calorime
 \section{Electrons}
 \label{sec:electrons}
 %Describe electron reconstruction
-As described in \SectionRef{sec:pf}, electrons are reconstructed by matching \ac{ECAL} deposits with tracks from the inner tracker. This process is complicated by the fact that electrons can lose significant amounts of energy, in the form of bremsstrahlung photons, as they traverse the inner tracker. Approximately 35\% of electrons lose at least 70\% of their initial energy in this way~\cite{Baffioni:2006cd}. The bremsstrahlung photons often convert to electron-positron pairs which are then further spread in the $\phi$ direction by CMS's solenoidal magnetic field. The electron reconstruction, which is described in detail in Ref.~\cite{1748-0221-10-06-P06005}, employs so-called ``supercluster'' algorithms to combine \ac{ECAL} deposits from both the intial electron and the bremsstrahlung photons.
+As described in \SectionRef{sec:pf}, electrons are reconstructed by matching \ac{ECAL} deposits with tracks from the inner tracker. This process is complicated by the fact that electrons can lose significant amounts of energy, in the form of bremsstrahlung photons, as they traverse the inner tracker. Approximately 35\% of electrons lose at least 70\% of their initial energy in this way~\cite{Baffioni:2006cd}. The bremsstrahlung photons often convert to electron-positron pairs which are then further spread in the $\phi$ direction by CMS's solenoidal magnetic field. The electron reconstruction, which is described in detail in \ReferenceRef{1748-0221-10-06-P06005}, employs so-called ``supercluster'' algorithms to combine \ac{ECAL} deposits from both the intial electron and the bremsstrahlung photons.
 
 %supercluster forming and tracking
 Due to their different geometries, different supercluster algorithms are used in the barrel and endcaps. In the barrel the ``hybrid'' clustering algorithm is used, this begins with seed crystals which are the crystals with local maximum energy which is greater than 1\GeV. Arrays of 5$\times$1 crystals in $\eta\times\phi$ are then added around the seed crystal if they are within 17 crystals of it in either direction in$\phi$ and have energy greater than 0.1\GeV. Contiguous arrays are grouped into clusters. The final supercluster consists of all clusters with energy greater than 0.35\GeV.
@@ -96,6 +96,7 @@ As it is a hadron collider quarks and gluons are very common at the \LHC. Furthe
 %??Performance
 
 \subsection{Jet clustering}
+\label{sec:jetclustering}
 %IR and colinear safety and sequential recombination
 Jet clustering algorithms take the many different types of particles that are expected to be present in the particle showers from hadronisation, and combine them into jets~\cite{Salam:2009jx}. It is important that jet clustering algorithms do not produce different reconstructed jets if a jet undergoes soft QCD radiation (called infrared unsafety) or if a gluon in it splits in two (called colinear unsafety). The algorithm used by CMS is a so-called sequential recombination algorithm. This class of algorithms requires a metric for calculating the distance between particles in the event, $d_{ij}$, and a metric for calculating the distance to a nominal beamline particle, $d_{iB}$ to be defined. The algorithms then proceed as follows:
 \begin{itemize}
@@ -116,6 +117,7 @@ where $\Delta R_{ij}$ is the distance in the $\eta-\phi$ plane between particles
 The anti-$k_{T}$ algorithm is implemented using the \textsc{FastJet} package with the \ac{PF} candidates, described in \SectionRef{sec:pf}, used as input~\cite{Cacciari:fastjet1}. For analyses using data from \LHC Run 1 (Run 2) $R$ of 0.5 (0.4) is used.
 
 \subsection{Jet identification}
+\label{sec:jetid}
 %PF , PU , and lepton cleaning ref previous sections
 In order to reject jets that are badly reconstructed or just due to detector noise, identification criteria are imposed on the jets reconstructed by the above algorithm. These requirements are that:
 \begin{itemize}
@@ -131,8 +133,9 @@ In addition to jets from detector noise, it is also possible for the jet reconst
 Finally, jets which are within 0.5 in the $\eta-\phi$ plane of any veto electron, defined in \SectionRef{sec:electrons} or veto muon, defined in \SectionRef{sec:muons} are vetoed, to avoid using jets which are due to misreconstructed leptons.
 
 \subsection{Jet energy corrections}
+\label{sec:jec}
 %??JEC
-The energy of the jets clustered and identified by the CMS jet reconstruction often does not match the energy of the particle that initiated the jet. This can have many causes such as additional energy from \ac{PU}, miscalibration of the energy response of the calorimeters or energy deposited in uninstrumented areas of the detector. To correct for these mismatches a correction to the jet energy is applied that has the following functional form and is described in detail in Ref.~\cite{CMS-JME-10-011}: 
+The energy of the jets clustered and identified by the CMS jet reconstruction often does not match the energy of the particle that initiated the jet. This can have many causes such as additional energy from \ac{PU}, miscalibration of the energy response of the calorimeters or energy deposited in uninstrumented areas of the detector. To correct for these mismatches a correction to the jet energy is applied that has the following functional form and is described in detail in \ReferenceRef{CMS-JME-10-011}: 
 \begin{equation}
   p_{\mu}^{\rm{cor}}=C_{\rm{offset}}\left(p_{T}^{\rm{raw}}\right)\cdot C_{\rm{rel}}\left(\eta\right)\cdot C_{\rm{abs}}\left(p_{T}'\right)\cdot C_{\rm{res}}\left(p_{T}'',\eta\right)\cdot p_{\mu}^{\rm{raw}}.
 \end{equation}
@@ -154,10 +157,24 @@ Finally $C_{\rm{res}}$, which is applied only to data and not \ac{MC}, corrects 
 \section{Missing transverse energy}
 \label{sec:MET}
 %??Describe MET reconstruction
-%??Relevance to analysis
-%??Algorithm
-%??Performance
+Particles which interact only weakly with normal matter such as neutrinos and hypothetical \ac{DM} particles will pass through the CMS detector without interacting. The only signature that they leave is a momentum imbalance between the visible particles in an event. The high hermeticity of the CMS detector allows this imbalance, referred to as \MET, to be measured accurately. As the analyses described in this thesis are searches for invisibly decaying Higgs bosons, the measurement of \MET is crucial.
 
+%??Algorithm
+The CMS \MET reconstruction algorithm defines the \MET as the negative vectorial sum of the $p_{T}$ of all \ac{PF} candidates~\cite{CMS-PAS-JME-12-002}. For processes such as \PZ boson decays to muon pairs or $\gamma$+jets there should be no \MET as all the decay products are visible. However, as can be seen from \FigureRef{fig:metresponse}, these events often still appear to have \MET due to resolution of the $p_{T}$ measurements of the various objects making up the \ac{PF} candidates, primarily the jets which are numerous and do not have as good resolution as other objects.
+
+\begin{figure}
+  \includegraphics[width=0.6\largefigwidth]{plots/obj/metzmumu.pdf}
+  \includegraphics[width=0.6\largefigwidth]{plots/obj/metgammajets.pdf}
+  \caption{Distributions of the uncorrected \MET in $\PZ\rightarrow\mu\mu$ events (left) and $\gamma$+jets events (right) in $\sqrt{s}=8$\TeV\, data and simulation. The shaded band corresponds to the systematic uncertainty~\cite{CMS-PAS-JME-12-002}.}
+  \label{fig:metresponse}
+\end{figure}
+
+The jet energy corrections, described in \SectionRef{sec:jec}, alter the energy of jets, and in doing so alter the total energy present in the event, these changes are propagated to the \MET. Furthermore, as charged particle flow candidates can be determined to be from the \ac{PV} or a \ac{PU} vertex it is also possible to correct the \MET for \ac{PU} contributions. This correction uses the ratio of the energy response of CMS for charged and neutral particles to calculate the neutral \ac{PU} contribution can be estimated from the charged \ac{PU} contribution.
+
+In addition to the above corrections filters are applied to reject events where detector or beam effects lead to a high probability of spurious \MET. Examples of the effects which are removed with these filters include particles directly hitting the photodetectors in the \ac{ECAL} or significant energy deposits from the halo of particles surrounding the \LHC beam.
+
+%??METNOMU
+In the \ac{VBF} invisible Higgs boson decay searches described below events with \PZ boson decays to muons are used to estimate the rate of \PZ boson decays to neutrinos. As part of this estimation the muons from the \PZ boson decay are ignored when calculating the \MET, the resulting variable is referred to as \METnoMU.
 \section{Taus}
 \label{sec:taus}
 %??Describe tau reconstruction

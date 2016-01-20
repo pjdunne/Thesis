@@ -882,11 +882,11 @@
 \DeclareRobustCommand{\thesisverysubsection}[1]{\thesistypeout\verysubsection{#1}}
 
 %% In-document references
-\DeclareRobustCommand{\Chapter}{Chapter\xspace}
-\DeclareRobustCommand{\Section}{Section\xspace}
-\DeclareRobustCommand{\Appendix}{Appendix\xspace}
-\DeclareRobustCommand{\Figure}{Figure\xspace}
-\DeclareRobustCommand{\Table}{Table\xspace}
+\DeclareRobustCommand{\Chapter}{chapter\xspace}
+\DeclareRobustCommand{\Section}{section\xspace}
+\DeclareRobustCommand{\Appendix}{appendix\xspace}
+\DeclareRobustCommand{\Figure}{figure\xspace}
+\DeclareRobustCommand{\Table}{table\xspace}
 \DeclareRobustCommand{\Equation}{equation\xspace}
 \DeclareRobustCommand{\Reference}{reference\xspace}
 %% Standard way to refer to a page number
