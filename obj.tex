@@ -69,17 +69,23 @@ Electron identification criteria are applied to reject fake electrons caused by 
 \end{itemize}
 all of these are generally lower for real prompt electrons.
 
-We also require the electrons to be isolated, i.e. have a low amount of other activity present around them in the detector. The variable used for this requirement is the effective area corrected \ac{PF} isolation, $I_{PF}$. It is defined as the sum of the $p_{T}$ of the \ac{PF} candidates within a cone of $\Delta R<0.3$ minus the expected contribution from \ac{PU} across the area of the electron.
+We also require the electrons to be isolated, i.e. have a low amount of other activity present around them in the detector. The variable used for this requirement is the effective area corrected \ac{PF} isolation, $I_{PF}$. In Run 1 (Run 2) it was defined as the sum of the $p_{T}$ of the \ac{PF} candidates within a cone of $\Delta R<0.4(0.3)$ minus the expected contribution from \ac{PU} across the area of the electron.
 
 %Performance
 In the \ac{VBF} invisible Higgs searches described later in this thesis two sets of requirements on the above variables are used to identify electrons. The ``veto'' set of identification criteria is looser and is used to veto events containing electrons. The other ``tight'' set of criteria is stricter and is used when it is wished to study events containing electrons. The veto (tight) criteria have an efficiency of 93\% (85\%) for reconstructing central electrons with $p_{T}>50$ GeV~\cite{eleeff}.
 
 \section{Muons}
 \label{sec:muons}
-%??Describe muon reconstruction
-%??Relevance to analysis
-%??Algorithm
-%??Performance
+%Describe muon reconstruction %Relevance to analysis
+Due to their relatively high mass and lack of strong force interactions, most muons deposit very little energy in the CMS calorimeters and thus leave the detector after passing through the muon system. As described in \SectionRef{sec:pf}, this means that muons can be reconstructed by searching for compatible tracks from the inner tracker and the muon system. The approach of requiring both inner tracker and muon system tracks greatly improves the discrimination between muons and hadronic activity and is referred to as ``global'' muon reconstruction.
+
+%Algorithm
+The CMS global muon reconstruction algorithm starts with each track in the muon system and searches for compatible tracks in the inner tracker ~\cite{MuonReco}. If a compatible inner tracker track is found, a track fit, similar to that described in section \SectionRef{sec:tracks}, is performed using the hits in both the inner tracker and muon system. The fit accounts for energy losses as the muon traverses the detector. It is found that for muons with $p_{T}>200$\GeV\, the global-muon fit is better than that from the tracker only. However, due to the increased hadron discrimination described above all muons used for analyses in this thesis are required to have both inner tracker and muon system tracks. As with electrons it is also required that muons are isolated. The same isolation variable, $I_{PF}$, as described in \SectionRef{sec:electrons} is used for muon isolation. Global muon reconstruction is sufficient for use in vetoing events containing muons, and muons passing the above reconstruction are referred to as ``veto'' muons.
+
+Where it is wished to study events containing electrons, further identification criteria are used. This is because whilst global muon reconstruction removes most hadrons, some so-called ``punch through'' hadrons, which are energetic enough to travel all the way through the CMS calorimeters, can still be reconstructed as muons. Furthermore, it is desirable to separate real but non-prompt muons from hadron decay, from prompt muons from the hard scatter or tau decay. The identification consists of requiring a high quality global muon track fit, that the muon's track passes through at least at least 5 inner tracker layers at least one being a pixel layer and that it includes at least two hits in the muon system, and that there is at least one muon system track segment present. Muons passing these additional requirements are referred to as ``tight'' muons.
+
+%Performance
+The efficiency of veto (tight) muon reconstruction has been found to be 98-99\% (96-98\%) depending on the $\eta$ of the muon, for muons with $p_{T}>10$\GeV. This efficiency measurement was performed using events with $J/\psi/PZ$ decays to muon pairs.
 
 \section{Jets}
 \label{sec:jets}
@@ -122,7 +128,7 @@ Real jets pass these requirements with over 99\% efficiency ~\cite{ARTICLE:CMSAN
 
 In addition to jets from detector noise, it is also possible for the jet reconstruction to include particles that are not from the \ac{PV}, but instead come from \ac{PU} vertices. This can lead either to an overestimation of the energy of a real jet from the \ac{PV}, or to fake jets made up of energy from several vertices. The CMS pileup jet identification procedure~\cite{CMS-PAS-JME-13-005} combines several variables sensitive to the pileup contribution in a jet, such as information on how the $p_{T}$ of the jet is shared between its constituents and the constituents tracking information, into a \ac{BDT}~\cite{TMVA}. Simulated real jets from quarks pass this identification with 88-99\% efficiency depending on how central they are, while jets from pile-up are rejected with 40-87\% efficiency.
 
-Finally, jets which are within 0.5 in the $\eta-\phi$ plane of any veto electron, defined in \SectionRef{sec:electrons} or loose muon, defined in \SectionRef{sec:muons} are vetoed, to avoid using jets which are due to misreconstructed leptons.
+Finally, jets which are within 0.5 in the $\eta-\phi$ plane of any veto electron, defined in \SectionRef{sec:electrons} or veto muon, defined in \SectionRef{sec:muons} are vetoed, to avoid using jets which are due to misreconstructed leptons.
 
 \subsection{Jet energy corrections}
 %??JEC
