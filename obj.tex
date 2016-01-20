@@ -110,11 +110,41 @@ where $\Delta R_{ij}$ is the distance in the $\eta-\phi$ plane between particles
 The anti-$k_{T}$ algorithm is implemented using the \textsc{FastJet} package with the \ac{PF} candidates, described in \SectionRef{sec:pf}, used as input~\cite{Cacciari:fastjet1}. For analyses using data from \LHC Run 1 (Run 2) $R$ of 0.5 (0.4) is used.
 
 \subsection{Jet identification}
-%??PF , PU \cite{CMS-PAS-JME-13-005} \cite{TMVA} for pu id bdt, and lepton cleaning ref previous sections
+%PF , PU , and lepton cleaning ref previous sections
+In order to reject jets that are badly reconstructed or just due to detector noise, identification criteria are imposed on the jets reconstructed by the above algorithm. These requirements are that:
+\begin{itemize}
+\item The jet contains at least two \ac{PF} candidates.
+\item The total jet energy contribution from neutral hadrons must be less than 99\% as must that from photons.
+\item The jet has contributions from both the \ac{ECAL} and \ac{HCAL}.
+\item Jets with $\eta$ such that tracking information is available must have at least one charged object which contributes to the jet's energy and less than 99\% of their energy from electrons.
+\end{itemize}
+Real jets pass these requirements with over 99\% efficiency ~\cite{ARTICLE:CMSAN-14-227}.
+
+In addition to jets from detector noise, it is also possible for the jet reconstruction to include particles that are not from the \ac{PV}, but instead come from \ac{PU} vertices. This can lead either to an overestimation of the energy of a real jet from the \ac{PV}, or to fake jets made up of energy from several vertices. The CMS pileup jet identification procedure~\cite{CMS-PAS-JME-13-005} combines several variables sensitive to the pileup contribution in a jet, such as information on how the $p_{T}$ of the jet is shared between its constituents and the constituents tracking information, into a \ac{BDT}~\cite{TMVA}. Simulated real jets from quarks pass this identification with 88-99\% efficiency depending on how central they are, while jets from pile-up are rejected with 40-87\% efficiency.
+
+Finally, jets which are within 0.5 in the $\eta-\phi$ plane of any veto electron, defined in \SectionRef{sec:electrons} or loose muon, defined in \SectionRef{sec:muons} are vetoed, to avoid using jets which are due to misreconstructed leptons.
 
 \subsection{Jet energy corrections}
-%??JEC \cite{CMS-JME-10-011}
+%??JEC
+The energy of the jets clustered and identified by the CMS jet reconstruction often does not match the energy of the particle that initiated the jet. This can have many causes such as additional energy from \ac{PU}, miscalibration of the energy response of the calorimeters or energy deposited in uninstrumented areas of the detector. To correct for these mismatches a correction to the jet energy is applied that has the following functional form and is described in detail in Ref.~\cite{CMS-JME-10-011}: 
+\begin{equation}
+  p_{\mu}^{\rm{cor}}=C_{\rm{offset}}\left(p_{T}^{\rm{raw}}\right)\cdot C_{\rm{rel}}\left(\eta\right)\cdot C_{\rm{abs}}\left(p_{T}'\right)\cdot C_{\rm{res}}\left(p_{T}'',\eta\right)\cdot p_{\mu}^{\rm{raw}}.
+\end{equation}
+Each $C$ in the equation represents a correction, $p_{\mu}^{\rm{cor}}$ is the corrected jet four-momentum, $p_{\mu}^{\rm{raw}}$ is the jet four-momentum before correction, $p_{T}'$ is the $p_{T}$ after the offset and relative correction, $C_{\rm{offset}}$ and $p_{T}''$ is the $p_{T}$ after all but the residual correction, $C_{\rm{abs}}$.
 
+The purpose of $C_{\rm{offset}}$ is to remove energy from the jet which is not due to activity from the \ac{PV} such as detector noise and \ac{PU}. The correction is calculated on a jet-by-jet basis by multiplying the median $p_{T}$ density of the event the jet is in by the jet's area. 
+
+The relative correction, $C_{\rm{rel}}$, serves to make the jet energy response uniform in $\eta$. \ac{MC} truth information and the dijet $p_{T}$ balance method, where the $p_{T}$ of a well measured jet in the central region of the detector is compared to a second jet at a different $\eta$ in events with only two jets, in data are used to calculate $C_{\rm{rel}}$.
+
+The absolute correction $C_{\rm{abs}}$, makes the jet energy response uniform in $p_{T}$. The correction is calculated in \ac{MC} with \ac{MC} truth information and in data by using \PZ$/\gamma$+jets events, where the transverse momentum of the jets should balance the \PZ$/\gamma$. Both \PZ bosons which decay leptonically and photons have very good energy resolution, so any imbalances can be assumed to be due to jet mismeasurement, and a correction calculated.
+
+Finally $C_{\rm{res}}$, which is applied only to data and not \ac{MC}, corrects for residual differences seen in both $p_{T}$ and $\eta$ response between data and \ac{MC}. The total uncertainty on the overall jet energy correction is taken to be the sum in quadrature of the uncertainties on the individual corrections. The correction and its uncertainty are shown in \FigureRef{fig:jec}, the other two types of jets in the figure are not used in analyses described in this thesis and so are not discused.
+
+\begin{figure}
+  \includegraphics[width=1.2\largefigwidth]{plots/obj/jec.png}
+  \caption{Total jet-energy-correction factor as a function of jet $\eta$ for jets with $p_{T}=50$\GeV\, (left) and $p_{T}=200$\GeV\, (right), for several types of jet reconstruction used at CMS. The bands indicate the corresponding uncertainty~\cite{CMS-JME-10-011}.}
+  \label{fig:jec}
+\end{figure}
 \section{Missing transverse energy}
 \label{sec:MET}
 %??Describe MET reconstruction
