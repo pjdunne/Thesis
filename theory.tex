@@ -196,7 +196,7 @@ The fermion's mass is then $\frac{k_{f}v}{\sqrt{2}}$.
 %??Detail Higgs production and decays in order to motivate searching for invisible decays in the VBF channel
 %??Mention proportionality of higgs coupling and mass
 %??DISCUSS HIGGS
-%??Introduce cross-section
+%??Introduce cross-section and events
 %??VBF with two forward jets
 %??Introduce jets and MET
 \subsection{Challenges for the SM}
@@ -216,17 +216,25 @@ The fermion's mass is then $\frac{k_{f}v}{\sqrt{2}}$.
 
 \section{Statistics of exclusion limits}
 %??introduce cls and limit setting
-Limits on the parameters of theoretical models are presented throughout this thesis. The technique used to set these limits is based on the CL$_{S}$ statistic and was developed by the LHC Higgs Combination Group and is used by both the ATLAS and CMS experiments~\cite{ATL-PHYS-PUB-2011-011}. 
+Limits on the parameters of theoretical models are presented throughout this thesis. The limits are set by performing a hypothesis test to discriminate between a null, background physics model only, hypothesis, $b$ and a test hypothesis, the signal process, $s$, plus background model. The particular procedure used is based on the CL$_{S}$ statistic and was developed by the LHC Higgs Combination Group and is used by both the ATLAS and CMS experiments~\cite{ATL-PHYS-PUB-2011-011}. 
 
-%??update the below
-The CL$_{s}$ statistic is a function of the profile likelihood ratio, q$_{\mu}$, defined as:
+The procedure starts by defining a likelihood function, $\mathcal{L}$, which quantifies how likely a given observation is given the expectation under a given hypothesis. $\mathcal{L}$ takes the form:
 \begin{equation}
+  \label{eq:likelihood}
+  \mathcal{L}=\displaystyle\prod_{i}Poisson\left(n_{i}|\nu_{i}\left(\mu,\theta\right)\right)\cdot\prod_{j}Constraint\left(\theta_{j},\bar{\theta}\right),
+\end{equation}
+where the first term is the contribution from the Poisson probability to observe $n_{i}$ events in each analysis category, $i$, considered given a predicted number of events from the hypothesis, $\nu_{i}$. $\nu_{i}$ is a function of a signal strength parameter, $\mu$, which in the case of the signal hypothesis being an SM Higgs boson is 1 for the SM and 0 for the background only case, and the ``nuisance paramters,'' $\theta$, which account for the uncertainties on parameters of the signal and background models and any correlations between them. The second term in \EquationRef{eq:likelihood} represents the constraints on the allowed values of these nuisance parameters, with $\bar{\theta}$ being the best estimate of $\theta$ obtained from external measurements. The shape of the constraint function varies depending on the nuisance parameter it represents. For example, uncertainties on the event yield in a category are usually modelled with log-normal constraints, which exclude negative values of the event yield.
+
+Profile likelihood ratios, q$_{\mu}$, are then calculated, which are defined as:
+\begin{equation}
+  \label{eq:proflikelihood}
   q_{\mu} = -2 \ln\frac{\mathcal{L}(obs|\mu \cdot s + b,\hat{\theta}_{\mu})}{\mathcal{L}(obs|\hat{\mu} \cdot s + b,\hat{\theta})}\,,
 \end{equation}
-where $\mathcal{L}$ is the likelihood, $obs$ is the observation, $s$ is the SM expected Higgs signal and b is the background. $\mu$ is a signal strength modifier which is 1 for a SM Higgs boson and 0 for the background only case. $\theta$ are ``nuisance parameters'', such as systematic uncertainties, which account for the uncertainties on $s$ and $b$ and any correlations between them. $\hat{\mu}$ and $\hat{\theta}$ are the values of $\theta$ and $\mu$ where the likelihood, $\mathcal{L}$, is maximised, and $\hat{\theta}_{\mu}$ is the $\theta$ that maximises the likelihood for a given $\mu$. The profile likelihood ratio therefore describes how likely it is to observe a signal strength equal to or higher than $\mu$ compared to the most likely signal strength.
+where $obs$ is the observation, and $\hat{\mu}$ and $\hat{\theta}$ are the values of $\theta$ and the $\mu$ where the likelihood is maximised given the constraint $0 \geqslant \hat{\mu} \geqslant \mu$. $\hat{\theta}_{\mu}$ are the values of the nuisance parameters that maximise the likelihood for a given $\mu$. The profile likelihood ratio therefore describes how likely it is to observe a signal strength equal to or higher than $\mu$ compared to the most likely signal strength.
 
-The definition of CL$_{s}$ is
+Finally the CL$_{s}$ statistic itself is defined as:
 \begin{equation}
+  \label{eq:cls}
   CL_{s} = \frac{P(q_{\mu}\geqslant q_{\mu}^{obs} | \mu \cdot s + b)}{P(q_{\mu}\geqslant q_{\mu}^{obs}|b)}\,,
 \end{equation}
-Where the method of determining the probability, $P$, varies. The region in which a signal strength $\mu \cdot s$ is excluded with $1 - \alpha$ confidence is then the region for which CL$_{s}$ is less than or equal to $\alpha$, i.e. when the background hypothesis is $1/\alpha$ times more likely than the signal hypothesis we exclude the signal hypothesis with $1 - \alpha$ confidence.
+Where the probability $P$ of a given $q_{\mu}$ is calculated using the asymptotic limit approximation~\cite{Cowan:2010js}. The region in which a signal strength $\mu \cdot s$ is excluded with $1 - \alpha$ confidence is then the region for which CL$_{s}$ is less than or equal to $\alpha$, i.e. when the signal hypothesis is $\alpha$ times less probably than the background.
