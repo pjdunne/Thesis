@@ -7,6 +7,7 @@
 \usepackage{slashed}
 \usepackage{multirow}
 \usepackage{amssymb}
+\usepackage{import}
 
 %% You can set the line spacing this way
 %\setallspacing{double}
@@ -60,13 +61,13 @@ linkcolor=black
 %% Start the content body of the thesis
 \begin{mainmatter}
   %% Actually, more semantic chapter filenames are better, like "chap-bgtheory.tex"
-  \input{theory}
-  \input{detector}
-  \input{obj}
-  \input{prompt}
-  \input{parked}
-  \input{comb}
-  \input{run2}
+  \import{}{theory}
+  \import{}{detector}
+  \import{}{obj}
+  \import{}{prompt}
+  \import{}{parked}
+  \import{}{comb}
+  \import{}{run2}
 
   %% To ignore a specific chapter while working on another,
   %% making the build faster, comment it out like this:
