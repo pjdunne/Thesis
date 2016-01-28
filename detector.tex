@@ -1,6 +1,5 @@
 \chapter{The \LHC and the \CMS experiment}
 \label{chap:detector}
-
 This chapter introduces the \CMS~\cite{Chatrchyan:2008aa} experiment and the \LHC~\cite{1748-0221-3-08-S08001}. In \SectionRef{sec:lhc} an overview of the \LHC and the chain of accelerators which feed into it is given. This is then followed in \SectionRef{sec:CMSInDetail} by a description of the \CMS experiment focussing on the aspects most relevant to the search for invisibly decaying Higgs bosons.
 
 \section{The \LHC}
@@ -171,7 +170,7 @@ The \ac{RPC}s are gas gaps surrounded by anode and cathode plates with read out 
 \subsection{Trigger system and data processing}
 \label{sec:triggers}
 %Describe trigger system
-The design bunch crossing rate of the \LHC is 40 MHz, and for the data used in this thesis it varied from 20-40 MHz. Since each event consists of approximately 1 MB of data, writing every event to tape would correspond to a data rate of 20-40 TB$/s$ which is not feasible. It is also not feasible for the detector electronics to read out the detector at this frequency. It is therefore necessary to use a trigger system to reduce the event rate and select only the most interesting events.
+The design bunch crossing rate of the \LHC is 40 MHz, and for the data used in this thesis it varied from 20-40 MHz. Since each event consists of approximately 1 MB of data, writing every event to tape would correspond to a data rate of 20-40 TB$/s$ which is not feasible. It is also not feasible for the detector electronics to read out the detector at this frequency. It is therefore necessary to use a trigger system to perform an ``online'' reconstruction and reduce the event rate by selecting only the most interesting events.
 
 The trigger is separated into two stages, the \ac{L1} trigger and the \ac{HLT}. First the \ac{L1} trigger, which is built of custom-designed electronics, reduces the rate to a maximum of 100 kHz. The decision to accept an event in the \ac{L1} trigger or not starts with local information on the energy deposits in the calorimeters and hits in the muon systems, which is stored for all events for 128 bunch crossings. A decision must therefore be made within 128 bunch crossings or the event is discarded. Due to the limited time available and the limited available bandwidth of the data aquisition system, this information is generally not available at the detector's full resolution. After it is collected from the detector the local information is then passed to the regional trigger systems, which generate lists of trigger candidates, such as electrons or jets, ranked by energy and quality. These ranked lists from each region are then passed to the global muon and calorimeter system triggers, which select the highest ranked candidates across the whole detector and give them to the global trigger, which makes a final decision. This process is shown in \FigureRef{fig:l1layout}.
 

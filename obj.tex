@@ -1,7 +1,7 @@
 \chapter{Physics objects and event reconstruction}
 \label{chap:obj}
 %Introduce reconstruction
-This chapter describes the reconstruction of physics objects from data collected by the CMS detector. The invisible Higgs analysis uses a wide range of objects from the jets and \MET that are present in the signal process, to charged leptons that are present in background processes. This range of objects means that information from all subdetectors of CMS must be used. The reconstruction of each object used is described, along with the overarching ``particle flow'' approach to data reconstruction used by CMS.
+The invisible Higgs analysis uses a wide range of objects from the jets and \MET that are present in the signal process, to charged leptons that are present in background processes. This range of objects means that information from all subdetectors of CMS must be used. The reconstruction of each physics object used from data collected by the CMS detector is described in this chapter, along with the overarching ``particle flow'' approach to data reconstruction used by CMS.
 
 \section{Tracks}
 \label{sec:tracks}
@@ -174,7 +174,7 @@ The jet energy corrections, described in \SectionRef{sec:jec}, alter the energy 
 In addition to the above corrections filters, are applied to reject events where detector or beam effects lead to a high probability of spurious \MET. Examples of the effects which are removed with these filters include particles directly hitting the photodetectors in the \ac{ECAL} or significant energy deposits from the halo of particles surrounding the \LHC beam.
 
 %??METNOMU
-In the \ac{VBF} invisible Higgs boson decay searches described below events with \PZ boson decays to muons are used to estimate the rate of \PZ boson decays to neutrinos. As part of this estimation the muons from the \PZ boson decay are ignored when calculating the \MET, the resulting variable is referred to as \METnoMU.
+In the \ac{VBF} invisible Higgs boson decay searches described below events with \PW or \PZ boson decays to muons are used to estimate the rate of some background processes. As part of this estimation the muons from the \PW or \PZ boson decays are ignored when calculating the \MET. The variable \METnoMU, which is the \MET calculated ignoring all veto muons, is used for this estimation.
 \section{Taus}
 \label{sec:taus}
 %??Describe tau reconstruction %??Relevance to analysis
