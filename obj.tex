@@ -72,7 +72,7 @@ All of these variables are generally lower for real prompt electrons.
 We also require the electrons to be isolated, i.e. have a low amount of other activity present around them in the detector. The variable used for this requirement is the effective area corrected \ac{PF} isolation, $I_{PF}$. In Run 1 (Run 2) it was defined as the sum of the \pt of the \ac{PF} candidates within a cone of $\Delta R<0.4(0.3)$ minus the expected contribution from \ac{PU} across the area of the electron.
 
 %Performance
-In the \ac{VBF} invisible Higgs boson decay searches described later in this thesis two sets of requirements on the above variables are used to identify electrons. The ``veto'' set of identification criteria is looser and is used to veto events containing electrons. The other ``tight'' set of criteria is stricter and is used when it is wished to study events containing electrons. The veto (tight) criteria have an efficiency of 93\% (85\%) for reconstructing central electrons with $\pt>50$ GeV~\cite{eleeff}.
+In the \ac{VBF} invisible Higgs boson decay searches described later in this thesis two sets of requirements on the above variables are used to identify electrons. The ``veto'' set of identification criteria is looser and is used to veto events containing electrons. The other ``tight'' set of criteria is stricter and is used when it is wished to study events containing electrons. Tight electrons are required to be separated by more than 0.3 in $\Delta R$ from any veto muons to remove fake electrons from muons. The veto (tight) criteria have an efficiency of 93\% (85\%) for reconstructing central electrons with $\pt>50$ GeV~\cite{eleeff}.
 
 \section{Muons}
 \label{sec:muons}
@@ -98,7 +98,7 @@ As it is a hadron collider, quarks and gluons are very common at the \LHC. Furth
 \subsection{Jet clustering}
 \label{sec:jetclustering}
 %IR and colinear safety and sequential recombination
-Jet clustering algorithms take the many different types of particles that are expected to be present in the particle showers from hadronisation, and combine them into jets~\cite{Salam:2009jx}. It is important that jet clustering algorithms do not produce different reconstructed jets if a jet undergoes soft QCD radiation (called infrared unsafety) or if a gluon in it splits in two (called colinear unsafety). The algorithm used by CMS is a so-called sequential recombination algorithm. This class of algorithms requires a metric for calculating the distance between particles in the event, $d_{ij}$, and a metric for calculating the distance to a nominal beamline particle, $d_{iB}$ to be defined. The algorithms then proceed as follows:
+Jet clustering algorithms take the many different types of particles that are expected to be present in the particle showers from hadronisation, and combine them into jets~\cite{Salam:2009jx}. It is important that jet clustering algorithms do not produce different reconstructed jets if a jet undergoes soft \ac{QCD} radiation (called infrared unsafety) or if a gluon in it splits in two (called colinear unsafety). The algorithm used by CMS is a so-called sequential recombination algorithm. This class of algorithms requires a metric for calculating the distance between particles in the event, $d_{ij}$, and a metric for calculating the distance to a nominal beamline particle, $d_{iB}$ to be defined. The algorithms then proceed as follows:
 \begin{itemize}
 \item[1] Calculate the distance between all pairs of particles in the event including the nominal beamline.
 \item[2] If the smallest distance is a $d_{ij}$ combine $i$ and $j$ together into a single new particle and return to step 1.
@@ -174,7 +174,7 @@ The jet energy corrections, described in \SectionRef{sec:jec}, alter the energy 
 In addition to the above corrections filters, are applied to reject events where detector or beam effects lead to a high probability of spurious \MET. Examples of the effects which are removed with these filters include particles directly hitting the photodetectors in the \ac{ECAL} or significant energy deposits from the halo of particles surrounding the \LHC beam.
 
 %??METNOMU
-In the \ac{VBF} invisible Higgs boson decay searches described below events with \PW or \PZ boson decays to muons are used to estimate the rate of some background processes. As part of this estimation the muons from the \PW or \PZ boson decays are ignored when calculating the \MET. The variable \METnoMU, which is the \MET calculated ignoring all veto muons, is used for this estimation.
+In the \ac{VBF} invisible Higgs boson decay searches described below events with \PW or \PZ boson decays to muons are used to estimate the rate of some background processes. As part of this estimation the muons from the \PW or \PZ boson decays are ignored when calculating the \MET. The variable \METnoMU, which is the \MET calculated ignoring all tight muons, is used for this estimation.
 \section{Taus}
 \label{sec:taus}
 %??Describe tau reconstruction %??Relevance to analysis
