@@ -56,7 +56,7 @@ Finally, the values of the cuts are optimised to provide the best expected limit
 \label{sec:promptbkg}
 As discussed in \SectionRef{sec:promptsel} there are several background processes which are capable of producing VBF-like jets in association with \MET. The analysis' event selection removes most of the events from these processes, however a significant number still remain and it is important to estimate this number precisely. Data-driven methods, where data ``control regions'', which are similar to the signal region, are used to estimate the most significant backgrounds. This data-driven approach is particularly important due to the very stringent kinematic requirements placed on the tag jets, which lead to high uncertainties on estimates taken from \ac{MC} alone. The particular method used to estimate each of the backgrounds will be described in this section.
 
-\subsection{\PW$\rightarrow e\nu$ + jets}%??
+\subsection{\PW$\rightarrow e\nu$ + jets}
 \label{sec:promptwenu}
 The ``$\PW$+jets'' background where the $\PW$ boson decays to an electron and an electron neutrino, $\PW\rightarrow e\nu$ is estimated using single electron events. All aspects of the event selection are the same as those used in the singal region, except for the electron veto, which is replaced with the requirement that there is exactly one tight electron, with $p_{T}>20$ \GeV, in the event and no other veto electrons. These requirements give a single electron control region with events with jets that have the same kinematics as those in the signal region, but which is dominated by $\PW$ boson decays to electrons.
 
@@ -65,7 +65,7 @@ The estimated number of $\PW\rightarrow e\nu$ events in the signal region is the
   \label{eq:wdatabkg}
   N^{S}_{Exp}=\left(N^{C}_{Data}-N^{C}_{Bkg}\right)\cdot\frac{N^{S}_{MC}}{N^{C}_{MC}},
 \end{equation}
-where $N^{S}_{Exp}$ is the number of expected events in the signal region from this background process, $N^{C}_{Data}$ is the number of events seen in the control region in data, $N^{C}_{Bkg}$ is the number of events from other backgrounds in the control region estimated using \ac{MC}, which is expected to be small, and $N^{S}_{MC}$ and $N^{C}_{MC}$ are the numbers of events predicted by \ac{MC} to be in the signal and control regions respectively. The fact that estimations from \ac{MC} are only used in ratios or where they are expected to be small removes any dependence of the final background estimation on the overall rate of the process predicted by \ac{MC}, and instead allows the observed rate in data to be used. The inputs and results of the background estimation are shown in \TableRef{tab:promptwenu}.
+where $N^{S}_{Exp}$ is the number of expected events in the signal region from this background process, $N^{C}_{Data}$ is the number of events seen in the control region in data, $N^{C}_{Bkg}$ is the number of events from other backgrounds in the control region estimated using \ac{MC}, which is expected to be small, and $N^{S}_{MC}$ and $N^{C}_{MC}$ are the numbers of events predicted by \ac{MC} to be in the signal and control regions respectively. The fact that estimations from \ac{MC} are only used in ratios or where they are expected to be small removes any dependence of the final background estimation on the overall rate of the process predicted by \ac{MC}, and instead allows the observed rate in data to be used. It is important that the shape of the variables which differ between the control and signal regions are well modelled by the \ac{MC}. The modelling of the shape of two key variables, the \MET and the electron \pt, are shown in \FigureRef{fig:promptwenu}, where it can be seen that whilst the overall rate is significantly different between data and \ac{MC}, the shape of the distribution is modelled well.  The inputs and results of the background estimation are shown in \TableRef{tab:promptwenu}.
 
 %tables from AN-13-205
 \begin{table}
@@ -83,11 +83,17 @@ where $N^{S}_{Exp}$ is the number of expected events in the signal region from t
   \end{tabular}
 \end{table}
 
-%??plot from AN-13-205
+%plot from AN-12-403
+\begin{figure}
+  \includegraphics[width=.6\largefigwidth]{plots/prompt/AN-12-403-figs/hWEl_WpT.pdf}
+  \includegraphics[width=.6\largefigwidth]{plots/prompt/AN-12-403-figs/hWEl_MET.pdf}
+  \caption{Distributions of the visible $\PW$ boson \pt (i.e. the electron \pt) (left) and \MET (right) in the single electron control region. The hatched region illustrates the systematic uncertainty~\cite{ARTICLE:CMSAN-12-403}.}
+  \label{fig:promptwenu}
+\end{figure}
 
-\subsection{\PW$\rightarrow \mu\nu$ + jets}%??
+\subsection{\PW$\rightarrow \mu\nu$ + jets}
 \label{sec:promptwmunu}
-The method used to estimate the background from $\PW$+jets where the $\PW$ boson decays to a muon and a muon neutrino, $\PW\rightarrow\mu\nu$, is very similar to that used for $\PW\rightarrow e\nu$. A single muon control region is used, again with identical selection to the signal region except for the modification of the lepton veto, in this case by replacing the muon veto with the requirement that there is exactly one tight muon, with \pt$>20$ \GeV, and no other veto muons. \EquationRef{eq:wdatabkg} is then used, with the control region now being the single muon control region, to estimate the number of events from $W\rightarrow\mu\nu$ expected in the signal region. The inputs and results of the background estimation are shown in \TableRef{tab:promptwmunu}.
+The method used to estimate the background from $\PW$+jets where the $\PW$ boson decays to a muon and a muon neutrino, $\PW\rightarrow\mu\nu$, is very similar to that used for $\PW\rightarrow e\nu$. A single muon control region is used, again with identical selection to the signal region except for the modification of the lepton veto, in this case by replacing the muon veto with the requirement that there is exactly one tight muon, with \pt$>20$ \GeV, and no other veto muons. \EquationRef{eq:wdatabkg} is then used, with the control region now being the single muon control region, to estimate the number of events from $W\rightarrow\mu\nu$ expected in the signal region. The inputs and results of the background estimation are shown in \TableRef{tab:promptwmunu}, and distributions of the muon \pt and the \MET in the single muon control region are shown in \FigureRef{fig:promptwmunu}.
 
 %tables from AN-13-205
 \begin{table}
@@ -105,9 +111,15 @@ The method used to estimate the background from $\PW$+jets where the $\PW$ boson
   \end{tabular}
 \end{table}
 
-%??plot from AN-13-205
+%plot from AN-12-403
+\begin{figure}
+  \includegraphics[width=.6\largefigwidth]{plots/prompt/AN-12-403-figs/hWMu_WpT.pdf}
+  \includegraphics[width=.6\largefigwidth]{plots/prompt/AN-12-403-figs/hWMu_MET.pdf}
+  \caption{Distributions of the visible $\PW$ boson \pt (i.e. the muon \pt) (left) and \MET (right) in the single muon control region. The hatched region illustrates the systematic uncertainty~\cite{ARTICLE:CMSAN-12-403}.}
+  \label{fig:promptwmunu}
+\end{figure}
 
-\subsection{\PW$\rightarrow \tau\nu$ + jets}%??
+\subsection{\PW$\rightarrow \tau\nu$ + jets}
 \label{sec:promptwtaunu}
 The background from $\PW$+jets where the $\PW$ boson decays to a tau and a tau neutrino, $\PW\rightarrow\tau\nu$, is estimated using a single tau control region data-driven method. However, in this case the control region used has more differences from the signal region than those used above. The reason for these increased differences is that the reconstruction efficiency for tau leptons is significantly lower than that for electrons or muons, and they are also more likely to be misreconstructed as jets, causing the event to be vetoed by the \ac{CJV}. Altering the signal region by adding a requirement that there is exactly one tau with \pt$>20$ \GeV\, results in a region with only $3.76\pm 1.27$(stat.) \PW+jets events expected. In order to increase the number of events in the single tau control region as well as adding the tau requirement, the \ac{CJV} is also removed. The resulting control region has $29.2\pm 3.61$(stat.) \PW+jets events expected and thus a much lower statistical uncertainty.
 
@@ -116,7 +128,7 @@ The single tau control region has the same requirements as the signal region exc
 %cross-check of tau discriminant https://indico.cern.ch/event/259915/session/1/contribution/2/attachments/458506/635408/tauid090713.pdf
 In addition to the tau identification algorithm described in \SectionRef{sec:taus}, alternative algorithms were studied to check for better performance in terms of identification efficiency and fake rate. Specifically an alternative isolation algorithm was investigated which used an \ac{MVA} approach to estimate the isolation sum, as well as different working points for the anti-electron and anti-muon discriminators. The tau identification efficiency was found to be higher for both the alternative isolation algorithm and different working points for the anti-lepton discriminators, being twice as large if both were used compared to the standard tau identification. However, the rate of $\PW\rightarrow e\nu$ events being identified as $\PW\rightarrow\tau\nu$ was also significantly increased, going from 2\$ for the standard identification to 15\% where the alternative isolation and anti-lepton discriminators were used. It was therefore decided to use the tau identification described in \SectionRef{sec:taus}.
 
-The final estimation of the background from $W\rightarrow\tau\nu$ is carried out using \EquationRef{eq:wdatabkg}, with the single tau control region with no \ac{CJV} being used as the control region. The inputs and results of the background estimation are shown in \TableRef{tab:promptwtaunu}.
+The final estimation of the background from $W\rightarrow\tau\nu$ is carried out using \EquationRef{eq:wdatabkg}, with the single tau control region with no \ac{CJV} being used as the control region. The inputs and results of the background estimation are shown in \TableRef{tab:promptwtaunu}, and distributions of the tau \pt and $\Delta\phi_{jj}$ in the single tau control region are shown in \FigureRef{fig:promptwtaunu}.
 
 %tables from AN-13-205
 \begin{table}
@@ -134,10 +146,15 @@ The final estimation of the background from $W\rightarrow\tau\nu$ is carried out
   \end{tabular}
 \end{table}
 
-%??plot from AN-13-205
+%plot from AN-12-403
+\begin{figure}
+  \includegraphics[width=.6\largefigwidth]{plots/prompt/AN-12-403-figs/hWTau_tau1Pt.pdf}
+  \includegraphics[width=.6\largefigwidth]{plots/prompt/AN-12-403-figs/hWTau_dPhiJJ.pdf}
+  \caption{Distributions of the the tau \pt (left) and $\Delta\phi_{jj}$ (right) in the single tau control region. The hatched region illustrates the systematic uncertainty~\cite{ARTICLE:CMSAN-12-403}.}
+  \label{fig:promptwtaunu}
+\end{figure}
 
-
-\subsection{\PZ$\rightarrow \nu\nu$ + jets}%??
+\subsection{\PZ$\rightarrow \nu\nu$ + jets}
 \label{sec:promptznunu}
 The background from \PZ+jets where the \PZ decays to neutrinos, $\PZ\rightarrow\nu\nu$, is different from the \PW+jets backgrounds described above, in that nothing is required to be misidentified in order for these events to contribute to the signal region. The method used to estimate the $\PZ\rightarrow\nu\nu$ background therefore differs slightly from that used above. The method uses a dimuon control region which selects events from the process $\PZ/\gamma^{*}\rightarrow\mu\mu$. Due to this process being able to be mediated by a photon, the kinematics of the jets in $\PZ/\gamma^{*}\rightarrow\mu\mu$ events can be different to those from $\PZ\rightarrow\nu\nu$. The dimuon control region that is defined therefore has a requirement that the invariant mass of the dimuons be between 60 and 120 \GeV\,. The control region is otherwise identical to the signal region, except that the muon veto is replaced with a requirement that there are exactly two tight muons with \pt$>20$\GeV\, and no other veto muons.
 
@@ -155,21 +172,25 @@ where $\sigma\left(\PZ\rightarrow\nu\nu\right)$ is the cross-section for $\PZ\ri
 \end{align}
 Where $EWK$ and $QCD$ donate where cross-sections or numbers of events are for electroweak or \ac{QCD} production of a $\PZ$ boson. $N_{gen}$ is the number of events in the Z+jets \ac{MC} sample at generator level. Due to only very small $\PZ\rightarrow\nu\nu$ \ac{MC} samples being available the same $\PZ/\gamma^{*}\rightarrow\mu\mu$ samples used for the \ac{MC} estimate of the control region number of events is used, with the leptons ignored and the production cross-section scaled to the appropriate value, to obtain an estimate from \ac{MC} of the number of events from the $Z\rightarrow\nu\nu$ process in the signal region. The generated dimuon mass for this sample was required to be greater than 50 \GeV\,so the cross-sections used in equations~\ref{eq:zdatabkg}, \ref{eq:zdataeffs} and \ref{eq:zdataeffc} are also calculated with this constraint. For the control region $N_{gen}$ is calculated after requiring that the mass of the generator level dimuon is between 60 and 120 \GeV, denoted by $\PZ \rm{mass}$ in equations~\ref{eq:zdataeffs} and \ref{eq:zdataeffc}.
 
-%??table from AN-12-403
+The inputs to equations \ref{eq:zdataeffs} and \ref{eq:zdataeffc} are given in \TableRef{tab:promptznunueffs}. The cross-sections for electroweak $\PZ$ production were calculated at NLO using \textsc{VBFNLO} which specialises in vector boson production. The cross-section for \ac{QCD} production of $\PZ/\gamma^{*}\rightarrow\mu\mu$ is calculated using \textsc{FEWZ} inclusively for all leptons and then divided by three to obtain the figure for muons only. This cross-section is then multiplied by the ratio between the cross-section for $\PZ\rightarrow\nu\nu$ and $\PZ/\gamma^{*}\rightarrow\mu\mu$, which which was calculated to be 5.651 at NLO using \textsc{MCFM}, to obtain the \ac{QCD} production cross-section for $\PZ\rightarrow\nu\nu$. The inputs to \EquationRef{eq:zdatabkg} are given in \TableRef{tab:promptznunu}, with the exception of the ratio between the total production cross-sections for $\PZ\rightarrow\nu\nu$ and $\PZ/\gamma^{*}\rightarrow\mu\mu$ which is taken to be the same 5.651 that it is found to be for \ac{QCD} production. This approximation is used because the electroweak contribution to the ratio is smaller than that from \ac{QCD} by more than a factor of one thousand and is therefore negligible. The distributions of \MET and $M_{jj}$ for a $\PZ$ control region with relaxed selection to ensure sufficient numbers of events are shown in \FigureRef{fig:promptznunu}, demonstrating that the \ac{MC} samples model the data distribution well.
+
+%table from AN-12-403
 \begin{table}
   \caption{The input variables for the calculation of $\epsilon^{S}_{VBF}$ and $\epsilon^{C}_{VBF}$ using equations~\ref{eq:zdataeffs} and \ref{eq:zdataeffc} respectively.}
   \label{tab:promptznunueffs}
   \begin{tabular}{|l|c|}
     \hline
-    $\sigma\left(\PZ\rightarrow\nu\nu,EWK\right)$ & \\
-    $\sigma\left(\PZ\rightarrow\nu\nu,QCD\right)$ & \\
-    $\sigma\left(\PZ/\gamma^{*}\rightarrow\mu\mu,EWK\right)$ & \\
-    $\sigma\left(\PZ/\gamma^{*}\rightarrow\mu\mu,QCD\right)$ & \\
-    $\frac{N^{S}_{MC}(EWK)}{N_{gen}\left(\PZ\rm{mass},EWK\right)}$ & \\
-    $\frac{N^{S}_{MC}(QCD)}{N_{gen}\left(\PZ\rm{mass},QCD\right)}$ & \\
-    $\frac{N^{C}_{MC}(EWK)}{N_{gen}\left(EWK\right)}$ & \\
-    $\frac{N^{C}_{MC}(QCD)}{N_{gen}\left(QCD\right)}$ & \\
+    Variable & Value \\
     \hline
+    $\sigma\left(\PZ\rightarrow\nu\nu,EWK\right)$ & 1.380~\pb\\
+    $\sigma\left(\PZ\rightarrow\nu\nu,QCD\right)$ & 6600~\pb\\
+    $\sigma\left(\PZ/\gamma^{*}\rightarrow\mu\mu,EWK\right)$ & 0.303~\pb\\
+    $\sigma\left(\PZ/\gamma^{*}\rightarrow\mu\mu,QCD\right)$ & 1168~\pb\\
+    \hline
+    $\frac{N^{S}_{MC}(EWK)}{N_{gen}\left(\PZ\rm{mass},EWK\right)}$ & $\left(1.3\pm 0.1\right)\cdot 10^{-3}$ \\
+    $\frac{N^{S}_{MC}(QCD)}{N_{gen}\left(\PZ\rm{mass},QCD\right)}$ & $\left(1.4\pm 0.2\right)\cdot 10^{-6}$\\
+    $\frac{N^{C}_{MC}(EWK)}{N_{gen}\left(EWK\right)}$ & $\left(7.5\pm 0.3\right)\cdot 10^{-4}$\\
+    $\frac{N^{C}_{MC}(QCD)}{N_{gen}\left(QCD\right)}$ & $\left(9.2\pm 1.2\right)\cdot 10^{-7}$\\
     \hline
   \end{tabular}
 \end{table}
@@ -177,21 +198,29 @@ Where $EWK$ and $QCD$ donate where cross-sections or numbers of events are for e
 \begin{table}
   \caption{The inputs and results of the $\PZ\rightarrow \nu\nu$ background estimation using \EquationRef{eq:zdatabkg}. $\epsilon_{VBF}$ in the signal (control) region is calculated using equation \ref{eq:zdataeffs} (\ref{eq:zdataeffc}).  $N_{\PZ\rightarrow \nu\nu}/N_{\PZ/\gamma^{*}\rightarrow\mu\mu}$ is in the signal region the number of events expected from $\PZ\rightarrow \nu\nu$ backgrounds, and in the control region the number of events remaining in the region after the subtraction of other backgrounds.}
   \label{tab:promptznunu}
-  \begin{tabular}{|l|c|c|}
-    \hline
-    & Signal region & Control region \\
-    \hline
-    $N_{Data}$ & N/A & 12\\
-    $N_{Bkg}$ & N/A & $0.3\pm 0.1$(\ac{MC} stat.) \\
-    $\epsilon_{VBF}$& $(1.65 \pm 0.15$(stat.)$\pm 0.22$(syst.)$)\cdot 10^{-6}$ & $(1.11 \pm 0.12$(stat.)$\pm 0.12$(syst.)$)\cdot 10^{-6}$ \\
-    $N_{\PZ\rightarrow \nu\nu}/N_{\PZ\rightarrow/\gamma^{*}\rightarrow\mu\mu}$& $99\pm 29$(stat.)$\pm 25$(syst.) & $11.7\pm 0.1$(\ac{MC} stat.) \\
-    \hline
-  \end{tabular}
+  \resizebox{1.0\linewidth}{!}{
+    \begin{tabular}{|l|c|c|}
+      \hline
+      & Signal region & Control region \\
+      \hline
+      $N_{Data}$ & N/A & 12\\
+      $N_{Bkg}$ & N/A & $0.3\pm 0.1$(\ac{MC} stat.) \\
+      $\epsilon_{VBF}$& $(1.65 \pm 0.15$(stat.)$\pm 0.22$(syst.)$)\cdot 10^{-6}$ & $(1.11 \pm 0.12$(stat.)$\pm 0.12$(syst.)$)\cdot 10^{-6}$ \\
+      $N_{\PZ\rightarrow \nu\nu/\PZ\rightarrow/\gamma^{*}\rightarrow\mu\mu}$& $99\pm 29$(stat.)$\pm 25$(syst.) & $11.7\pm 0.1$(\ac{MC} stat.) \\
+      \hline
+    \end{tabular}
+  }
 \end{table}
 
+%plot from HIG-13-030
+\begin{figure}
+  \includegraphics[width=.6\largefigwidth]{plots/prompt/VBF-ZCtrl-MET.pdf}
+  \includegraphics[width=.6\largefigwidth]{plots/prompt/VBF-ZCtrl-Mjj.pdf}
+  \caption{Distributions of the \MET (left) and $M_{jj}$ (right) in a relaxed \PZ control region, with no requirement on $\Delta\phi_{jj}$, the \ac{CJV} removed, and the requirements on $M_{jj}$ and $Delta\eta_{jj}$ relaxed to 1000 \GeV and 3.5 respectively. The hatched region illustrates the systematic uncertainty~\cite{Chatrchyan:2014tja}.}
+  \label{fig:promptznunu}
+\end{figure}
 
 
-%??plot from HIG-13-030
 
 
 \subsection{QCD}%??
