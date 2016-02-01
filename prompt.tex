@@ -65,9 +65,9 @@ The estimated number of $\PW\rightarrow e\nu$ events in the signal region is the
   \label{eq:wdatabkg}
   N^{S}_{Exp}=\left(N^{C}_{Data}-N^{C}_{Bkg}\right)\cdot\frac{N^{S}_{MC}}{N^{C}_{MC}},
 \end{equation}
-where $N^{S}_{Exp}$ is the number of expected events in the signal region from this background process, $N^{C}_{Data}$ is the number of events seen in the control region in data, $N^{C}_{Bkg}$ is the number of events from other backgrounds in the control region estimated using \ac{MC}, which is expected to be small, and $N^{S}_{MC}$ and $N^{C}_{MC}$ are the numbers of events predicted by \ac{MC} to be in the signal and control regions respectively. The fact that estimations from \ac{MC} are only used in ratios or where they are expected to be small removes any dependence of the final background estimation on the overall rate of the process predicted by \ac{MC}, and instead allows the observed rate in data to be used.
+where $N^{S}_{Exp}$ is the number of expected events in the signal region from this background process, $N^{C}_{Data}$ is the number of events seen in the control region in data, $N^{C}_{Bkg}$ is the number of events from other backgrounds in the control region estimated using \ac{MC}, which is expected to be small, and $N^{S}_{MC}$ and $N^{C}_{MC}$ are the numbers of events predicted by \ac{MC} to be in the signal and control regions respectively. The fact that estimations from \ac{MC} are only used in ratios or where they are expected to be small removes any dependence of the final background estimation on the overall rate of the process predicted by \ac{MC}, and instead allows the observed rate in data to be used. The inputs and results of the background estimation are shown in \TableRef{tab:promptwenu}.
 
-%??tables from AN-13-205
+%tables from AN-13-205
 \begin{table}
   \caption{The inputs and results of the $\PW\rightarrow e\nu$ background estimation. $N_{\PW\rightarrow e\nu}$ is in the signal region the number of events expected from $\PW\rightarrow e\nu$ backgrounds, and in the control region the number of events remaining in the region after the subtraction of other backgrounds.}
   \label{tab:promptwenu}
@@ -83,14 +83,16 @@ where $N^{S}_{Exp}$ is the number of expected events in the signal region from t
   \end{tabular}
 \end{table}
 
+%??plot from AN-13-205
+
 \subsection{\PW$\rightarrow \mu\nu$ + jets}%??
 \label{sec:promptwmunu}
-The method used to estimate the background from $\PW$+jets where the $\PW$ boson decays to a muon and a muon neutrino, $\PW\rightarrow\mu\nu$, is very similar to that used for $\PW\rightarrow e\nu$. A single muon control region is used, again with identical selection to the signal region except for the modification of the lepton veto, in this case by replacing the muon veto with the requirement that there is exactly one tight muon, with \pt$>20$ \GeV, and no other veto muons. \EquationRef{eq:wdatabkg} is then used, with the control region now being the single muon control region, to estimate the number of events from $W\rightarrow\mu\nu$ expected in the signal region.
+The method used to estimate the background from $\PW$+jets where the $\PW$ boson decays to a muon and a muon neutrino, $\PW\rightarrow\mu\nu$, is very similar to that used for $\PW\rightarrow e\nu$. A single muon control region is used, again with identical selection to the signal region except for the modification of the lepton veto, in this case by replacing the muon veto with the requirement that there is exactly one tight muon, with \pt$>20$ \GeV, and no other veto muons. \EquationRef{eq:wdatabkg} is then used, with the control region now being the single muon control region, to estimate the number of events from $W\rightarrow\mu\nu$ expected in the signal region. The inputs and results of the background estimation are shown in \TableRef{tab:promptwmunu}.
 
-%??tables from AN-13-205
+%tables from AN-13-205
 \begin{table}
   \caption{The inputs and results of the $\PW\rightarrow \mu\nu$ background estimation. $N_{\PW\rightarrow \mu\nu}$ is in the signal region the number of events expected from $\PW\rightarrow \mu\nu$ backgrounds, and in the control region the number of events remaining in the region after the subtraction of other backgrounds.}
-  \label{tab:promptwenu}
+  \label{tab:promptwmunu}
   \begin{tabular}{|l|c|c|}
     \hline
     & Signal region & Control region \\
@@ -103,6 +105,8 @@ The method used to estimate the background from $\PW$+jets where the $\PW$ boson
   \end{tabular}
 \end{table}
 
+%??plot from AN-13-205
+
 \subsection{\PW$\rightarrow \tau\nu$ + jets}%??
 \label{sec:promptwtaunu}
 The background from $\PW$+jets where the $\PW$ boson decays to a tau and a tau neutrino, $\PW\rightarrow\tau\nu$, is estimated using a single tau control region data-driven method. However, in this case the control region used has more differences from the signal region than those used above. The reason for these increased differences is that the reconstruction efficiency for tau leptons is significantly lower than that for electrons or muons, and they are also more likely to be misreconstructed as jets, causing the event to be vetoed by the \ac{CJV}. Altering the signal region by adding a requirement that there is exactly one tau with \pt$>20$ \GeV\, results in a region with only $3.76\pm 1.27$(stat.) \PW+jets events expected. In order to increase the number of events in the single tau control region as well as adding the tau requirement, the \ac{CJV} is also removed. The resulting control region has $29.2\pm 3.61$(stat.) \PW+jets events expected and thus a much lower statistical uncertainty.
@@ -112,12 +116,12 @@ The single tau control region has the same requirements as the signal region exc
 %cross-check of tau discriminant https://indico.cern.ch/event/259915/session/1/contribution/2/attachments/458506/635408/tauid090713.pdf
 In addition to the tau identification algorithm described in \SectionRef{sec:taus}, alternative algorithms were studied to check for better performance in terms of identification efficiency and fake rate. Specifically an alternative isolation algorithm was investigated which used an \ac{MVA} approach to estimate the isolation sum, as well as different working points for the anti-electron and anti-muon discriminators. The tau identification efficiency was found to be higher for both the alternative isolation algorithm and different working points for the anti-lepton discriminators, being twice as large if both were used compared to the standard tau identification. However, the rate of $\PW\rightarrow e\nu$ events being identified as $\PW\rightarrow\tau\nu$ was also significantly increased, going from 2\$ for the standard identification to 15\% where the alternative isolation and anti-lepton discriminators were used. It was therefore decided to use the tau identification described in \SectionRef{sec:taus}.
 
-The final estimation of the background from $W\rightarrow\tau\nu$ is carried out using \EquationRef{eq:wdatabkg}, with the single tau control region with no \ac{CJV} being used as the control region.
+The final estimation of the background from $W\rightarrow\tau\nu$ is carried out using \EquationRef{eq:wdatabkg}, with the single tau control region with no \ac{CJV} being used as the control region. The inputs and results of the background estimation are shown in \TableRef{tab:promptwtaunu}.
 
-%??tables from AN-13-205
+%tables from AN-13-205
 \begin{table}
   \caption{The inputs and results of the $\PW\rightarrow \tau\nu$ background estimation. $N_{\PW\rightarrow \tau\nu}$ is in the signal region the number of events expected from $\PW\rightarrow \tau\nu$ backgrounds, and in the control region the number of events remaining in the region after the subtraction of other backgrounds.}
-  \label{tab:promptwenu}
+  \label{tab:promptwtaunu}
   \begin{tabular}{|l|c|c|}
     \hline
     & Signal region & Control region \\
@@ -125,10 +129,13 @@ The final estimation of the background from $W\rightarrow\tau\nu$ is carried out
     $N_{Data}$ & N/A & 32\\
     $N_{Bkg}$ & N/A & $14.7\pm 3.4$(\ac{MC} stat.) \\
     $N_{MC}$& $95.6\pm 8.5$(\ac{MC} stat.) & $29.2\pm 3.6$(\ac{MC} stat.) \\
-    $N_{\PW\rightarrow \tau\nu}$& $56.5\pm 21.5$(stat.)$\pm 8.6$(\ac{MC} stat.) & $\pm $(stat.) \\
+    $N_{\PW\rightarrow \tau\nu}$& $56.5\pm 21.5$(stat.)$\pm 8.6$(\ac{MC} stat.) & $17.3\pm 3.9 $(stat.) \\
     \hline
   \end{tabular}
 \end{table}
+
+%??plot from AN-13-205
+
 
 \subsection{\PZ$\rightarrow \nu\nu$ + jets}%??
 \label{sec:promptznunu}
@@ -137,11 +144,55 @@ The background from \PZ+jets where the \PZ decays to neutrinos, $\PZ\rightarrow\
 As well as the possibility of different kinematics, $\PZ/\gamma^{*}\rightarrow\mu\mu$ and $\PZ/rightarrow\nu\nu$ also have different cross-sections. The formula used to estimate the $\PZ/\rightarrow\nu\nu$ background takes this into account as follows:
 \begin{equation}
   \label{eq:zdatabkg}
-  N^{S}_{Exp}=N^{C}_{Data}-N^{C}_{Bkg}\cdot\frac{\sigma\left(\PZ\rightarrow\nu\nu\right)}{\sigma\left(\PZ/\gamma^{*}\rightarrow\mu\mu\right)}\cdot\frac{N^{S}_{MC}}{N^{C}_{MC}},
+  N^{S}_{Exp}=N^{C}_{Data}-N^{C}_{Bkg}\cdot\frac{\sigma\left(\PZ\rightarrow\nu\nu\right)}{\sigma\left(\PZ/\gamma^{*}\rightarrow\mu\mu\right)}\cdot\frac{\epsilon^{S}_{VBF}}{\epsilon^{C}_{VBF}},
 \end{equation}
-where $\sigma\left(\PZ\rightarrow\nu\nu\right)$ is the cross-section for $\PZ\rightarrow\nu\nu$ and $\sigma\left(\PZ/\gamma^{*}\rightarrow\mu\mu\right)$ is the cross-section for $\PZ/\gamma^{*}\rightarrow\mu\mu$. Due to only very small $\PZ\rightarrow\nu\nu$ \ac{MC} samples being available the same $\PZ/\gamma^{*}\rightarrow\mu\mu$ sample used for the \ac{MC} estimate of the control region number of events was used, with the leptons were ignored and the production cross-section was scaled to the appropriate value, to obtain an estimate from \ac{MC} of the number of events from the $Z\rightarrow\nu\nu$ process in the signal region. The generated dimuon mass for this sample was required to be greater than 50 \GeV\,so the cross-sections used in \EquationRef{eq:zdatabkg} are also calculated with this constraint.
+where $\sigma\left(\PZ\rightarrow\nu\nu\right)$ is the cross-section for $\PZ\rightarrow\nu\nu$ and $\sigma\left(\PZ/\gamma^{*}\rightarrow\mu\mu\right)$ is the cross-section for $\PZ/\gamma^{*}\rightarrow\mu\mu$. $\epsilon^{S}_{VBF}$ and $\epsilon^{C}_{VBF}$ are the efficiencies for $Z\rightarrow\nu\nu$ events to pass the signal region selection and $Z/\gamma^{*}\rightarrow\mu\mu$ events to pass the control region selection respectively. As Z bosons can be created via either \ac{QCD} or electroweak processes, which both have different cross-sections and efficiencies $\epsilon^{S}_{VBF}$ and $\epsilon^{C}_{VBF}$ are a cross-section weighted average of the efficiency for both types of production, calculated as:
+\begin{align}
+  \label{eq:zdataeffs}
+  \epsilon^{S}_{VBF}&=\frac{ \sigma\left(\PZ\rightarrow\nu\nu,EWK\right) \frac{N^{S}_{MC}\left(EWK\right)} {N_{gen}\left(\PZ \rm{mass},EWK\right)} + \sigma\left(\PZ\rightarrow\nu\nu,QCD\right) \frac{N^{S}_{MC}\left(QCD\right)} {N_{gen}\left(\PZ \rm{mass},QCD\right)} } {\sigma\left(\PZ\rightarrow\nu\nu,EWK\right) + \sigma\left(\PZ\rightarrow\nu\nu,QCD\right)},\\
+  \label{eq:zdataeffc}
+  \epsilon^{C}_{VBF}&=\frac{  \sigma\left(\PZ/\gamma^{*}\rightarrow\mu\mu,EWK\right) \frac{N^{C}_{MC}\left(EWK\right)} {N_{gen}\left(EWK\right)} + \sigma\left(\PZ/\gamma^{*}\rightarrow\mu\mu,QCD\right) \frac{N^{S}_{MC}\left(QCD\right)} {N_{gen}\left(QCD\right)}  }{\sigma\left(\PZ/\gamma^{*}\rightarrow\mu\mu,EWK\right)+\sigma\left(\PZ/\gamma^{*}\rightarrow\mu\mu,QCD\right)}.
+\end{align}
+Where $EWK$ and $QCD$ donate where cross-sections or numbers of events are for electroweak or \ac{QCD} production of a $\PZ$ boson. $N_{gen}$ is the number of events in the Z+jets \ac{MC} sample at generator level. Due to only very small $\PZ\rightarrow\nu\nu$ \ac{MC} samples being available the same $\PZ/\gamma^{*}\rightarrow\mu\mu$ samples used for the \ac{MC} estimate of the control region number of events is used, with the leptons ignored and the production cross-section scaled to the appropriate value, to obtain an estimate from \ac{MC} of the number of events from the $Z\rightarrow\nu\nu$ process in the signal region. The generated dimuon mass for this sample was required to be greater than 50 \GeV\,so the cross-sections used in equations~\ref{eq:zdatabkg}, \ref{eq:zdataeffs} and \ref{eq:zdataeffc} are also calculated with this constraint. For the control region $N_{gen}$ is calculated after requiring that the mass of the generator level dimuon is between 60 and 120 \GeV, denoted by $\PZ \rm{mass}$ in equations~\ref{eq:zdataeffs} and \ref{eq:zdataeffc}.
 
-%??plot or table/both
+%??table from AN-12-403
+\begin{table}
+  \caption{The input variables for the calculation of $\epsilon^{S}_{VBF}$ and $\epsilon^{C}_{VBF}$ using equations~\ref{eq:zdataeffs} and \ref{eq:zdataeffc} respectively.}
+  \label{tab:promptznunueffs}
+  \begin{tabular}{|l|c|}
+    \hline
+    $\sigma\left(\PZ\rightarrow\nu\nu,EWK\right)$ & \\
+    $\sigma\left(\PZ\rightarrow\nu\nu,QCD\right)$ & \\
+    $\sigma\left(\PZ/\gamma^{*}\rightarrow\mu\mu,EWK\right)$ & \\
+    $\sigma\left(\PZ/\gamma^{*}\rightarrow\mu\mu,QCD\right)$ & \\
+    $\frac{N^{S}_{MC}(EWK)}{N_{gen}\left(\PZ\rm{mass},EWK\right)}$ & \\
+    $\frac{N^{S}_{MC}(QCD)}{N_{gen}\left(\PZ\rm{mass},QCD\right)}$ & \\
+    $\frac{N^{C}_{MC}(EWK)}{N_{gen}\left(EWK\right)}$ & \\
+    $\frac{N^{C}_{MC}(QCD)}{N_{gen}\left(QCD\right)}$ & \\
+    \hline
+    \hline
+  \end{tabular}
+\end{table}
+
+\begin{table}
+  \caption{The inputs and results of the $\PZ\rightarrow \nu\nu$ background estimation using \EquationRef{eq:zdatabkg}. $\epsilon_{VBF}$ in the signal (control) region is calculated using equation \ref{eq:zdataeffs} (\ref{eq:zdataeffc}).  $N_{\PZ\rightarrow \nu\nu}/N_{\PZ/\gamma^{*}\rightarrow\mu\mu}$ is in the signal region the number of events expected from $\PZ\rightarrow \nu\nu$ backgrounds, and in the control region the number of events remaining in the region after the subtraction of other backgrounds.}
+  \label{tab:promptznunu}
+  \begin{tabular}{|l|c|c|}
+    \hline
+    & Signal region & Control region \\
+    \hline
+    $N_{Data}$ & N/A & 12\\
+    $N_{Bkg}$ & N/A & $0.3\pm 0.1$(\ac{MC} stat.) \\
+    $\epsilon_{VBF}$& $(1.65 \pm 0.15$(stat.)$\pm 0.22$(syst.)$)\cdot 10^{-6}$ & $(1.11 \pm 0.12$(stat.)$\pm 0.12$(syst.)$)\cdot 10^{-6}$ \\
+    $N_{\PZ\rightarrow \nu\nu}/N_{\PZ\rightarrow/\gamma^{*}\rightarrow\mu\mu}$& $99\pm 29$(stat.)$\pm 25$(syst.) & $11.7\pm 0.1$(\ac{MC} stat.) \\
+    \hline
+  \end{tabular}
+\end{table}
+
+
+
+%??plot from HIG-13-030
+
 
 \subsection{QCD}%??
 \label{sec:promptacQCD}
@@ -183,6 +234,7 @@ Where $N_{A,B,C}$ is the number of events observed in region $A,B,C$ in data min
 %??Systematics
 %??JES/JER/UES
 %??Znunu extrap fac
+%??lepton weights
 
 \section{Results}%??
 \label{sec:promptresults}
