@@ -299,31 +299,69 @@ In addition to the V+jets and QCD multijet backgrounds above which account for 9
 
 \section{Systematic uncertainties}%??
 \label{sec:promptsyst}
-%??Systematics %??electron contamination in tau region
-\subsection{Jet energy scale}%??
+As well as statistical uncertainties due to the number of data events observed in the control regions used in background estimations, there are also several systematic uncertainties on the expected numbers of signal and background events. These uncertainties are described individually below and the fractional uncertainty on the total expected number of signal and background events from all sources of uncertainty are summarised in \TableRef{tab:promptsysts}.
+\subsection{Jet energy scale}
 \label{sec:promptjes}
+The true energy of a jet reconstructed by \ac{CMS} is not necessarily the same as the true energy of all the particle that make it up. As described in \SectionRef{sec:jec}, jet corrections are applied to correct for this. The correction for the ratio between reconstructed and true jet energy is referred to as the \ac{JES}, and the uncertainty on it gives rise to an uncertainty on the energy of all jets in \ac{CMS} events. The impact of this uncertainty on the event yields expected and observed in this analysis was estimated be altering the \ac{JES} correction up by one standard deviation, ``JESUP'', and down by one standard deviation ``JESDOWN'', and recalculating the energy and momentum of all jets in each event. The \MET is recalculated taking into account the updated jet energies. Furthermore, as the jet energy scale uncertainty varies as a function of a jet's \pt and $\eta$, it is possible for the \pt ordering of the jets to change when the \ac{JES} is changed. The \ac{VBF} tag pair is therefore rechosen to be the new highest \pt pair of jets. 
+
+After modifying the \ac{JES} the analysis selection is then reapplied and the resulting change in the expected signal and background yields is taken to be the uncertainty due to \ac{JES}. The second highest \pt jet's \pt in a W+jets \ac{MC} sample is shown for the nominal \ac{JES}, JESUP and JESDOWN in \FigureRef{fig:promptjes}. It can be seen that altering the \ac{JES} results in a smooth change in the jet \pt, and the difference in numbers of events passing the 50 \GeV cut present in analysis is not due to individual events with large weights.
+
+%plot from AN-13-205
+\begin{figure}
+  \includegraphics[width=\largefigwidth]{plots/prompt/jescheckzoom.png}
+  \caption{The \pt distribution of the second highest \pt jet present in W+Jets \ac{MC} events with the nominal \ac{JES} and for JESUP and JESDOWN.}
+  \label{fig:promptjes}
+\end{figure}
 
 \subsection{Jet energy resolution}%??
 \label{sec:promptjer}
 
+
 \subsection{Unclustered energy scale}%??
 \label{sec:promptues}
+
 
 \subsection{Lepton identification and isolation efficiency}%??
 \label{sec:promptlepweights}
 %??e, mu, tau
 
+
 \subsection{\PZ$\rightarrow\nu\nu$ background extrapolation}%??
 \label{sec:promptzextrap}
 
+
 \subsection{Other uncertainties}%??
 \label{sec:promptzextrap}
-%??pileup weights, cross-sections, pdf uncertainty, qcd scale, luminosity
+%??pileup weights, cross-sections, pdf uncertainty, qcd scale, luminosity, electron contamination in tau region, mc stat
 
 
+\begin{table}
+  \caption{A summary of the uncertainties in the total expected signal and background yields. All uncertainties are quoted as teh change in the yield when each effect is varied up and down according to its uncertainty. The signal yields assume a Higgs boson mass of 125\GeV.}
+  \label{tab:promptsysts}
+  \begin{tabular}{lcc}
+    \hline
+    \hline
+    Uncertainty source & Total background & Signal \\
+    \hline
+    Control region statistics               & 11\%          & \NA  \\
+    MC statistics                           & 11\%          & 4\%  \\
+    Jet/\ETm\ energy scale/resolution       & 7\%           & 13\% \\
+    QCD background estimation               & 4\%           & \NA  \\
+    Lepton efficiency                       & 2\%           & \NA  \\
+    Tau ID efficiency                       & 1\%           & \NA  \\
+    Luminosity                              & 0.2\%         & 2.6\%\\
+    Cross sections                          & 0.5--1\%      & \NA  \\
+    PDFs                                    & \NA           & 5\%  \\
+    Factorization/renormalization scale     & \NA           & 4\%  \\
+    Gluon fusion signal modelling           & \NA           & 4\%  \\
+    \hline
+    Total & 18\% & 14\% \\
+    \hline
+    \hline
+  \end{tabular}
+\end{table}
 
-
-\section{Results}%??
+\section{Results}
 \label{sec:promptresults}
 The final results of all the background estimation methods and systematic uncertainty studies are summarised in \TableRef{tab:promptresults}. The final number of events expected from background processes in the signal region is $332\pm 46\stat\pm 45\syst$. Assuming the presence of a Higgs boson with a mass of 125 \GeV\,, \ac{SM} production and \BRinv$=100\%$, $224\pm 31$ signal events would be expected, with 6\% of these from \ac{ggH} and the remainder from \ac{VBF} production. 390 events are observed, which is within one standard deviation of the background only prediction. \FigureRef{fig:promptresults} shows the \MET and $M_{jj}$ of the background and signal events expected, and the data observed, in the signal region. 
 
