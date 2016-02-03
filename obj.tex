@@ -114,7 +114,7 @@ d_{iB}&=p_{Ti}^{-2},
 \end{align}
 where $\Delta R_{ij}$ is the distance in the $\eta-\phi$ plane between particles $i$ and $j$ and $R$ is a parameter of the algorithm analogous to the maximum radius of the jet. This algorithm starts by clustering around the hardest particle in a region and therefore usually produces circular jets, with easy to calculate areas.
 
-The anti-$k_{T}$ algorithm is implemented using the \textsc{FastJet} package with the \ac{PF} candidates, described in \SectionRef{sec:pf}, used as input~\cite{Cacciari:fastjet1}, the output jets are referred to as \ac{PF} jets. For analyses using data from \LHC Run 1 (Run 2) $R$ of 0.5 (0.4) is used.
+The anti-$k_{T}$ algorithm is implemented using the \textsc{FastJet} package with the \ac{PF} candidates, described in \SectionRef{sec:pf}, used as input~\cite{Cacciari:fastjet1}, the output jets are referred to as \ac{PF} jets. For analyses using data from \LHC Run 1 (Run 2) $R$ of 0.5 (0.4) is used. In addition to these jets reconstructed from \ac{PF} candidates, in \ac{MC} events ``generator'' jets are also reconstructed by applying the anti-$k_{T}$ algorithm, with the same radius as that used for the \ac{PF} jets, to the final state particles produced by the generator before they are passed through the detector simulation.
 
 \subsection{Jet identification}
 \label{sec:jetid}

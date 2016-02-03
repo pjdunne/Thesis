@@ -294,15 +294,17 @@ Where $N_{A,B,C}$ is the number of events observed in region $A,B,C$ in data min
 
 \subsection{Minor backgrounds}
 \label{sec:promptminor}
-In addition to the V+jets and QCD multijet backgrounds above which account for 94\% of the expected events in the signal region, there is also a small number of events expected from other minor backgrounds (single top quark production, top quark pair production and diboson production). Due to its small contribution this number of events is taken directly from \ac{MC}. The diboson backgrounds are simulated using \textsc{pythia 6}, the single top quark background is simulated using \textsc{powheg} and the top quark pair production and $\PZ/\gamma^{*}\rightarrow\ell\ell$ backgrounds are calculated using \textsc{MadGraph}. The final estimate of the number of events from minor backgrounds in the signal region is $20\pm 8.2$(syst.), with 70\% of these expected to be from diboson production.
+In addition to the V+jets and QCD multijet backgrounds above which account for 94\% of the expected events in the signal region, there is also a small number of events expected from other minor backgrounds (single top quark production, top quark pair production and diboson production). Due to its small contribution this number of events is taken directly from \ac{MC}. The diboson backgrounds are simulated using \textsc{pythia 6}, the single top quark background is simulated using \textsc{powheg} and the top quark pair production and $\PZ/\gamma^{*}\rightarrow\ell\ell$ backgrounds are calculated using \textsc{MadGraph}. The final estimate of the number of events from minor backgrounds in the signal region is $20\pm 8.2$(syst.), with 70\% of these expected to be from diboson production. %??cross-sections taken from CMS published analyses
 
 
-\section{Systematic uncertainties}%??
+\section{Systematic uncertainties}
 \label{sec:promptsyst}
-As well as statistical uncertainties due to the number of data events observed in the control regions used in background estimations, there are also several systematic uncertainties on the expected numbers of signal and background events. These uncertainties are described individually below and the fractional uncertainty on the total expected number of signal and background events from all sources of uncertainty are summarised in \TableRef{tab:promptsysts}.
+The dominant uncertainties in the analysis are the statistical uncertainties on the V+jets backgrounds due to the number of data events observed in the control regions. In addition, as well as those mentioned in \SectionRef{sec:promptbkg} there are several further systematic uncertainties on the expected numbers of signal and background events, including the statistical uncertainties on the numbers of \ac{MC} events. These uncertainties are described individually below and the fractional uncertainty on the total expected number of signal and background events from all sources of uncertainty are summarised in \TableRef{tab:promptsysts}.
 \subsection{Jet energy scale}
 \label{sec:promptjes}
-The true energy of a jet reconstructed by \ac{CMS} is not necessarily the same as the true energy of all the particle that make it up. As described in \SectionRef{sec:jec}, jet corrections are applied to correct for this. The correction for the ratio between reconstructed and true jet energy is referred to as the \ac{JES}, and the uncertainty on it gives rise to an uncertainty on the energy of all jets in \ac{CMS} events. The impact of this uncertainty on the event yields expected and observed in this analysis was estimated be altering the \ac{JES} correction up by one standard deviation, ``JESUP'', and down by one standard deviation ``JESDOWN'', and recalculating the energy and momentum of all jets in each event. The \MET is recalculated taking into account the updated jet energies. Furthermore, as the jet energy scale uncertainty varies as a function of a jet's \pt and $\eta$, it is possible for the \pt ordering of the jets to change when the \ac{JES} is changed. The \ac{VBF} tag pair is therefore rechosen to be the new highest \pt pair of jets. 
+The true energy of a jet reconstructed by \ac{CMS} is not necessarily the same as the true energy of all the particle that make it up. As described in \SectionRef{sec:jec}, jet corrections are applied to correct for this. The correction for the ratio between reconstructed and true jet energy is referred to as the \ac{JES}. Uncertainties on the \ac{JES} come from several sources. The dijet \pt balance method for instance has uncertainties in the measured \ac{JES} from jet resolution bias. This bias is due to the \pt spectrum of jets being sharply falling with increasing \pt. This shaprly falling \pt spectrum leads to the well measured jet being used as the base for the balance method to be more likely to have fluctuated up in \pt than down. The main uncertainties in the photon/\PZ balance methods comes from the limited number of events in the samples used. The \ac{MC} correction is also different when measured with different \ac{MC} generators, which also leads to an uncertainty.
+
+These uncertainties on the \ac{JES} give rise to an uncertainty on the energy of all jets in \ac{CMS} events. The impact of this uncertainty on the event yields expected and observed in this analysis was estimated be altering the \ac{JES} correction up by one standard deviation, ``JESUP'', and down by one standard deviation ``JESDOWN'', and recalculating the energy and momentum of all jets in each event. The \MET is recalculated taking into account the updated jet energies. Furthermore, as the jet energy scale uncertainty varies as a function of a jet's \pt and $\eta$, it is possible for the \pt ordering of the jets to change when the \ac{JES} is changed. The \ac{VBF} tag pair is therefore rechosen to be the new highest \pt pair of jets. 
 
 After modifying the \ac{JES} the analysis selection is then reapplied and the resulting change in the expected signal and background yields is taken to be the uncertainty due to \ac{JES}. The second highest \pt jet's \pt in a W+jets \ac{MC} sample is shown for the nominal \ac{JES}, JESUP and JESDOWN in \FigureRef{fig:promptjes}. It can be seen that altering the \ac{JES} results in a smooth change in the jet \pt, and the difference in numbers of events passing the 50 \GeV cut present in analysis is not due to individual events with large weights.
 
@@ -313,30 +315,46 @@ After modifying the \ac{JES} the analysis selection is then reapplied and the re
   \label{fig:promptjes}
 \end{figure}
 
-\subsection{Jet energy resolution}%??
+\subsection{Jet energy resolution}
 \label{sec:promptjer}
+The width of the jet energy distribution, the \ac{JER}, differs between \ac{MC} and data. This is partly due to \ac{MC} samples being generated before and during data taking, and thus before a measurement of the exact resolution in data can be performed. Measuring the \ac{JER} in data is done in a very similar way to the measurement of the \ac{JES} using dijet and photon/\PZ-jet balance techniques in data and by comparing the reconstructed energy to that generated in \ac{MC}, and thus has the same sources of uncertainty.
 
+To correct the \ac{MC} resolution to match that in the data the \pt of all jets in \ac{MC} is ``smeared''. The smearing is carried out using two methods. The first method is used for jets in \ac{MC} that are within 0.5 in the $\eta-\phi$ plane of a generator jet. In this method the difference between the reconstructed and generator jet \pt is scaled by a correction factor, $c$, chosen to be the ratio between the resolution of the data and \ac{MC} and calculated as a function of the jet's \pt and $\eta$. The resulting jet \pt is given by:
+\begin{equation}
+  \label{eq:promptjermatched}
+  \pt'=\rm{max}\left[0,p_{\mathrm{T}gen}+c\left(\pt-p_{\mathrm{T}gen}\right)\right],
+\end{equation}
+where \pt is the initial \pt, \pt' is the \pt after smearing and \pt$_{gen}$ is the matched generator jet's \pt. This procedure has the advantage that the smearing is not reliant on random factors and is therefore reproducible, making synchronisation between analysis implementations easier.
 
-\subsection{Unclustered energy scale}%??
+The second method is used where a jet has no matching generator jet. In this case a random correction is necessary. The technique used is to add a random gaussian fluctuation to the jet's \pt with width:
+\begin{equation}
+  \label{eq:promptjerunmatched}
+  \sqrt{\left(c^{2}-1\right)\sigma_{MC}},
+\end{equation}
+where, $c$ is the same correction factor from the method above and $\sigma_{MC}$ is the intial \ac{MC} resolution as a function of \pt and $\eta$. As well as being random and thus difficult to reproduce, this method also has the disadvantage that it can only be used to worsen the resolution. 
+
+The analysis is performed three times with three different smearings, one where the MC resolution is smeared to match the nominal data resolution, which is used for the main signal and background estimations and two where the \ac{MC} resolution is made to match the improvement, ``JERBETTER'' and worsening, ``JERWORSE'' of the jet energy resolution by one standard deviation. For the nominal and JERWORSE smearings the limitation of the unmatched jet smearing method to only worsening the resolution is not a problem, as the initial \ac{MC} resolution is better than that in data for all values of jet \pt and $\eta$. However, for the JERBETTER smearing it is necessary to improve the resolution for some jets. Fortunately, the differences between the generated resolution and the JERBETTER resolutions where improved resolution is required are small, so in these cases no smearing is applied. For all smearings the resulting changes in jet \pt are propagated through to the \MET. The differences between the signal and background yields obtained with the nominal \ac{JER}, JERBETTER and JERWORSE are used to assign an uncertainty due to the \ac{JER}.
+
+\subsection{Unclustered energy scale}
 \label{sec:promptues}
+In addition to the uncertainties on the \MET from the propagation of \ac{JES} and \ac{JER} uncertainties there are also uncertainties from the other elements contributing to the \MET. Electrons and muons contribute to the \MET, but have very good resolution and small scale uncertainties compared to jets so their contribution to the \MET uncertainty is considered negligible. Unclustered energy, which is made up of all of the energy deposits in the calorimeters not identified as part of an object, such as a jet or lepton, still contribute to the \MET, and have a non-negligible scale uncertainty. 
 
+The unclustered energy scale is meausred using photon and \PZ events with jets present in them, where it can be assumed that the \MET should be zero~\cite{CMS-PAS-JME-12-002}. After jet energy corrections the distribution of the remaining difference between the photon or \PZ momentum and the jets is therefore centered around zero, and its width can be taken as the uncertainty on the unclustered energy scale. The unclustered energy scale in all events is modified up and down by this uncertainty and the \MET recalculated. The differences in the obtained signal and background event yields obtained through this process are used as the uncertainty from this source.
 
-\subsection{Lepton identification and isolation efficiency}%??
+\subsection{Lepton identification and isolation efficiency}
 \label{sec:promptlepweights}
-%??e, mu, tau
+As described in \SectionRef{sec:mcweights} \ac{MC} events are reweighted using scale factors to account for differences in the efficiency of electron and muon identification and isolation criteria. The weights due to these efficiencies are varied up and down by the uncertainties from the tag and probe method used to measure them and the resulting signal and background yield differences used as the uncertainty from this source.
+
+An uncertainty of 8\% is added to the estimate of the $\PW\rightarrow\tau\nu$ background to account for the uncertainty in the tau identification efficiency, which is measured using $\PZ\rightarrow\tau\tau$ events where one tau decays to a muon and the other hadronically~\cite{Chatrchyan:1385560}. 5\% of events in the $\PW\rightarrow\tau\nu$ control region also appear to be due to $\PW\rightarrow e\nu$ events where the elctron or a jet has been misreconstructed as a tau, so a further 5\% systematic is assigned to the $\PW\rightarrow\tau\nu$ estimate.
 
 
-\subsection{\PZ$\rightarrow\nu\nu$ background extrapolation}%??
+\subsection{Other uncertainties}
 \label{sec:promptzextrap}
-
-
-\subsection{Other uncertainties}%??
-\label{sec:promptzextrap}
-%??pileup weights, cross-sections, pdf uncertainty, qcd scale, luminosity, electron contamination in tau region, mc stat
+Additional uncertainties arise from several sources. For instance, the $\PZ\rightarrow\nu\nu$ background estimate is reliant on the ratio of the cross-sections for the \Znunu and \Zmumu. A 20\% uncertainty on this ratio was applied to cover the difference between the value of the ratio calculated using \textsc{MadGraph} and using \textsc{MCFM}. Further uncertainties come from the measurement of the distribution of the number of primary vertices used in the pileup weights, described in \SectionRef{sec:mcweights}, the \ac{pdf}s and \ac{QCD} scale used in signal cross-section measurements, the cross-sections used to normalise the minor backgrounds, and the measurement of the total integrated luminosity that the data used for the analysis correspond to.
 
 
 \begin{table}
-  \caption{A summary of the uncertainties in the total expected signal and background yields. All uncertainties are quoted as teh change in the yield when each effect is varied up and down according to its uncertainty. The signal yields assume a Higgs boson mass of 125\GeV.}
+  \caption{A summary of the uncertainties in the total expected signal and background yields. All uncertainties are quoted as the change in the yield when each effect is varied up and down according to its uncertainty. The signal yields assume a Higgs boson mass of 125\GeV.}
   \label{tab:promptsysts}
   \begin{tabular}{lcc}
     \hline
