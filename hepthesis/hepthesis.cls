@@ -888,7 +888,7 @@
 \DeclareRobustCommand{\Figure}{figure\xspace}
 \DeclareRobustCommand{\Table}{table\xspace}
 \DeclareRobustCommand{\Equation}{equation\xspace}
-\DeclareRobustCommand{\Reference}{reference\xspace}
+\DeclareRobustCommand{\Reference}{Ref.\xspace}
 %% Standard way to refer to a page number
 \DeclareRobustCommand{\Page}{page\xspace}
 
