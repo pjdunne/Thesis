@@ -1,11 +1,50 @@
 \chapter{Search for invisibly decaying Higgs bosons in Run 1 parked data}
 \label{chap:parked}
+The parked data, described in \SectionRef{sec:triggers}, used for this analysis was collected using a range of triggers with similar but looser requirements than that used for the prompt data analysis described in the previous chapter. These looser requirements allow areas of phase space which were previously removed by the prompt trigger to be used. However, these regions also have very high levels of \ac{QCD} multijet backgrounds, and require the analysis selection and some background estimation methods to be redesigned compared to the prompt analysis.
 
 %??As above for prompt data analysis but focus on differences and limit setting:
 %??New trigger efficiency characterisation, systematic improvements, signal region optimisation, differences in background estimations including options not used
 %??lepton and jet pt requirements
 \section{Trigger}%??
 \label{sec:parkedtrigger}
+The parked data trigger varied throughout LHC Run 1. Run 1 was split into 4 ``eras'', A, B, C and D. During era A data was not being parked, so the prompt data is used. The two other triggers used, one for eras B and C, and one for era D, differed from the prompt trigger in that there was no requirement on the \MET present in each event and the jet \pt and \Mjj requirements were looser. The exact values of the trigger selection cuts are summarised in \TableRef{tab:parkedtrig}.
+
+As three different triggers are used the measurement of trigger efficiency must be performed separately for each one. Also, the variables used in the trigger are highly correlated with each other. These correlations mean it is important to either only use regions of phase space where the trigger is fully efficient, as was done in the prompt analysis, or to measure the trigger efficiency in a way that accurately models the effect of these correlations. The cuts required to ensure that each trigger is fully efficient throughout the region selected can be ascertained from \FigureRef{fig:prompttrigplots}. As the trigger used in era A is the same as that used for the prompt analysis, no relaxation would be possible if the data from era A is to be used. Era A only accounts for 5\% of the total data, however even if the analysis selection is chosen such that only the loosest trigger is fully efficient the common \ac{L1} \MET requirements in all three triggers mean that only the thresholds on the second highest \pt jet's \pt and the \Mjj would be able to be relaxed and it would still be necessary to discard data in the trigger turn on region which is expected to contain signal events. For these reasons several approaches to measuring the trigger efficiency as a function of the values of all variables used in it were investigated.
+
+
+
+%??different methods
+%??trigeff310314.pdf for 1D
+%??trigeff070414.pdf for full 3D binned
+
+
+
+%??final 2D binning then 1D fit and why, sample plots.
+
+\begin{table}
+  \caption{A summary of the requirements of the triggers used for this analysis in each of LHC Run 1's eras. For the jet requirements all triggers require that there is at least one pair of jets in the event satisfying all of the jet requirements listed in this table. All requirements are on \ac{HLT} variables unless stated otherwise.}%??parked trigger cut summary
+  \label{tab:parkedtrig}
+  \begin{tabular}{lc|c|c}
+    \hline\hline
+    \multirow{2}{*}{Variable} & \multicolumn{3}{c}{Cut in era} \\
+    \cline{2-4}
+    & A & B \& C & D \\
+    \hhline{====}
+    L1 \MET & \multicolumn{3}{c}{$>40$ \GeV} \\
+    \hline
+    \METnoMU & $>65$ \GeV & \multicolumn{2}{c}{No requirement} \\
+    \hline
+    jet \pt of both jets & $>40$ \GeV & $>35$ \GeV & $>30$ \GeV \\
+    \hline
+    \Mjj & $>800$ \GeV & \multicolumn{2}{c}{$>700$ \GeV} \\
+    \hline
+    \detajj & \multicolumn{3}{c}{$>3.5$} \\
+    \hline
+    $\eta_{j1}\cdot\eta_{j2}$ & \multicolumn{3}{c}{$>0$} \\
+    \hline
+    \hline
+  \end{tabular}
+\end{table}
 
 \section{Event selection}%??Possibly restructure into preselection and then optimisation after background estimation section
 \label{sec:parkedsel}
