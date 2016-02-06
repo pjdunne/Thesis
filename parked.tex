@@ -2,6 +2,10 @@
 \label{chap:parked}
 The parked data, described in \SectionRef{sec:triggers}, used for this analysis was collected using a range of triggers with similar but looser requirements than that used for the prompt data analysis described in the previous chapter. These looser requirements allow areas of phase space which were previously removed by the prompt trigger to be used. However, these regions also have very high levels of \ac{QCD} multijet backgrounds, and require the analysis selection and some background estimation methods to be redesigned compared to the prompt analysis.
 
+%??closure161214update for closure test
+%??invupdate081214.pdf for some pileup studies
+%??framework synch fwprogress300614.pdf
+%??preapproval for source of gain and other good things
 %??As above for prompt data analysis but focus on differences and limit setting:
 %??New trigger efficiency characterisation, systematic improvements, signal region optimisation, differences in background estimations including options not used
 %??lepton and jet pt requirements
@@ -9,20 +13,8 @@ The parked data, described in \SectionRef{sec:triggers}, used for this analysis 
 \label{sec:parkedtrigger}
 The parked data trigger varied throughout LHC Run 1. Run 1 was split into 4 ``eras'', A, B, C and D. During era A data was not being parked, so the prompt data is used. The two other triggers used, one for eras B and C, and one for era D, differed from the prompt trigger in that there was no requirement on the \MET present in each event and the jet \pt and \Mjj requirements were looser. The exact values of the trigger selection cuts are summarised in \TableRef{tab:parkedtrig}.
 
-As three different triggers are used the measurement of trigger efficiency must be performed separately for each one. Also, the variables used in the trigger are highly correlated with each other. These correlations mean it is important to either only use regions of phase space where the trigger is fully efficient, as was done in the prompt analysis, or to measure the trigger efficiency in a way that accurately models the effect of these correlations. The cuts required to ensure that each trigger is fully efficient throughout the region selected can be ascertained from \FigureRef{fig:prompttrigplots}. As the trigger used in era A is the same as that used for the prompt analysis, no relaxation would be possible if the data from era A is to be used. Era A only accounts for 5\% of the total data, however even if the analysis selection is chosen such that only the loosest trigger is fully efficient the common \ac{L1} \MET requirements in all three triggers mean that only the thresholds on the second highest \pt jet's \pt and the \Mjj would be able to be relaxed and it would still be necessary to discard data in the trigger turn on region which is expected to contain signal events. For these reasons several approaches to measuring the trigger efficiency as a function of the values of all variables used in it were investigated.
-
-
-
-%??different methods
-%??trigeff310314.pdf for 1D
-%??trigeff070414.pdf for full 3D binned
-
-
-
-%??final 2D binning then 1D fit and why, sample plots.
-
 \begin{table}
-  \caption{A summary of the requirements of the triggers used for this analysis in each of LHC Run 1's eras. For the jet requirements all triggers require that there is at least one pair of jets in the event satisfying all of the jet requirements listed in this table. All requirements are on \ac{HLT} variables unless stated otherwise.}%??parked trigger cut summary
+  \caption{A summary of the requirements of the triggers used for this analysis in each of LHC Run 1's eras. For the jet requirements all triggers require that there is at least one pair of jets in the event satisfying all of the jet requirements listed in this table. All requirements are on \ac{HLT} variables unless stated otherwise.}
   \label{tab:parkedtrig}
   \begin{tabular}{lc|c|c}
     \hline\hline
@@ -46,8 +38,32 @@ As three different triggers are used the measurement of trigger efficiency must 
   \end{tabular}
 \end{table}
 
+As three different triggers are used the measurement of trigger efficiency must be performed separately for each one. Also, the variables used in the trigger are highly correlated with each other. These correlations mean it is important to either only use regions of phase space where the trigger is fully efficient, as was done in the prompt analysis, or to measure the trigger efficiency in a way that accurately models the effect of these correlations. The cuts required to ensure that each trigger is fully efficient throughout the region selected can be ascertained from \FigureRef{fig:prompttrigplots}. As the trigger used in era A is the same as that used for the prompt analysis, no relaxation would be possible if the data from era A is to be used. Era A only accounts for 5\% of the total data, however even if the analysis selection is chosen such that only the loosest trigger is fully efficient the common \ac{L1} \MET requirements in all three triggers mean that only the thresholds on the sub-leading jet's \pt and the \Mjj would be able to be relaxed and it would still be necessary to discard data in the trigger turn on region which is expected to contain signal events. For these reasons several approaches to measuring the trigger efficiency as a function of the values of all variables used in it were investigated.
+
+First, the trigger efficiency was measured three dimensionally as a function of \METnoMU, \Mjj and sub-leading jet's \pt. An example of one of the results of these mearements in one of the bins in \METnoMU for the era B and C, and the era D triggers can be seen in \FigureRef{fig:parked3dtrigeff}. The three variables used were chosen, as the trigger becomes fully efficient very quickly as a function of the $\eta$ related variables, so no parametrisation of the efficiency is necessary. The number and size of the bins was chosen to ensure that sufficient events are present in each bin to prevent the statistical error on the efficiency measurement being larger than the differences between bins. As can be seen from the figure, this leads to very large differences in efficiency between bins, which leads to discontinuities in the \MET, \Mjj and sub-leading jet \pt distributions when the measured efficiency is applied to \ac{MC} events as a weight. This method was therefore not suitable for use in the final analysis.
+%trigeff070414.pdf for full 3D binned plot
+\begin{figure} 
+  \includegraphics[width=.6\largefigwidth]{plots/parked/HLT_DiJet35_MJJ700_AllJets_DEta3p5_VBFmet120trigeff.pdf}
+  \includegraphics[width=.6\largefigwidth]{plots/parked/HLT_DiJet30_MJJ700_AllJets_DEta3p5_VBFmet120trigeff.pdf}
+ \caption{The efficiency for the trigger (color-scale) used in eras B and C (left) and era D (right), as a function of \Mjj and sub-leading jet \pt for events with \METnoMU between 60 and 120 \GeV. The efficiency is measured using a single muon dataset collected with an orthogonal trigger.}
+  \label{fig:parked3dtrigeff}
+\end{figure}
+
+In order to achieve a smoother trigger efficiency parametrisation, coarse bins in \Mjj and subleading jet \pt were chosen and a fit to the \METnoMU efficiency distribution in each bin was performed, using the following function:
+\begin{equation}
+  \label{eq:parkedtrigfunc}
+  f\left(x\right)=\frac{A}{2}\cdot\left(1+ \frac{2}{\sqrt{\pi}}\int_{0}^{\frac{x-B}{\sqrt{C}}}e^{-t^{2}}\mathrm{d}t\right),
+\end{equation}
+which has a maximum value of A, and is derived from the error function with centre B and width C. The width, maximum and centre of the function are all allowed to float in the fit.
+
+%??contplotsandpresel220914.pdf
+
+
+%??final 2D binning then 1D fit and why, sample plots.
+
 \section{Event selection}%??Possibly restructure into preselection and then optimisation after background estimation section
 \label{sec:parkedsel}
+%??runcbug101114.pdf
 
 \section{Background estimation}%??                                                                                                                          
 \label{sec:parkedbkg}

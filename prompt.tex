@@ -32,7 +32,7 @@ In each measurement the cut on the variable being studied is removed. The measur
 
   \subfloat[]{\includegraphics[width=.6\largefigwidth]{plots/prompt/trigeffplots_hltonly/metefficiency.pdf}}
   \subfloat[]{\includegraphics[width=.6\largefigwidth]{plots/prompt/trigeffplots_hltonly/mjjefficiency.pdf}}
-  \caption{The efficiency of the \ac{HLT} requirements used in the prompt (blue) and parked (purple and red) data analyses as a function of the values of several offline variables, measured in a sample of events recorded on a single-muon trigger. (a) Efficiency as a function of offline \detajj, (b) efficiency as a function of second highest offline jet \pt, (c) efficiency as a function of offline \MET, (d) efficiency as a function of \Mjj.}
+  \caption{The efficiency of the \ac{HLT} requirements used in the prompt (blue) and parked (purple and red) data analyses as a function of the values of several offline variables, measured in a sample of events recorded on a single-muon trigger. (a) Efficiency as a function of offline \detajj, (b) efficiency as a function of sub-leading jet \pt, (c) efficiency as a function of offline \MET, (d) efficiency as a function of \Mjj.}
   \label{fig:prompttrigplots}
 \end{figure}
 
@@ -42,7 +42,7 @@ In each measurement the cut on the variable being studied is removed. The measur
 
   \subfloat[]{\includegraphics[width=.6\largefigwidth]{plots/prompt/trigeffplots_nol1cut/metefficiency.pdf}}
   \subfloat[]{\includegraphics[width=.6\largefigwidth]{plots/prompt/trigeffplots_nol1cut/mjjefficiency.pdf}}
-  \caption{The combined efficiency of the \ac{HLT} and \ac{L1} trigger requirements used in the prompt (blue) and parked (purple and red) data analyses as a function of the values of several offline variables, measured in a sample of events recorded on a single-muon trigger. (a) Efficiency as a function of offline \detajj, (b) efficiency as a function of second highest offline jet \pt, (c) efficiency as a function of offline \MET, (d) efficiency as a function of \Mjj.}
+  \caption{The combined efficiency of the \ac{HLT} and \ac{L1} trigger requirements used in the prompt (blue) and parked (purple and red) data analyses as a function of the values of several offline variables, measured in a sample of events recorded on a single-muon trigger. (a) Efficiency as a function of offline \detajj, (b) efficiency as a function of sub-leading jet \pt, (c) efficiency as a function of offline \MET, (d) efficiency as a function of \Mjj.}
   \label{fig:prompttrigplots2}
 \end{figure}
 
@@ -323,12 +323,12 @@ The true energy of a jet reconstructed by CMS is not necessarily the same as the
 
 These uncertainties on the \ac{JES} give rise to an uncertainty on the energy of all jets in CMS events. The impact of this uncertainty on the event yields expected and observed in this analysis was estimated be altering the \ac{JES} correction up by one standard deviation, ``JESUP'', and down by one standard deviation ``JESDOWN'', and recalculating the energy and momentum of all jets in each event. The \MET is recalculated taking into account the updated jet energies. Furthermore, as the jet energy scale uncertainty varies as a function of a jet's \pt and $\eta$, it is possible for the \pt ordering of the jets to change when the \ac{JES} is changed. The \ac{VBF} tag pair is therefore rechosen to be the new highest \pt pair of jets. 
 
-After modifying the \ac{JES}, the analysis is reperformed and the resulting change in the expected signal and background yields is taken to be the uncertainty due to \ac{JES}. The second highest \pt jet's \pt in a W+jets \ac{MC} sample is shown for the nominal \ac{JES}, JESUP and JESDOWN in \FigureRef{fig:promptjes}. It can be seen that altering the \ac{JES} results in a smooth change in the jet \pt, indicating that the difference in numbers of events passing the analysis cuts is not due to individual events with large weights migrating in and out of the signal region.
+After modifying the \ac{JES}, the analysis is reperformed and the resulting change in the expected signal and background yields is taken to be the uncertainty due to \ac{JES}. The sub-leading jet's \pt in a W+jets \ac{MC} sample is shown for the nominal \ac{JES}, JESUP and JESDOWN in \FigureRef{fig:promptjes}. It can be seen that altering the \ac{JES} results in a smooth change in the jet \pt, indicating that the difference in numbers of events passing the analysis cuts is not due to individual events with large weights migrating in and out of the signal region.
 
 %plot from AN-13-205
 \begin{figure}
   \includegraphics[width=\largefigwidth]{plots/prompt/jescheckzoom.png}
-  \caption{The \pt distribution of the second highest \pt jet present in W+Jets \ac{MC} events with the nominal \ac{JES} and for JESUP and JESDOWN.}
+  \caption{The distribution of the sub-leading jet's \pt in W+Jets \ac{MC} events with the nominal \ac{JES} and for JESUP and JESDOWN.}
   \label{fig:promptjes}
 \end{figure}
 
