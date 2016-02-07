@@ -49,21 +49,50 @@ First, the trigger efficiency was measured three dimensionally as a function of 
   \label{fig:parked3dtrigeff}
 \end{figure}
 
-In order to achieve a smoother trigger efficiency parametrisation, coarse bins in \Mjj and subleading jet \pt were chosen and a fit to the \METnoMU efficiency distribution in each bin was performed, using the following function:
+In order to achieve a smoother trigger efficiency parametrisation, coarse bins in \Mjj and sub-leading jet \pt were chosen and a fit to the \METnoMU efficiency distribution in each bin was performed, using the following function:
 \begin{equation}
   \label{eq:parkedtrigfunc}
   f\left(x\right)=\frac{A}{2}\cdot\left(1+ \frac{2}{\sqrt{\pi}}\int_{0}^{\frac{x-B}{\sqrt{C}}}e^{-t^{2}}\mathrm{d}t\right),
 \end{equation}
-which has a maximum value of A, and is derived from the error function with centre B and width C. The width, maximum and centre of the function are all allowed to float in the fit.
+which has a maximum value of A, and is derived from the error function with centre B and width C. The width, maximum and centre of the function are all allowed to float in the fit. The events used in this study were required to have leading jet \pt$>50$ \GeV, $\eta_{j1}\cdot\eta_{j2}<0$ and \detajj$>3.6$ to ensure that there are no inefficiencies due to these variables. The results of these fits for two representative \Mjj and sub-leading jet \pt bins are shown in \FigureRef{fig:parkedtrigeff}, and the results for the remaining bins are shown in \AppendixRef{app:trigeffs}. Some of the plots in the appendix indicate that the parameters of the fit have taken extreme values, or have very large uncertainties. These extreme values and poor fits are mostly due to low numbers of events in the bin, and as described in \SectionRef{sec:parkedsel}, these bins are not used in the final event selection.
 
-%??contplotsandpresel220914.pdf
+\begin{figure}
+  \includegraphics[width=.6\largefigwidth]{plots/parked/trigfitplots/hData_MET_1D_35D.pdf}
+  \includegraphics[width=.6\largefigwidth]{plots/parked/trigfitplots/hData_MET_1D_45D.pdf}
+  \caption{The results of performing a fit of the function in \EquationRef{eq:parkedtrigfunc} to the efficiency of the trigger used in era D, measured in a sample of single muon events collected with an orthogonal trigger. The dashed bands show the uncertainty on the fit due to each of the three parameters of the fit. The two bins of dijet mass (mjj) and sub-leading jet's \pt (j2pt) shown are those with the two highest numbers of events from the final signal region described in \SectionRef{sec:parkedsel}.}
+  \label{fig:parkedtrigeff}
+\end{figure}
 
-
-%??final 2D binning then 1D fit and why, sample plots.
+ The weight applied to each \ac{MC} event is an average of the efficiency found for each of the three triggers weighted as follows by the amount of integrated luminosity recorded using each trigger:
+\begin{equation}
+  \label{eq:parkedtrigweight}
+  w\left(p_{\mathrm{T}j2},\Mjj,\METnoMU\right)=\frac{\sum_{i}\mathcal{L}_{i}\epsilon_{i}\left(p_{\mathrm{T}j2},\Mjj,\METnoMU\right)}{\sum_{i}\mathcal{L}_{i}},
+\end{equation}
+Where $i$ are the three triggers, $\epsilon_{i}\left(p_{\mathrm{T}j2},\Mjj,\METnoMU\right)$ is the measured efficiency for trigger $i$ as a function of the event's sub-leading jet \pt, \Mjj and \METnoMU, and $\mathcal{L}_{i}$ is the integrated luminosity collected using trigger $i$. The resulting trigger efficiency varies smoothly and leads to no unphysical discontinuities in the distributions of event variables as can be seen from the figures in the remainder of this chapter.
 
 \section{Event selection}%??Possibly restructure into preselection and then optimisation after background estimation section
 \label{sec:parkedsel}
-%??runcbug101114.pdf
+As mentioned above a significant challenge of the parked data analysis is that the areas of phase space collected by the parked data triggers but not by the prompt data triggers have very large contributions from \ac{QCD} multijet backgrounds. The \ac{QCD} multijet contribution to \ac{VBF} analyses is very hard to model because whilst the cross-sections for these processes are very high, the probability of any individual event being \ac{VBF}-like is very low, making the number of \ac{MC} events that must be generated prohibitively large. As a result of these difficulties the parked data selection is separated into two stages. The first ``preselection'' stage selects a region of phase space which is not expected to be dominated by \ac{QCD} processes, so that studies could be undertaken into which background estimation methods and final signal region selection lead to the best expected limits.
+%??runcbug101114.pdf sig reg optimisation
+
+\subsection{Preselection}%??
+\label{sec:parkedpresel}
+The first element of the preselection is motivated by the trigger. The following selection is applied to ensure that the values of all event variables are above the trigger thresholds of all triggers used and also that any bins in the trigger efficiency parametrisation, described in \SectionRef{sec:parkedtrigger}, with extreme values of the fit parameters or very large uncertainties are not used:
+\begin{align}
+  \label{sec:parkedprepresel}
+  \begin{split}
+  \eta_{j1}\cdot\eta_{j2}<0,\,\mathrm{leading\,jet\,}\pt>50 \GeV, \detajj>3.6, \\
+  \mathrm{subleading\,jet\,}\pt>40 \GeV, \Mjj>1000 GeV.
+  \end{split}
+\end{align}
+
+
+%??metsig
+%??jetmetdphi leading and all
+
+\subsection{Signal region selection}%??
+\label{sec:parkedsigsel}
+
 
 \section{Background estimation}%??                                                                                                                          
 \label{sec:parkedbkg}
@@ -83,11 +112,14 @@ which has a maximum value of A, and is derived from the error function with cent
 \subsection{QCD}%??                                                                                                                                         
 \label{sec:parkedQCD}
 
-\subsection{Minor backgrounds}%??                                                                                                                           
+\subsection{Minor backgrounds}%??
 \label{sec:parkedminor}
 
-\section{Systematic uncertainties}%??                                                                                                                       
+\section{Systematic uncertainties}%??
 \label{sec:parkedsyst}
+The uncertainty due to the reweighting process used to account for trigger inefficiencies cancels in all data driven background estimates, as a ratio of \ac{MC} event yields is taken. To estimate the size of the uncertainty that should be applied to processes not taken from data driven background, the bin with the largest uncertainties on its fit for each era was chosen. It was then assumed that all bins had this worst-case uncertainty. This resulted in a 2.3\% overall uncertainty on these processes from this effect. Given that this error is smaller than many of the other errors considered, and that the uncertainty on the efficiency in most of the fit bins is significantly lower than this worst case this uncertainty is considered negligible.
+
+
 
 \section{Results}%??                                                                                                                                        
 \label{sec:parkedresults}
