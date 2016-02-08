@@ -1,0 +1,448 @@
+Taking input from: ../output_lighttree_htfix//
+-------------------------------------
+Module List
+-------------------------------------
+top
+wmunu
+wenu
+wtaunu
+zmumu
+QCDraw
+vv
+data
+signal110
+signal125
+signal150
+signal200
+signal300
+signal400
+ggHsignal110
+ggHsignal125
+ggHsignal150
+ggHsignal200
+ggHsignal300
+ggHsignal400
+plotter
+summary
+-------------------------------------
+Module Initialisation Output
+-------------------------------------
+Initialisation info for top:
+  Signal MC set is: Top
+  Control MC set is: Top
+  Control data set is: SPLITPARKEDPLUSA
+  Base selection is: jet1_eta*jet2_eta<0 && jet1_eta<4.7 && jet2_eta<4.7 && dijet_M>=800&&jet1_pt>50&&dijet_deta>3.6&& jet2_pt>40&&metnomuons>90&&metnomu_significance>3.0
+  Signal extra selection is: nvetomuons==0&&nvetoelectrons==0&&jetmetnomu_mindphi>1.
+  Control extra selection is: nvetomuons==1&&nvetoelectrons==1&&nselmuons==1&&nselelectrons==1
+  Signal MC weight is: total_weight_lepveto
+  Control MC weight is: total_weight_leptight
+  Control data weight is: weight_nolep
+Initialisation info for wmunu:
+  Signal MC set is: WJets_munu
+  Control MC set is: WJets_munu
+  Control data set is: SPLITPARKEDPLUSA
+  Base selection is: jet1_eta*jet2_eta<0 && jet1_eta<4.7 && jet2_eta<4.7 && dijet_M>=800&&jet1_pt>50&&dijet_deta>3.6&& jet2_pt>40&&metnomuons>90&&metnomu_significance>3.0
+  Signal extra selection is: nvetomuons==0&&nvetoelectrons==0&&jetmetnomu_mindphi>1.
+  Control extra selection is: nselmuons==1&&nvetomuons==1&&nvetoelectrons==0&&jetmetnomu_mindphi>1.
+  Signal MC weight is: total_weight_lepveto
+  Control MC weight is: total_weight_leptight
+  Control data weight is: weight_nolep
+Initialisation info for wenu:
+  Signal MC set is: WJets_enu
+  Control MC set is: WJets_enu
+  Control data set is: SPLITPARKEDPLUSA
+  Base selection is: jet1_eta*jet2_eta<0 && jet1_eta<4.7 && jet2_eta<4.7 && dijet_M>=800&&jet1_pt>50&&dijet_deta>3.6&& jet2_pt>40&&metnomuons>90&&metnomu_significance>3.0
+  Signal extra selection is: nvetomuons==0&&nvetoelectrons==0&&jetmetnomu_mindphi>1.
+  Control extra selection is: nselelectrons==1&&nvetomuons==0&&nvetoelectrons==1&&jetmetnomu_mindphi>1.
+  Signal MC weight is: total_weight_lepveto
+  Control MC weight is: total_weight_leptight
+  Control data weight is: weight_nolep
+Initialisation info for wtaunu:
+  Signal MC set is: WJets_taunu
+  Control MC set is: WJets_taunu
+  Control data set is: SPLITPARKEDPLUSA
+  Base selection is: jet1_eta*jet2_eta<0 && jet1_eta<4.7 && jet2_eta<4.7 && dijet_M>=800&&jet1_pt>50&&dijet_deta>3.6&& jet2_pt>40&&metnomuons>90&&metnomu_significance>3.0
+  Signal extra selection is: nvetomuons==0&&nvetoelectrons==0&&jetmetnomu_mindphi>1.
+  Control extra selection is: ntaus==1&&nvetomuons==0&&nvetoelectrons==0&&lep_mt>20&&jetmetnomu_mindphi>1.0
+  Signal MC weight is: total_weight_lepveto
+  Control MC weight is: total_weight_lepveto
+  Control data weight is: weight_nolep
+Initialisation info for zmumu:
+Signal MC ewk set is: ZJets_ll_vbf
+Signal MC qcd set is: ZJets_ll
+Control MC ewk set  is: ZJets_ll_vbf
+Control MC qcd set is: ZJets_ll
+Control data set is: SPLITPARKEDPLUSA
+Base selection is: jet1_eta*jet2_eta<0 && jet1_eta<4.7 && jet2_eta<4.7 && dijet_M>=800&&jet1_pt>50&&dijet_deta>3.6&& jet2_pt>40&&metnomuons>90&&metnomu_significance>3.0
+Signal extra selection is: m_mumu_gen>80&&m_mumu_gen<100&&jetmetnomu_mindphi>1.
+Control extra selection is: nselmuons==2&&nvetomuons==2&&nvetoelectrons==0&&m_mumu>60&&m_mumu<120&&jetmetnomu_mindphi>1.
+Inclusive control ewk cross-section: 303
+Inclusive control qcd cross-section: 1.1679e+06
+Inclusive signal ewk cross-section: 1380
+Inclusive signal qcd cross-section: 6.5998e+06
+Number of generated ewk Z events: 5781.91
+Number of generated qcd Z events: 2.27893e+07
+Number of generated ewk Z events after mass filtering: 4226.53
+Number of generated qcd Z events after mass filtering: 2.03349e+07
+Initialisation info for QCDraw:
+  Data sets are: 
+    VBF-QCD
+  Base selection is: jet1_eta*jet2_eta<0 && jet1_eta<4.7 && jet2_eta<4.7 && dijet_M>=800&&jet1_pt>50&&dijet_deta>3.6&& jet2_pt>40&&metnomuons>90&&metnomu_significance>3.0
+  Extra selection is: nvetomuons==0&&nvetoelectrons==0&&jetmetnomu_mindphi>1.
+  Data weight is: total_weight_lepveto
+Initialisation info for vv:
+  Data sets are: 
+    VV
+  Base selection is: jet1_eta*jet2_eta<0 && jet1_eta<4.7 && jet2_eta<4.7 && dijet_M>=800&&jet1_pt>50&&dijet_deta>3.6&& jet2_pt>40&&metnomuons>90&&metnomu_significance>3.0
+  Extra selection is: nvetomuons==0&&nvetoelectrons==0&&jetmetnomu_mindphi>1.
+  Data weight is: total_weight_lepveto
+Initialisation info for data:
+  Data sets are: 
+    SPLITPARKEDPLUSA
+  Base selection is: jet1_eta*jet2_eta<0 && jet1_eta<4.7 && jet2_eta<4.7 && dijet_M>=800&&jet1_pt>50&&dijet_deta>3.6&& jet2_pt>40&&metnomuons>90&&metnomu_significance>3.0
+  Extra selection is: nvetomuons==0&&nvetoelectrons==0&&jetmetnomu_mindphi>1.&&((((run>=190456)&&(run<=193621))&&passtrigger==1)||(((run>=193833)&&(run<=203742))&&passparkedtrigger1==1)||(((run>=203777)&&(run<=208686))&&passparkedtrigger2==1))&&l1met>=40
+  Data weight is: weight_nolep
+Initialisation info for signal110:
+  Data sets are: 
+    sig110
+  Base selection is: jet1_eta*jet2_eta<0 && jet1_eta<4.7 && jet2_eta<4.7 && dijet_M>=800&&jet1_pt>50&&dijet_deta>3.6&& jet2_pt>40&&metnomuons>90&&metnomu_significance>3.0
+  Extra selection is: nvetomuons==0&&nvetoelectrons==0&&jetmetnomu_mindphi>1.
+  Data weight is: total_weight_lepveto
+Initialisation info for signal125:
+  Data sets are: 
+    sig125
+  Base selection is: jet1_eta*jet2_eta<0 && jet1_eta<4.7 && jet2_eta<4.7 && dijet_M>=800&&jet1_pt>50&&dijet_deta>3.6&& jet2_pt>40&&metnomuons>90&&metnomu_significance>3.0
+  Extra selection is: nvetomuons==0&&nvetoelectrons==0&&jetmetnomu_mindphi>1.
+  Data weight is: total_weight_lepveto
+Initialisation info for signal150:
+  Data sets are: 
+    sig150
+  Base selection is: jet1_eta*jet2_eta<0 && jet1_eta<4.7 && jet2_eta<4.7 && dijet_M>=800&&jet1_pt>50&&dijet_deta>3.6&& jet2_pt>40&&metnomuons>90&&metnomu_significance>3.0
+  Extra selection is: nvetomuons==0&&nvetoelectrons==0&&jetmetnomu_mindphi>1.
+  Data weight is: total_weight_lepveto
+Initialisation info for signal200:
+  Data sets are: 
+    sig200
+  Base selection is: jet1_eta*jet2_eta<0 && jet1_eta<4.7 && jet2_eta<4.7 && dijet_M>=800&&jet1_pt>50&&dijet_deta>3.6&& jet2_pt>40&&metnomuons>90&&metnomu_significance>3.0
+  Extra selection is: nvetomuons==0&&nvetoelectrons==0&&jetmetnomu_mindphi>1.
+  Data weight is: total_weight_lepveto
+Initialisation info for signal300:
+  Data sets are: 
+    sig300
+  Base selection is: jet1_eta*jet2_eta<0 && jet1_eta<4.7 && jet2_eta<4.7 && dijet_M>=800&&jet1_pt>50&&dijet_deta>3.6&& jet2_pt>40&&metnomuons>90&&metnomu_significance>3.0
+  Extra selection is: nvetomuons==0&&nvetoelectrons==0&&jetmetnomu_mindphi>1.
+  Data weight is: total_weight_lepveto
+Initialisation info for signal400:
+  Data sets are: 
+    sig400
+  Base selection is: jet1_eta*jet2_eta<0 && jet1_eta<4.7 && jet2_eta<4.7 && dijet_M>=800&&jet1_pt>50&&dijet_deta>3.6&& jet2_pt>40&&metnomuons>90&&metnomu_significance>3.0
+  Extra selection is: nvetomuons==0&&nvetoelectrons==0&&jetmetnomu_mindphi>1.
+  Data weight is: total_weight_lepveto
+Initialisation info for ggHsignal110:
+  Data sets are: 
+    ggH110
+  Base selection is: jet1_eta*jet2_eta<0 && jet1_eta<4.7 && jet2_eta<4.7 && dijet_M>=800&&jet1_pt>50&&dijet_deta>3.6&& jet2_pt>40&&metnomuons>90&&metnomu_significance>3.0
+  Extra selection is: nvetomuons==0&&nvetoelectrons==0&&jetmetnomu_mindphi>1.
+  Data weight is: total_weight_lepveto
+Initialisation info for ggHsignal125:
+  Data sets are: 
+    ggH125
+  Base selection is: jet1_eta*jet2_eta<0 && jet1_eta<4.7 && jet2_eta<4.7 && dijet_M>=800&&jet1_pt>50&&dijet_deta>3.6&& jet2_pt>40&&metnomuons>90&&metnomu_significance>3.0
+  Extra selection is: nvetomuons==0&&nvetoelectrons==0&&jetmetnomu_mindphi>1.
+  Data weight is: total_weight_lepveto
+Initialisation info for ggHsignal150:
+  Data sets are: 
+    ggH150
+  Base selection is: jet1_eta*jet2_eta<0 && jet1_eta<4.7 && jet2_eta<4.7 && dijet_M>=800&&jet1_pt>50&&dijet_deta>3.6&& jet2_pt>40&&metnomuons>90&&metnomu_significance>3.0
+  Extra selection is: nvetomuons==0&&nvetoelectrons==0&&jetmetnomu_mindphi>1.
+  Data weight is: total_weight_lepveto
+Initialisation info for ggHsignal200:
+  Data sets are: 
+    ggH200
+  Base selection is: jet1_eta*jet2_eta<0 && jet1_eta<4.7 && jet2_eta<4.7 && dijet_M>=800&&jet1_pt>50&&dijet_deta>3.6&& jet2_pt>40&&metnomuons>90&&metnomu_significance>3.0
+  Extra selection is: nvetomuons==0&&nvetoelectrons==0&&jetmetnomu_mindphi>1.
+  Data weight is: total_weight_lepveto
+Initialisation info for ggHsignal300:
+  Data sets are: 
+    ggH300
+  Base selection is: jet1_eta*jet2_eta<0 && jet1_eta<4.7 && jet2_eta<4.7 && dijet_M>=800&&jet1_pt>50&&dijet_deta>3.6&& jet2_pt>40&&metnomuons>90&&metnomu_significance>3.0
+  Extra selection is: nvetomuons==0&&nvetoelectrons==0&&jetmetnomu_mindphi>1.
+  Data weight is: total_weight_lepveto
+Initialisation info for ggHsignal400:
+  Data sets are: 
+    ggH400
+  Base selection is: jet1_eta*jet2_eta<0 && jet1_eta<4.7 && jet2_eta<4.7 && dijet_M>=800&&jet1_pt>50&&dijet_deta>3.6&& jet2_pt>40&&metnomuons>90&&metnomu_significance>3.0
+  Extra selection is: nvetomuons==0&&nvetoelectrons==0&&jetmetnomu_mindphi>1.
+  Data weight is: total_weight_lepveto
+Initialisation info for plotter:
+Initialisation info for summary:
+  Processes are: 
+    wel
+    wmu
+    wtau
+    zvv
+    vv
+    top
+    qqH125
+    data_obs
+-------------------------------------
+Beginning Main Analysis Sequence
+-------------------------------------
+top:
+  Getting control MC shape
+  Getting control MC Backgrounds shape
+  Getting control Data shape
+  ncmc: 80.3591+-6.76432, ncdata: 112+-10.583, ncbkg: 1.97551+-0.352109
+  weight: 1.36916+-0.131696(data stat.)+-0.115334(MC stat.)
+  Getting signal MC shapes
+  Unnormalised NSMC: 949.188+-21.9194 (MC stat.)
+  Normalised NSMC: 1299.59+-125.005(data stat.)+-113.513(MC stat.)
+N$^{data}$&XXX&$112\pm 10.6$(stat.)\\ 
+N$^{bkg}$&N/A&$2.0\pm 0.4$(stat.)\\ 
+N$^{MC}$&$949.2\pm21.9$(stat.)&$80.4\pm 6.8$(stat.)\\ 
+Final estimate&\textcolor{red}{$1299.6\pm125.0$(stat.)$\pm113.5$(MC stat.)}&N/A \\ 
+wmunu:
+  Getting control MC shape
+  Getting control MC Backgrounds shape
+  Getting control Data shape
+  ncmc: 6529.59+-56.9036, ncdata: 7727+-87.9034, ncbkg: 1240.35+-157.936
+  weight: 0.993425+-0.0134623(data stat.)+-0.0256904(MC stat.)
+  Getting signal MC shapes
+  Unnormalised NSMC: 3561.53+-44.0167 (MC stat.)
+  Normalised NSMC: 3538.11+-47.9465(data stat.)+-101.409(MC stat.)
+N$^{data}$&XXX&$7727\pm 87.9$(stat.)\\ 
+N$^{bkg}$&N/A&$1240.3\pm 157.9$(stat.)\\ 
+N$^{MC}$&$3561.5\pm44.0$(stat.)&$6529.6\pm 56.9$(stat.)\\ 
+Final estimate&\textcolor{red}{$3538.1\pm47.9$(stat.)$\pm101.4$(MC stat.)}&N/A \\ 
+wenu:
+  Getting control MC shape
+  Getting control MC Backgrounds shape
+  Getting control Data shape
+  ncmc: 1974.79+-29.7518, ncdata: 2202+-46.9255, ncbkg: 458.038+-60.056
+  weight: 0.883113+-0.0237623(data stat.)+-0.0331944(MC stat.)
+  Getting signal MC shapes
+  Unnormalised NSMC: 3427.38+-43.8408 (MC stat.)
+  Normalised NSMC: 3026.76+-81.4422(data stat.)+-120.177(MC stat.)
+N$^{data}$&XXX&$2202\pm 46.9$(stat.)\\ 
+N$^{bkg}$&N/A&$458.0\pm 60.1$(stat.)\\ 
+N$^{MC}$&$3427.4\pm43.8$(stat.)&$1974.8\pm 29.8$(stat.)\\ 
+Final estimate&\textcolor{red}{$3026.8\pm81.4$(stat.)$\pm120.2$(MC stat.)}&N/A \\ 
+wtaunu:
+  Getting control MC shape
+  Getting control MC Backgrounds shape
+  Getting control Data shape
+  ncmc: 287.021+-11.7616, ncdata: 448+-21.166, ncbkg: 78.4008+-12.128
+  weight: 1.28771+-0.0737438(data stat.)+-0.0676012(MC stat.)
+  Getting signal MC shapes
+  Unnormalised NSMC: 3759.39+-43.2208 (MC stat.)
+  Normalised NSMC: 4841+-277.232(data stat.)+-260.162(MC stat.)
+N$^{data}$&XXX&$448\pm 21.2$(stat.)\\ 
+N$^{bkg}$&N/A&$78.4\pm 12.1$(stat.)\\ 
+N$^{MC}$&$3759.4\pm43.2$(stat.)&$287.0\pm 11.8$(stat.)\\ 
+Final estimate&\textcolor{red}{$4841.0\pm277.2$(stat.)$\pm260.2$(MC stat.)}&N/A \\ 
+zmumu:
+  Getting control MC shape
+  Getting control MC Backgrounds shape
+  Getting control Data shape
+  ncmcewk: 55.9375+-0.556649, ncmcqcd: 325.215+-9.11903, ncdata: 402+-20.0499, ncbkg: 18.9137+-2.87233
+(NCData-NCBkg)/(NCMCEWK+NCMCQCD): 1.00507 n.b. this is not directly used in calculation due to mumu nunu cross-section reweighting procedure
+NSMC EWK: 556.428+-4.40258 NSMC QCD: 4370.86+-81.5911
+Final estimate: 4927.29+-257.884 (data stat.) +-142.226(MC stat.)
+N$_{Gen}$(EWK)&\multicolumn{2}{c|}{$5781.9$}   \\ 
+N$_{Gen}$(Z mass, EWK)&\multicolumn{2}{c|}{$4226.5$}   \\ 
+N$_{Gen}$(QCD)&\multicolumn{2}{c|}{$22789300.0$}   \\ 
+N$_{Gen}$(Z mass, QCD)&\multicolumn{2}{c|}{$20334900.0$}   \\ 
+\hline 
+ & Signal region & Control region \\ 
+ \hline 
+$N^{data}$ & XXX & $402 \pm 20.0 (stat.)$\\ 
+$N^{bkg}$ & N/A  & $18.9 \pm 2.9 (stat.)$  \\ 
+$N^{MC}(EWK)$ & $87.2 \pm 0.7 (stat.)$  & $55.9 \pm 0.6 (stat.) $   \\ 
+$N^{MC}(QCD)$ & $689.0 \pm 12.9 (stat.)$  & $325.2 \pm 9.1 (stat.) $   \\ 
+$Final N^{Z\rightarrow\nu\nu} estimate$ & \textcolor{red}{$4927.3 \pm 257.9 (data stat.) \pm 142.2 (MC stat.)$}  & N/A  \\ 
+QCDraw:
+  Getting shape
+WARNING: VBF-QCD-Pt-1400to1800 is empty.
+  nevents: 5401+-45.6283
+WARNING: VBF-QCD-Pt-1400to1800 is empty.
+WARNING: VBF-QCD-Pt-1400to1800 is empty.
+WARNING: VBF-QCD-Pt-1400to1800 is empty.
+WARNING: VBF-QCD-Pt-1400to1800 is empty.
+WARNING: VBF-QCD-Pt-1400to1800 is empty.
+WARNING: VBF-QCD-Pt-1400to1800 is empty.
+WARNING: VBF-QCD-Pt-1400to1800 is empty.
+WARNING: VBF-QCD-Pt-1400to1800 is empty.
+WARNING: VBF-QCD-Pt-1400to1800 is empty.
+WARNING: VBF-QCD-Pt-1400to1800 is empty.
+WARNING: VBF-QCD-Pt-1400to1800 is empty.
+WARNING: VBF-QCD-Pt-1400to1800 is empty.
+WARNING: VBF-QCD-Pt-1400to1800 is empty.
+WARNING: VBF-QCD-Pt-1400to1800 is empty.
+WARNING: VBF-QCD-Pt-1400to1800 is empty.
+WARNING: VBF-QCD-Pt-1400to1800 is empty.
+WARNING: VBF-QCD-Pt-1400to1800 is empty.
+WARNING: VBF-QCD-Pt-1400to1800 is empty.
+WARNING: VBF-QCD-Pt-1400to1800 is empty.
+WARNING: VBF-QCD-Pt-1400to1800 is empty.
+WARNING: VBF-QCD-Pt-1400to1800 is empty.
+WARNING: VBF-QCD-Pt-1400to1800 is empty.
+WARNING: VBF-QCD-Pt-1400to1800 is empty.
+WARNING: VBF-QCD-Pt-1400to1800 is empty.
+WARNING: VBF-QCD-Pt-1400to1800 is empty.
+vv:
+  Getting shape
+  nevents: 97.2809+-2.34054
+data:
+  Getting shape
+  nevents: 32562+-180.449
+signal110:
+  Getting shape
+  nevents: 1303.59+-19.9954
+signal125:
+  Getting shape
+  nevents: 1231.04+-18.2872
+signal150:
+  Getting shape
+  nevents: 1145.93+-15.9365
+signal200:
+  Getting shape
+  nevents: 903.063+-16.5099
+signal300:
+  Getting shape
+  nevents: 569.816+-9.35016
+signal400:
+  Getting shape
+  nevents: 381.015+-5.83313
+ggHsignal110:
+  Getting shape
+  nevents: 240.481+-22.4301
+ggHsignal125:
+  Getting shape
+  nevents: 229.445+-18.8637
+ggHsignal150:
+  Getting shape
+  nevents: 227.046+-16.1986
+ggHsignal200:
+  Getting shape
+  nevents: 178.636+-10.4619
+ggHsignal300:
+  Getting shape
+  nevents: 170.277+-7.38222
+ggHsignal400:
+  Getting shape
+  nevents: 185.156+-6.93886
+plotter:
+  Drawing plot for jet2_pt
+    Getting histograms..
+    Drawing Stack..
+    Drawing Unstacked..
+  Drawing plot for jet1_pt
+    Getting histograms..
+    Drawing Stack..
+    Drawing Unstacked..
+  Drawing plot for metnomuons
+    Getting histograms..
+    Drawing Stack..
+    Drawing Unstacked..
+  Drawing plot for met
+    Getting histograms..
+    Drawing Stack..
+    Drawing Unstacked..
+  Drawing plot for l1met
+    Getting histograms..
+    Drawing Stack..
+    Drawing Unstacked..
+  Drawing plot for dijet_M
+    Getting histograms..
+    Drawing Stack..
+    Drawing Unstacked..
+  Drawing plot for jetmetnomu_mindphi
+    Getting histograms..
+    Drawing Stack..
+    Drawing Unstacked..
+  Drawing plot for alljetsmetnomu_mindphi
+    Getting histograms..
+    Drawing Stack..
+    Drawing Unstacked..
+  Drawing plot for metnomu_significance
+    Getting histograms..
+    Drawing Stack..
+    Drawing Unstacked..
+  Drawing plot for dijet_sumeta
+    Getting histograms..
+    Drawing Stack..
+    Drawing Unstacked..
+  Drawing plot for ht
+    Getting histograms..
+    Drawing Stack..
+    Drawing Unstacked..
+  Drawing plot for jetunclet_mindphi
+    Getting histograms..
+    Drawing Stack..
+    Drawing Unstacked..
+  Drawing plot for metnomuunclet_dphi
+    Getting histograms..
+    Drawing Stack..
+    Drawing Unstacked..
+  Drawing plot for dijetmetnomu_scalarSum_pt
+    Getting histograms..
+    Drawing Stack..
+    Drawing Unstacked..
+  Drawing plot for dijetmetnomu_vectorialSum_pt
+    Getting histograms..
+    Drawing Stack..
+    Drawing Unstacked..
+  Drawing plot for n_jets_cjv_30
+    Getting histograms..
+    Drawing Stack..
+    Drawing Unstacked..
+  Drawing plot for n_jets_cjv_20EB_30EE
+    Getting histograms..
+    Drawing Stack..
+    Drawing Unstacked..
+  Drawing plot for dijet_dphi
+    Getting histograms..
+    Drawing Stack..
+    Drawing Unstacked..
+  Drawing plot for dijet_deta
+    Getting histograms..
+    Drawing Stack..
+    Drawing Unstacked..
+  Drawing plot for lep_mt
+    Getting histograms..
+    Drawing Stack..
+    Drawing Unstacked..
+  Drawing plot for dijetmetnomu_ptfraction
+    Getting histograms..
+    Drawing Stack..
+    Drawing Unstacked..
+  Drawing plot for ele1_pt
+    Getting histograms..
+    Drawing Stack..
+    Drawing Unstacked..
+  Drawing plot for mu1_pt
+    Getting histograms..
+    Drawing Stack..
+    Drawing Unstacked..
+  Drawing plot for jet1_csv
+    Getting histograms..
+    Drawing Stack..
+    Drawing Unstacked..
+  Drawing plot for jet2_csv
+    Getting histograms..
+    Drawing Stack..
+    Drawing Unstacked..
+  Drawing plot for jet3_csv
+    Getting histograms..
+    Drawing Stack..
+    Drawing Unstacked..
+summary:
+wel: 3026.76
+wmu: 3538.11
+wtau: 4841
+zvv: 4927.29
+vv: 97.2809
+top: 1299.59
+qqH125: 1231.04
+data_obs: 32562
+All modules ran and exited with status 0.

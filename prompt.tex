@@ -32,7 +32,7 @@ In each measurement the cut on the variable being studied is removed. The measur
 
   \subfloat[]{\includegraphics[width=.6\largefigwidth]{plots/prompt/trigeffplots_hltonly/metefficiency.pdf}}
   \subfloat[]{\includegraphics[width=.6\largefigwidth]{plots/prompt/trigeffplots_hltonly/mjjefficiency.pdf}}
-  \caption{The efficiency of the \ac{HLT} requirements used in the prompt (blue) and parked (purple and red) data analyses as a function of the values of several offline variables, measured in a sample of events recorded on a single-muon trigger. (a) Efficiency as a function of offline \detajj, (b) efficiency as a function of sub-leading jet \pt, (c) efficiency as a function of offline \MET, (d) efficiency as a function of \Mjj.}
+  \caption{The efficiency of the \ac{HLT} requirements used in the prompt (blue) and parked (purple and red) data analyses as a function of the values of several offline variables, measured in a sample of events recorded on a single-muon trigger. (a) Efficiency as a function of offline \detajj, (b) efficiency as a function of sub-leading jet \pt, (c) efficiency as a function of offline \METnoMU, (d) efficiency as a function of \Mjj.}
   \label{fig:prompttrigplots}
 \end{figure}
 
@@ -42,7 +42,7 @@ In each measurement the cut on the variable being studied is removed. The measur
 
   \subfloat[]{\includegraphics[width=.6\largefigwidth]{plots/prompt/trigeffplots_nol1cut/metefficiency.pdf}}
   \subfloat[]{\includegraphics[width=.6\largefigwidth]{plots/prompt/trigeffplots_nol1cut/mjjefficiency.pdf}}
-  \caption{The combined efficiency of the \ac{HLT} and \ac{L1} trigger requirements used in the prompt (blue) and parked (purple and red) data analyses as a function of the values of several offline variables, measured in a sample of events recorded on a single-muon trigger. (a) Efficiency as a function of offline \detajj, (b) efficiency as a function of sub-leading jet \pt, (c) efficiency as a function of offline \MET, (d) efficiency as a function of \Mjj.}
+  \caption{The combined efficiency of the \ac{HLT} and \ac{L1} trigger requirements used in the prompt (blue) and parked (purple and red) data analyses as a function of the values of several offline variables, measured in a sample of events recorded on a single-muon trigger. (a) Efficiency as a function of offline \detajj, (b) efficiency as a function of sub-leading jet \pt, (c) efficiency as a function of offline \METnoMU, (d) efficiency as a function of \Mjj.}
   \label{fig:prompttrigplots2}
 \end{figure}
 
@@ -55,7 +55,7 @@ As well as the trigger based selection, further cuts are made to reduce the \ac{
 
 The specific values of the cuts on each variable are chosen for three reasons. Firstly, the reconstruction algorithms for some objects are only well validated for certain values of \pt and $\eta$. This consideration decides the threshold for the \ac{CJV} and lepton vetos. Secondly, as can be seen from \FigureRef{fig:prompttrigplots}, the values of the offline variables where the trigger becomes fully efficient are in some cases much higher than the online cut. Because the variables used in the trigger are highly correlated, the offline cuts on all variables used in the trigger were chosen such that the trigger efficiency for the variable at that point is greater than 95\%. The region of phase space remaining after all cuts have been applied is called the signal region.
 
-Finally, the values of the cuts are optimised to provide the best expected limit on \BRinv\, for a 125 \GeV\, Higgs boson, which is calculated using the method described in \SectionRef{sec:stats} with the background estimation carried out as in \SectionRef{sec:promptbkg} and the systematic uncertainties as described in \SectionRef{sec:promptsyst}. For the tag jet \pt and \MET, no improvement in the expected limit is seen by tightening the cut, so the requirement is at the 95\% efficiency point of the trigger. The distributions and cut values for several of the other variables used are shown in \FigureRef{fig:promptcontrolplots}. The full selection gives a $(6.8\pm 0.3)\times 10^{-3}$ efficiency for selecting events from invisible decays of a VBF produced 125 \GeV\, Higgs boson.  
+Finally, the values of the cuts are optimised to provide the best expected limit on \BRinv\, for a 125 \GeV\, Higgs boson, which is calculated using the method described in \SectionRef{sec:stats} with the background estimation carried out as in \SectionRef{sec:promptbkg} and the systematic uncertainties as described in \SectionRef{sec:promptsyst}. For the tag jet \pt and \METnoMU, no improvement in the expected limit is seen by tightening the cut, so the requirement is at the 95\% efficiency point of the trigger. The distributions and cut values for several of the other variables used are shown in \FigureRef{fig:promptcontrolplots}. The full selection gives a $(6.8\pm 0.3)\times 10^{-3}$ efficiency for selecting events from invisible decays of a VBF produced 125 \GeV\, Higgs boson.  
 
 %discriminating variable plots from HIG-13-030
 \begin{figure}
@@ -64,7 +64,7 @@ Finally, the values of the cuts are optimised to provide the best expected limit
 
   \subfloat[]{\includegraphics[width=.6\largefigwidth]{plots/prompt/VBF-Dijet-DPhi.pdf}}
   \subfloat[]{\includegraphics[width=.6\largefigwidth]{plots/prompt/VBF-CJV-pT.pdf}}
-  \caption{Distributions of (a) \Mjj, (b) \detajj, (c) \dphijj and (d) leading central jet \pt in background and signal \ac{MC} events. The events shown are required to have two jets in opposite forward/backward halves of the detector with \pt$>50$ \GeV, $\Mjj>150$ \GeV and \MET$>130$ \GeV. The dashed lines indicate the offline selection criteria applied to these variables ~\cite{Chatrchyan:2014tja}.}
+  \caption{Distributions of (a) \Mjj, (b) \detajj, (c) \dphijj and (d) leading central jet \pt in background and signal \ac{MC} events. The events shown are required to have two jets in opposite forward/backward halves of the detector with \pt$>50$ \GeV, $\Mjj>150$ \GeV and \METnoMU$>130$ \GeV. The dashed lines indicate the offline selection criteria applied to these variables ~\cite{Chatrchyan:2014tja}.}
   \label{fig:promptcontrolplots}
 \end{figure}
 
@@ -83,7 +83,7 @@ The number of $\PW\rightarrow e\nu$ events in the signal region is then estimate
   \label{eq:wdatabkg}
   N^{S}_{Exp}=\left(N^{C}_{Data}-N^{C}_{Bkg}\right)\cdot\frac{N^{S}_{MC}}{N^{C}_{MC}},
 \end{equation}
-where $N^{S}_{Exp}$ is the number of expected events in the signal region from this background process, $N^{C}_{Data}$ is the number of events seen in the control region in data, $N^{C}_{Bkg}$ is the number of events from other backgrounds in the control region estimated using \ac{MC}, which is expected to be small, and $N^{S}_{MC}$ and $N^{C}_{MC}$ are the numbers of events predicted by \ac{MC} simulating this process to be in the signal and control regions respectively. The fact that estimations from \ac{MC} are only used in ratios, or where they are expected to be small, removes any dependence of the final background estimation on the overall rate of the process predicted by \ac{MC} and instead allows the observed rate in data to be used. It is important that the shape of the variables which differ between the control and signal regions are well modelled by the \ac{MC}. The modelling of the shape of two key variables, the \MET and the electron \pt, are shown in \FigureRef{fig:promptwenu}, where it can be seen that whilst the overall rate is significantly different between data and \ac{MC}, the shape of the distribution is modelled well.  The inputs and results of the background estimation are shown in \TableRef{tab:promptwenu}.
+where $N^{S}_{Exp}$ is the number of expected events in the signal region from this background process, $N^{C}_{Data}$ is the number of events seen in the control region in data, $N^{C}_{Bkg}$ is the number of events from other backgrounds in the control region estimated using \ac{MC}, which is expected to be small, and $N^{S}_{MC}$ and $N^{C}_{MC}$ are the numbers of events predicted by \ac{MC} simulating this process to be in the signal and control regions respectively. The fact that estimations from \ac{MC} are only used in ratios, or where they are expected to be small, removes any dependence of the final background estimation on the overall rate of the process predicted by \ac{MC} and instead allows the observed rate in data to be used. It is important that the shape of the variables which differ between the control and signal regions are well modelled by the \ac{MC}. The modelling of the shape of two key variables, the \METnoMU and the electron \pt, are shown in \FigureRef{fig:promptwenu}, where it can be seen that whilst the overall rate is significantly different between data and \ac{MC}, the shape of the distribution is modelled well.  The inputs and results of the background estimation are shown in \TableRef{tab:promptwenu}.
 
 %tables from AN-13-205
 \begin{table}
@@ -109,13 +109,13 @@ where $N^{S}_{Exp}$ is the number of expected events in the signal region from t
 \begin{figure}
   \includegraphics[width=.6\largefigwidth]{plots/prompt/AN-12-403-figs/hWEl_WpT.pdf}
   \includegraphics[width=.6\largefigwidth]{plots/prompt/AN-12-403-figs/hWEl_MET.pdf}
-  \caption{Distributions of the visible $\PW$ boson \pt (i.e. the electron \pt) (left) and \MET (right) in the single electron control region. The hatched region illustrates the systematic uncertainty~\cite{ARTICLE:CMSAN-12-403}.}
+  \caption{Distributions of the visible $\PW$ boson \pt (i.e. the electron \pt) (left) and \METnoMU (right) in the single electron control region. The hatched region illustrates the systematic uncertainty~\cite{ARTICLE:CMSAN-12-403}.}
   \label{fig:promptwenu}
 \end{figure}
 
 \subsection{\PW$\rightarrow \mu\nu$ + jets}
 \label{sec:promptwmunu}
-The method used to estimate the background from $\PW$+jets where the $\PW$ boson decays to a muon and a muon neutrino, $\PW\rightarrow\mu\nu$, is very similar to that used for $\PW\rightarrow e\nu$. A single muon control region is used which replaces the muon veto of the signal region with a requirement that there is exactly one tight muon, with \pt$>20$ \GeV, and no other veto muons. All other signal region cuts remain unchanged. Equation \ref{eq:wdatabkg} is then used, with the control region now being the single muon control region, to estimate the number of events from $W\rightarrow\mu\nu$ expected in the signal region. The inputs and results of the background estimation are shown in \TableRef{tab:promptwmunu}, and distributions of the muon \pt and the \MET in the single muon control region are shown in \FigureRef{fig:promptwmunu}.
+The method used to estimate the background from $\PW$+jets where the $\PW$ boson decays to a muon and a muon neutrino, $\PW\rightarrow\mu\nu$, is very similar to that used for $\PW\rightarrow e\nu$. A single muon control region is used which replaces the muon veto of the signal region with a requirement that there is exactly one tight muon, with \pt$>20$ \GeV, and no other veto muons. All other signal region cuts remain unchanged. Equation \ref{eq:wdatabkg} is then used, with the control region now being the single muon control region, to estimate the number of events from $W\rightarrow\mu\nu$ expected in the signal region. The inputs and results of the background estimation are shown in \TableRef{tab:promptwmunu}, and distributions of the muon \pt and the \METnoMU in the single muon control region are shown in \FigureRef{fig:promptwmunu}.
 
 %tables from AN-13-205
 \begin{table}
@@ -141,7 +141,7 @@ The method used to estimate the background from $\PW$+jets where the $\PW$ boson
 \begin{figure}
   \includegraphics[width=.6\largefigwidth]{plots/prompt/AN-12-403-figs/hWMu_WpT.pdf}
   \includegraphics[width=.6\largefigwidth]{plots/prompt/AN-12-403-figs/hWMu_MET.pdf}
-  \caption{Distributions of the visible $\PW$ boson \pt (i.e. the muon \pt) (left) and \MET (right) in the single muon control region. The hatched region illustrates the systematic uncertainty~\cite{ARTICLE:CMSAN-12-403}.}
+  \caption{Distributions of the visible $\PW$ boson \pt (i.e. the muon \pt) (left) and \METnoMU (right) in the single muon control region. The hatched region illustrates the systematic uncertainty~\cite{ARTICLE:CMSAN-12-403}.}
   \label{fig:promptwmunu}
 \end{figure}
 
@@ -202,7 +202,7 @@ where $\sigma\left(\PZ\rightarrow\nu\nu\right)$ is the cross-section for \Znunu 
 \end{align}
 Where $EWK$ and $QCD$ denote where cross-sections or numbers of events are for electroweak or \ac{QCD} production of a $\PZ$ boson. $N_{gen}$ is the number of events in the Z+jets \ac{MC} sample at generator level. Due to only very small \Znunu \ac{MC} samples being available, the same \Zmumu samples used for the \ac{MC} estimate of the control region number of events are used, with the leptons ignored and the production cross-section scaled to the appropriate value, to obtain an estimate from \ac{MC} of the number of events from the $Z\rightarrow\nu\nu$ process in the signal region. The generated dimuon mass for this sample was required to be greater than 50 \GeV, so the cross-sections used in equations~\ref{eq:zdatabkg}, \ref{eq:zdataeffs} and \ref{eq:zdataeffc} are also calculated with this constraint. For the control region $N_{gen}$ is calculated after requiring that the mass of the generator level dimuon is between 60 and 120 \GeV, denoted by $\PZ \rm{mass}$ in equations~\ref{eq:zdataeffs} and \ref{eq:zdataeffc}.
 
-The inputs to equations \ref{eq:zdataeffs} and \ref{eq:zdataeffc} are given in \TableRef{tab:promptznunueffs}. The cross-sections for electroweak $\PZ$ production were calculated at NLO using \textsc{VBFNLO} which specialises in vector boson production. The cross-section for \ac{QCD} production of \Zmumu is calculated using \textsc{FEWZ} inclusively for all leptons and then divided by three to obtain the figure for muons only. This cross-section is then multiplied by the ratio between the cross-section for \Znunu and \Zmumu, which was calculated to be 5.651 at NLO using \textsc{MCFM}, to obtain the \ac{QCD} production cross-section for \Znunu. The inputs to \EquationRef{eq:zdatabkg} are given in \TableRef{tab:promptznunu}, with the exception of the ratio between the total production cross-sections for \Znunu and \Zmumu which is taken to be the same 5.651 that it is found to be for \ac{QCD} production. This approximation is used because the electroweak contribution to the ratio is smaller than that from \ac{QCD} by more than a factor of one thousand and is therefore negligible. The distributions of \MET and \Mjj for a \PZ control region with relaxed selection, to ensure sufficient numbers of events, are shown in \FigureRef{fig:promptznunu}, demonstrating that the \ac{MC} samples model the data distribution well.
+The inputs to equations \ref{eq:zdataeffs} and \ref{eq:zdataeffc} are given in \TableRef{tab:promptznunueffs}. The cross-sections for electroweak $\PZ$ production were calculated at NLO using \textsc{VBFNLO} which specialises in vector boson production. The cross-section for \ac{QCD} production of \Zmumu is calculated using \textsc{FEWZ} inclusively for all leptons and then divided by three to obtain the figure for muons only. This cross-section is then multiplied by the ratio between the cross-section for \Znunu and \Zmumu, which was calculated to be 5.651 at NLO using \textsc{MCFM}, to obtain the \ac{QCD} production cross-section for \Znunu. The inputs to \EquationRef{eq:zdatabkg} are given in \TableRef{tab:promptznunu}, with the exception of the ratio between the total production cross-sections for \Znunu and \Zmumu which is taken to be the same 5.651 that it is found to be for \ac{QCD} production. This approximation is used because the electroweak contribution to the ratio is smaller than that from \ac{QCD} by more than a factor of one thousand and is therefore negligible. The distributions of \METnoMU and \Mjj for a \PZ control region with relaxed selection, to ensure sufficient numbers of events, are shown in \FigureRef{fig:promptznunu}, demonstrating that the \ac{MC} samples model the data distribution well.
 
 %table from AN-12-403
 \begin{table}
@@ -253,7 +253,7 @@ The inputs to equations \ref{eq:zdataeffs} and \ref{eq:zdataeffc} are given in \
 \begin{figure}
   \includegraphics[width=.6\largefigwidth]{plots/prompt/VBF-ZCtrl-MET.pdf}
   \includegraphics[width=.6\largefigwidth]{plots/prompt/VBF-ZCtrl-Mjj.pdf}
-  \caption{Distributions of the \MET (left) and \Mjj (right) in a relaxed \PZ control region, with no requirement on \dphijj, the \ac{CJV} removed, and the requirements on \Mjj and \detajj relaxed to 1000 \GeV and 3.5 respectively. The hatched region illustrates the systematic uncertainty~\cite{Chatrchyan:2014tja}.}
+  \caption{Distributions of the \METnoMU (left) and \Mjj (right) in a relaxed \PZ control region, with no requirement on \dphijj, the \ac{CJV} removed, and the requirements on \Mjj and \detajj relaxed to 1000 \GeV and 3.5 respectively. The hatched region illustrates the systematic uncertainty~\cite{Chatrchyan:2014tja}.}
   \label{fig:promptznunu}
 \end{figure}
 
@@ -263,11 +263,11 @@ The inputs to equations \ref{eq:zdataeffs} and \ref{eq:zdataeffc} are given in \
 \subsection{QCD}
 \label{sec:promptacQCD}
 %??maybe others that were tried
-The \ac{QCD} multijet background remaining after the full event selection is mostly from events where jets are mismeasured. The size of the \ac{MC} samples available for studying this process is not sufficient for them to be relied upon to generate extrapolation ratios between a control region and the signal region. The remaining \ac{QCD} multijet background is therefore estimated using a so-called ``ABCD'' method. In this method four regions, A, B, C and D, are defined according to whether events pass or fail the \MET and \ac{CJV} cuts as shown in \FigureRef{fig:abcdmethod}. Region D is the signal region and regions A, B and C are three mutually exclusive control regions.
+The \ac{QCD} multijet background remaining after the full event selection is mostly from events where jets are mismeasured. The size of the \ac{MC} samples available for studying this process is not sufficient for them to be relied upon to generate extrapolation ratios between a control region and the signal region. The remaining \ac{QCD} multijet background is therefore estimated using a so-called ``ABCD'' method. In this method four regions, A, B, C and D, are defined according to whether events pass or fail the \METnoMU and \ac{CJV} cuts as shown in \FigureRef{fig:abcdmethod}. Region D is the signal region and regions A, B and C are three mutually exclusive control regions.
 
 \begin{figure}
   \begin{tabular}{l|c|c|l}
-    \multicolumn{1}{c}{}&\multicolumn{1}{c}{Fail \MET} & \multicolumn{1}{c}{Pass \MET} &\\
+    \multicolumn{1}{c}{}&\multicolumn{1}{c}{Fail \METnoMU} & \multicolumn{1}{c}{Pass \METnoMU} &\\
     \cline{2-3}
     Fail \ac{CJV} &\cellcolor{orange} A & \cellcolor{orange}B &\\
     \cline{2-3}
@@ -279,7 +279,7 @@ The \ac{QCD} multijet background remaining after the full event selection is mos
   \label{fig:abcdmethod}
 \end{figure}
 
-The efficiency to pass the \MET and \ac{CJV} cuts can be determined from the ratios between regions A and B, and A and C respectively. The number of events expected in the signal region is then:
+The efficiency to pass the \METnoMU and \ac{CJV} cuts can be determined from the ratios between regions A and B, and A and C respectively. The number of events expected in the signal region is then:
 \begin{align}
   \label{eq:abcd}
   \begin{split}
@@ -287,7 +287,7 @@ The efficiency to pass the \MET and \ac{CJV} cuts can be determined from the rat
   &=\frac{N_{B}\cdot N_{C}}{N_{A}}
   \end{split}
 \end{align}
-Where $N_{A,B,C}$ is the number of events observed in region $A,B,C$ in data minus the number expected from V+jets or other minor backgrounds, i.e. the number of events in the region believed to be from QCD. This method relies on the probability of an event passing the \ac{CJV} being uncorrelated with the \MET of the event. This has been checked by comparing the \MET distribution, below 130 \GeV, for events which pass and fail the \ac{CJV}. The maximum fractional difference observed between bins of these two distributions is 40\%, so this is added as a systematic to the \ac{QCD} multijet background yield. The method was also tested in a region orthogonal to the signal region with all requirements the same as those of the signal region except \dphijj which was required to be greater than 2.6. In this test region, which is expected to be \ac{QCD} dominated, the prediction agreed with the expectation within 15\%, which is within the systematic uncertainty on the method. The results of using this method to estimate the number of QCD events in the signal region are shown in \TableRef{tab:promptqcd}.
+Where $N_{A,B,C}$ is the number of events observed in region $A,B,C$ in data minus the number expected from V+jets or other minor backgrounds, i.e. the number of events in the region believed to be from QCD. This method relies on the probability of an event passing the \ac{CJV} being uncorrelated with the \METnoMU of the event. This has been checked by comparing the \METnoMU distribution, below 130 \GeV, for events which pass and fail the \ac{CJV}. The maximum fractional difference observed between bins of these two distributions is 40\%, so this is added as a systematic to the \ac{QCD} multijet background yield. The method was also tested in a region orthogonal to the signal region with all requirements the same as those of the signal region except \dphijj which was required to be greater than 2.6. In this test region, which is expected to be \ac{QCD} dominated, the prediction agreed with the expectation within 15\%, which is within the systematic uncertainty on the method. The results of using this method to estimate the number of QCD events in the signal region are shown in \TableRef{tab:promptqcd}.
 
 %Table of results
 \begin{table}
@@ -398,7 +398,7 @@ Additional uncertainties arise from several sources. For instance, the \Znunu ba
 
 \section{Results}
 \label{sec:promptresults}
-The final results of all the background estimation methods and systematic uncertainty studies are summarised in \TableRef{tab:promptresults}. The total number of events expected from background processes in the signal region is $332\pm 46\stat\pm 45\syst$. Assuming the presence of a Higgs boson with a mass of 125 \GeV, \ac{SM} production and \BRinv$=100\%$, $224\pm 31$ signal events would be expected, with 6\% of these from \ac{ggH} and the remainder from \ac{VBF} production. 390 events are observed, which is within one standard deviation of the background only prediction. \FigureRef{fig:promptresults} shows the \MET and \Mjj of the background and signal events expected, and the data observed, in the signal region. 
+The final results of all the background estimation methods and systematic uncertainty studies are summarised in \TableRef{tab:promptresults}. The total number of events expected from background processes in the signal region is $332\pm 46\stat\pm 45\syst$. Assuming the presence of a Higgs boson with a mass of 125 \GeV, \ac{SM} production and \BRinv$=100\%$, $224\pm 31$ signal events would be expected, with 6\% of these from \ac{ggH} and the remainder from \ac{VBF} production. 390 events are observed, which is within one standard deviation of the background only prediction. \FigureRef{fig:promptresults} shows the \METnoMU and \Mjj of the background and signal events expected, and the data observed, in the signal region. 
 
 %table of yields
 \begin{table}
@@ -432,7 +432,7 @@ The final results of all the background estimation methods and systematic uncert
 \begin{figure}
   \includegraphics[width=.6\largefigwidth]{plots/prompt/AN-12-403-figs/SignalRegionMET.pdf}
   \includegraphics[width=.6\largefigwidth]{plots/prompt/AN-12-403-figs/SignalRegionMjj.pdf}
-  \caption{Distributions of the \MET (left) and \Mjj (right) of events observed in data and expected from the background estimation methods described in \SectionRef{sec:promptbkg} in the signal region. The hatched region illustrates the systematic uncertainty. The QCD multijet background is not shown due to very low numbers of events in \ac{MC} samples. The cumulative effect of a signal from a Higgs boson with mass of 125 \GeV, decaying 100\% to invisible final states is also shown~\cite{Chatrchyan:2014tja}.}
+  \caption{Distributions of the \METnoMU (left) and \Mjj (right) of events observed in data and expected from the background estimation methods described in \SectionRef{sec:promptbkg} in the signal region. The hatched region illustrates the systematic uncertainty. The QCD multijet background is not shown due to very low numbers of events in \ac{MC} samples. The cumulative effect of a signal from a Higgs boson with mass of 125 \GeV, decaying 100\% to invisible final states is also shown~\cite{Chatrchyan:2014tja}.}
   \label{fig:promptresults}
 \end{figure}
 

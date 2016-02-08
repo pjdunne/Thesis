@@ -2,6 +2,7 @@
 \label{chap:parked}
 The parked data, described in \SectionRef{sec:triggers}, used for this analysis was collected using a range of triggers with similar but looser requirements than that used for the prompt data analysis described in the previous chapter. These looser requirements allow areas of phase space which were previously removed by the prompt trigger to be used. However, these regions also have very high levels of \ac{QCD} multijet backgrounds, and require the analysis selection and some background estimation methods to be redesigned compared to the prompt analysis.
 
+%??prkedgains111114.pdf for parked vs prompt limits
 %??closure161214update for closure test
 %??invupdate081214.pdf for some pileup studies
 %??framework synch fwprogress300614.pdf
@@ -40,7 +41,7 @@ The parked data trigger varied throughout LHC Run 1. Run 1 was split into 4 ``er
 
 As three different triggers are used the measurement of trigger efficiency must be performed separately for each one. Also, the variables used in the trigger are highly correlated with each other. These correlations mean it is important to either only use regions of phase space where the trigger is fully efficient, as was done in the prompt analysis, or to measure the trigger efficiency in a way that accurately models the effect of these correlations. The cuts required to ensure that each trigger is fully efficient throughout the region selected can be ascertained from \FigureRef{fig:prompttrigplots}. As the trigger used in era A is the same as that used for the prompt analysis, no relaxation would be possible if the data from era A is to be used. Era A only accounts for 5\% of the total data, however even if the analysis selection is chosen such that only the loosest trigger is fully efficient the common \ac{L1} \MET requirements in all three triggers mean that only the thresholds on the sub-leading jet's \pt and the \Mjj would be able to be relaxed and it would still be necessary to discard data in the trigger turn on region which is expected to contain signal events. For these reasons several approaches to measuring the trigger efficiency as a function of the values of all variables used in it were investigated.
 
-First, the trigger efficiency was measured three dimensionally as a function of \METnoMU, \Mjj and sub-leading jet's \pt. An example of one of the results of these mearements in one of the bins in \METnoMU for the era B and C, and the era D triggers can be seen in \FigureRef{fig:parked3dtrigeff}. The three variables used were chosen, as the trigger becomes fully efficient very quickly as a function of the $\eta$ related variables, so no parametrisation of the efficiency is necessary. The number and size of the bins was chosen to ensure that sufficient events are present in each bin to prevent the statistical error on the efficiency measurement being larger than the differences between bins. As can be seen from the figure, this leads to very large differences in efficiency between bins, which leads to discontinuities in the \MET, \Mjj and sub-leading jet \pt distributions when the measured efficiency is applied to \ac{MC} events as a weight. This method was therefore not suitable for use in the final analysis.
+First, the trigger efficiency was measured three dimensionally as a function of \METnoMU, \Mjj and sub-leading jet's \pt. An example of one of the results of these mearements in one of the bins in \METnoMU for the era B and C, and the era D triggers can be seen in \FigureRef{fig:parked3dtrigeff}. The three variables used were chosen, as the trigger becomes fully efficient very quickly as a function of the $\eta$ related variables, so no parametrisation of the efficiency is necessary. The number and size of the bins was chosen to ensure that sufficient events are present in each bin to prevent the statistical error on the efficiency measurement being larger than the differences between bins. As can be seen from the figure, this leads to very large differences in efficiency between bins, which leads to discontinuities in the \METnoMU, \Mjj and sub-leading jet \pt distributions when the measured efficiency is applied to \ac{MC} events as a weight. This method was therefore not suitable for use in the final analysis.
 %trigeff070414.pdf for full 3D binned plot
 \begin{figure} 
   \includegraphics[width=.6\largefigwidth]{plots/parked/HLT_DiJet35_MJJ700_AllJets_DEta3p5_VBFmet120trigeff.pdf}
@@ -72,23 +73,50 @@ Where $i$ are the three triggers, $\epsilon_{i}\left(p_{\mathrm{T}j2},\Mjj,\METn
 
 \section{Event selection}%??Possibly restructure into preselection and then optimisation after background estimation section
 \label{sec:parkedsel}
-As mentioned above a significant challenge of the parked data analysis is that the areas of phase space collected by the parked data triggers but not by the prompt data triggers have very large contributions from \ac{QCD} multijet backgrounds. The \ac{QCD} multijet contribution to \ac{VBF} analyses is very hard to model because whilst the cross-sections for these processes are very high, the probability of any individual event being \ac{VBF}-like is very low, making the number of \ac{MC} events that must be generated prohibitively large. As a result of these difficulties the parked data selection is separated into two stages. The first ``preselection'' stage selects a region of phase space which is not expected to be dominated by \ac{QCD} processes, so that studies could be undertaken into which background estimation methods and final signal region selection lead to the best expected limits.
+As mentioned above a significant challenge of the parked data analysis is that the areas of phase space collected by the parked data triggers but not by the prompt data triggers have very large contributions from \ac{QCD} multijet backgrounds. The \ac{QCD} multijet contribution to \ac{VBF} analyses is very hard to model because whilst the cross-sections for these processes are very high, the probability of any individual event being \ac{VBF}-like is very low, making the number of \ac{MC} events that must be generated prohibitively large. As a result of these difficulties the parked data selection is separated into two stages. The first ``preselection'' stage selects a region of phase space which is not expected to be dominated by \ac{QCD} processes, so that studies could be undertaken into which background estimation methods and final signal region selection lead to the best expected limits. 
 %??runcbug101114.pdf sig reg optimisation
 
 \subsection{Preselection}%??
 \label{sec:parkedpresel}
-The first element of the preselection is motivated by the trigger. The following selection is applied to ensure that the values of all event variables are above the trigger thresholds of all triggers used and also that any bins in the trigger efficiency parametrisation, described in \SectionRef{sec:parkedtrigger}, with extreme values of the fit parameters or very large uncertainties are not used:
+The first element of the preselection is motivated by the trigger. The following selection is applied to ensure that the values of all event variables are above the trigger thresholds of all triggers used:
 \begin{align}
-  \label{sec:parkedprepresel}
+  \label{eq:parkedprepresel}
   \begin{split}
   \eta_{j1}\cdot\eta_{j2}<0,\,\mathrm{leading\,jet\,}\pt>50 \GeV, \detajj>3.6, \\
-  \mathrm{subleading\,jet\,}\pt>40 \GeV, \Mjj>1000 GeV.
+  \mathrm{subleading\,jet\,}\pt>40 \GeV, \Mjj>800 GeV, \METnoMU>90\GeV.
   \end{split}
 \end{align}
+Where $j1$ and $j2$ are the leading and sub-leading \pt jets in the event and are chosen as the \ac{VBF} tag jets. QCD multijet processes still dominate the region defined by this selection, as can be seen in \FigureRef{fig:parkedpresel} top left, where there are a lot more data events than expected from the background \ac{MC} prediction. This difference is due to mismeasured \ac{QCD} multijets events not being adequately modelled by the available \ac{MC} samples. Further pre-selection is therefore necessary to reduce the mismeasured \ac{QCD} multijet background to a level where the large uncertainties on any estimation of its contribution do not have a significant effect on the analysis.
+
+The first variable that is used to achieve this reduction is the \MET significance, \METsig, which is defined as the ratio between \METnoMU and the square root of the sum of the transverse energy of all particles in the event which is an estimate of the statistical error on the \MET. The preselection requires that this variable be greater than 3. The value of this cut was chosen by looking at \FigureRef{fig:parkedpresel} top left and removing the region with the most disagreement between data and \ac{MC}. The resulting region shown in \FigureRef{fig:parkedpresel} top right still does not display good agreement between data and the \ac{MC} prediction, however the disagreement is smaller.
+
+After the cut on \METsig, a requirement that the \METnoMU is not too close to any jets in \phi is made. This requirement is motivated by the high probability for the \MET to be aligned with jets that have been mismeasured. Two variables were investigated, the first was the minimum azimuthal angle difference between either of the two tag jets and the \METnoMU, \jetmetdphileading, and the second was the minimum azimuthal angle difference between any jet with \pt greater than 30 \GeV and the \METnoMU, \jetmetdphi. At a similar signal efficiency the difference between the observed number of events and the \ac{MC} background prediction, which is an indication of the remaining \ac{QCD} multijet background, was found to be 80\% smaller for a cut on \jetmetdphi than a cut on \jetmetdphileading. The same cut on \jetmetdphi was also found to reduce top quark related backgrounds by a factor of two compared to a cut on \jetmetdphileading. We therefore require that \jetmetdphi$>1.0$ for events to pass the preselection.
+
+%contplotsandpresel160914
+The \Mjj distribution after the \jetmetdphi cut is shown in \FigureRef{fig:parkedpresel} bottom. Whilst the agreement for large \Mjj is good, it can be seen that the first bin of the distribution, where mismeasured \ac{QCD} multijet events would be expected, due to their not recoiling against another object, shows a significant disagreement. The final cut of the preselection is therefore to require that \Mjj$>1000$ \GeV. In summary the full preselection is as follows:
+\begin{equation}
+  \label{eq:presel}
+  \begin{split}
+  \eta_{j1}\cdot\eta_{j2}<0,\,\mathrm{leading\,jet\,}\pt>50 \GeV, \detajj>3.6, \\
+  \mathrm{subleading\,jet\,}\pt>40 \GeV, \Mjj>1000 GeV, \METnoMU>90\GeV, \\
+  \jetmetdphi>1.0, \METsig>3.0.
+  \end{split}
+\end{equation}
+After defining the preselection the analysis was ``blinded'', i.e. the data observations were not looked at whilst the analysis was being designed.
 
 
-%??metsig
-%??jetmetdphi leading and all
+%AN-14-243
+\begin{figure}
+  \includegraphics[width=.6\largefigwidth]{plots/parked/AN-14-243-figs/nopreselnunu_metnomu_significance.pdf}
+  \includegraphics[width=.6\largefigwidth]{plots/parked/AN-14-243-figs/metsigpreselnunu_alljetsmetnomu_mindphi.pdf}
+
+  \includegraphics[width=.6\largefigwidth]{plots/parked/AN-14-243-figs/mjj800nunu_dijet_M.pdf}
+  \caption{Top left: \METsig after the trigger driven selection described in \EquationRef{eq:parkedprepresel}. Top right: \jetmetdphi after the trigger driven selection and requiring \METsig$>3$. Bottom: \Mjj after the trigger driven selection and requiring \METsig$>3$ and \jetmetdphi$>1$. In all three plots the disagreement between data and the predictions from background \ac{MC} samples are believed to be due to mismeasured \ac{QCD} multijet events which are not well moddelled by the available \ac{MC} samples.}
+  \label{fig:parkedpresel}
+\end{figure}
+
+%?? and also that any bins in the trigger efficiency parametrisation, described in \SectionRef{sec:parkedtrigger}, with extreme values of the fit parameters or very large uncertainties are not used:
+
 
 \subsection{Signal region selection}%??
 \label{sec:parkedsigsel}
