@@ -159,16 +159,17 @@ discriminants were trained using signal and background events passing the signal
 
 \section{Background estimation}%??                                                                                                                          
 \label{sec:parkedbkg}
-The backgrounds contributing to the parked data analysis are the same as those in the prompt data analysis, and the estimation methods used here are also based on those used in the prompt analysis. However, the changes in event selection necessitate several changes from the methods for the prompt analysis. Furthermore, among other improvements, the systematic uncertainty on the \Znunu background was reduced, better understanding of the data driven scale factors was gained and data driven methods of estimating the top quark related background were investigated.
+The backgrounds contributing to the parked data analysis are the same as those in the prompt data analysis, and the estimation methods used here are also based on those used in the prompt analysis. \EquationRef{eq:wdatabkg} is used in several of these methods in this section, and it is repeated here:
+\begin{equation}
+  \label{eq:wdatabkgrep}
+  N^{S}_{Exp}=\left(N^{C}_{Data}-N^{C}_{Bkg}\right)\cdot\frac{N^{S}_{MC}}{N^{C}_{MC}}.
+\end{equation}
+The terms on the right hand side of this equation which multiple the estimation from \ac{MC} of the number of events due to a particular background process is often referred to as the data driven scale factor. The changes in event selection necessitated several changes from the methods for the prompt analysis. Furthermore, among other improvements, the systematic uncertainty on the \Znunu background was reduced, better understanding of the data driven scale factors was gained and data driven methods of estimating the top quark related background were investigated.
 
 \subsection{Top quarks}%??
 Almost all top quarks decay to a \PW boson and a b quark~\cite{pdg}. Top quarks are either created in pairs, in which case there will be two \PW bosons and two b quarks, or via ``single top'' production where only one top quark is created in association with other quarks or a \PW boson and the result is some combination of \PW bosons and quarks. Where at least one of the \PW bosons decays leptonically and the lepton is misreconstructed either of these processes can result in the appearance of \MET and jets that can coincidentally have \ac{VBF}-like topology. Whilst the contribution from these processes is expected to be small in the signal region, making up around 1\% of events there, the presence of \PW bosons and jets makes these processes very likely to contribute to the control regions used to estimate the \PW+jets background contribution. In the $\PW\rightarrow\tau\nu$ control region approximately 15\% of events are estimated to come from top quark processes. Data driven methods for estimating the top quark background and its uncertainties were therefore investigated.
 
 Initially a dilepton control region was investigated. This had the same cuts on the jet and \MET related variables as the signal region, but the lepton veto, which was replaced with a requirement that there is exactly one tight electron and one tight muond. This region had only single figure numbers of events expected, so the cut on \jetmetdphi was also loosened to 0. It can be seen from \FigureRef{fig:parkedtopjetmetdphi} the ratio between data and MC in this region does not depend significanty on \jetmetdphi. Within the statistics available the scale factor from this control region is consistent with 1 and a good agreement between data and \ac{MC} is seen in all variables studied.
-
-A modification of this control region where events with either two tight electrons or two tight muons, and no other leptons was also studied. In order to avoid \PZ boson contributions the lepton's invariant mass was required to be outside of the range from 60 to 120 \GeV. This control region also yielded good data-\ac{MC} agreement and a scale factor compatible with 1. An issue with both of these control regions is that the top quark pair to single top ratio is very different to both the signal region and the $\PW\rightarrow\tau\nu$ control region. The control regions have a negligible single top contribution, while the signal region top background has almost no top quark pair contribution. The $\PW\rightarrow\tau\nu$ region is a mixture, its top quark background being 30\% from single top events and 70\% for top quark pairs. A single top control region was therefore also investigated.
-
-The single top region differed from the signal region in that the \jetmetdphi cut was removed, exactly one tight electron or muon was required, further leptons were vetoed and one of the tag jets was required to be compatible with being a b-jet. This b-tagging was done using the \ac{CSV} algorithm %??explain CSV
 
 \begin{figure}
   \includegraphics[width=.6\largefigwidth]{plots/parked/topjetmetdphicut0.pdf}
@@ -176,23 +177,102 @@ The single top region differed from the signal region in that the \jetmetdphi cu
   \caption{The distribution of \jetmetdphi (left) and \Mjj (right) in the top control region with one tight electron and one tight muon.}
   \label{fig:parkedtopjetmetdphi}
 \end{figure}
-%??two regions, 
-%??top vs single top, kinematics different important to get contribution the same as in sig reg
-%??top reweighting, 
-%??average out to 1 so just use MC
+
+A modification of this control region where events with either two tight electrons or two tight muons, and no other leptons was also studied. In order to avoid \PZ boson contributions the lepton's invariant mass was required to be outside of the range from 60 to 120 \GeV. This control region also yielded good data-\ac{MC} agreement and a scale factor compatible with 1. An issue with both of these control regions is that the top quark pair to single top ratio is very different to both the signal region and the $\PW\rightarrow\tau\nu$ control region. The control regions have a negligible single top contribution, while the signal region top background has almost no top quark pair contribution. The $\PW\rightarrow\tau\nu$ region is a mixture, its top quark background being 30\% from single top events and 70\% for top quark pairs. A single top control region was therefore also investigated.
+
+The single top region differed from the signal region in that the \jetmetdphi cut was removed, exactly one tight electron or muon was required, further leptons were vetoed and one of the tag jets was required to be compatible with being a b-jet. This b-tagging was done using the \ac{CSV} discriminant. b quarks are both heavier and longer lived than many othe particles created at the \LHC, meaning that their secondary decay vertex can be distinguished from the \ac{PV}. \ac{CSV} is an \ac{MVA} based discriminant which uses information on secondary vertices and the lifetime of the particle to discriminate between jets from b quarks and those from other lighter quarks. The medium working point used for this control region correctly has an efficiency of approximately 85\% for b-quarks and mis-identifies lighter quark jets as b jets approximately 1\% of the time~\cite{bjets}.
+
+The single top region was found to have a 17\% signel top contribution and again showed good data-\ac{MC} agreement and a scale factor compatible with 1 within uncertainties. Because good agreement between data and \ac{MC} and scale factors compatible with 1 are seen in all investigated control regions it was decided to use the \ac{MC} prediction for the top background in all regions with no additional scale factor. A 20\% systematic uncertainty was applied to this prediction which covered the largest deviation from 1 seen in the scale factors from the various control regions.
+
+\begin{figure}
+  \includegraphics[width=.6\largefigwidth]{plots/parked/AN-14-243-figs/singletop/top_jetmetnomu_mindphi.png}
+  \includegraphics[width=.6\largefigwidth]{plots/parked/AN-14-243-figs/singletop/top_dijet_M.png}
+  \caption{The distribution of \jetmetdphileading (left) and \Mjj (right) in the single top control region.}
+  \label{fig:parkedtopjetmetdphi}
+\end{figure}
 
 \subsection{W$\rightarrow e\nu$+jets}%??                                                                                                                    
 \label{sec:parkedwenu}
-The $W\rightarrow e\nu$ background in the parked data analysis is estimated using the same method as 
+The $W\rightarrow e\nu$ background in the parked data analysis is estimated using the same method as that used for the prompt data analysis being based on \EquationRef{eq:wdatabkgrep}. The control region used has the same requirements as the signal region, except that the electron veto is replaced with a requirement that there is one tight electron and no other electrons present in the event. The distributions of several variables in data and \ac{MC} (which has been scaled by the data-driven scale factor extracted from this control region) are shown in \FigureRef{fig:parkedwenu}, where good agreement can be seen. A table of the inputs to \EquationRef{eq:wdatabkgrep} can be seen in \TableRef{tab:parkedwenu}. The scale factor obtained %??scale factor and see investigated further in sec:parkedscalefactors
+
+\begin{table}
+  \begin{center}
+    \caption{The inputs to and results of \EquationRef{eq:wdatabkgrep}, when used to estimate the $W\rightarrow e\nu$ estimate in the signal
+      region.}
+    \label{tab:parkedwenu}
+    \begin{tabular}{lcc}
+      \hline
+      \hline
+      & Signal region & Control region \\
+      \hline
+      \hline
+      $N_{Data}$&N/A$68\pm 8.2$\stat\\
+      $N_{Bkg}$&N/A&$3.5\pm 1.2$\stat\\
+      $N_{MC}$&$114.9\pm8.9$\stat&$128.0\pm 8.0$\stat\\
+      \hline
+      $\frac{N^{data}-N^{bkg}}{N^{W MC}_{C}}$ & \multicolumn{2}{c|}{$0.50\pm0.06$\stat$\pm0.03$(MC stat.)} \\
+      \hline
+      $N_{\PW\rightarrow e\nu}$&\textcolor{red}{$57.9\pm7.4$\stat$\pm7.7$\syst}&N/A \\
+        \hline
+        \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\begin{figure}
+  \caption{}%??
+  \label{fig:parkedwenu}
+\end{figure}
 
 \subsection{W$\rightarrow \mu\nu$+jets}%??                                                                                                                  
 \label{sec:parkedwmunu}
+As for the $\PW\rightarrow e\nu$ background the $W\rightarrow \mu\nu$ background is estimated using \EquationRef{eq:wdatabkgrep}. The control region used has the same requirements as the signal region, except that the muon veto is replaced with a requirement that there is one tight muon and no other muons present in the event. The distributions of several variables in data and \ac{MC} (which has been scaled by the data-driven scale factor extracted from this control region) are shown in \FigureRef{fig:parkedwmunu}, where good agreement can be seen. A table of the inputs to \EquationRef{eq:wdatabkgrep} can be seen in \TableRef{tab:parkedwmunu}. The scale factor obtained %??scale factor and see investigated further in sec:parkedscalefactors
+
+\begin{figure}
+  \caption{}%??
+  \label{fig:parkedwmunu}
+\end{figure}
+
+\begin{table}[h!]
+  \begin{center}
+    \caption{The inputs to and results of \EquationRef{eq:wdatabkgrep}, when used to estimate the $W\rightarrow \mu\nu$ estimate in the signal
+      region.}
+    \label{tab:parkedwmunu}
+    \begin{tabular}{lcc}
+      \hline
+      \hline
+      & Signal region & Control region \\
+      \hline
+      \hline
+      $N_{Data}$&N/A&$300\pm 17.3$\stat\\
+      $N_{Bkg}$&N/A&$14.8\pm 2.5$\stat\\
+      $N_{MC}$&$143.7\pm10.2$\stat&$399.9\pm 14.9$\stat\\
+      \hline
+      $\frac{N^{data}-N^{bkg}}{N^{MC}_{C}}$ & \multicolumn{2}{c|}{$0.71\pm0.04$\stat$\pm0.03$(MC stat.)} \\
+      \hline
+      $N_{\PW\rightarrow\mu\nu}$&\textcolor{red}{$102.5\pm6.2$\stat$\pm11.7$\syst}&N/A \\
+      \hline
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\subsection{Differences between the W$\rightarrow e\nu$ and $W\rightarrow\mu\nu$ +jets backgrounds}%??
+\label{sec:parkedenumunudiff}
 
 \subsection{W$\rightarrow \tau\nu$+jets}%??                                                                                                                 
 \label{sec:parkedwtaunu}
 
 \subsection{Z$\rightarrow \nu\nu$+jets}%??                                                                                                                  
 \label{sec:parkedznunu}
+
+
+
+\subsection{V+jets closure tests}%??
+\label{sec:parkedclosure}
+
+\subsection{V+jets scale factor investigations}%??
+\label{sec:parkedscalefactors}
 
 \subsection{QCD}%??                                                                                                                                         
 \label{sec:parkedQCD}
