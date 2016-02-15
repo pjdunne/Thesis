@@ -5,17 +5,17 @@ and some background estimation methods to be redesigned compared to the prompt a
 
 %??CHECK PLOT AXIS LABEL SIZES AND THAT LEGEND TERMS ARE STANDARD OR IN TEXT
 
-%??prkedgains111114.pdf for parked vs prompt limits
+%??parkedgains111114.pdf for parked vs prompt limits
 %??closure161214update for closure test
 %??invupdate081214.pdf for some pileup studies
 %??framework synch fwprogress300614.pdf
 %??preapproval for source of gain and other good things
 %??As above for prompt data analysis but focus on differences and limit setting:
-%??New trigger efficiency characterisation, systematic improvements, signal region optimisation, differences in background estimations including options not used
+%??systematic improvements, signal region optimisation, differences in background estimations including options not used
 %??lepton and jet pt requirements
 \section{Trigger}
 \label{sec:parkedtrigger}
-The parked data trigger varied throughout LHC Run 1 due to the estimates of both the trigger bandwidth available and the rate of the triggers used in the particular LHC conditions that occured being updated. Run 1 was split into 4 ``eras'', A, B, C and D. During era A data was not being parked, so the prompt data is used. The two other triggers used, one for eras B and C, and one for era D, differed from the prompt trigger in that there was no requirement on the \MET present at \ac{HLT} level in each event and the jet \pt and \Mjj requirements were looser. These looser requirements allow the trigger driven selection applied in the prompt data analysis to be relaxed, and more optimal signal and background control regions to be used. As the region accessible with the parked data includes the prompt data signal region as a subset, no improvement would be possible from applying the analysis designed for the prompt data to the parked data without modification. The exact values of the trigger selection cuts are summarised in \TableRef{tab:parkedtrig}.
+The parked data trigger varied throughout LHC Run 1 due to the estimates of both the trigger bandwidth available and the rate of the triggers used in the particular LHC conditions that occurred being updated. Run 1 was split into 4 ``eras'', A, B, C and D. During era A data was not being parked, so the prompt data is used. The two other triggers used, one for eras B and C, and one for era D, differed from the prompt trigger in that there was no requirement on the \MET present at \ac{HLT} level in each event and the jet \pt and \Mjj requirements were looser. These looser requirements allow the trigger driven selection applied in the prompt data analysis to be relaxed, and more optimal signal and background control regions to be used. As the region accessible with the parked data includes the prompt data signal region as a subset, no improvement would be possible from applying the analysis designed for the prompt data to the parked data without modification. The exact values of the trigger selection cuts are summarised in \TableRef{tab:parkedtrig}.
 
 \begin{table}
   \caption{A summary of the requirements of the triggers used for this analysis in each of LHC Run 1's eras. For the jet requirements all triggers require that there is at least one pair of jets in the event satisfying all of the jet requirements listed in this table. All requirements are on \ac{HLT} variables unless stated otherwise.}
@@ -46,7 +46,7 @@ In order to get the biggest improvement in sensitivity from the parked data, it 
 
 As the trigger used in era A was the same as that used for the prompt analysis, no relaxation would be possible if full trigger efficiency is required and the data from era A is to be used. Era A only accounts for 5\% of the total data, so one possibility is not to use the era A data and to relax the selection to the point of full efficiency of the next tightest trigger. However, it would still be necessary to discard data in the trigger turn on region which is expected to contain signal events. For these reasons several approaches to measuring the trigger efficiency as a function of the values of all variables used in it were investigated.
 
-First, the trigger efficiency was measured three dimensionally as a function of \METnoMU, \Mjj and sub-leading jet's \pt. An example of one of the results of these mearements in one of the bins in \METnoMU for the era B and C, and the era D triggers can be seen in \FigureRef{fig:parked3dtrigeff}. The three variables used were chosen because the trigger becomes fully efficient very quickly as a function of the $\eta$ related variables, so no parametrisation of this efficiency is necessary. The number and size of the bins was chosen to ensure that sufficient events are present in each bin to prevent the statistical error on the efficiency measurement being larger than the differences between bins. As can be seen from the figure, this leads to very large differences in efficiency between bins, which leads to discontinuities in the \METnoMU, \Mjj and sub-leading jet \pt distributions when the measured efficiency was applied to \ac{MC} events as a weight. This method was therefore not suitable for use in the final analysis.
+First, the trigger efficiency was measured three dimensionally as a function of \METnoMU, \Mjj and sub-leading jet's \pt. An example of one of the results of these measurements in one of the bins in \METnoMU for the era B and C, and the era D triggers can be seen in \FigureRef{fig:parked3dtrigeff}. The three variables used were chosen because the trigger becomes fully efficient very quickly as a function of the $\eta$ related variables, so no parameterisation of this efficiency is necessary. The number and size of the bins was chosen to ensure that sufficient events are present in each bin to prevent the statistical error on the efficiency measurement being larger than the differences between bins. As can be seen from the figure, this leads to very large differences in efficiency between bins, which leads to discontinuities in the \METnoMU, \Mjj and sub-leading jet \pt distributions when the measured efficiency was applied to \ac{MC} events as a weight. This method was therefore not suitable for use in the final analysis.
 %trigeff070414.pdf for full 3D binned plot
 \begin{figure} 
   \subfloat[]{\includegraphics[width=.6\largefigwidth]{plots/parked/HLT_DiJet35_MJJ700_AllJets_DEta3p5_VBFmet120trigeff.pdf}}
@@ -55,7 +55,7 @@ First, the trigger efficiency was measured three dimensionally as a function of 
   \label{fig:parked3dtrigeff}
 \end{figure}
 
-In order to achieve a smoother trigger efficiency parametrisation, coarse bins in \Mjj and sub-leading jet \pt were chosen and a fit to the \METnoMU efficiency distribution in each bin was performed, using the following function:
+In order to achieve a smoother trigger efficiency parameterisation, coarse bins in \Mjj and sub-leading jet \pt were chosen and a fit to the \METnoMU efficiency distribution in each bin was performed, using the following function:
 \begin{equation}
   \label{eq:parkedtrigfunc}
   f\left(x\right)=\frac{A}{2}\cdot\left(1+ \frac{2}{\sqrt{\pi}}\int_{0}^{\frac{x-B}{\sqrt{C}}}e^{-t^{2}}\mathrm{d}t\right),
@@ -80,7 +80,7 @@ Where $i$ are the three triggers, $\epsilon_{i}\left(p_{\mathrm{T}j2},\Mjj,\METn
 \label{sec:parkedsel}
 As mentioned above a significant challenge of the parked data analysis is that the areas of phase space collected by the parked data triggers but not by the prompt data triggers have very large contributions from \ac{QCD} multijet backgrounds. The \ac{QCD} multijet contribution to \ac{VBF} analyses is very hard to model because whilst the cross-sections for these processes are very high, the probability of any individual event being \ac{VBF}-like is very low. The number of \ac{MC} events that must be generated to make a representative sample is therefore prohibitively large. As a result of these difficulties, the parked data selection is separated into two stages. The first ``preselection'' stage selects a region of phase space which is not expected to be dominated by \ac{QCD} processes. After this preselection has been made the background processes expected to make contributions are the same as in the prompt data analysis, and studies were undertaken into which background estimation methods and final signal region selection led to the best expected limit.
 
-%??runcbug101114.pdf sig reg optimisation
+%runcbug101114.pdf sig reg optimisation
 
 \subsection{Preselection}
 \label{sec:parkedpresel}
@@ -102,7 +102,7 @@ After the cut on \METsig, a requirement that the \METnoMU is not too close to an
   \subfloat[]{\includegraphics[width=.6\largefigwidth]{plots/parked/AN-14-243-figs/logmetsigpreselnunu_alljetsmetnomu_mindphi.pdf}}
 
   \subfloat[]{\includegraphics[width=.6\largefigwidth]{plots/parked/AN-14-243-figs/logmjj800nunu_dijet_M.pdf}}
-  \caption{(a) \METsig after the trigger driven selection described in \EquationRef{eq:parkedprepresel}. (b) \jetmetdphi after the trigger driven selection and requiring \METsig$>3$. (c) \Mjj after the trigger driven selection and requiring \METsig$>3$ and \jetmetdphi$>1$. All three plots are of the signal-like region with the \ac{MC} scaled using the background estimation methods described in \SectionRef{sec:parkedbkg}. The disagreement between data and the predictions from background \ac{MC} samples is believed to be due to mismeasured \ac{QCD} multijet events which are not well moddelled by the available \ac{MC} samples.}
+  \caption{(a) \METsig after the trigger driven selection described in \EquationRef{eq:parkedprepresel}. (b) \jetmetdphi after the trigger driven selection and requiring \METsig$>3$. (c) \Mjj after the trigger driven selection and requiring \METsig$>3$ and \jetmetdphi$>1$. All three plots are of the signal-like region with the \ac{MC} scaled using the background estimation methods described in \SectionRef{sec:parkedbkg}. The disagreement between data and the predictions from background \ac{MC} samples is believed to be due to mismeasured \ac{QCD} multijet events which are not well modelled by the available \ac{MC} samples.}
   \label{fig:parkedpresel}
 \end{figure}
 
@@ -119,16 +119,16 @@ The \Mjj distribution after the \jetmetdphi cut is shown in \FigureRef{fig:parke
 Distributions of several variables after the full preselection are shown in \FigureRef{fig:parkedpostpresel}.
 
 \begin{figure}
-  \subfloat[]{\includegraphics[width=.5\largefigwidth]{plots/parked/AN-14-243-figs/output_presel/nunu_dijet_deta.pdf}}
-  \subfloat[]{\includegraphics[width=.5\largefigwidth]{plots/parked/AN-14-243-figs/output_presel/nunu_dijet_M.pdf}}
+  \subfloat[]{\includegraphics[width=.55\largefigwidth]{plots/parked/AN-14-243-figs/output_presel/nunu_dijet_deta.pdf}}
+  \subfloat[]{\includegraphics[width=.55\largefigwidth]{plots/parked/AN-14-243-figs/output_presel/nunu_dijet_M.pdf}}
   
-  \subfloat[]{\includegraphics[width=.5\largefigwidth]{plots/parked/AN-14-243-figs/output_presel/nunu_jet1_pt.pdf}}
-  \subfloat[]{\includegraphics[width=.5\largefigwidth]{plots/parked/AN-14-243-figs/output_presel/nunu_jet2_pt.pdf}}
+  \subfloat[]{\includegraphics[width=.55\largefigwidth]{plots/parked/AN-14-243-figs/output_presel/nunu_jet1_pt.pdf}}
+  \subfloat[]{\includegraphics[width=.55\largefigwidth]{plots/parked/AN-14-243-figs/output_presel/nunu_jet2_pt.pdf}}
 
-  \subfloat[]{\includegraphics[width=.5\largefigwidth]{plots/parked/AN-14-243-figs/output_presel/nunu_metnomuons.pdf}}
-  \subfloat[]{\includegraphics[width=.5\largefigwidth]{plots/parked/AN-14-243-figs/output_presel/nunu_metnomu_significance.pdf}}
+  \subfloat[]{\includegraphics[width=.55\largefigwidth]{plots/parked/AN-14-243-figs/output_presel/nunu_metnomuons.pdf}}
+  \subfloat[]{\includegraphics[width=.55\largefigwidth]{plots/parked/AN-14-243-figs/output_presel/nunu_metnomu_significance.pdf}}
   
-  \subfloat[]{\includegraphics[width=.5\largefigwidth]{plots/parked/AN-14-243-figs/output_presel/nunu_alljetsmetnomu_mindphi.pdf}}
+  \subfloat[]{\includegraphics[width=.55\largefigwidth]{plots/parked/AN-14-243-figs/output_presel/nunu_alljetsmetnomu_mindphi.pdf}}
 
   \caption{From top to bottom left to right distributions of \detajj, \Mjj, leading jet \pt, sub-leading jet \pt, \METnoMU, \METsig and \jetmetdphi for events passing the full preselection. No \ac{QCD} multijet contribution is shown, which accounts for the difference between the data observation and background prediction.}
   \label{fig:parkedpostpresel}
@@ -137,12 +137,11 @@ Distributions of several variables after the full preselection are shown in \Fig
 
 
 
-%??full explanations done to here
 \subsection{Signal region selection}
 \label{sec:parkedsigsel}
-As can be seen from \FigureRef{fig:parkedpostpresel}, there is still a significant difference between the data and the \ac{MC} background prediction. It is also evident that the main areas where disagreement occurs are where contributions from \ac{QCD} multijet backgrounds (which are not modelled in the figure) would be expected to contribute, i.e. at low \METsig and with jets close to the \METnoMU. Outside these \ac{QCD}-like regions good agreement between data and \ac{MC} is seen. The approach taken was to place tight requirements on these two variables to reduce the \ac{QCD} multijet background to negligible levels, so that it doesn't matter that the uncertainty on the contribution from it is high. A requirement that events have $\jetmetdphi>2$ and $\METsig>4$, was therefore imposed. The resulting relatively \ac{QCD}-free ``optimisation'' region was blinded (i.e. the data were not looked at) to use for studies to determine the final signal region selection.
+As can be seen from \FigureRef{fig:parkedpostpresel}, there is still a significant difference between the data and the \ac{MC} background prediction. It is also evident that the main areas where disagreement occurs are where contributions from \ac{QCD} multijet backgrounds (which are not modelled in the figure) would be expected to contribute, i.e. at low \METsig and low \jetmetdphi, i.e. with jets close to the \METnoMU. Outside these \ac{QCD}-like regions good agreement between data and \ac{MC} is seen. The approach taken was to place tight requirements on these two variables to reduce the \ac{QCD} multijet background to sub-leading levels. The large uncertainties on any estimates of the number of events from \ac{QCD} multijet processes therefore also become negligible. A requirement that events have $\jetmetdphi>2$ and $\METsig>4$, was therefore imposed. The resulting relatively \ac{QCD}-free ``optimisation'' region was blinded (i.e. the data were not looked at) to use for studies to determine the final signal region selection.
 
-Two methods of signal region selection were investigated. The first method was a cut based selection. Starting from the optimisation region the cuts on \METsig, \jetmetdphi, \detajj, sub-leading jet \pt and \Mjj were varied one at a time and the expected limit for each cut value was calculated using the method described in \SectionRef{sec:stats} with the background estimation techniques and systematic uncertainties described in Sections~\ref{sec:parkedbkg} and \ref{sec:parkedsyst} respectively. In the case of the \ac{QCD} multijet background, the background estimation was performed once for the optimisation selection and used for all cut values. The estimations for all other background processes were repeated for each set of cuts. After each variable was varied the selection was updated to use the cut value that gave the best expected limit. After all the variables had been varied the process was repeated until no improvement in the expected limit was seen so as to avoid ignoring other better sets of cuts. The cut values that gave the best expected limit define the signal region and are as follows:
+Two methods of signal region selection were investigated. The first method was a cut based selection. Starting from the optimisation region the cuts on \METsig, \jetmetdphi, \detajj, sub-leading jet \pt and \Mjj were varied one at a time and the expected limit for each combination of cuts was calculated. The method described in \SectionRef{sec:stats} was used, with the background estimation techniques and systematic uncertainties described in Sections~\ref{sec:parkedbkg} and \ref{sec:parkedsyst} respectively, to calculate the expected limit. In the case of the \ac{QCD} multijet background, which has only a very small contribution to the signal region, the background estimation was performed once for the optimisation selection and used for all cut values. The estimations for all other background processes were repeated for each set of cuts. After each variable was varied the selection was updated to use the cut value that gave the best expected limit. After all the variables had been varied the process was repeated until no improvement in the expected limit was seen so as to avoid ignoring other better sets of cuts. The cut values that gave the best expected limit define the signal region and are as follows:
 \begin{equation}
   \label{eq:parkedsigsel}
   \begin{split}
@@ -151,12 +150,12 @@ Two methods of signal region selection were investigated. The first method was a
     \METnoMU>90 \GeV, \METsig>4.0,\jetmetdphi>2.3.
   \end{split}
 \end{equation}
-After this selection was defined a second \ac{MVA} based method of optimising the selection was investigated to see if could improve on the cut based selection. \ac{BDT} and fisher %??citation
-discriminants were trained using signal and background events passing the signal region selection, and the optimisation procedure defined above was repeated with the value of the discriminant considered as an additional variable. The correlation coefficients between the variables used as inputs to the \ac{MVA} are shown in \FigureRef{fig:parkedmvacorr}. These variables were chosen as they showed the most difference between signal and background distributions and correlations out of a wide range of variables investigated. Without the addition of any additional systematic uncertainties from the understanding of the variables which were input to the \ac{MVA} the best improvement in the expected limit over that of the signal region was less than 1\%. It was therefore decided to use the cut based selection as the final event selection.
+After this selection was defined a second \ac{MVA} based method of optimising the selection was investigated to see if could improve on the cut based selection. \ac{BDT} and fisher %??citation and why bdt and fisher
+discriminants were trained using signal and background events passing the signal region selection. The signal region selection was used as the basis for this training so as to ensure that the number of events from \ac{QCD} multijet backgrounds in the studied region was small. The optimisation procedure defined above was then repeated with the value of the discriminant considered as an additional variable. The correlation coefficients between the variables used as inputs to the \ac{MVA} are shown for signal and V+jets background events in \FigureRef{fig:parkedmvacorr}. These variables were chosen as they showed the most difference between signal and background distributions and correlations out of a wide range of variables investigated. Without the addition of any additional systematic uncertainties from the understanding of the variables which were input to the \ac{MVA} the best improvement in the expected limit over that of the signal region was less than 1\%. It was therefore decided to use the cut based selection as the final event selection.
 \begin{figure}
   \subfloat[]{\includegraphics[width=.6\largefigwidth]{plots/parked/AN-14-243-figs/inputcorrsig.pdf}}
   \subfloat[]{\includegraphics[width=.6\largefigwidth]{plots/parked/AN-14-243-figs/inputcorrbkg.pdf}}
-  \caption{Matrices of correlation coefficients for several variables in signal (a) and background (b) events passing the signal region selection. The variables are 1) the azimuthal angle difference between the \METnoMU and the unclustered energy in the event, 2) the square root of the hadronic energy in the event, 3) \METsig, 4) \METnoMU, 5) \Mjj, 6) the number of jets with $\pt>30$ \GeV between the two tag jets in \eta, 7) the vectorial sum of the tag jets \pt and the \METnoMU, 8) the ratio between the magnitude of the vectorial sum of the tag jet's \pt and the \METnoMU.}
+  \caption{Matrices of correlation coefficients for several variables in signal (a) and V+jets background (b) events passing the signal region selection. The variables are 1) the azimuthal angle difference between the \METnoMU and the unclustered energy in the event, 2) the square root of the hadronic energy in the event, 3) \METsig, 4) \METnoMU, 5) \Mjj, 6) the number of jets with $\pt>30$ \GeV between the two tag jets in \eta, 7) the vectorial sum of the tag jets \pt and the \METnoMU, 8) the ratio between the magnitude of the vectorial sum of the tag jet's \pt and the \METnoMU.}
   \label{fig:parkedmvacorr}
 \end{figure}
 
@@ -167,12 +166,12 @@ The backgrounds contributing to the parked data analysis are the same as those i
   \label{eq:wdatabkgrep}
   N^{S}_{Exp}=\left(N^{C}_{Data}-N^{C}_{Bkg}\right)\cdot\frac{N^{S}_{MC}}{N^{C}_{MC}}.
 \end{equation}
-The terms on the right hand side of this equation which multiple the estimation from \ac{MC} of the number of events due to a particular background process is often referred to as the data driven scale factor. The changes in event selection necessitated several changes from the methods for the prompt analysis. Furthermore, among other improvements, the systematic uncertainty on the \Znunu background was reduced, better understanding of the data driven scale factors was gained and data driven methods of estimating the top quark related background were investigated.
+The terms on the right hand side of this equation which multiply the estimation from \ac{MC} of the number of events due to a particular background process are often collectively referred to as the data driven scale factor. The changes in event selection for this analysis necessitated several changes from the methods for the prompt analysis. Furthermore, among other improvements, the systematic uncertainty on the \Znunu background was reduced, better understanding of the data driven scale factors was gained and data driven methods of estimating the top quark related background were investigated. All of these changes and improvements are described in this section.
 
-\subsection{Top quarks}%??
-Almost all top quarks decay to a \PW boson and a b quark~\cite{pdg}. Top quarks are either created in pairs, in which case there will be two \PW bosons and two b quarks, or via ``single top'' production where only one top quark is created in association with other quarks or a \PW boson and the result is some combination of \PW bosons and quarks. Where at least one of the \PW bosons decays leptonically and the lepton is misreconstructed either of these processes can result in the appearance of \MET and jets that can coincidentally have \ac{VBF}-like topology. Whilst the contribution from these processes is expected to be small in the signal region, making up around 1\% of events there, the presence of \PW bosons and jets makes these processes very likely to contribute to the control regions used to estimate the \PW+jets background contribution. In the $\PW\rightarrow\tau\nu$ control region approximately 15\% of events are estimated to come from top quark processes. Data driven methods for estimating the top quark background and its uncertainties were therefore investigated.
+\subsection{Top quarks}
+Almost all top quarks decay to a \PW boson and a b quark~\cite{pdg}. Top quarks are either created in pairs, or via ``single top'' production where only one top quark is created in association with  other quarks or a \PW boson. Top pair production results in two \PW bosons and two b quarks. Single top production results in some combination of \PW bosons and quarks. Where at least one of the \PW bosons decays leptonically and the lepton is misreconstructed, either of these processes can result in the appearance of \MET and jets that can coincidentally have \ac{VBF}-like topology. Whilst the contribution from these processes is expected to be small in the signal region, making up around 1\% of events there, the presence of \PW bosons and jets makes these processes very likely to contribute to the control regions used to estimate the \PW+jets background contribution. In the $\PW\rightarrow\tau\nu$ control region approximately 15\% of events are estimated to come from top quark processes. Data driven methods for estimating the top quark background and its uncertainties were therefore investigated.
 
-Initially a dilepton control region was investigated. This had the same cuts on the jet and \MET related variables as the signal region, but the lepton veto, which was replaced with a requirement that there is exactly one tight electron and one tight muond. This region had only single figure numbers of events expected, so the cut on \jetmetdphi was also loosened to 0. It can be seen from \FigureRef{fig:parkedtopjetmetdphi} the ratio between data and MC in this region does not depend significanty on \jetmetdphi. Within the statistics available the scale factor from this control region is consistent with 1 and a good agreement between data and \ac{MC} is seen in all variables studied.
+Initially a dilepton control region was investigated. This had the same cuts on the jet and \MET related variables as the signal region, but the lepton veto was replaced with a requirement that there is exactly one tight electron and one tight muon. This final state would be expected in the case of top quark pair production or single top production with a \PW boson, where both the resulting \PW bosons decay leptonically to different leptons. This region had only single figure numbers of events expected, so the cut on \jetmetdphi was loosened to 0. It can be seen from \FigureRef{fig:parkedtopjetmetdphi} that the ratio between data and MC in this region does not depend significantly on \jetmetdphi. The data driven scale factor obtained from this dilepton region was, within the statistics available, consistent with 1 and a good agreement between data and \ac{MC} was seen in all variables studied.
 
 \begin{figure}
   \subfloat[]{\includegraphics[width=.6\largefigwidth]{plots/parked/topjetmetdphicut0.pdf}}
@@ -181,11 +180,13 @@ Initially a dilepton control region was investigated. This had the same cuts on 
   \label{fig:parkedtopjetmetdphi}
 \end{figure}
 
-A modification of this control region where events with either two tight electrons or two tight muons, and no other leptons was also studied. In order to avoid \PZ boson contributions the lepton's invariant mass was required to be outside of the range from 60 to 120 \GeV. This control region also yielded good data-\ac{MC} agreement and a scale factor compatible with 1. An issue with both of these control regions is that the top quark pair to single top ratio is very different to both the signal region and the $\PW\rightarrow\tau\nu$ control region. The control regions have a negligible single top contribution, while the signal region top background has almost no top quark pair contribution. The $\PW\rightarrow\tau\nu$ region is a mixture, its top quark background being 30\% from single top events and 70\% for top quark pairs. A single top control region was therefore also investigated.
+A modification of this control region where events with either two tight electrons or two tight muons, and no other leptons was also studied. This final state would also be expected where two \PW bosons from top quark production decayed leptonically, except this time to the same flavour of lepton. In order to avoid \PZ boson contributions the lepton's invariant mass was required to be incompatible with that of a \PZ boson, i.e. outside of the range from 60 to 120 \GeV. This control region also yielded good data-\ac{MC} agreement and a scale factor compatible with 1. An issue with both of these control regions is that the top quark pair production to single top production ratio is very different to both the signal region and the $\PW\rightarrow\tau\nu$ control region. \ac{MC} estimations indicate that these top control regions have a negligible single top contribution, while the top background in the signal region has almost no top quark pair contribution. The $\PW\rightarrow\tau\nu$ region is expected to be a mixture, its top quark background being 30\% from single top events and 70\% for top quark pairs, again estimated from \ac{MC}. A single top control region was therefore also investigated.
 
-The single top region differed from the signal region in that the \jetmetdphi cut was removed, exactly one tight electron or muon was required, further leptons were vetoed and one of the tag jets was required to be compatible with being a b-jet. This b-tagging was done using the \ac{CSV} discriminant. b quarks are both heavier and longer lived than many othe particles created at the \LHC, meaning that their secondary decay vertex can be distinguished from the \ac{PV}. \ac{CSV} is an \ac{MVA} based discriminant which uses information on secondary vertices and the lifetime of the particle to discriminate between jets from b quarks and those from other lighter quarks. The medium working point used for this control region correctly has an efficiency of approximately 85\% for b-quarks and mis-identifies lighter quark jets as b jets approximately 1\% of the time~\cite{bjets}.
+The single top region differed from the signal region in that the \jetmetdphi cut was removed, exactly one tight electron or muon was required, further leptons were vetoed and one of the tag jets was required to be compatible with being a b-jet. The restriction to a single lepton significantly reduces the top quark pair production contribution where both resulting \PW bosons decay leptonically, and the requirement of one b-jet reduces the \PW+jets contribution. 
 
-The single top region was found to have a 17\% signel top contribution and again showed good data-\ac{MC} agreement and a scale factor compatible with 1 within uncertainties. Because good agreement between data and \ac{MC} and scale factors compatible with 1 are seen in all investigated control regions it was decided to use the \ac{MC} prediction for the top background in all regions with no additional scale factor. A 20\% systematic uncertainty was applied to this prediction which covered the largest deviation from 1 seen in the scale factors from the various control regions.
+Identification of the b-jet was done using the \ac{CSV} discriminant. b quarks are both heavier and longer lived than many other particles created at the \LHC, meaning that their secondary decay vertex can be distinguished from the \ac{PV}. \ac{CSV} is an \ac{MVA} based discriminant which uses information on secondary vertices and the lifetime of the particle to discriminate between jets from b quarks and those from other lighter quarks. The medium working point used for this control region correctly has an efficiency of approximately 85\% for b-quarks and mis-identifies lighter quark jets as b jets approximately 1\% of the time~\cite{bjets}.
+
+\ac{MC} estimates indicate the single top region has a 17\% single top contribution. This region again showed good data-\ac{MC} agreement and a scale factor compatible with 1 within uncertainties. Because good agreement between data and \ac{MC} and scale factors compatible with 1 are seen in all investigated control regions, it was decided to use the \ac{MC} prediction for the top background in all regions with no additional scale factor. A 20\% systematic uncertainty was applied to this prediction which covered the largest deviation from 1 seen in the scale factors from the various control regions.
 
 \begin{figure}
   \subfloat[]{\includegraphics[width=.6\largefigwidth]{plots/parked/AN-14-243-figs/singletop/top_jetmetnomu_mindphi.png}}
@@ -196,7 +197,7 @@ The single top region was found to have a 17\% signel top contribution and again
 
 \subsection{W$\rightarrow e\nu$+jets}%??                                                                                                                    
 \label{sec:parkedwenu}
-The $W\rightarrow e\nu$ background in the parked data analysis is estimated using the same method as that used for the prompt data analysis being based on \EquationRef{eq:wdatabkgrep}. The control region used has the same requirements as the signal region, except that the electron veto is replaced with a requirement that there is one tight electron and no other electrons present in the event. The distributions of several variables in data and \ac{MC} (which has been scaled by the data driven scale factor extracted from this control region) are shown in \FigureRef{fig:parkedwenu}, where good agreement can be seen. A table of the inputs to \EquationRef{eq:wdatabkgrep} can be seen in \TableRef{tab:parkedwenu}. The scale factor obtained for this background is 0.5, which is significantly different from 1, this difference is further investigated in \SectionRef{sec:parkedscalefactors}.
+The $\PW\rightarrow e\nu$ background in the parked data analysis is estimated using the same method as that used for the prompt data analysis being based on \EquationRef{eq:wdatabkgrep}. The control region used has the same requirements as the signal region, except that the electron veto is replaced with a requirement that there is one tight electron and no other electrons present in the event. The requirement of an electron removes signal events and enriches the region in $\PW\rightarrow e\nu$ events. The distributions of several variables in data and \ac{MC} (which has been scaled by the data driven scale factor extracted from this control region) are shown in \FigureRef{fig:parkedwenu}, where good agreement can be seen. A table of the inputs to and results of \EquationRef{eq:wdatabkgrep} can be seen in \TableRef{tab:parkedwenu}. The table also shows that the expected contribution to this region from other background processes is small, being approximately 5\%. The scale factor obtained for this background is 0.5, which is significantly different from 1, this difference is further investigated in \SectionRef{sec:parkedscalefactors}.
 
 \begin{table}
   \begin{center}
@@ -209,9 +210,9 @@ The $W\rightarrow e\nu$ background in the parked data analysis is estimated usin
       & Signal region & Control region \\
       \hline
       \hline
-      $N_{Data}$&N/A$68\pm 8.2$\stat\\
-      $N_{Bkg}$&N/A&$3.5\pm 1.2$\stat\\
-      $N_{MC}$&$114.9\pm8.9$\stat&$128.0\pm 8.0$\stat\\
+      $N_{Data}$&N/A&$68\pm 8.2$\stat\\
+      $N_{Bkg}$&N/A&$3.5\pm 1.2(MC stat)$\\
+      $N_{MC}$&$114.9\pm8.9(MC stat)$&$128.0\pm 8.0(MC stat)$\\
       \hline
       $\frac{N^{data}-N^{bkg}}{N^{W MC}_{C}}$ & \multicolumn{2}{c|}{$0.50\pm0.06$\stat$\pm0.03$(MC stat.)} \\
       \hline
@@ -223,37 +224,37 @@ The $W\rightarrow e\nu$ background in the parked data analysis is estimated usin
 \end{table}
 
 \begin{figure}
-  \subfloat[]{\includegraphics[width=.5\largefigwidth]{plots/parked/AN-14-243-figs/output_sigreg/enu_dijet_deta.pdf}}
-  \subfloat[]{\includegraphics[width=.5\largefigwidth]{plots/parked/AN-14-243-figs/output_sigreg/enu_dijet_M.pdf}}
+  \subfloat[]{\includegraphics[width=.55\largefigwidth]{plots/parked/AN-14-243-figs/output_sigreg/enu_dijet_deta.pdf}}
+  \subfloat[]{\includegraphics[width=.55\largefigwidth]{plots/parked/AN-14-243-figs/output_sigreg/enu_dijet_M.pdf}}
  
-  \subfloat[]{\includegraphics[width=.5\largefigwidth]{plots/parked/AN-14-243-figs/output_sigreg/enu_jet1_pt.pdf}}
-  \subfloat[]{\includegraphics[width=.5\largefigwidth]{plots/parked/AN-14-243-figs/output_sigreg/enu_jet2_pt.pdf}}
+  \subfloat[]{\includegraphics[width=.55\largefigwidth]{plots/parked/AN-14-243-figs/output_sigreg/enu_jet1_pt.pdf}}
+  \subfloat[]{\includegraphics[width=.55\largefigwidth]{plots/parked/AN-14-243-figs/output_sigreg/enu_jet2_pt.pdf}}
 
-  \subfloat[]{\includegraphics[width=.5\largefigwidth]{plots/parked/AN-14-243-figs/output_sigreg/enu_metnomuons.pdf}}
-  \subfloat[]{\includegraphics[width=.5\largefigwidth]{plots/parked/AN-14-243-figs/output_sigreg/enu_metnomu_significance.pdf}}
+  \subfloat[]{\includegraphics[width=.55\largefigwidth]{plots/parked/AN-14-243-figs/output_sigreg/enu_metnomuons.pdf}}
+  \subfloat[]{\includegraphics[width=.55\largefigwidth]{plots/parked/AN-14-243-figs/output_sigreg/enu_metnomu_significance.pdf}}
   
-  \subfloat[]{\includegraphics[width=.5\largefigwidth]{plots/parked/AN-14-243-figs/output_sigreg/enu_alljetsmetnomu_mindphi.pdf}}
+  \subfloat[]{\includegraphics[width=.55\largefigwidth]{plots/parked/AN-14-243-figs/output_sigreg/enu_alljetsmetnomu_mindphi.pdf}}
 
-  \caption{}%??
+  \caption{Distributions of variables in data and \ac{MC} events in the $\PW\rightarrow e\nu$ control region. \ac{MC} events from V+jets backgrounds are scaled by their data-driven scale factors. The variables shown are from top to bottom and left to right \detajj, \Mjj, the leading and subleading jet's \pt, \METnoMU, \METsig and \jetmetdphi.}
   \label{fig:parkedwenu}
 \end{figure}
 
 \subsection{W$\rightarrow \mu\nu$+jets}%??                                                                                                                  
 \label{sec:parkedwmunu}
-As for the $\PW\rightarrow e\nu$ background the $W\rightarrow \mu\nu$ background is estimated using \EquationRef{eq:wdatabkgrep}. The control region used has the same requirements as the signal region, except that the muon veto is replaced with a requirement that there is one tight muon and no other muons present in the event. The distributions of several variables in data and \ac{MC} (which has been scaled by the data driven scale factor extracted from this control region) are shown in \FigureRef{fig:parkedwmunu}, where good agreement can be seen. A table of the inputs to \EquationRef{eq:wdatabkgrep} can be seen in \TableRef{tab:parkedwmunu}. Again the scale factor obtained  for this background is significantly different from 1, being 0.71, and further investigation of this is detailed in \SectionRef{sec:parkedscalefactors}.
+As for the $\PW\rightarrow e\nu$ background the $W\rightarrow \mu\nu$ background is estimated using \EquationRef{eq:wdatabkgrep} with a control region enriched in $\PW\rightarrow\mu\nu$ events through a change in lepton requirements. The control region used has the same requirements as the signal region, but with the muon veto replaced with a requirement that there is one tight muon and no other muons present in the event. The distributions of several variables in data and \ac{MC} (which has been scaled by the data driven scale factor extracted from this control region) are shown in \FigureRef{fig:parkedwmunu}, where good agreement can be seen. A table of the inputs to \EquationRef{eq:wdatabkgrep} can be seen in \TableRef{tab:parkedwmunu}. The contribution from other backgrounds in the $\PW\rightarrow\mu\nu$ control region is approximately 5\%. Again the scale factor obtained  for this background is significantly different from 1, being 0.71, and further investigation of this is detailed in \SectionRef{sec:parkedscalefactors}.
 
 \begin{figure}
-  \subfloat[]{\includegraphics[width=.5\largefigwidth]{plots/parked/AN-14-243-figs/output_sigreg/munu_dijet_deta.pdf}}
-  \subfloat[]{\includegraphics[width=.5\largefigwidth]{plots/parked/AN-14-243-figs/output_sigreg/munu_dijet_M.pdf}}
+  \subfloat[]{\includegraphics[width=.55\largefigwidth]{plots/parked/AN-14-243-figs/output_sigreg/munu_dijet_deta.pdf}}
+  \subfloat[]{\includegraphics[width=.55\largefigwidth]{plots/parked/AN-14-243-figs/output_sigreg/munu_dijet_M.pdf}}
 
-  \subfloat[]{\includegraphics[width=.5\largefigwidth]{plots/parked/AN-14-243-figs/output_sigreg/munu_jet1_pt.pdf}}
-  \subfloat[]{\includegraphics[width=.5\largefigwidth]{plots/parked/AN-14-243-figs/output_sigreg/munu_jet2_pt.pdf}}
+  \subfloat[]{\includegraphics[width=.55\largefigwidth]{plots/parked/AN-14-243-figs/output_sigreg/munu_jet1_pt.pdf}}
+  \subfloat[]{\includegraphics[width=.55\largefigwidth]{plots/parked/AN-14-243-figs/output_sigreg/munu_jet2_pt.pdf}}
 
-  \subfloat[]{\includegraphics[width=.5\largefigwidth]{plots/parked/AN-14-243-figs/output_sigreg/munu_metnomuons.pdf}}
-  \subfloat[]{\includegraphics[width=.5\largefigwidth]{plots/parked/AN-14-243-figs/output_sigreg/munu_metnomu_significance.pdf}}
+  \subfloat[]{\includegraphics[width=.55\largefigwidth]{plots/parked/AN-14-243-figs/output_sigreg/munu_metnomuons.pdf}}
+  \subfloat[]{\includegraphics[width=.55\largefigwidth]{plots/parked/AN-14-243-figs/output_sigreg/munu_metnomu_significance.pdf}}
 
-  \subfloat[]{\includegraphics[width=.5\largefigwidth]{plots/parked/AN-14-243-figs/output_sigreg/munu_alljetsmetnomu_mindphi.pdf}}
-  \caption{}%??
+  \subfloat[]{\includegraphics[width=.55\largefigwidth]{plots/parked/AN-14-243-figs/output_sigreg/munu_alljetsmetnomu_mindphi.pdf}}
+    \caption{Distributions of variables in data and \ac{MC} events in the $\PW\rightarrow \mu\nu$ control region. \ac{MC} events from V+jets backgrounds are scaled by their data-driven scale factors. The variables shown are from top to bottom and left to right \detajj, \Mjj, the leading and subleading jet's \pt, \METnoMU, \METsig and \jetmetdphi.}
   \label{fig:parkedwmunu}
 \end{figure}
 
@@ -269,8 +270,8 @@ As for the $\PW\rightarrow e\nu$ background the $W\rightarrow \mu\nu$ background
       \hline
       \hline
       $N_{Data}$&N/A&$300\pm 17.3$\stat\\
-      $N_{Bkg}$&N/A&$14.8\pm 2.5$\stat\\
-      $N_{MC}$&$143.7\pm10.2$\stat&$399.9\pm 14.9$\stat\\
+      $N_{Bkg}$&N/A&$14.8\pm 2.5(MC stat)$\\
+      $N_{MC}$&$143.7\pm10.2(MC stat)$&$399.9\pm 14.9(MC stat)$\\
       \hline
       $\frac{N^{data}-N^{bkg}}{N^{MC}_{C}}$ & \multicolumn{2}{c|}{$0.71\pm0.04$\stat$\pm0.03$(MC stat.)} \\
       \hline
@@ -281,34 +282,95 @@ As for the $\PW\rightarrow e\nu$ background the $W\rightarrow \mu\nu$ background
   \end{center}
 \end{table}
 
-\subsection{Differences between the W$\rightarrow e\nu$ and $W\rightarrow\mu\nu$ +jets backgrounds}%??
-\label{sec:parkedenumunudiff}
+
 
 \subsection{W$\rightarrow \tau\nu$+jets}%??                                                                                                                 
 \label{sec:parkedwtaunu}
+%??region
+The signal region requirements do not include a veto of hadronic taus, due to the low identification efficiency and relatively high probability for a jet to be identified as a fake tau. Requiring that there is an identified hadronic tau in addition to the signal region selection results in a region containing only 2 data events. In order to increase the number of events in the tau control region the \jetmetdphi cut was removed. Whilst the requirement that there is an identified tau reduces the \ac{QCD} multijet contribution in the low \jetmetdphi region significantly compared to what was seen during the choice of the preselection. However, poor data-\ac{MC} agreement was still observed in the \jetmetdphi<1 region, which is evidence that some events from multijet processes are still present. To remove these \ac{QCD} multijet events, whilst keeping a reasonable number of events in the resulting control region, a requirement that \jetmetdphileading is greater than 1 and that the transverse mass of the hadronic tau and \MET system is greater than 20 \GeV. The \jetmetdphileading requirement reduces multijet backgrounds for the same reason that \jetmetdphi does, but it is a slightly looser requirement as it only considers the two leading jets. The transverse mass of the tau-\MET system is a good variable to reject \ac{QCD} where a lepton is present as in real \PW boson events the tau and \MET are expected to originate from the same object and therefore have significant invariant mass, which is not the case for \ac{QCD} multijet events.
+
+After the anti-\ac{QCD} cuts the agreement between data and \ac{MC} is good as can be seen in \FigureRef{fig:parkedwtaunu} To account for the different \jetmetdphi selection in this region and the signal region the data driven scale factor was calculated both in the $\PW\rightarrow\mu\nu$ control region, which has the signal region \jetmetdphi selection, and in a modified single muon control region with the $\PW\rightarrow\tau\nu$ control region \jetmetdphi selection. The difference between these two scale factors was found to be 20\%, so a 20\% systematic uncertainty was added to the estimate of the $\PW\rightarrow\tau\nu$ background.
+
+The single tau control region with a \jetmetdphileading cut and no \jetmetdphi cut was used with \EquationRef{eq:wdatabkgrep} to estimate the number of $\PW\rightarrow\tau\nu$ events in the signal region. A table of the inputs to \EquationRef{eq:wdatabkgrep} can be seen in \TableRef{tab:parkedwtaunu}. The contribution from other backgrounds in the $\PW\rightarrow\tau\nu$ control region is approximately 15\%, with most of these other background events being due to top quark related processes. The scale factor obtained for this background is 0.78, which is closer to 1 than those seen in the other \PW+jets backgrounds, however it also has the largest uncertainty. Further investigation of the V+jets scale factors is detailed in \SectionRef{sec:parkedscalefactors}.
+
+\begin{figure}
+  \subfloat[]{\includegraphics[width=.55\largefigwidth]{plots/parked/AN-14-243-figs/output_sigreg/taunu_dijet_deta.pdf}}
+  \subfloat[]{\includegraphics[width=.55\largefigwidth]{plots/parked/AN-14-243-figs/output_sigreg/taunu_dijet_M.pdf}}
+
+  \subfloat[]{\includegraphics[width=.55\largefigwidth]{plots/parked/AN-14-243-figs/output_sigreg/taunu_jet1_pt.pdf}}
+  \subfloat[]{\includegraphics[width=.55\largefigwidth]{plots/parked/AN-14-243-figs/output_sigreg/taunu_jet2_pt.pdf}}
+
+  \subfloat[]{\includegraphics[width=.55\largefigwidth]{plots/parked/AN-14-243-figs/output_sigreg/taunu_metnomuons.pdf}}
+  \subfloat[]{\includegraphics[width=.55\largefigwidth]{plots/parked/AN-14-243-figs/output_sigreg/taunu_metnomu_significance.pdf}}
+
+  \subfloat[]{\includegraphics[width=.55\largefigwidth]{plots/parked/AN-14-243-figs/output_sigreg/taunu_jetmetnomu_mindphi.pdf}}
+  \subfloat[]{\includegraphics[width=.55\largefigwidth]{plots/parked/AN-14-243-figs/output_sigreg/taunu_lep_mt.pdf}}
+  \caption{Distributions of variables in data and \ac{MC} events in the $\PW\rightarrow e\nu$ control region. \ac{MC} events from V+jets backgrounds are scaled by their data-driven scale factors. The variables shown are from top to bottom and left to right \detajj, \Mjj, the leading and subleading jet's \pt, \METnoMU, \METsig, \jetmetdphileading and the tau-\MET system's transverse mass.}
+  \label{fig:parkedwtaunu}
+\end{figure}
+
+\begin{table}[h!]
+  \begin{center}
+    \caption{The inputs to and results of \EquationRef{eq:wdatabkgrep}, when used to estimate the $W\rightarrow \tau\nu$ estimate in the signal
+      region.}
+    \label{tab:parkedwtaunu}
+    \begin{tabular}{lcc}
+      \hline
+      \hline
+      & Signal region & Control region \\
+      \hline
+      \hline
+      $N_{Data}$&N/A&$76\pm 8.7$\stat\\
+      $N_{Bkg}$&N/A&$13.3\pm 2.8(MC stat)$\\
+      $N_{MC}$&$121.9\pm 8.7(MC stat)$&$80.8\pm 6.4(MC stat)$\\
+      \hline
+      $\frac{N^{data}-N^{bkg}}{N^{MC}_{C}}$ & \multicolumn{2}{c|}{$0.78\pm 0.11$\stat$\pm 0.07$(MC stat.)} \\
+      \hline
+      $N_{\PW\rightarrow\mu\nu}$&\textcolor{red}{$94.6\pm 13.1$\stat$\pm 23.8$\syst}&N/A \\
+      \hline
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+
+
+\subsection{Differences between the $W\rightarrow e\nu$, $W\rightarrow\mu\nu$ and $W\rightarrow\tau\nu$ +jets backgrounds}%??
+\label{sec:parkedenumunudiff}
+%??tau easily explainable by id eff
+%??sf for enu and munu different but compatible MC yield is where main difference is separate into into and out of acceptance and why (electrons in HF are jets, electron ID eff slightly worse) mindphijetmet shape difference outside acceptance
+
 
 \subsection{Z$\rightarrow \nu\nu$+jets}%??                                                                                                                  
 \label{sec:parkedznunu}
-
-
+%??same as before studies of uncertainty with madgraph and mcfm
 
 \subsection{V+jets closure tests}%??
 \label{sec:parkedclosure}
+%??as in AN relatively good agreement but large uncertainties
 
 \subsection{V+jets scale factor investigations}%??
 \label{sec:parkedscalefactors}
+%??as in AN
 
 \subsection{QCD}%??                                                                                                                                         
 \label{sec:parkedQCD}
+%??as in AN use isolated non-isolated met analogy with other methods
+%??justify as high unc estimation of small background not perfect method
+
 
 \subsection{Minor backgrounds}%??
 \label{sec:parkedminor}
+%??straight from MC same XSec measurements as prompt
 
 \section{Systematic uncertainties}%??
 \label{sec:parkedsyst}
 The uncertainty due to the reweighting process used to account for trigger inefficiencies cancels in all data driven background estimates, as a ratio of \ac{MC} event yields is taken. To estimate the size of the uncertainty that should be applied to processes not taken from data driven background, the bin with the largest uncertainties on its fit for each era was chosen. It was then assumed that all bins had this worst-case uncertainty. This resulted in a 2.3\% overall uncertainty on these processes from this effect. Given that this error is smaller than many of the other errors considered, and that the uncertainty on the efficiency in most of the fit bins is significantly lower than this worst case this uncertainty is considered negligible.
 
-
+%??explain uncertainty impact calculations and pulls test and give order of importance of nuisances state no issues found with pulls.
 
 \section{Results}%??                                                                                                                                        
 \label{sec:parkedresults}
+%??cont plots
+%??limit brazil plots
+%??likelihood scans
