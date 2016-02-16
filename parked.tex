@@ -161,12 +161,14 @@ discriminants were trained using signal and background events passing the signal
 
 \section{Background estimation}%??                                                                                                                          
 \label{sec:parkedbkg}
-The backgrounds contributing to the parked data analysis are the same as those in the prompt data analysis, and the estimation methods used here are also based on those used in the prompt analysis. \EquationRef{eq:wdatabkg} is used in several of these methods in this section, and it is repeated here:
+After selection the V+jets backgrounds, as in the prompt analysis, dominate. Also, as in the prompt data analysis contributions are expected from top quark and diboson related processes. Finally, whilst it is reduced significantly by the selection described above, it is necessary to at least place an upper bound on the expected contribution from \ac{QCD} multijet events.
+
+The methods used to estimate the V+jets backgrounds are based on those used in the prompt data analysis. \EquationRef{eq:wdatabkg} is used in several of these methods in this section, and it is repeated here:
 \begin{equation}
   \label{eq:wdatabkgrep}
   N^{S}_{Exp}=\left(N^{C}_{Data}-N^{C}_{Bkg}\right)\cdot\frac{N^{S}_{MC}}{N^{C}_{MC}}.
 \end{equation}
-The terms on the right hand side of this equation which multiply the estimation from \ac{MC} of the number of events due to a particular background process are often collectively referred to as the data driven scale factor. The changes in event selection for this analysis necessitated several changes from the methods for the prompt analysis. Furthermore, among other improvements, the systematic uncertainty on the \Znunu background was reduced, better understanding of the data driven scale factors was gained and data driven methods of estimating the top quark related background were investigated. All of these changes and improvements are described in this section.
+The terms on the right hand side of this equation which multiply the estimation from \ac{MC} of the number of events due to a particular background process are often collectively referred to as the data driven scale factor. The changes in event selection for this analysis necessitated several changes from the methods for the prompt analysis. The use of this data driven method to investigate the top quark related background was also investigated. Furthermore, among other improvements, the systematic uncertainty on the \Znunu background was reduced. All of these changes and improvements are described in this section.
 
 \subsection{Top quarks}
 Almost all top quarks decay to a \PW boson and a b quark~\cite{pdg}. Top quarks are either created in pairs, or via ``single top'' production where only one top quark is created in association with  other quarks or a \PW boson. Top pair production results in two \PW bosons and two b quarks. Single top production results in some combination of \PW bosons and quarks. Where at least one of the \PW bosons decays leptonically and the lepton is misreconstructed, either of these processes can result in the appearance of \MET and jets that can coincidentally have \ac{VBF}-like topology. Whilst the contribution from these processes is expected to be small in the signal region, making up around 1\% of events there, the presence of \PW bosons and jets makes these processes very likely to contribute to the control regions used to estimate the \PW+jets background contribution. In the $\PW\rightarrow\tau\nu$ control region approximately 15\% of events are estimated to come from top quark processes. Data driven methods for estimating the top quark background and its uncertainties were therefore investigated.
@@ -241,7 +243,7 @@ The $\PW\rightarrow e\nu$ background in the parked data analysis is estimated us
 
 \subsection{W$\rightarrow \mu\nu$+jets}%??                                                                                                                  
 \label{sec:parkedwmunu}
-As for the $\PW\rightarrow e\nu$ background the $W\rightarrow \mu\nu$ background is estimated using \EquationRef{eq:wdatabkgrep} with a control region enriched in $\PW\rightarrow\mu\nu$ events through a change in lepton requirements. The control region used has the same requirements as the signal region, but with the muon veto replaced with a requirement that there is one tight muon and no other muons present in the event. The distributions of several variables in data and \ac{MC} (which has been scaled by the data driven scale factor extracted from this control region) are shown in \FigureRef{fig:parkedwmunu}, where good agreement can be seen. A table of the inputs to \EquationRef{eq:wdatabkgrep} can be seen in \TableRef{tab:parkedwmunu}. The contribution from other backgrounds in the $\PW\rightarrow\mu\nu$ control region is approximately 5\%. Again the scale factor obtained  for this background is significantly different from 1, being 0.71, and further investigation of this is detailed in \SectionRef{sec:parkedscalefactors}.
+As for the $\PW\rightarrow e\nu$ background the $W\rightarrow \mu\nu$ background is estimated using \EquationRef{eq:wdatabkgrep} with a control region enriched in $\PW\rightarrow\mu\nu$ events through a change in lepton requirements. The control region used has the same requirements as the signal region, but with the muon veto replaced with a requirement that there is one tight muon and no other muons present in the event. The distributions of several variables in data and \ac{MC} (which has been scaled by the data driven scale factor extracted from this control region) are shown in \FigureRef{fig:parkedwmunu}, where good agreement can be seen. A table of the inputs to \EquationRef{eq:wdatabkgrep} can be seen in \TableRef{tab:parkedwmunu}. The contribution from other backgrounds in the $\PW\rightarrow\mu\nu$ control region is approximately 5\%. Again the scale factor obtained  for this background is significantly different from 1, being 0.71, and further investigation of this is detailed in \SectionRef{sec:parkedscalefactors}. Furthermore, the estimated contribution from this background is very different to that expected from $\PW\rightarrow e\nu$, an investigation of this difference is described in \SectionRef{sec:parkedenumunudiff}.
 
 \begin{figure}
   \subfloat[]{\includegraphics[width=.55\largefigwidth]{plots/parked/AN-14-243-figs/output_sigreg/munu_dijet_deta.pdf}}
@@ -335,15 +337,69 @@ The single tau control region with a \jetmetdphileading cut and no \jetmetdphi c
 
 
 
-\subsection{Differences between the $W\rightarrow e\nu$, $W\rightarrow\mu\nu$ and $W\rightarrow\tau\nu$ +jets backgrounds}%??
+\subsection{Differences between the $W\rightarrow e\nu$, $W\rightarrow\mu\nu$ and $W\rightarrow\tau\nu$ +jets backgrounds}
 \label{sec:parkedenumunudiff}
-%??tau easily explainable by id eff
-%??sf for enu and munu different but compatible MC yield is where main difference is separate into into and out of acceptance and why (electrons in HF are jets, electron ID eff slightly worse) mindphijetmet shape difference outside acceptance
+%tau easily explainable by id eff
+%sf for enu and munu different but compatible MC yield is where main difference is separate into into and out of acceptance and why (electrons in HF are jets, electron ID eff slightly worse) mindphijetmet shape difference outside acceptance
+The number of \PW+jets events decaying to a particular flavour of lepton with \ac{VBF}-like jet kinematics should be the same for all three flavours of lepton through lepton universality~\cite{pdg}.
+Differences between the numbers of background events from $\PW\rightarrow e\nu$ and $\PW\rightarrow \mu\nu$ and $\PW\rightarrow \tau\nu$ must therefore be due to differences in the identification of the leptons. Hadronic taus have much lower identification efficiencies than the other two flavours of leptons, so might naively be expected to give rise to a much larger number of background events. However, due to the similarities between hadronic taus and jets, unidentified taus often lead to additional jets in the event and therefore increase the probability that an event will fail the analysis \jetmetdphi cut~\cite{CMS-PAS-TAU-11-001}. These two competing effects mean that the number of background events from $\PW\rightarrow\tau\nu$ passing the signal region selection are not necessarily expected to be the same as those from $\PW\rightarrow e\nu$ and $\PW\rightarrow\mu\nu$.
 
+By contrast, electrons and muons have much more similar identification efficiencies to each other (see Sections~\ref{sec:electrons} and \ref{sec:muons}). The 45\% difference in the number of expected background events from these two processes was therefore unexpected. This difference was also not seen in the prompt data analysis, as can be seen from \TableRef{tab:promptresults}. The prediction of the $\PW\rightarrow e/\mu\nu$ backgrounds is made up of a data driven scale factor and an estimate from \ac{MC} of the number of events from the process expected in the signal region, $N_{MC}^{S}$. Both these elements were studied to try to understand the observed differences.
+
+Firstly, the data driven scale factors for the electron and muon backgrounds differ by 30\%, which is not sufficient to explain the full difference between the electron and muon background estimates. Furthermore, when systematic errors are taken into account this difference is only approximately one standard deviation. On the other hand, $N_{MC}^{S}$ does show a significant difference.
+
+To study the difference in $N_{MC}^{S}$ two subregions of the signal region were studied, that with a generator level lepton inside the detector acceptance for both electrons and muons ($|\eta<2.1$), and that with a generator lepton outside the detector acceptance for both electrons and muons ($|\eta|>2.4$). The number of events in these two subregions from both $\PW\rightarrow e\nu$ and $\PW\rightarrow\mu\nu$ \ac{MC} can be seen in \TableRef{tab:enumunudiff}. The numbers of events with a generator level lepton inside acceptance are slightly but not much higher for electrons. This small difference is expected due to the lower identification efficiency for veto leptons making them less likely to cause an event to fail the lepton veto. Distributions of several variables were also studied for the inside acceptance events and found to be very similar for both $\PW\rightarrow e\nu$ and $\PW\rightarrow\mu\nu$ events.
+
+Outside acceptance there are a lot more muon events than electron events. In this region neither flavour of lepton can be reconstructed and therefore cannot lead to an event failing the lepton veto, which implies that any difference is due to one or both flavours of lepton being reconstructed as a different object and affecting the jet or \MET related variables in the signal region selection. To study this effect further the \jetmetdphi requirement was relaxed to 1 and the distributions of several variables plotted for outside acceptance electron and muon events. Three of these distributions are shown in \FigureRef{fig:enumunudiff}. It can be seen from \FigureRef{fig:enumunudiff}a that electron events generally have more events than muon events. \FigureRef{fig:enumunudiff}b indicates that the electron events also have much lower values of \jetmetdphi. Finally, \FigureRef{fig:enumunudiff}c shows that there are very few events passing this region's selection requirements which have a generator level electron with \pt$>30$ \GeV, the threshold for jets to be included in the \jetmetdphi cut. These three pieces of information suggest that electrons are being reconstructed as jets when outside acceptance significantly more often than muons are. These misreconstructed jets then cause the electron events to fail the \jetmetdphi requirement.
+
+It is to be expected that electrons outside of the detector acceptance will be reconstructed as jets, as these electrons will only be seen as deposits in the forward \ac{HCAL} and therefore be indistinguishable from jets. By contrast, muons deposit very little energy in the calorimetry systems, so will simply not be identified if they are outside of the muon system acceptance. No requirements were made on jets which were further forward in $\eta$ than the tag jets in the prompt data analysis, explaining why the difference in numbers of $\PW\rightarrow e\nu$ and $\PW\rightarrow\mu\nu$ events were not seen there.
+
+\begin{table}
+  \caption{The numbers of events predicted by \ac{MC} in the two subregions of the signal region with a generator level lepton that is inside/outside the detector acceptance for both electrons and muons from $\PW\rightarrow e\nu$ and $\PW\rightarrow\mu\nu$ processes. The errors shown are from \ac{MC} statistics.}
+  \label{tab:enumunudiff}
+  \begin{tabular}{lcc}
+    \hline
+    \hline
+    Process & Inside acceptance & Outside acceptance \\
+    \hline
+    $\PW\rightarrow e\nu$ & $73.7\pm 6.8$ & $30.2\pm 4.9$ \\
+    $\PW\rightarrow \mu\nu$ & $61.5\pm 6.8$ & $74.4\pm7.3$ \\
+    \hline
+    \hline
+  \end{tabular}
+\end{table}
+
+\begin{figure}
+  \subfloat[]{\includegraphics[width=.55\largefigwidth]{plots/parked/AN-14-243-figs/genlepstudy/outsideaccloosedphi/nunu_n_jets_15.pdf}}
+  \subfloat[]{\includegraphics[width=.55\largefigwidth]{plots/parked/AN-14-243-figs/genlepstudy/outsideaccloosedphi/nunu_alljetsmetnomu_mindphi.pdf}}
+
+  \subfloat[]{\includegraphics[width=.55\largefigwidth]{plots/parked/AN-14-243-figs/genlepstudy/outsideaccloosedphi/nunu_genlep1_pt.pdf}}
+  \caption{Distributions of the number of jets with \pt$>15$ \GeV (a), \jetmetdphi (b) and the \pt of the leading generator level electron/muon in $\PW\rightarrow e/\mu\nu$ events in a region with cuts which are the same as those of the signal region except that the \jetmetdphi requirement has been loosened to 1 and a generator level lepton outside the detector acceptance for both electrons and muons is required.}
+  \label{fig:enumunudiff}
+\end{figure}
 
 \subsection{Z$\rightarrow \nu\nu$+jets}%??                                                                                                                  
 \label{sec:parkedznunu}
 %??same as before studies of uncertainty with madgraph and mcfm
+The irreducible $\PZ\rightarrow\nu\nu$ background is estimated using a very similar method to that used in the prompt data analysis, and a detailed description can be found in \SectionRef{sec:promptznunu}. A reminder of the method highlighting the differences from the prompt analysis is given here.
+
+The method starts by defining a dimuon control region by taking the signal region requirements and replacing the muon veto with the requirement that there are two tight muons with invariant mass compatible with a \PZ boson, i.e. between 60 and 120 \GeV, and no other muons in the event. The number of events in this dimuon control region is then extrapolated to the signal region using efficiencies and cross-section ratios calculated using \ac{MC} events. As in the prompt data analysis \Zmumu \ac{MC} with the leptons removed and a requirement that there is a generator level dimuon system with invariant mass between 60 and 120 \GeV (i.e. compatible with a \PZ boson) is used to estimate the contribution in the signal region from \Znunu processes. \Znunu \ac{MC} events are not used for this estimation due to the limited size of the available \Znunu \ac{MC} samples. 
+
+The formulas used to carry out the extrapolation from the control region to the signal region are given in Equations~\ref{eq:zdatabkg}, \ref{eq:zdataeffs} and \ref{eq:zdataeffc} which are repeated here for reference:
+\begin{equation}
+  \label{eq:zdatabkgrep}
+  N^{S}_{Exp}=N^{C}_{Data}-N^{C}_{Bkg}\cdot\frac{\sigma\left(\PZ\rightarrow\nu\nu\right)}{\sigma\left(\PZ/\gamma^{*}\rightarrow\mu\mu\right)}\cdot\frac{\epsilon^{S}_{VBF}}{\epsilon^{C}_{VBF}},
+\end{equation}
+where $\epsilon^{S}$ and $\epsilon^{C}$ are calculated as follows.
+\begin{align}
+  \label{eq:zdataeffsrep}
+  \epsilon^{S}_{VBF}&=\frac{ \sigma\left(\PZ\rightarrow\nu\nu,EWK\right) \frac{N^{S}_{MC}\left(EWK\right)} {N_{gen}\left(\PZ \rm{mass},EWK\right)} + \sigma\left(\PZ\rightarrow\nu\nu,QCD\right) \frac{N^{S}_{MC}\left(QCD\right)} {N_{gen}\left(\PZ \rm{mass},QCD\right)} } {\sigma\left(\PZ\rightarrow\nu\nu,EWK\right) + \sigma\left(\PZ\rightarrow\nu\nu,QCD\right)},\\
+  \label{eq:zdataeffcrep}
+  \epsilon^{C}_{VBF}&=\frac{  \sigma\left(\PZ/\gamma^{*}\rightarrow\mu\mu,EWK\right) \frac{N^{C}_{MC}\left(EWK\right)} {N_{gen}\left(EWK\right)} + \sigma\left(\PZ/\gamma^{*}\rightarrow\mu\mu,QCD\right) \frac{N^{S}_{MC}\left(QCD\right)} {N_{gen}\left(QCD\right)}  }{\sigma\left(\PZ/\gamma^{*}\rightarrow\mu\mu,EWK\right)+\sigma\left(\PZ/\gamma^{*}\rightarrow\mu\mu,QCD\right)},
+\end{align}
+
+%??inputs where the same and where different from prompt
+%??studies of uncertainty on cross-section ratio
 
 \subsection{V+jets closure tests}%??
 \label{sec:parkedclosure}
