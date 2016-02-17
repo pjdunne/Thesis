@@ -448,12 +448,12 @@ As the \Zmumu and \Znunu cross-sections are calculated before analysis selection
 %studies of uncertainty on cross-section ratio
 In the prompt data analysis one of the largest uncertainties, being 44\% of the size of the total systematic uncertainty on the total background estimate, was the uncertainty on the ratio between the \Zmumu and \Znunu cross-sections in the \ac{VBF} phase space. To reduce this uncertainty in this analysis the cross-section ratio was calculated both with \textsc{MadGraph} and \textsc{aMC\@NLO\_MG5}. The \textsc{aMC\@NLO\_MG5} calculation was carried out by generating both \Zmumu and \Znunu events and calculating the ratio of the efficiencies of events in each sample to pass the analysis selection. The selection was applied to generator level objects, with jets being constructed using the algorithm described in \SectionRef{sec:jets} from the generator level quarks and gluons, and the \MET being taken to be the \PZ boson's \pt. For the \textsc{MadGraph} calculation, the same generator level selection was applied to the \Zmumu samples that are used in the background estimation method and the small available \Znunu sample and the same efficiency ratio was calculated. Within statistical errors (4\% for \textsc{MadGraph} and 15\% for \textsc{aMC\@NLO\_MG5}) the ratios from the two generators were found to be compatible. As there was no evidence for a non-statistical discrepancy between the two, the statistical uncertainty from the \textsc{MadGraph} calculations was used. As the samples used for the \textsc{MadGraph} calculation are the same as those used in the background estimation method this error is already accounted for by the \ac{MC} statistical uncertainty on the numbers of events in the \Zmumu sample predicted to be in the signal and control regions and no additional error is necessary.
 
-\subsection{V+jets consistency tests}%??
+\subsection{V+jets consistency tests}
 \label{sec:parkedclosure}
-%??as in AN relatively good agreement but large uncertainties
+%as in AN relatively good agreement but large uncertainties
 To check the consistency of the scale factors obtained from the different V+jets background estimation methods, a study was undertaken to use the single muon region scale factor to predict the data yield in the other control regions. Rather than calculate a single scale factor for the control region, as was done in the background estimation methods, scale factors were calculated for each bin of the distribution of several variables. These scale factors were then applied to the \ac{MC} estimate in the corresponding bin of the other control regions, and the resulting estimate compared to the data yield minus the background expected from other processes from \ac{MC}.
 
-The scale factor weighted \ac{MC} was found to agree better with data than the unweighted \ac{MC}, with the differences seen between the weighted \ac{MC} and the data being less than systematic uncertainty in the majority of bins. The results of these studies in the \METnoMU distribution can be seen in \FigureRef{fig:parkedclosure}.
+The scale factor weighted \ac{MC} was found to agree better with data than the unweighted \ac{MC}, with the differences seen between the weighted \ac{MC} and the data being less than systematic uncertainty in the majority of bins, which gives confidence that the data driven methods improve the background estimations. The results of these studies in the \METnoMU distribution can be seen in \FigureRef{fig:parkedclosure}.
 \begin{figure}
   \subfloat[]{\includegraphics[width=.65\largefigwidth]{plots/parked/AN-14-243-figs/closuretests/closuremetnomuonsWJets_enu.pdf}}
   \subfloat[]{\includegraphics[width=.65\largefigwidth]{plots/parked/AN-14-243-figs/closuretests/closuremetnomuonsWJets_taunu.pdf}}
@@ -463,9 +463,26 @@ The scale factor weighted \ac{MC} was found to agree better with data than the u
   \label{fig:parkedclosure}
 \end{figure}
 
-\subsection{V+jets scale factor investigations}%??
+\subsection{V+jets scale factor investigations}%??proof read
 \label{sec:parkedscalefactors}
-%??as in AN
+As has been seen in the previous sections the data driven scale factors seen in the V+jets background estimation methods are consistently significantly different from 1. To investigate the reason for this difference the variation of the scale factors as a function of the analysis selection criteria was studied. Due to the high thresholds of the triggers the parked data was collected with it was necessary to use a different trigger for this study. The particular trigger chosen was the same single muon trigger used for the trigger efficiency measurements described in \SectionRef{sec:parkedtrigger}. The study was therefore restricted to the single muon control region as it has muons present and contains significantly more events than the dimuon control region. To ensure that the single muon control region was fully efficient the muon \pt cut was tightened to 25 \GeV.
+
+The requirements on the leading and subleading jet's \pt, \Mjj, \jetmetdphi, \METnoMU and \METsig were then varied simultaneously to ascertain which requirements caused the largest variations in the scale factor. The \METnoMU and leading jet \pt requirements were found to have no discernible effect on the scale factor. The effect from the subleading jet \pt and \METsig requirements was found to be less than 5\%. The \jetmetdphi and \Mjj requirements on the other hand were found to significantly alter the scale factor obtained. As can be seen in \FigureRef{fig:jetmetdphimjjscalefactor}a, when these two requirements are loosened the scale factor increases significantly.
+
+\begin{figure}
+  %\subfloat[]{\includegraphics[width=\largefigwidth]{}}%??add plots and make look nicer
+  %\subfloat[]{\includegraphics[width=\largefigwidth]{}}%??
+  \caption{}%??
+  \label{fig:jetmetdphimjjscalefactor}
+\end{figure}
+
+%??study of dphijj
+To determine whether the scale factor depends more strongly on the jet or \METnoMU azimuthal angle the requirement on \jetmetdphi was replaced with a requirement on the azimuthal angle difference between the two tag jets, $\Delta\phi_{jj}$, which doesn't depend on the \METnoMU and the study was repeated. As can be seen in \FigureRef{fig:jetmetdphimjjscalefactor}b, the scale factor was still found to vary in the same range with $\Delta\phi_{jj}$, indicating that the use of the \METnoMU azimuthal angle does not cause a further deviation from 1 than that present already due to jet related effects.
+
+As the scale factor approaches 1 the looser the requirements on the jet kinematics are, it seems that the scale factor deviation from 1 is caused by mismodelling of the jet related variables in V+jets \ac{MC}. The distributions of variables for events in the various analysis regions shown in Figures~\ref{fig:parkedwenu}-\ref{fig:parkedznunu} show good shape agreement between data and \ac{MC}. Also, the data driven methods used to estimate the V+jets background contribution to this analysis correct for the overall normalisation difference, so this mismodelling should not cause problems for the analysis.
+
+
+
 
 \subsection{QCD}%??                                                                                                                                         
 \label{sec:parkedQCD}
