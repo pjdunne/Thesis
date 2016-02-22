@@ -12,6 +12,8 @@ and some background estimation methods to be redesigned compared to the prompt a
 \label{sec:parkedtrigger}
 The parked data trigger varied throughout LHC Run 1 due to the estimates of both the trigger bandwidth available and the rate of the triggers used in the particular LHC conditions that occurred being updated. Run 1 was split into 4 ``eras'', A, B, C and D. During era A data was not being parked, so the prompt data is used. The two other triggers used, one for eras B and C, and one for era D, differed from the prompt trigger in that there was no requirement on the \MET present at \ac{HLT} level in each event and the jet \pt and \Mjj requirements were looser. These looser requirements allow the trigger driven selection applied in the prompt data analysis to be relaxed, and more optimal signal and background control regions to be used. As the region accessible with the parked data includes the prompt data signal region as a subset, no improvement would be possible from applying the analysis designed for the prompt data to the parked data without modification. The exact values of the trigger selection cuts are summarised in \TableRef{tab:parkedtrig}.
 
+%??lumi with each trigger
+
 \begin{table}
   \caption{A summary of the requirements of the triggers used for this analysis in each of LHC Run 1's eras. For the jet requirements all triggers require that there is at least one pair of jets in the event satisfying all of the jet requirements listed in this table. All requirements are on \ac{HLT} variables unless stated otherwise.}
   \label{tab:parkedtrig}
@@ -169,6 +171,7 @@ The methods used to estimate the V+jets backgrounds are based on those used in t
 The terms on the right hand side of this equation which multiply the estimation from \ac{MC} of the number of events due to a particular background process are often collectively referred to as the data driven scale factor. The changes in event selection for this analysis necessitated several changes from the methods for the prompt analysis. The use of this data driven method to investigate the top quark related background was also investigated. Furthermore, among other improvements, the systematic uncertainty on the \Znunu background was reduced. All of these changes and improvements are described in this section.
 
 \subsection{Top quarks}
+\label{sec:parkedtop}
 Almost all top quarks decay to a \PW boson and a b quark~\cite{pdg}. Top quarks are either created in pairs, or via ``single top'' production where only one top quark is created in association with  other quarks or a \PW boson. Top pair production results in two \PW bosons and two b quarks. Single top production results in some combination of \PW bosons and quarks. Where at least one of the \PW bosons decays leptonically and the lepton is misreconstructed, either of these processes can result in the appearance of \MET and jets that can coincidentally have \ac{VBF}-like topology. Whilst the contribution from these processes is expected to be small in the signal region, making up around 1\% of events there, the presence of \PW bosons and jets makes these processes very likely to contribute to the control regions used to estimate the \PW+jets background contribution. In the $\PW\rightarrow\tau\nu$ control region approximately 15\% of events are estimated to come from top quark processes. Data driven methods for estimating the top quark background and its uncertainties were therefore investigated.
 
 Initially a dilepton control region was investigated. This had the same cuts on the jet and \MET related variables as the signal region, but the lepton veto was replaced with a requirement that there is exactly one tight electron and one tight muon. This final state would be expected in the case of top quark pair production or single top production with a \PW boson, where both the resulting \PW bosons decay leptonically to different leptons. This region had only single figure numbers of events expected, so the cut on \jetmetdphi was loosened to 0. It can be seen from \FigureRef{fig:parkedtopjetmetdphi} that the ratio between data and MC in this region does not depend significantly on \jetmetdphi. The data driven scale factor obtained from this dilepton region was, within the statistics available, consistent with 1 and a good agreement between data and \ac{MC} was seen in all variables studied.
@@ -482,11 +485,10 @@ To determine whether the scale factor depends more strongly on the jet or \METno
 
 The looser the requirements on the jet kinematics are the closer the scale factor is to 1. It therefore seems that the scale factor deviation from 1 is caused by mismodelling of the jet related variables in V+jets \ac{MC}. The distributions of variables for events in the various control regions shown in Figures~\ref{fig:parkedwenu}-\ref{fig:parkedznunu} show good shape agreement between data and \ac{MC}, indicating that the shape in these regions is not significantly mismodelled. Also, the data driven methods used to estimate the V+jets background contribution to this analysis correct for the overall normalisation difference from mismodelling in areas of phase space outside the analysis control and signal regions. For these two reasons this mismodelling is not expected to cause problems for the analysis.
 
-%??proof read
 \subsection{QCD}
 \label{sec:parkedQCD}
 %describe QCD MC, problem with real and fake met
-As mentioned in \SectionRef{sec:parkedsel} events from \ac{QCD} multijet processes are very difficult to model using \ac{MC} as their low probability to pass selection cuts and high cross-section makes the number of events which must be generated prohibitively large. In an attempt to circumvent this problem a dedicated sample of \ac{QCD} multijet events with \ac{VBF}-like cuts placed at generator level was generated. Specifically, the \MET was required to be greater than 40 \GeV,  at least 2 jets with \pt$>20$ within the detector acceptance had to be present, at least one pair of those jets was then required to have \Mjj$>700$ \GeV and $\detajj>3.2$. As can be seen from \FigureRef{fig:parkedpresel} this sample does not adequately describe the contribution to the region with trigger driven selection imposed. 
+As mentioned in \SectionRef{sec:parkedsel} events from \ac{QCD} multijet processes are very difficult to model using \ac{MC}, as their low probability to pass selection cuts and high cross-section makes the number of events which must be generated prohibitively large. In an attempt to circumvent this problem a dedicated sample of \ac{QCD} multijet events with \ac{VBF}-like cuts imposed at generator level was generated. Specifically, the \MET was required to be greater than 40 \GeV, at least 2 jets with \pt$>20$ within the detector acceptance had to be present, and at least one pair of those jets was then required to have \Mjj$>700$ \GeV and $\detajj>3.2$. As can be seen from \FigureRef{fig:parkedpresel} this sample does not adequately describe the contribution to the region with trigger driven selection imposed. 
 
 \begin{figure}
   \includegraphics[width=.7\largefigwidth]{plots/parked/AN-14-243-figs/Joao_140209_p11.png}
@@ -494,21 +496,23 @@ As mentioned in \SectionRef{sec:parkedsel} events from \ac{QCD} multijet process
   \label{fig:parkedmcqcd}
 \end{figure}
 
-To investigate where this mismodelling comes from the reconstructed \MET was plotted as a function of the generator level \MET in the \ac{QCD} multijet \ac{MC} sample centrally produced by CMS, which does not have generator level cuts on the \MET or jet kinematics present, as shown in \FigureRef{fig:parkedmcqcd}. As expected most events fall in the bottom left of this plot, having low \MET at both generator level and offline. These events would therefore not enter the analysis signal region and would also be rejected by the generator level cut as intended. There is then another class of events distributed around the diagonal of the plot due to the resolution of the \MET, with higher values of both generator level and offline \MET. These on-diagonal events would be expected to be well modelled by the \ac{VBF} \ac{QCD} sample as most of them which fall into the analysis signal region which requires \MET$>90$ \GeV would be expected to pass the generator level cut. Finally, there is a third type of events, which have low values of generator level \MET, but high values of the offline \MET due to mismeasurement. These so-called ``fake'' \MET events are believed to be the cause of the \ac{VBF} \ac{QCD} sample not adequately modelling the \ac{QCD} background in this analysis, as they will be removed by the generator level cut, but should be present in the analysis signal region. 
+To investigate where this mismodelling comes from the reconstructed \MET was plotted as a function of the generator level \MET in the \ac{QCD} multijet \ac{MC} sample centrally produced by CMS as shown in \FigureRef{fig:parkedmcqcd}. This sample does not have any generator level cuts on the \MET or jet kinematics. Most events fall in the bottom left of this plot, having low \MET at both generator level and offline. These events would therefore not enter the analysis signal region and would also be rejected by the generator level cut as intended. There is then another class of events distributed around the diagonal of the plot due to the resolution of the \MET, with higher values of both generator level and offline \MET. These on-diagonal events would be expected to be well modelled by the \ac{VBF} \ac{QCD} sample as most of them which fall into the analysis signal region, which requires \MET$>90$ \GeV, would be expected to pass the generator level cut. Finally, there is a third type of events, which have low values of generator level \MET, but high values of the offline \MET due to mismeasurement. These so-called ``fake'' \MET events are believed to be the cause of the \ac{VBF} \ac{QCD} sample not adequately modelling the \ac{QCD} background in this analysis, as they will be removed by the generator level cut, but should be present in the analysis signal region. 
 
 %as in PAS use isolated non-isolated met analogy with other methods
 %data driven method therefore necessary explain as in pas
-It can be seen from the location of the gaps between the data and the \ac{MC} predictions in \FigureRef{fig:parkedpresel} that the fake \MET events, like the well modelled on-diagonal events, have at least one jet close in $\phi$ to the \MET, and have low values of \METsig. They are therefore expected to be almost entirely removed by the analysis selection. Nevertheless it is important to provide an estimate of the small remaining number of \ac{QCD} background events of both types. Due to the difficulties with \ac{MC} estimates outlined above this estimation must be data driven.
+It can be seen from the location of the gaps between the data and \ac{MC} predictions in \FigureRef{fig:parkedpresel} that the fake \MET events, like the well modelled on-diagonal events, have at least one jet close in $\phi$ to the \MET, and have low values of \METsig. They are therefore expected to be almost entirely removed by the analysis selection. Nevertheless it is important to provide an estimate of the small remaining number of \ac{QCD} background events of both types. Due to the difficulties with \ac{MC} estimates outlined above this estimation must be data driven.
 
 %why not ABCD, then follow PAS
-The ABCD method used in the prompt data analysis cannot be used for this analysis because the regions where only one of the two main anti-\ac{QCD} cuts are inverted are expected to have signal contributions of approximately 10\% of the total number of data events (assuming a 125 \GeV Higgs boson decaying entirely to invisible final states). An alternative method using events with ``non-isolated'' \MET, i.e. that with a jet close to it in $\phi$ or a lot of other activity in the event, is therefore used. This non-isolated method involves three regions: (i) the ``inverted'' region where the shape of the distributions of key variables for the \ac{QCD} background is determined, (ii) the ``3-jet'' region where this shape is validated, and (iii) a set of ``sideband'' regions where a normalisation for the \ac{QCD} shape is extracted.
+The ABCD method used in the prompt data analysis cannot be used for this analysis because the regions where only one of the two main anti-\ac{QCD} cuts is inverted are expected to have non-negligible signal contributions (approximately 10\% of the total number of data events assuming a 125 \GeV Higgs boson decaying entirely to invisible final states). An alternative method using events with ``non-isolated'' \MET, i.e. that with a jet close to it in $\phi$, is therefore used. This non-isolated method involves three regions: (i) the ``inverted'' region where the shape of the distributions of key variables for the \ac{QCD} background is determined, (ii) the ``3-jet'' region where this shape is validated, and (iii) a set of ``sideband'' regions where a normalisation for the \ac{QCD} shape is extracted. A schematic of these regions is shown in \FigureRef{fig:parkedqcdregions}
+
+The contribution from V+jets backgrounds in these regions is estimated using \ac{MC} normalised with the data driven method described by \EquationRef{eq:wdatabkgrep}. The control regions used for each background in each region are defined by making the same modifications to the region as were made to the signal region to define the V+jets control regions used in Sections~\ref{sec:parkedwenu}-\ref{sec:parkedznunu}.
 
 %inverted
-The inverted region is defined starting from the signal region, by swapping the \jetmetdphi$>2.3$ requirement for a requirement that only \jetmetdphileading is greater than 2.3, and then requiring that \jetmetdphi is less than 1. The resulting region consists of events with two signal-like jets, but also an additional jet close to the \MET making it non-isolated. The contribution from V+jets backgrounds in this region is estimated using \ac{MC} normalised with the data driven method described by \EquationRef{eq:wdatabkgrep}. The control regions used for each background are defined by making the same modifications to the inverted region as were made to the signal region to define the V+jets control regions used in Sections~\ref{sec:parkedwenu}-\ref{sec:parkedznunu}. As can be seen from \FigureRef{fig:parkeddataqcd}a the inverted region is dominated by \ac{QCD} events with only 20\% of the events expected to come from V+jets and other background processes. The \ac{QCD} shape is taken to be the shape of the data after subtracting the estimated contribution from all other background processes.
+The inverted region is defined starting from the signal region, by swapping the \jetmetdphi$>2.3$ requirement for a requirement that only \jetmetdphileading is greater than 2.3, and then requiring that \jetmetdphi is less than 1. The resulting region consists of events with two signal-like jets, but also an additional jet close to the \MET making it non-isolated.   As can be seen from \FigureRef{fig:parkeddataqcd}a the inverted region is dominated by \ac{QCD} events with only 20\% of the events expected to come from V+jets and other background processes. The \ac{QCD} shape is taken to be the shape of the data after subtracting the estimated contribution from all other background processes.
 
 
 %3 jet
-To ensure the \ac{QCD} shape derived from non-isolated \MET is adequate to describe the \ac{QCD} background with isolated \MET in the signal region the agreement the 3-jet region is used. This region is defined starting from the signal region by relaxing the \jetmetdphi and \METsig requirements from greater than 2.3 to greater than 1 and from greater than 4 to greater than 3 respectively, then requiring that there are at least three jets with \pt$>30$ \GeV in the event. The \ac{QCD} shape obtained from the inverted region is then normalised to the data yield minus the expected contribution from other backgrounds in this 3-jet region and plotted as a function of several variables. The distribution of \METsig is shown in \FigureRef{fig:parkeddataqcd}b and good agreement between data and \ac{MC} is seen. Unfortunately as most of the events passing the signal region selection have only two jets and not three, the 3-jet region cannot be used to provide a normalisation to be used in the signal region \ac{QCD} estimate.
+To ensure the \ac{QCD} shape derived from non-isolated \MET is adequate to describe the \ac{QCD} background with isolated \MET in the signal region the agreement the 3-jet region is used. This region is defined starting from the signal region by relaxing the \jetmetdphi and \METsig requirements from greater than 2.3 to greater than 1 and from greater than 4 to greater than 3 respectively, then requiring that there are at least three jets with \pt$>30$ \GeV in the event. The \ac{QCD} shape obtained from the inverted region is then normalised to the data yield minus the expected contribution from other backgrounds in this 3-jet region and plotted as a function of several variables. Good agreement between data and \ac{MC} is seen and the distribution of \METsig is shown in \FigureRef{fig:parkeddataqcd}b. Unfortunately as most of the events passing the signal region selection have only two jets and not three, the 3-jet region cannot be used to provide a normalisation to be used in the signal region \ac{QCD} estimate.
 
 \begin{figure}
   \subfloat[]{\includegraphics[width=.65\largefigwidth]{plots/parked/HIG-14-038-figs/output_invqcd_qcd_metnomu_significance.pdf}}
@@ -558,14 +562,16 @@ Whilst the regions obtained from inverting only one of the \jetmetdphi or \METsi
 \multicolumn{6}{c}{MET significance} & \\
 \end{tabular}
 \end{center}
+\caption{A schematic of the regions used in the \ac{QCD} background estimation method.}
+\label{fig:parkedqcdregions}
 \end{figure}
 
 Scale factors were then obtained in each of the sideband regions by evaluating the following formula:
 \begin{equation}
-  SF=\frac{N_{Data}-N_{Bkg}dx}{N_{QCD}dx},
+  SF=\frac{N_{Data}-N_{Bkg}}{N_{QCD}},
   \label{eq:parkedqcdscalefactor}
 \end{equation}
-where $N_{Data}$ and $N_{Bkg}$ ($N_{QCD}$) are (is)  evaluated using events passing the cuts of the particular sideband region being studied and also having \jetmetdphi$>1$ (\jetmetdphi$<1$). This scale factor was found to be much lower in the sideband 2 and sideband 3 regions than in the sideband 1 region.  For this reason, the scale factor was studied as a function of the requirements on \jetmetdphileading and \METsig by gradually tightening the requirement on each variable separately and recalculating the scale factor. The value of the scale factor as a function of the requirement placed on both \jetmetdphileading and \METsig can be seen in \FigureRef{fig:parkedqcdsfvar}.
+where $N_{Data}$ and $N_{Bkg}$ ($N_{QCD}$) are (is)  evaluated using events passing the cuts of the particular sideband region being studied and also having \jetmetdphi$>1$ (\jetmetdphi$<1$). This scale factor was found to be much lower in the sideband 2 and sideband 3 regions than in the sideband 1 region.  For this reason, the scale factor was studied as a function of the requirements on \jetmetdphileading and \METsig by gradually tightening the requirement on each variable in sideband 1 separately and recalculating the scale factor. The value of the scale factor as a function of the requirement placed on both \jetmetdphileading and \METsig can be seen in \FigureRef{fig:parkedqcdsfvar}.
 
 
 \begin{figure}
@@ -576,26 +582,87 @@ where $N_{Data}$ and $N_{Bkg}$ ($N_{QCD}$) are (is)  evaluated using events pass
   \label{fig:parkedqcdsfvar}
 \end{figure}
 
-The behaviour of the scale factor with each variable is compatible with either an exponential or linear decrease. So as not to underestimate the number of events from \ac{QCD} an exponential function, which yields slightly larger scale factors, was fit to each of the distributions shown in \FigureRef{fig:parkedqcdsfvar}. Both these exponentials were then extrapolated to the signal region requirements. The average of these two extrapolations was usd as the central prediction of the scale factor, and the envelope of their uncertains was used to assign a systematic uncertainty. The final value of the scale factor is $0.048\pm 0.040$. The inverted region contains $363\pm 36$ events, so the total number of events expected from \ac{QCD} in the signal region is $17\pm 14$.
+The behaviour of the scale factor with each variable is compatible with both an exponential or linear decrease. So as not to underestimate the number of events from \ac{QCD} an exponential function, which yields slightly larger scale factors, was fit to each of the distributions shown in \FigureRef{fig:parkedqcdsfvar}. Both these exponentials were then extrapolated to the signal region requirements. The average of these two extrapolations was used as the central prediction of the scale factor, and the envelope of their uncertainties was used to assign a systematic uncertainty. The final value of the scale factor is $0.048\pm 0.040$. The inverted region contains $363\pm 36$ events, so the total number of events expected from \ac{QCD} in the signal region is $17\pm 14$.
 
-It should be noted that the \jetmetdphileading variable is not exactly the same as the \jetmetdphi used for the signal region selection. This alternate variable was used as cutting on \jetmetdphi left no \ac{QCD} events for the higher values of the requirement studied in \FigureRef{fig:parkedqcdsfvar}a. However, because the \jetmetdphi variable is more discriminating against \ac{QCD} the estimate presented above acts as an upper bound, which is acceptable given the low number of events ($<5\%$ of the total expected background) and its large relative uncertainty.
+It should be noted that the \jetmetdphileading variable is not exactly the same as the \jetmetdphi used for the signal region selection. This alternate variable was used as cutting on \jetmetdphi left no \ac{QCD} events for the higher values of the requirement studied in \FigureRef{fig:parkedqcdsfvar}a. However, because the \jetmetdphi variable is more discriminating against \ac{QCD} than \jetmetdphileading the estimate presented above acts as an upper bound, which is acceptable given the low number of events ($<5\%$ of the total expected background) and its large relative uncertainty.
 
 
 \subsection{Minor backgrounds}
 \label{sec:parkedminor}
 %straight from MC same XSec measurements as prompt
-As in the prompt data analysis, due to it being very small, the contribution to the signal and control regions from diboson and \Zmumu background processes is estimated from \ac{MC}. \textsc{PYTHIA 6} is used to generate diboson events, while \Zmumu events are generated with \textsc{MadGraph}. The \ac{MC} estimate of the diboson backgrounds is normalised using the most accurate CMS measurement at the time of this analysis~\cite{Chatrchyan2013190}.
+As in the prompt data analysis, due to it being very small, the contribution to the signal and control regions from diboson and \Zmumu background processes is estimated from \ac{MC}. \textsc{PYTHIA 6} is used to generate diboson events, while \Zmumu events are generated with \textsc{MadGraph}. The \ac{MC} estimate of the diboson backgrounds is normalised using the most accurate CMS measurement at the time of this analysis~\cite{Chatrchyan2013190} and the expected number of events in the signal region is $3.9\pm 0.7$.
 
-\section{Systematic uncertainties}%??
+\section{Systematic uncertainties}
 \label{sec:parkedsyst}
-The uncertainty due to the reweighting process used to account for trigger inefficiencies cancels in all data driven background estimates, as a ratio of \ac{MC} event yields is taken. To estimate the size of the uncertainty that should be applied to processes not taken from data driven background, the bin with the largest uncertainties on its fit for each era was chosen. It was then assumed that all bins had this worst-case uncertainty. This resulted in a 2.3\% overall uncertainty on these processes from this effect. Given that this error is smaller than many of the other errors considered, and that the uncertainty on the efficiency in most of the fit bins is significantly lower than this worst case this uncertainty is considered negligible.
+Most systematic uncertainties are calculated using the same methods as in the prompt data analysis (see \SectionRef{sec:promptsyst}). In several cases the inputs to those methods have been updated to take into account improved measurements of various parameters using the full Run 1 dataset which were not available at the time of the prompt analysis. For example, the impacts of the \ac{JES}, \ac{JER} and unclustered energy scale uncertainties are still estimated by recalculating the \pt of all jets and the \MET after varying each parameter up and down by one standard deviation and reperforming the analysis. However, the total uncertainty from these is smaller, being 6\% of the total expected background yield for this analysis where it was 7\% in the prompt data analysis.
 
-%??ref prompt and improvements in top and znunu, also remention wtau increased extrap error
+Most changes to the calculation of systematic errors have already been discussed in Sections \ref{sec:parkedtop}, \ref{sec:parkedwtaunu}, \ref{sec:parkedznunu} and \ref{sec:parkedQCD}. The fractional uncertainty on the total signal and background yield estimates from each source of uncertainty considered is shown in \TableRef{tab:parkedsyst}.
+
+In addition to the above changes a study was undertaken to estimate the impact of the uncertainties on the trigger efficiency measurement. As described in \SectionRef{sec:parkedtrigger}, all \ac{MC} events are reweighted by the measured trigger efficiency as a function of the events subleading jet \pt, \METnoMU and \Mjj. The uncertainty due to the reweighting process cancels in all data driven background estimates, as a ratio of \ac{MC} event yields is taken. To estimate the size of the uncertainty that should be applied to processes not estimated with data driven methods, the bin with the largest uncertainties on its fit for each era was chosen. It was then assumed that all bins had this worst-case uncertainty. This assumption resulted in a 2.3\% uncertainty on these non-data driven processes. Given that this error is smaller than many of the other errors considered, and that the uncertainty on the efficiency in most of the fit bins is significantly lower than this worst case, this uncertainty was considered negligible.
+
+\begin{table}
+\caption{A summary of the uncertainties on the total background and signal yields. All uncertainties affect the normalization of the yield, and are quoted as the change in \% in the total background or signal estimate, when each systematic effect is varied according to its uncertainties. The signal uncertainties are given for $m_{H}=125$\GeV and $\BRinv=100$\%.}
+\label{tab:parkedsyst}
+\begin{tabular}{lcc}
+\hline \hline
+Source  & Total background & Signal     \\
+\hline
+Control region statistics & 9.3 & - \\
+MC statistics & 5.4 & 3.8 \\
+Jet energy scale & 4.6 & 11 \\
+$\PW\rightarrow\tau\nu$ control region extrapolation & 4.3 & - \\
+QCD background estimationtion & 3.2 & - \\
+Jet energy resolution & 3.0 & 1.8 \\
+Lepton ID efficiency & 2.4 & - \\
+Unclustered energy scale & 1.9 & 1.6 \\
+Pileup weight & 1.1 & 1.5 \\
+Top MC scale factor unc. & 0.25 & - \\
+Luminosity & 0.02 & 2.6 \\
+QCD scale, PDF and cross section uncertainties & 0.01 & 5.2 \\
+\hline
+Total & 13.6 & 13.3 \\
+\hline \hline
+\end{tabular}
+\end{table}
+
+
+
 %??Maybe explain uncertainty impact calculations and pulls test and give order of importance of nuisances state no issues found with pulls. possibly move pulls to combinations
 
 \section{Results}%??                                                                                                                                        
 \label{sec:parkedresults}
-%??yields etc and cont plots
+The final predicted yields for each background process are shown, along with their uncertainties in \TableRef{tab:parkedresults}.
+%yields etc table
+\begin{table}
+\caption{The estimated numbers of background and signal events from each process, together with the observed yield, in the signal region. The signal yield assumes a Higgs boson mass of 125 \GeV and \BRinv$=100\%$. Where two errors quoted they are the statistical and systematic uncertainties respectively, where only one is quoted it is the systematic uncertainty.}
+
+
+\label{tab:parkedresults}
+\begin{tabular}{lc}
+\hline \hline
+Process & Event yields \\
+\hline
+$Z\rightarrow\nu\nu$&$158.1 \pm 37.3 \pm 21.2$\\
+$W\rightarrow e\nu$&$57.9 \pm 7.4 \pm 7.7$\\
+$W\rightarrow\mu\nu$&$102.5 \pm 6.2 \pm 11.7$\\
+$W\rightarrow\tau\nu$&$94.6 \pm 13.1 \pm 23.8$\\
+top&$5.5 \pm  1.8$\\
+Minor backgrounds&$3.9 \pm 0.7$\\
+QCD multijet &$17\pm 14$\\
+\hline
+Total background &$439.4 \pm 40.7 \pm 43.5 $\\
+\hline
+Signal(VBF) &$273.1 \pm 31.2 $\\
+Signal(ggH) &$23.1 \pm 15.9 $\\
+\hline
+Observed data & 508 \\
+\hline \hline
+\end{tabular}
+\end{table}
+
+%??cont plots
+
+
 %??limit brazil plots
 %??likelihood scans
 

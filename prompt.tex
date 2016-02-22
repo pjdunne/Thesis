@@ -1,7 +1,7 @@
 \chapter{Search for invisibly decaying VBF produced Higgs bosons in Run 1 prompt data}
 \label{chap:prompt}
 %Introduction to selection and challenges of jets+met, e.g. trigger, \ac{QCD}
-As described in \ChapterRef{chap:theory}, searches for invisible Higgs boson decays are well motivated by their sensitivity to new physics, such as \ac{DM}. Because \BRinv of an \ac{SM} 125 \GeV Higgs boson is very small, any evidence for invisible Higgs boson decays at the \LHC would be evidence for physics beyond the \ac{SM}. This chapter describes the search for invisible Higgs boson decays using data taken by CMS in 2012 which was promptly reconstructed, a dedicated trigger was developed specifically for this analysis. The total integrated luminosity collected with this trigger that was certified for use in physics analyses was 19.5\invfb~. The analysis was published in \ReferenceRef{Chatrchyan:2014tja}.
+As described in \ChapterRef{chap:theory}, searches for invisible Higgs boson decays are well motivated by their sensitivity to new physics, such as \ac{DM}. Because \BRinv of an \ac{SM} 125 \GeV Higgs boson is very small, any evidence for invisible Higgs boson decays at the \LHC would be evidence for physics beyond the \ac{SM}. This chapter describes the search for invisible Higgs boson decays using data taken by CMS in 2012 which was promptly reconstructed, a dedicated trigger was developed specifically for this analysis. The total integrated luminosity collected with this trigger that was certified for use in physics analyses was 19.5\invfb~\cite{CMS-PAS-LUM-13-001}. The analysis was published in \ReferenceRef{Chatrchyan:2014tja}.
 
 \section{Event selection}
 \label{sec:promptsel}
@@ -353,7 +353,7 @@ The second method is used when a jet has no matching generator jet. In this case
   \label{eq:promptjerunmatched}
   \sqrt{\left(c^{2}-1\right)\sigma_{MC}},
 \end{equation}
-where $c$ is the same correction factor from the method above and $\sigma_{MC}$ is the initial \ac{MC} resolution as a function of \pt and $\eta$. As well as being random and thus difficult to reproduce, this method has the disadvantage that it can only be used to worsen the resolution. 
+where $c$ is the same correction factor from the method above and $\sigma_{MC}$ is the initial \ac{MC} resolution as a function of \pt and $\eta$. $\sigma_{MC}$ was measured by performing a gaussian fit to the distribution of the ratio between the generator level and offline jet \pt observed in \PW+jets \ac{MC}. As well as being random and thus difficult to reproduce, this method has the disadvantage that it can only be used to worsen the resolution. 
 
 The analysis is performed three times with three different smearings, one where the MC resolution is smeared to match the nominal data resolution, which is used for the main signal and background estimations, and two where the \ac{MC} resolution is made to match the improvement, ``JERBETTER'' and worsening, ``JERWORSE'' of the jet energy resolution by one standard deviation. For the nominal and JERWORSE smearings the limitation that the unmatched jet smearing method can only worsen the resolution is not a problem, as the initial \ac{MC} resolution is better than that in data for all values of jet \pt and $\eta$. However, for the JERBETTER smearing it is necessary to improve the resolution for some jets. Fortunately, the differences between the generated resolution and the JERBETTER resolutions where improved resolution is required are small, so in these cases no smearing is applied. For all smearings the resulting changes in jet \pt are propagated through to the \MET. The differences between the signal and background yields obtained with the nominal \ac{JER}, JERBETTER and JERWORSE are used to assign an uncertainty due to the \ac{JER}.
 
@@ -372,7 +372,7 @@ An uncertainty of 8\% is added to the estimate of the $\PW\rightarrow\tau\nu$ ba
 
 \subsection{Other uncertainties}
 \label{sec:promptzextrap}
-Additional uncertainties arise from several sources. For instance, the \Znunu background estimate is reliant on the ratio of the cross-sections for the \Znunu and \Zmumu processes in the phase space of this analysis. A 20\% uncertainty on this ratio was applied to cover the difference between the values of the ratio calculated using \textsc{MadGraph} and using \textsc{MCFM}~\cite{ARTICLE:CMSAN-12-403}. Further uncertainties come from the measurement of the distribution of the number of primary vertices used in the pileup weights, described in \SectionRef{sec:mcweights}, the \ac{pdf}s and \ac{QCD} scale used in the signal cross-section measurements, differences in the \ac{ggH} \dphijj spectrum depending on the \ac{MC} generator used~\cite{ARTICLE:CMSAN-12-403}, the cross-sections used to normalise the minor backgrounds, and the measurement of the total integrated luminosity.
+Additional uncertainties arise from several sources. For instance, the \Znunu background estimate is reliant on the ratio of the cross-sections for the \Znunu and \Zmumu processes in the phase space of this analysis. A 20\% uncertainty on this ratio was applied to cover the difference between the values of the ratio calculated using \textsc{MadGraph} and using \textsc{MCFM}~\cite{ARTICLE:CMSAN-12-403}. Further uncertainties come from the measurement of the distribution of the number of primary vertices used in the pileup weights, described in \SectionRef{sec:mcweights}, the \ac{PDF}s and \ac{QCD} scale used in the signal cross-section measurements~\cite{Dittmaier:2011ti,Dittmaier:2012vm}, differences in the \ac{ggH} \dphijj spectrum depending on the \ac{MC} generator used~\cite{ARTICLE:CMSAN-12-403}, the cross-sections used to normalise the minor backgrounds, described in \SectionRef{sec:promptminor}, and the measurement of the total integrated luminosity~\cite{CMS-PAS-LUM-13-001}.
 
 
 \begin{table}
@@ -385,12 +385,12 @@ Additional uncertainties arise from several sources. For instance, the \Znunu ba
     \hline
     Control region statistics               & 11\%          & \NA  \\
     MC statistics and \Znunu cross-section ratio  & 11\%          & 4\%  \\
-    Jet/\ETm\ energy scale/resolution       & 7\%           & 13\% \\
+    Jet/unclustered energy scale/resolution       & 7\%           & 13\% \\
     QCD background estimation               & 4\%           & \NA  \\
     Lepton efficiency                       & 2\%           & \NA  \\
     Luminosity                              & 0.2\%         & 2.6\%\\
     Cross-sections                          & 0.5--1\%      & \NA  \\
-    Pdfs                                    & \NA           & 5\%  \\
+    PDFs                                    & \NA           & 5\%  \\
     \ac{QCD} scale     & \NA           & 4\%  \\
     \ac{ggH} \dphijj spectrum           & \NA           & 4\%  \\
     \hline
