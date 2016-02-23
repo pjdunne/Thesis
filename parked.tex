@@ -594,102 +594,110 @@ As in the prompt data analysis, due to it being very small, the contribution to 
 
 \section{Systematic uncertainties}
 \label{sec:parkedsyst}
-Most systematic uncertainties are calculated using the same methods as in the prompt data analysis (see \SectionRef{sec:promptsyst}). In several cases the inputs to those methods have been updated to take into account improved measurements of various parameters using the full Run 1 dataset which were not available at the time of the prompt analysis. For example, the impacts of the \ac{JES}, \ac{JER} and unclustered energy scale uncertainties are still estimated by recalculating the \pt of all jets and the \MET after varying each parameter up and down by one standard deviation and reperforming the analysis. However, the total uncertainty from these is smaller, being 6\% of the total expected background yield for this analysis where it was 7\% in the prompt data analysis.
+Most systematic uncertainties are calculated using the same methods as in the prompt data analysis (see \SectionRef{sec:promptsyst}). The changes to the calculation of systematic errors on the top, $\PW\rightarrow\tau\nu$, $\PZ\rightarrow\nu\nu$ and \ac{QCD} multijet backgrounds have already been discussed in Sections \ref{sec:parkedtop}, \ref{sec:parkedwtaunu}, \ref{sec:parkedznunu} and \ref{sec:parkedQCD} respectively.
 
-Most changes to the calculation of systematic errors have already been discussed in Sections \ref{sec:parkedtop}, \ref{sec:parkedwtaunu}, \ref{sec:parkedznunu} and \ref{sec:parkedQCD}. The fractional uncertainty on the total signal and background yield estimates from each source of uncertainty considered is shown in \TableRef{tab:parkedsyst}.
+Despite the methods used being similar, in several cases the inputs to the methods have been updated to take into account improved measurements of various parameters using the full Run 1 dataset which were not available at the time of the prompt analysis. For example, the impacts of the \ac{JES}, \ac{JER} and unclustered energy scale uncertainties are still estimated by recalculating the \pt of all jets and the \MET after varying each parameter up and down by one standard deviation and reperforming the analysis. However, the total uncertainty from these is smaller, being 6\% of the total expected background yield for this analysis where it was 7\% in the prompt data analysis.
 
-In addition to the above changes a study was undertaken to estimate the impact of the uncertainties on the trigger efficiency measurement. As described in \SectionRef{sec:parkedtrigger}, all \ac{MC} events are reweighted by the measured trigger efficiency as a function of the events subleading jet \pt, \METnoMU and \Mjj. The uncertainty due to the reweighting process cancels in all data driven background estimates, as a ratio of \ac{MC} event yields is taken. To estimate the size of the uncertainty that should be applied to processes not estimated with data driven methods, the bin with the largest uncertainties on its fit for each era was chosen. It was then assumed that all bins had this worst-case uncertainty. This assumption resulted in a 2.3\% uncertainty on these non-data driven processes. Given that this error is smaller than many of the other errors considered, and that the uncertainty on the efficiency in most of the fit bins is significantly lower than this worst case, this uncertainty was considered negligible.
+In addition to these changes a study was undertaken to estimate the impact of the uncertainties on the trigger efficiency measurement. As described in \SectionRef{sec:parkedtrigger}, all \ac{MC} events are reweighted by the measured trigger efficiency as a function of the events subleading jet \pt, \METnoMU and \Mjj. The uncertainty due to the reweighting process cancels in all data driven background estimates, as a ratio of \ac{MC} event yields is taken. To estimate the size of the uncertainty that should be applied to processes not estimated with data driven methods, the bin with the largest uncertainties on its fit for each era was chosen. It was then assumed that all bins had this worst-case uncertainty. This assumption resulted in a 2.3\% uncertainty on these non-data driven processes. Given that this error is smaller than many of the other errors considered, and that the uncertainty on the efficiency in most of the fit bins is significantly lower than this worst case, this uncertainty was considered negligible.
+
+The fractional uncertainties on the total signal and background yield estimates from each source of uncertainty considered are shown in \TableRef{tab:parkedsyst} in decreasing order of the size of the uncertainty on the total background yield. It can be seen that the dominant uncertainties are statistical, with these being dominated by the low number of data events in the double muon control region (see \TableRef{tab:parkedznunu}).
 
 \begin{table}
-\caption{A summary of the uncertainties on the total background and signal yields. All uncertainties affect the normalization of the yield, and are quoted as the change in \% in the total background or signal estimate, when each systematic effect is varied according to its uncertainties. The signal uncertainties are given for $m_{H}=125$\GeV and $\BRinv=100$\%.}
-\label{tab:parkedsyst}
-\begin{tabular}{lcc}
-\hline \hline
-Source  & Total background & Signal     \\
-\hline
-Control region statistics & 9.3 & - \\
-MC statistics & 5.4 & 3.8 \\
-Jet energy scale & 4.6 & 11 \\
-$\PW\rightarrow\tau\nu$ control region extrapolation & 4.3 & - \\
-QCD background estimationtion & 3.2 & - \\
-Jet energy resolution & 3.0 & 1.8 \\
-Lepton ID efficiency & 2.4 & - \\
-Unclustered energy scale & 1.9 & 1.6 \\
-Pileup weight & 1.1 & 1.5 \\
-Top MC scale factor unc. & 0.25 & - \\
-Luminosity & 0.02 & 2.6 \\
-QCD scale, PDF and cross section uncertainties & 0.01 & 5.2 \\
-\hline
-Total & 13.6 & 13.3 \\
-\hline \hline
-\end{tabular}
+  \caption{A summary of the uncertainties on the total background and signal yields. All uncertainties affect the normalization of the yield, and are quoted as the change in \% in the total background or signal estimate, when each systematic effect is varied according to its uncertainties. The signal uncertainties are given for $m_{H}=125$\GeV and $\BRinv=100$\%.}
+  \label{tab:parkedsyst}
+  \begin{tabular}{lcc}
+    \hline \hline
+    Source  & Total background & Signal     \\
+    \hline
+    Control region statistics & 9.3 & - \\
+    MC statistics & 5.4 & 3.8 \\
+    Jet energy scale & 4.6 & 11 \\
+    $\PW\rightarrow\tau\nu$ control region extrapolation & 4.3 & - \\
+    QCD background estimationtion & 3.2 & - \\
+    Jet energy resolution & 3.0 & 1.8 \\
+    Lepton ID efficiency & 2.4 & - \\
+    Unclustered energy scale & 1.9 & 1.6 \\
+    Pileup weight & 1.1 & 1.5 \\
+    Top MC scale factor unc. & 0.25 & - \\
+    Luminosity & 0.02 & 2.6 \\
+    QCD scale, PDF and cross section uncertainties & 0.01 & 5.2 \\
+    \hline
+    Total & 13.6 & 13.3 \\
+    \hline \hline
+  \end{tabular}
 \end{table}
 
 
 
-%??Maybe explain uncertainty impact calculations and pulls test and give order of importance of nuisances state no issues found with pulls. possibly move pulls to combinations
+%Maybe explain uncertainty impact calculations and pulls test and give order of importance of nuisances state no issues found with pulls. possibly move pulls to combinations
 
 \section{Results}%??                                                                                                                                        
 \label{sec:parkedresults}
-The final predicted yields for each background process are shown, along with their uncertainties in \TableRef{tab:parkedresults}.
+The final predicted yields for each background process are shown, along with their uncertainties in \TableRef{tab:parkedresults}. The total predicted event yield from background processes is $439.4\pm 40.7\stat\pm 43.5 \syst$. Assuming an \ac{SM} produced Higgs boson which decays 100\% to invisible final states, $296.2\pm 39.4\syst$ events from signal processes are expected. 508 events are observed, which is a slightly more than one standard deviation above the background only prediction. The distributions of the variables used in the analysis selection are shown in the signal region in \FigureRef{fig:parkednunucontplots}. The shapes of these distributions for data and the predicted backgrounds agree well, so the excess of events is therefore not considered significant.
+
 %yields etc table
 \begin{table}
-\caption{The estimated numbers of background and signal events from each process, together with the observed yield, in the signal region. The signal yield assumes a Higgs boson mass of 125 \GeV and \BRinv$=100\%$. Where two errors quoted they are the statistical and systematic uncertainties respectively, where only one is quoted it is the systematic uncertainty.}
-
-
-\label{tab:parkedresults}
-\begin{tabular}{lc}
-\hline \hline
-Process & Event yields \\
-\hline
-$Z\rightarrow\nu\nu$&$158.1 \pm 37.3 \pm 21.2$\\
-$W\rightarrow e\nu$&$57.9 \pm 7.4 \pm 7.7$\\
-$W\rightarrow\mu\nu$&$102.5 \pm 6.2 \pm 11.7$\\
-$W\rightarrow\tau\nu$&$94.6 \pm 13.1 \pm 23.8$\\
-top&$5.5 \pm  1.8$\\
-Minor backgrounds&$3.9 \pm 0.7$\\
-QCD multijet &$17\pm 14$\\
-\hline
-Total background &$439.4 \pm 40.7 \pm 43.5 $\\
-\hline
-Signal(VBF) &$273.1 \pm 31.2 $\\
-Signal(ggH) &$23.1 \pm 15.9 $\\
-\hline
-Observed data & 508 \\
-\hline \hline
-\end{tabular}
+  \caption{The estimated numbers of background and signal events from each process, together with the observed yield, in the signal region. The signal yield assumes a Higgs boson mass of 125 \GeV and \BRinv$=100\%$. Where two errors are quoted they are the statistical and systematic uncertainties respectively, where only one is quoted it is the systematic uncertainty.}
+  \label{tab:parkedresults}
+  \begin{tabular}{lc}
+    \hline \hline
+    Process & Event yields \\
+    \hline
+    $Z\rightarrow\nu\nu$&$158.1 \pm 37.3 \pm 21.2$\\
+    $W\rightarrow e\nu$&$57.9 \pm 7.4 \pm 7.7$\\
+    $W\rightarrow\mu\nu$&$102.5 \pm 6.2 \pm 11.7$\\
+    $W\rightarrow\tau\nu$&$94.6 \pm 13.1 \pm 23.8$\\
+    top&$5.5 \pm  1.8$\\
+    Minor backgrounds&$3.9 \pm 0.7$\\
+    QCD multijet &$17\pm 14$\\
+    \hline
+    Total background &$439.4 \pm 40.7 \pm 43.5 $\\
+    \hline
+    Signal(VBF) &$273.1 \pm 31.2 $\\
+    Signal(ggH) &$23.1 \pm 15.9 $\\
+    \hline
+    Observed data & 508 \\
+    \hline \hline
+  \end{tabular}
 \end{table}
 
-%??cont plots maybe pick a few more
 \begin{figure}
-  \begin{center}
     \includegraphics[width=.65\largefigwidth]{plots/parked/HIG-14-038-figs/output_sigreg/nunu_dijet_deta.pdf}
     \includegraphics[width=.65\largefigwidth]{plots/parked/HIG-14-038-figs/output_sigreg/nunu_dijet_M.pdf}
-    \includegraphics[width=.65\largefigwidth]{plots/parked/HIG-14-038-figs/output_sigreg/nunu_metnomu_significance.pdf}
+    \includegraphics[width=.65\largefigwidth]{plots/parked/HIG-14-038-figs/output_sigreg/nunu_jet1_pt.pdf}
+    \includegraphics[width=.65\largefigwidth]{plots/parked/HIG-14-038-figs/output_sigreg/nunu_jet2_pt.pdf}
     \includegraphics[width=.65\largefigwidth]{plots/parked/HIG-14-038-figs/output_sigreg/nunu_metnomuons.pdf}
+    \includegraphics[width=.65\largefigwidth]{plots/parked/HIG-14-038-figs/output_sigreg/nunu_metnomu_significance.pdf}
+    \includegraphics[width=.65\largefigwidth]{plots/parked/HIG-14-038-figs/output_sigreg/nunu_alljetsmetnomu_mindphi.pdf}
 
-    \caption{Top: Pseudorapidity difference between the two VBF tag jets $\Delta\eta_{jj}$ (left), dijet mass $m_{jj}$ (right),  bottom: \MET significance \METsig (left) and \MET (right), in the signal region. An excess is seen which is less than 2$\sigma$ in significance as can be seen from the hatched band which indicates the size of the total uncertainty on the background estimate.}%??
+    \caption{From top to bottom and left to right \detajj, \Mjj, the leading and subleading jet's \pt, \METnoMU, \METsig and \jetmetdphi in the signal region. An excess is seen which is less than 2$\sigma$ in significance as can be seen from the hatched band which indicates the size of the total uncertainty on the background estimate.}
    \label{fig:parkednunucontplots}
-  \end{center}
 \end{figure}
 
-%??limit brazil plots
+As no significant excess is observed the upper limits that can be placed on $\sigma\times\mathcal{B}$ at 95\% \ac{CL} are calculated for assuming \ac{SM} Higgs boson acceptances using the asymptotic $CL_{S}$ technique described in \SectionRef{sec:stats}. As in the prompt data analysis all systematic uncertainties and all the statistical uncertainties on the control regions except the double muon region are modellled as log-normally distributed nuisance parameters. The double muon control region statistical uncertainty is again modelled as a gamma-normally distributed nuisance parameter due to the low number of events in this region. Assuming \ac{SM} Higgs production the resulting limits can be interpreted as limits on the invisible branching fraction of the Higgs boson. For a Higgs boson with a mass of 125 \GeV the resulting observed (expected) upper limit is $\BRinv=0.57 (0.40)$. The observed limits and the expected limits along with their 68\% and 95\% confidence intervals are shown as a function of Higgs boson mass in \FigureRef{fig:parkedlimits}. Since the analysis has only one bin, and no shape information is used the measurements for the different Higgs boson masses are 100\% correlated, so the fact that all the points show an approximately one sigma excess is not significant evidence of non-\ac{SM} behaviour.
+
+For a 125 \GeV Higgs boson the profile likelihood was also calculated as a function of \BRinv for both the prompt and parked data analyses as shown in \FigureRef{fig:parkedlikelihood}. It can be seen that the most likely value of \BRinv is non-zero, being approximately 0.25 for both analyses. However, as seen above this non-zero value corresponds to only an approximately one standard deviation excess in both cases.
+
+%limit brazil plots
 \begin{figure}
   \begin{center}
     \subfloat[]{\includegraphics[width=\largefigwidth]{plots/parked/HIG-14-038-figs/vbflimit.pdf}}
 
     \subfloat[]{\includegraphics[width=\largefigwidth]{plots/parked/HIG-14-038-figs/vbfxslimit.pdf}}
- \caption{The 95\% C.L. limit on \BRinv\, of a SM Higgs boson (a) and the 95\% C.L. limit on the cross section times \BRinv\, (b) as a function of the Higgs boson mass, assuming SM Higgs boson acceptances.}%??
+ \caption{The 95\% C.L. limit on \BRinv\, of a SM Higgs boson (a) and the 95\% C.L. limit on the cross section times \BRinv\, (b) as a function of the Higgs boson mass, assuming SM Higgs boson acceptances.}
     \label{fig:parkedlimits}
   \end{center}
 \end{figure}
 
-%??likelihood scans
-%??get from twiki
-
-\subsection{How does this improve on the prompt data analysis?}
+\subsection{Improvement relative to the prompt data analysis}
 %??parkedgains111114.pdf for parked vs prompt limits
 
+
+\begin{figure}
+  \includegraphics[width=\largefigwidth]{plots/parked/promptparkedscan.pdf}
+  \caption{Scans of the profile likelihood (i.e. the likelihood where each nuisance parameter takes the value which maximises the likelihood at each point) versus \BRinv of a \ac{SM} Higgs boson with a mass of 125 \GeV for both the prompt and parked data analyses.}
+  \label{fig:parkedlikelihood}
+\end{figure}
 
 
 
