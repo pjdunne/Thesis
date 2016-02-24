@@ -1,18 +1,16 @@
 \chapter{Search for invisibly decaying Higgs bosons in Run 1 parked data}
 \label{chap:parked}
 The parked data, described in \SectionRef{sec:triggers}, used for this analysis was collected using a range of triggers with similar but looser requirements than that used for the prompt data analysis described in the previous chapter. These looser requirements allow areas of phase space which were previously removed by the prompt trigger to be used. However, these areas also have very high levels of \ac{QCD} backgrounds, and require the analysis selection 
-and some background estimation methods to be redesigned compared to the prompt analysis. As it was reconstructed later the parked data also uses different, better, detector callibrations, such as jet energy callibrations, calculated with the full Run 1 LHC dataset. The parked data analysis was also carried out using a new code framework, which was fully validated against that used in the prompt data analysis by reproducing the results of the prompt analysis background estimations. %framework synch fwprogress300614.pdf
+and some background estimation methods to be redesigned compared to the prompt analysis. As it was reconstructed later the parked data also uses different, better, detector calibrations, such as jet energy calibrations, calculated with the full Run 1 LHC dataset. The parked data analysis was also carried out using a new code framework, which was fully validated against that used in the prompt data analysis by reproducing the results of the prompt analysis background estimations. %framework synch fwprogress300614.pdf
 
-%??CHECK PLOT AXIS LABEL SIZES AND THAT LEGEND TERMS ARE STANDARD OR IN TEXT
+%??CHECK PLOT AXIS LABEL SIZES AND THAT LEGEND TERMS ARE STANDARD OR IN TEXT, LAST BIN BEING OVERFLOW MENTIONED IN ALL LEGENDS WHERE IT'S AN ISSUE
 
 %invupdate081214.pdf for some pileup and veto muon studies but not included here, can mention in viva if asked
 %preapproval for source of gain and other good things
 %As above for prompt data analysis but focus on differences and limit setting:
 \section{Trigger}
 \label{sec:parkedtrigger}
-The parked data trigger varied throughout LHC Run 1 due to the estimates of both the trigger bandwidth available and the rate of the triggers used in the particular LHC conditions that occurred being updated. Run 1 was split into 4 ``eras'', A, B, C and D. During era A data was not being parked, so the prompt data is used. The two other triggers used, one for eras B and C, and one for era D, differed from the prompt trigger in that there was no requirement on the \MET present at \ac{HLT} level in each event and the jet \pt and \Mjj requirements were looser. These looser requirements allow the trigger driven selection applied in the prompt data analysis to be relaxed, and more optimal signal and background control regions to be used. As the region accessible with the parked data includes the prompt data signal region as a subset, no improvement would be possible from applying the analysis designed for the prompt data to the parked data without modification. The exact values of the trigger selection cuts are summarised in \TableRef{tab:parkedtrig}.
-
-%??lumi with each trigger
+The parked data trigger varied throughout LHC Run 1 due to the estimates of both the trigger bandwidth available and the rate of the triggers used in the particular LHC conditions that occurred being updated. Run 1 was split into 4 ``eras'', A, B, C and D, with 0.9, 3.9, 7.2 and 7.3 \invfb of integrated luminosity collected in each respectively. During era A data was not being parked, so the prompt data is used. The two other triggers used, one for eras B and C, and one for era D, differed from the prompt trigger in that there was no requirement on the \MET present at \ac{HLT} level in each event and the jet \pt and \Mjj requirements were looser. These looser requirements allow the trigger driven selection applied in the prompt data analysis to be relaxed, and more optimal signal and background control regions to be used. As the region accessible with the parked data includes the prompt data signal region as a subset, no improvement would be possible from applying the analysis designed for the prompt data to the parked data without modification. The exact values of the trigger selection cuts are summarised in \TableRef{tab:parkedtrig}.
 
 \begin{table}
   \caption{A summary of the requirements of the triggers used for this analysis in each of LHC Run 1's eras. For the jet requirements all triggers require that there is at least one pair of jets in the event satisfying all of the jet requirements listed in this table. All requirements are on \ac{HLT} variables unless stated otherwise.}
@@ -45,10 +43,9 @@ As the trigger used in era A was the same as that used for the prompt analysis, 
 
 First, the trigger efficiency was measured three dimensionally as a function of \METnoMU, \Mjj and sub-leading jet's \pt. An example of one of the results of these measurements in one of the bins in \METnoMU for the era B and C, and the era D triggers can be seen in \FigureRef{fig:parked3dtrigeff}. The three variables used were chosen because the trigger becomes fully efficient very quickly as a function of the $\eta$ related variables, so no parameterisation of this efficiency is necessary. The number and size of the bins was chosen to ensure that sufficient events are present in each bin to prevent the statistical error on the efficiency measurement being larger than the differences between bins. As can be seen from the figure, this leads to very large differences in efficiency between bins, which leads to discontinuities in the \METnoMU, \Mjj and sub-leading jet \pt distributions when the measured efficiency was applied to \ac{MC} events as a weight. This method was therefore not suitable for use in the final analysis.
 %trigeff070414.pdf for full 3D binned plot
-%??sort axis labels
 \begin{figure} 
-  \subfloat[]{\includegraphics[width=.6\largefigwidth]{plots/parked/HLT_DiJet35_MJJ700_AllJets_DEta3p5_VBFmet120trigeff.pdf}}
-  \subfloat[]{\includegraphics[width=.6\largefigwidth]{plots/parked/HLT_DiJet30_MJJ700_AllJets_DEta3p5_VBFmet120trigeff.pdf}}
+  \subfloat[]{\includegraphics[width=.65\largefigwidth]{plots/parked/HLT_DiJet35_MJJ700_AllJets_DEta3p5_VBFmet120trigeff.pdf}}
+  \subfloat[]{\includegraphics[width=.65\largefigwidth]{plots/parked/HLT_DiJet30_MJJ700_AllJets_DEta3p5_VBFmet120trigeff.pdf}}
  \caption{The efficiency for the trigger (color-scale) used in eras B and C (a) and era D (b), as a function of \Mjj and sub-leading jet \pt for events with \METnoMU between 60 and 120 \GeV. The efficiency was measured using a single muon dataset collected with an orthogonal trigger.}
   \label{fig:parked3dtrigeff}
 \end{figure}
@@ -60,10 +57,9 @@ In order to achieve a smoother trigger efficiency parameterisation, coarse bins 
 \end{equation}
 which has a maximum value of A, and is derived from the error function with centre B and width C. The width, maximum and centre of the function are all allowed to float in the fit. The events used in this study were required to have leading jet \pt$>50$ \GeV, $\eta_{j1}\cdot\eta_{j2}<0$ and \detajj$>3.6$ to ensure that there are no inefficiencies due to these variables. The results of these fits for the two \Mjj and sub-leading jet \pt bins containing the most events entering the final analysis selection are shown in \FigureRef{fig:parkedtrigeff}, and the results for the remaining bins are shown in \AppendixRef{app:trigeffs}. Some of the plots in the appendix indicate that the parameters of the fit have taken extreme values, or have very large uncertainties. These extreme values and poor fits are mostly due to low numbers of events in the bin. The analysis selection described in \SectionRef{sec:parkedsel}, ensures that no events in these bins are used in the analysis.
 
-%??sort axis labels
 \begin{figure}
-  \subfloat[]{\includegraphics[width=.6\largefigwidth]{plots/parked/trigfitplots/hData_MET_1D_35D.pdf}}
-  \subfloat[]{\includegraphics[width=.6\largefigwidth]{plots/parked/trigfitplots/hData_MET_1D_45D.pdf}}
+  \subfloat[]{\includegraphics[width=.65\largefigwidth]{plots/parked/trigfitplots/hData_MET_1D_35D.pdf}}
+  \subfloat[]{\includegraphics[width=.65\largefigwidth]{plots/parked/trigfitplots/hData_MET_1D_45D.pdf}}
   \caption{The results of performing a fit of the function in \EquationRef{eq:parkedtrigfunc} to the efficiency of the trigger used in era D, measured in a sample of single muon events collected with an orthogonal trigger. The dashed bands show the uncertainty on the fit due to each of the three parameters of the fit. The two bins of dijet mass (mjj) and sub-leading jet's \pt (j2pt) shown are those with the two highest numbers of events from the final signal region described in \SectionRef{sec:parkedsel}.}
   \label{fig:parkedtrigeff}
 \end{figure}
@@ -96,7 +92,6 @@ Where $j1$ and $j2$ are the leading and sub-leading \pt jets in the event and ar
 After the cut on \METsig, a requirement that the \METnoMU is not too close to any jets in \phi was made. This requirement was motivated by the high probability for the \MET to be aligned with a jet in the case where the jet has been mismeasured. Two variables were investigated, the first was the minimum azimuthal angle difference between either of the two tag jets and the \METnoMU, \jetmetdphileading, and the second was the minimum azimuthal angle difference between any jet with \pt greater than 30 \GeV and the \METnoMU, \jetmetdphi. At a similar signal efficiency the difference between the observed number of events and the \ac{MC} background prediction, which is an indication of the remaining \ac{QCD} multijet background, was found to be 80\% smaller for a cut on \jetmetdphi than a cut on \jetmetdphileading. The same cut on \jetmetdphi was also found to reduce top quark related backgrounds by a factor of two compared to a cut on \jetmetdphileading. We therefore require that \jetmetdphi$>1.0$ for events to pass the preselection. \jetmetdphi was found to give significantly better signal efficiency than \dphijj for the same background rejection, so no cut was made on \dphijj.
 
 %AN-14-243
-%??sort axis labels
 \begin{figure}
   \subfloat[]{\includegraphics[width=.7\largefigwidth]{plots/parked/AN-14-243-figs/lognopreselnunu_metnomu_significance.pdf}}
   \subfloat[]{\includegraphics[width=.7\largefigwidth]{plots/parked/AN-14-243-figs/logmetsigpreselnunu_alljetsmetnomu_mindphi.pdf}}
@@ -118,7 +113,6 @@ The \Mjj distribution after the \jetmetdphi cut is shown in \FigureRef{fig:parke
 \end{equation}
 Distributions of several variables after the full preselection are shown in \FigureRef{fig:parkedpostpresel}.
 
-%??sort axis labels
 \begin{figure}
   \includegraphics[width=.65\largefigwidth]{plots/parked/AN-14-243-figs/output_presel/nunu_dijet_deta.pdf}
   \includegraphics[width=.65\largefigwidth]{plots/parked/AN-14-243-figs/output_presel/nunu_dijet_M.pdf}
@@ -159,7 +153,7 @@ After this selection was defined a second \ac{MVA} based method of optimising th
   \label{fig:parkedmvacorr}
 \end{figure}
 
-\section{Background estimation}%??                                                                                                                          
+\section{Background estimation}                                                                                                                          
 \label{sec:parkedbkg}
 After selection the V+jets backgrounds, as in the prompt analysis, dominate. Also, as in the prompt data analysis contributions are expected from top quark and diboson related processes. Finally, whilst it is reduced significantly by the selection described above, it is necessary to at least place an upper bound on the expected contribution from \ac{QCD} multijet events.
 
@@ -176,7 +170,6 @@ Almost all top quarks decay to a \PW boson and a b quark~\cite{pdg}. Top quarks 
 
 Initially a dilepton control region was investigated. This had the same cuts on the jet and \MET related variables as the signal region, but the lepton veto was replaced with a requirement that there is exactly one tight electron and one tight muon. This final state would be expected in the case of top quark pair production or single top production with a \PW boson, where both the resulting \PW bosons decay leptonically to different leptons. This region had only single figure numbers of events expected, so the cut on \jetmetdphi was loosened to 0. It can be seen from \FigureRef{fig:parkedtopjetmetdphi} that the ratio between data and MC in this region does not depend significantly on \jetmetdphi. The data driven scale factor obtained from this dilepton region was, within the statistics available, consistent with 1 and a good agreement between data and \ac{MC} was seen in all variables studied.
 
-%??sort axis labels
 \begin{figure}
   \includegraphics[width=.65\largefigwidth]{plots/parked/topjetmetdphicut0.pdf}
   \includegraphics[width=.65\largefigwidth]{plots/parked/HIG-14-038-figs/output_sigreg/top_dijet_M.pdf}
@@ -192,10 +185,9 @@ Identification of the b-jet was done using the \ac{CSV} discriminant. b quarks a
 
 \ac{MC} estimates indicate the single top region has a 17\% single top contribution. This region again showed good data-\ac{MC} agreement (as can be seen in \FigureRef{fig:parkedsingletopjetmetdphi} and a scale factor compatible with 1 within uncertainties. Because good agreement between data and \ac{MC} and scale factors compatible with 1 are seen in all investigated control regions, it was decided to use the \ac{MC} prediction for the top background in all regions with no additional scale factor. A 20\% systematic uncertainty was applied to this prediction which covered the largest deviation from 1 seen in the scale factors from the various control regions.
 
-%??sort axis labels
 \begin{figure}
-  \includegraphics[width=.65\largefigwidth]{plots/parked/AN-14-243-figs/singletop/top_jetmetnomu_mindphi.png}
-  \includegraphics[width=.65\largefigwidth]{plots/parked/AN-14-243-figs/singletop/top_dijet_M.png}
+  \includegraphics[width=.65\largefigwidth]{plots/parked/output_singletop/top_jetmetnomu_mindphi.pdf}
+  \includegraphics[width=.65\largefigwidth]{plots/parked/output_singletop/top_dijet_M.pdf}
   \caption{The distribution of \jetmetdphileading (left) and \Mjj (right) in the single top control region.}
   \label{fig:parkedsingletopjetmetdphi}
 \end{figure}
@@ -371,7 +363,6 @@ It is to be expected that electrons outside of the detector acceptance will be r
   \end{tabular}
 \end{table}
 
-%??sort axis labels
 \begin{figure}
   \subfloat[]{\includegraphics[width=.65\largefigwidth]{plots/parked/AN-14-243-figs/genlepstudy/outsideaccloosedphi/nunu_n_jets_15.pdf}}
   \subfloat[]{\includegraphics[width=.65\largefigwidth]{plots/parked/AN-14-243-figs/genlepstudy/outsideaccloosedphi/nunu_alljetsmetnomu_mindphi.pdf}}
@@ -400,7 +391,7 @@ The method starts by defining a dimuon control region by taking the signal regio
 
   \includegraphics[width=.65\largefigwidth]{plots/parked/HIG-14-038-figs/output_sigreg/mumu_jetmetnomu_mindphi.pdf}
   \includegraphics[width=.65\largefigwidth]{plots/parked/HIG-14-038-figs/output_sigreg/mumu_m_mumu.pdf}
-  \caption{Distributions of variables in data and \ac{MC} events in the dimuon control region. \ac{MC} events from V+jets backgrounds are scaled by their data-driven scale factors. The variables shown are from top to bottom and left to right \detajj, \Mjj, the leading and subleading jet's \pt, \METnoMU, \METsig, \jetmetdphileading and the invariant mass of the dimuon system. The contributions to this region from electroweak and \ac{QCD} produced \PZ+jets evetns are shown separately.}
+  \caption{Distributions of variables in data and \ac{MC} events in the dimuon control region. \ac{MC} events from V+jets backgrounds are scaled by their data-driven scale factors. The variables shown are from top to bottom and left to right \detajj, \Mjj, the leading and subleading jet's \pt, \METnoMU, \METsig, \jetmetdphileading and the invariant mass of the dimuon system. The contributions to this region from electroweak and \ac{QCD} produced \PZ+jets events are shown separately.}
   \label{fig:parkedznunu}
 \end{figure}
 
@@ -416,7 +407,7 @@ where $\epsilon^{S}$ and $\epsilon^{C}$ are calculated as in Equations~\ref{eq:z
   \label{eq:zdataeffcrep}
   \epsilon^{C}_{VBF}&=\frac{  \sigma\left(\PZ/\gamma^{*}\rightarrow\mu\mu,EWK\right) \frac{N^{C}_{MC}\left(EWK\right)} {N_{gen}\left(EWK\right)} + \sigma\left(\PZ/\gamma^{*}\rightarrow\mu\mu,QCD\right) \frac{N^{S}_{MC}\left(QCD\right)} {N_{gen}\left(QCD\right)}  }{\sigma\left(\PZ/\gamma^{*}\rightarrow\mu\mu,EWK\right)+\sigma\left(\PZ/\gamma^{*}\rightarrow\mu\mu,QCD\right)}.
 \end{align}
-As the \Zmumu and \Znunu cross-sections are calculated before analysis selection and do not depend on detector callibration, the same values are used as in the prompt data analysis shown in \TableRef{tab:promptznunueffs}. The other inputs to the above equations and the results of the estimation are shown in \TableRef{tab:parkedznunu}. Also shown in the table is the ratio between the number of \ac{MC} events, both from electroweak and \ac{QCD} events, and the number of data events minus expected backgrounds from other processes. This ratio is analogous to the data driven scale factor used in the \PW+jets background estimation and can be seen to have a similar value, significantly different from 1, to those scale factors. However, due to the different efficiencies and cross-section ratios for the $EWK$ and $QCD$ components, the ratio is not directly used in the \Znunu estimation.
+As the \Zmumu and \Znunu cross-sections are calculated before analysis selection and do not depend on detector calibration, the same values are used as in the prompt data analysis shown in \TableRef{tab:promptznunueffs}. The other inputs to the above equations and the results of the estimation are shown in \TableRef{tab:parkedznunu}. Also shown in the table is the ratio between the number of \ac{MC} events, both from electroweak and \ac{QCD} events, and the number of data events minus expected backgrounds from other processes. This ratio is analogous to the data driven scale factor used in the \PW+jets background estimation and can be seen to have a similar value, significantly different from 1, to those scale factors. However, due to the different efficiencies and cross-section ratios for the $EWK$ and $QCD$ components, the ratio is not directly used in the \Znunu estimation.
 %inputs where the same and where different from prompt
 
 \begin{table}
@@ -613,7 +604,7 @@ The fractional uncertainties on the total signal and background yield estimates 
     MC statistics & 5.4 & 3.8 \\
     Jet energy scale & 4.6 & 11 \\
     $\PW\rightarrow\tau\nu$ control region extrapolation & 4.3 & - \\
-    QCD background estimationtion & 3.2 & - \\
+    QCD background estimation & 3.2 & - \\
     Jet energy resolution & 3.0 & 1.8 \\
     Lepton ID efficiency & 2.4 & - \\
     Unclustered energy scale & 1.9 & 1.6 \\
@@ -674,7 +665,9 @@ The final predicted yields for each background process are shown, along with the
    \label{fig:parkednunucontplots}
 \end{figure}
 
-As no significant excess is observed the upper limits that can be placed on $\sigma\times\mathcal{B}$ at 95\% \ac{CL} are calculated for assuming \ac{SM} Higgs boson acceptances using the asymptotic $CL_{S}$ technique described in \SectionRef{sec:stats}. As in the prompt data analysis all systematic uncertainties and all the statistical uncertainties on the control regions except the double muon region are modellled as log-normally distributed nuisance parameters. The double muon control region statistical uncertainty is again modelled as a gamma-normally distributed nuisance parameter due to the low number of events in this region. Assuming \ac{SM} Higgs production the resulting limits can be interpreted as limits on the invisible branching fraction of the Higgs boson. For a Higgs boson with a mass of 125 \GeV the resulting observed (expected) upper limit is $\BRinv=0.57 (0.40)$. The observed limits and the expected limits along with their 68\% and 95\% confidence intervals are shown as a function of Higgs boson mass in \FigureRef{fig:parkedlimits}. Since the analysis has only one bin, and no shape information is used the measurements for the different Higgs boson masses are 100\% correlated, so the fact that all the points show an approximately one sigma excess is not significant evidence of non-\ac{SM} behaviour.
+As no significant excess is observed the upper limits that can be placed on $\sigma\times\mathcal{B}$ at 95\% \ac{CL} are calculated for assuming \ac{SM} Higgs boson acceptances using the asymptotic $CL_{S}$ technique described in \SectionRef{sec:stats}. As in the prompt data analysis all systematic uncertainties and all the statistical uncertainties on the control regions except the double muon region are modelled as log-normally distributed nuisance parameters. The double muon control region statistical uncertainty is again modelled as a gamma-normally distributed nuisance parameter due to the low number of events in this region. Assuming \ac{SM} Higgs production the resulting limits can be interpreted as limits on the invisible branching fraction of the Higgs boson. For a Higgs boson with a mass of 125 \GeV the resulting observed (expected) upper limit is $\BRinv=0.57 (0.40)$. The observed limits and the expected limits along with their 68\% and 95\% confidence intervals are shown as a function of Higgs boson mass in \FigureRef{fig:parkedlimits}. Since the analysis has only one bin, and no shape information is used the measurements for the different Higgs boson masses are 100\% correlated, so the fact that all the points show an approximately one sigma excess is not significant evidence of non-\ac{SM} behaviour.
+
+An interesting feature of the LHC Higgs Combination Group's $CL_{S}$ technique is that the expected limit quoted above is dependent on the number of data observed in the signal region~\cite{ATL-PHYS-PUB-2011-011}. This dependence occurs because the values of the nuisance parameters that maximise the likelihood for the observed data are used in the denominator of \EquationRef{eq:proflikelihood}. Therefore, if an excess of events is seen values of the nuisance parameters which lead to a larger expected background yield will be chosen. For this reason the expected limit quoted above is also referred to as the post-fit expected limit. It is also possible to calculate a ``pre-fit'' expected limit by using the values of the nuisance parameters which maximise the likelihood assuming that the observed data are equal to the expected number of background events. The pre-fit expected limit on \BRinv is 0.35 at 95\% \ac{CL} for this analysis.
 
 For a 125 \GeV Higgs boson the profile likelihood was also calculated as a function of \BRinv for both the prompt and parked data analyses as shown in \FigureRef{fig:parkedlikelihood}. It can be seen that the most likely value of \BRinv is non-zero, being approximately 0.25 for both analyses. However, as seen above this non-zero value corresponds to only an approximately one standard deviation excess in both cases.
 
@@ -689,15 +682,30 @@ For a 125 \GeV Higgs boson the profile likelihood was also calculated as a funct
   \end{center}
 \end{figure}
 
-\subsection{Improvement relative to the prompt data analysis}
-%??parkedgains111114.pdf for parked vs prompt limits
-
-
 \begin{figure}
   \includegraphics[width=\largefigwidth]{plots/parked/promptparkedscan.pdf}
   \caption{Scans of the profile likelihood (i.e. the likelihood where each nuisance parameter takes the value which maximises the likelihood at each point) versus \BRinv of a \ac{SM} Higgs boson with a mass of 125 \GeV for both the prompt and parked data analyses.}
   \label{fig:parkedlikelihood}
 \end{figure}
+
+\subsection{Improvement relative to the prompt data analysis}
+%??parkedgains111114.pdf for parked vs prompt limits
+As an improved limit is seen in this analysis compared to the prompt data analysis, it is important to ascertain whether this improvement is due to the improved analysis selection, the additional phase space made available by the triggers used to collect the parked data or both. To this end both the parked data analysis selection (``parked selection'') and the prompt data analysis selection (``prompt selection'') were applied to both the prompt data and parked data and new expected limits were calculated under each scenario as shown in \TableRef{tab:promptvsparked}. To allow a fair comparison, the prompt data analysis was updated to take into account the improved knowledge of the extrapolation uncertainty on the \Znunu background and resulting reduced systematic uncertainty (see \SectionRef{sec:parkedznunu}. The values of the absolute values of the expected limits in \TableRef{tab:promptvsparked} can therefore not be compared to those shown in \SectionRef{sec:promptresults}.
+
+\begin{table}
+  \caption{The 95\% \ac{CL} expected limits on \BRinv obtained when applying both the prompt data and parked data analysis selections to both the prompt and parked data.}
+  \label{tab:promptvsparked}
+  \begin{tabular}{lcc}
+    \hline\hline
+    & Prompt data & Parked data \\
+    Prompt selection & 45\% & 46\% \\
+    Parked selection & 47\% & 40\% \\
+  \end{tabular}
+\end{table}
+
+Applying the parked selection to the prompt data produces a worse limit than applying the prompt selection to the prompt data. Also, applying the prompt selection to the parked data produces a worse limit than applying the prompt selection to the prompt data. The only improvement seen is from applying the parked selection to the parked data, indicating that the improved analysis selection also requires the additional phase space made available by the trigger in order to be of benefit.
+
+
 
 
 
