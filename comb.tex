@@ -1,17 +1,74 @@
 \chapter{Combinations and interpretations of Run 1 searches for invisibly decaying Higgs bosons}
 \label{chap:comb}
+Whilst the \ac{VBF} production mode offers the best sensitivity to invisibly decaying Higgs bosons, the limits on \BRinv can be improved by taking into account searches performed using other production channels. Combinations with these other channels are described in sections \ref{sec:combotherchannels} to \ref{sec:combparked}. As well as combining the results of the \ac{VBF} searches with other channels, it is also possible to interpret them as limits on other specific models. Interpretations of the \ac{VBF} search results in several \ac{DM} models are described in \SectionRef{sec:dminterp}.
 
 %??CHECK PLOT AXIS LABEL SIZES AND THAT LEGEND TERMS ARE STANDARD OR IN TEXT
 
 \section{Searches in other channels}
+\label{sec:combotherchannels}
 %??Refer back to theory to introduce ZH and ggH searches
+As described in \SectionRef{sec:higprod} after \ac{VBF} the next most sensitive production modes to invisible Higgs boson decays are \ac{ggH} and \ac{VH}. \ac{VH} has a much lower rate than \ac{VBF} (approximately 4 times less for a 125 \GeV Higgs boson). Compensating for this low cross-section, several of the final states of \ac{VH} production, particularly \ac{ZH}, give very clean signatures which are easy to identify. \ac{ggH} has a much higher rate than \ac{VBF}, but in most cases the resulting Higgs boson is created alone. However, if there is \ac{ISR} this can result in one or more jets allowing this channel to also be used. 
+
+Three invisibly decaying Higgs boson searches were carried out by CMS during Run 1 in addition to the \ac{VBF} analyses. Two of these searches specifically targeted the \ac{ZH} production mode, one searching for events where the \PZ boson decayed to two leptons (the \PZ$(\ell\ell)$H search) and one where it decayed to two b quarks (the \PZ$(b\bar{b})$H search). The third ``monojet'' search targets events with one or more jets that are not \ac{VBF}-like and includes categories targeting \ac{ggH} and \ac{VH} production where the vector boson decays hadronically. 
+
+When combining limits from separate analyses it is important that there is no overlap between the regions used by the analyses. It is also important to understand which uncertainties are correlated between analyses and which are not. A brief description of the event selection and uncertainties used in each of the non-\ac{VBF} invisibly decaying Higgs searches is therefore given in the following subsections. 
+
+
+\subsection{Z$(\ell\ell)$H$\rightarrow$invisible}
+\label{sec:zllh}
+%??sel
+The \PZ$(\ell\ell$)H search is described in Ref.~\cite{CMS-PAS-HIG-13-018}. The analysis selection requires two tight opposite charge same flavour leptons (either electrons or muons) both with \pt$>20$ \GeV, with invariant mass compatible with the \PZ boson, and no further leptons. Events containing two or more jets with \pt$>30$ \GeV are rejected to reduce the \PZ+jets background. This jet veto is important as it means that there is no overlap between the events selected in the \ac{VBF} analyses (where two jets with \pt$>30$ \GeV are required in all regions). In events with a single jet, that jet is required not to be identified using the \ac{CSV} algorithm (described in \SectionRef{sec:parkedtop}) as a b-jet.
+
+In addition to these requirements on the leptons and jets,  the \MET is required to be greater than 120 \GeV to select invisible decays. To reduce diboson backgrounds, requirements are made on the azimuthal angular separation and \pt balance between the \MET and the dilepton system. In addition to this signal region control regions, which differ from the signal region in that the lepton system is not compatible with a \PZ boson decay, are used for background estimation. These control regions are also orthogonal to all regions used in other analyses due to the jet and lepton requirements.
+
+%??uncertainties
+
+%??signal fractions
+%??limits
+
+\subsection{Z$(b\bar{b})$H$\rightarrow$invisible}
+\label{sec:zbbh}
+%??sel
+The \PZ$(b\bar{b})$H search is described in Ref.~\cite{CMS-PAS-HIG-13-028}. The analysis selection requires two jets tagged by the \ac{CSV} algorithm as originating from b-quarks, large \MET, and no reconstructed electrons or muons. The di-b-jet system is required to have high \pt (above 100-130 \GeV depending on the region), but low invariant mass (less than 250 \GeV). The dijet mass cut ensures there is no overlap with either of the \ac{VBF} analyses, and the requirement of two jets and the lepton vetoes ensure there is no overlap with the \PZ$(\ell\ell)$H search. The main background to the analysis is from \ac{QCD} multijet processes as in the \ac{VBF} analysis. Similarly to the selection of the parked data \ac{VBF} analysis this background is reduced using requirements on \jetmetdphi and \METsig. The neutral component of the \MET is also required to be aligned with the charged component in $\phi$. 
+
+%??signal fractions
+%??uncertainties
+%??limits
+%??b jets mean no overlap with zll
+
+\subsection{Monojet searches}
+\label{sec:monojet}
+%??sel
+The ``monojet'' search is described in Ref.~\cite{CMS-PAS-EXO-12-055}. This analysis selects events with large \MET, one or more high-\pt jets and no reconstructed electrons or muons. Both \ac{VH} production, where the vector boson decays hadronically and \ac{ggH} production with \ac{ISR} can yield events with these final states. To distinguish between jets from \ac{ISR} and those from hadronic vector boson decays events are classified into three categories. The categorisation is sequential, i.e. if an event passes the requirements for the first category it is not considered for the second etc. 
+
+The first category is those events with an ``unresolved'' vector boson where the high \pt of the vector boson causes its decay products to be very close together. These unresolved vector bosons are identified by searching for so-called ``fat'' jets with substructure, which are reconstructed with a larger radius parameter than that used for standard jets and appear to be made of distinct sub-elements~\cite{CMS-PAS-EXO-12-055}. One additional jet is allowed in this category as long as it is within 2 in $\phi$ of the fat jet.
+
+The second category is the resolved category where the vector boson has lower \pt and its decay products can be identified as two separate normal jets. These jets are required to have an invariant mass between 60 and 110 \GeV, which overlaps with the range used in the \PZ$(b\bar{b})$H analysis regions, leading to a non-negligible overlap in the events selected. The resolved category is therefore not used in any combinations.
+
+The third category is the ``monojet'' category. Events in this category are required to have one jet with \pt$>200$ \GeV. One additional jet within 2 in $\phi$ of the first jet is present the event is allowed, with further jets causing the event to be vetoed.
+
+The lepton veto present in all three categories means there is no overlap with the \PZ$(\ell\ell)$H analysis regions. %??zbbh overlap in boosted and monojet
+
+%?? fat jets
+
+%??signal fractions
+%??uncertainties
+%??limits
 
 \section{Combination with prompt VBF search}
+\label{sec:combprompt}
 %??Present combination
+%??overlaps
+%??correlation decisions
+%??interpolation
 
 \section{Combination with the parked VBF search}
+\label{sec:combparked}
 %??Present combination
+%??overlaps (checks for mono vs VBF and the mono channel that overlaps with zbbH)
+%??syst studies, correlation of JES,JER etc. and why
 
 \section{Dark matter interpretations}
+\label{sec:dminterp}
 %??At minimum present an update of spin independent cross-section limit against dark matter mass plot from prompt data EPJC paper
 %??Present progress on interpretations that is made between now and writing up
