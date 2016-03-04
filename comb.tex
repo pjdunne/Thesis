@@ -66,7 +66,7 @@ Three invisibly decaying Higgs boson searches were carried out by CMS during Run
                 \hline
                 \hline
         \end{tabular}
-        \label{tab:limits}
+        \label{tab:combinedlimits}
 \end{center}
 \end{table}
 
@@ -99,7 +99,7 @@ The third category is the ``monojet'' category. Events in this category are requ
 
 The lepton veto present in all three signal categories means there is no overlap of any of the three categories with the \PZ$(\ell\ell)$H analysis regions. Some of the control regions do overlap slightly with regions of the \PZ$(\ell\ell)$H search, however these overlaps are very small due to the very high jet \pt cut present in the monojet search. In addition to the \PZ$(b\bar{b})$H search overlapping with the resolved category, there are also overlaps between the \PZ$(b\bar{b})$H search and the  unresolved and monojet categories. However, very few events in the \PZ$(b\bar{b})$H search have jets with \pt$>200$ \GeV, so these overlaps are considered negligible.
 
-\section{Combination with prompt VBF search}
+\section{Combination with prompt data VBF search}
 \label{sec:combprompt}
 %??Present combination
 The first combination that was performed was between the analyses that were completed in 2013, the two \PZ$\rm{H}$ searches and the promt data \ac{VBF} search. As has been described above the regions used in these analyses do not overlap, however, as the objects used are very similar all three analyses several of the systematic uncertainties are correlated. The full list of correlated uncertainties, and the analyses they affect are given in decreasing order of the change in the expected limit on \BRinv for a 125 \GeV Higgs boson as a result of removing the uncertainty in \TableRef{tab:promptcorrs}. As can be seen from the table, because the method for determining jet energy is very different in the \PZ$(b\bar{b})$ H analysis, involving a regression technique~\cite{CMS-PAS-HIG-13-028}, the jet uncertainties are correlated between the \PZ$(\ell\ell)$H and \ac{VBF} searches, but not the \PZ$(b\bar{b})$H analysis.
@@ -149,12 +149,34 @@ To combine the \PZ$\rm{H}$ and \ac{VBF} analyses it was necessary to interpolate
   \label{fig:promptcombhighmass}
 \end{figure}
 
-\section{Combination with the parked VBF search}
+\section{Combination with the parked data VBF search}
 \label{sec:combparked}
 %??Present combination
-The parked data \ac{VBF} analysis was combined with both the \PZ$\rm{H}$ searches and the monojet search, which was finished in 2015. The prompt data \ac{VBF} analysis was not included in this combination due to its large overlap with the parked data analysis.
-%??syst studies, correlation of JES,JER etc. and why
+The parked data \ac{VBF} analysis was combined with both the \PZ$\rm{H}$ searches and the monojet search, which was finished in 2015~\cite{CMS-PAS-HIG-15-012}. The prompt data \ac{VBF} analysis was not included in this combination due to its large overlap with the parked data analysis. As dicussed above overlaps between the regions of the \ac{VBF} and monojet searches were explicitly removed by vetoing events in the monojet search passing the \ac{VBF} selection. The resolved category of the monojet search was also removed from the combination to avoid large overlap with the \PZ$(b\bar{b})$H search. This removal did not change the expected limit as the resolved category is the least sensitive to invisibly decaying Higgs bosons. The remaining overlaps between the monojet search and the \PZ$\rm{H}$ searches are small as discussed in \SectionRef{sec:monojet}.
 
+%??syst studies, correlation of JES,JER and why met scale in monojet not correlated why zbbH as above
+After resolving the issue of overlaps it was necessary to study the correlations of systematic uncertainties between the searches. A summary of the correlated uncertainties, and the analyses they affect is given in \TableRef{tab:parkedcorrs}. 
+
+%??check this table and naming
+\begin{table}
+  \caption{}%??
+  \label{tab:parkedcorrs}
+  \begin{tabular}{|l|c|}
+      \hline
+      Nuisance & Analyses which it affects \\
+      \hline
+      Jet energy scale & VBF, Z($\ell\ell$)H \\
+      PDF uncertainties & VBF, Z($b\bar{b}$), Z($\ell\ell$)H, monojet \\
+      QCD scale & VBF, Z($b\bar{b}$), Z($\ell\ell$)H, monojet \\
+      Luminosity & VBF, Z($b\bar{b}$)H, Z($\ell\ell$)H, monojet \\
+      Jet energy resolution & VBF, Z($\ell\ell$)H \\
+      Unclustered energy scale & VBF, Z($b\bar{b}$)H, Z($\ell\ell$)H \\
+      Muon identification efficiency & VBF, Z($\ell\ell$)H, monojet \\
+      Electron identification efficiency & VBF, Z($\ell\ell$)H \\
+      Diboson cross-section & VBF, monojet \\
+      \hline
+    \end{tabular}
+\end{table}
 
 
 \begin{figure}
