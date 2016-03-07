@@ -2,7 +2,7 @@
 
 EXTRASTYS = abhepexpt.sty abhep.sty  abmath.sty lineno.sty SIunits.sty varwidth.sty
 
-thesis.pdf: thesis.tex thesis.cls theory.tex detector.tex obj.tex prompt.tex parked.tex comb.tex run2.tex frontmatter.tex appparkedtrigeff.tex backmatter.tex
+thesis.pdf: thesis.tex thesis.cls theory.tex detector.tex obj.tex prompt.tex parked.tex comb.tex frontmatter.tex appparkedtrigeff.tex backmatter.tex
 	@rm -f $(EXTRASTYS)
 	unzip extrastyles.zip
 	@rm -f thesis.{aux,toc,lof,lot}
