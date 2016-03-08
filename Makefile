@@ -6,7 +6,7 @@ thesis.pdf: thesis.tex thesis.cls theory.tex detector.tex obj.tex prompt.tex par
 	@rm -f $(EXTRASTYS)
 	unzip extrastyles.zip
 	@rm -f thesis.{aux,toc,lof,lot}
-	(pdflatex thesis && bibtex thesis && pdflatex thesis && pdflatex thesis) || rm -f $(EXTRASTYS) thesis.pdf
+	(rm -f thesisfeynmandiags.* && pdflatex thesis && mpost thesisfeynmandiags.mp && bibtex thesis && pdflatex thesis && pdflatex thesis) || rm -f $(EXTRASTYS) thesis.pdf
 	@rm -f thesis.{aux,toc,lof,lot}
 	@rm -f $(EXTRASTYS)
 

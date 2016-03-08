@@ -10,6 +10,7 @@
 \usepackage{import}
 \usepackage{colortbl}
 \usepackage{hhline}
+\usepackage{feynmp}
 
 %% You can set the line spacing this way
 %\setallspacing{double}
@@ -35,6 +36,21 @@
 \renewcommand{\listtablename}{List of tables}
 
 
+\DeclareGraphicsRule{.1}{mps}{*}{}
+\DeclareGraphicsRule{.2}{mps}{*}{}
+\DeclareGraphicsRule{.3}{mps}{*}{}
+\DeclareGraphicsRule{.4}{mps}{*}{}
+\DeclareGraphicsRule{.5}{mps}{*}{}
+\DeclareGraphicsRule{.6}{mps}{*}{}
+\DeclareGraphicsRule{.7}{mps}{*}{}
+\DeclareGraphicsRule{.8}{mps}{*}{}
+\DeclareGraphicsRule{.9}{mps}{*}{}
+\DeclareGraphicsRule{.10}{mps}{*}{}
+\DeclareGraphicsRule{.11}{mps}{*}{}
+\DeclareGraphicsRule{.12}{mps}{*}{}
+\DeclareGraphicsRule{.13}{mps}{*}{}
+\DeclareGraphicsRule{.14}{mps}{*}{}
+
 
 %% PDF metadata
 \makeatletter
@@ -56,6 +72,7 @@ linkcolor=black
 %% Start the document
 \begin{document}
 
+\begin{fmffile}{thesisfeynmandiags}
 %% Define the un-numbered front matter (cover pages, rubrik and table of contents)
 \begin{frontmatter}
   \input{frontmatter}
@@ -90,4 +107,5 @@ linkcolor=black
 \end{backmatter}
 
 %% Close
+\end{fmffile}
 \end{document}

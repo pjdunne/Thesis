@@ -6,7 +6,7 @@ In order to describe the search for invisible decays of the Higgs boson (``Higgs
 
 \section{The standard model of particle physics}
 \label{sec:SM}
-The SM describes the interaction of the particles currently thought to be fundamental with the strong, weak and electromagnetic forces. Its predictions, which come from specifying the symmetries the theory respects and how they are broken, the particles in the theory, and 18 free parameters, have been tested in many different experiments, in some cases up to one part in a trillion \cite{PhysRevLett.100.120801}. However, it does face challenges, described in section \SectionRef{sec:SMchallenges}, one example being that it does not describe \ac{DM}. 
+The SM describes the interaction of the particles currently thought to be fundamental with the strong, weak and electromagnetic forces~\cite{GlashowPartialSymmetries,WeinbergModelOfLeptons,SalamNobelSymposium}. Its predictions, which come from specifying the symmetries the theory respects and how they are broken, the particles in the theory, and 18 free parameters, have been tested in many different experiments, in some cases up to one part in a trillion \cite{PhysRevLett.100.120801}. However, it does face challenges, described in section \SectionRef{sec:SMchallenges}, one example being that it does not describe \ac{DM}. 
 
 The SM is a gauge invariant \ac{QFT}. To construct a QFT the symmetries that are respected by the theory and the fields it describes must be specified. The symmetries are important because of Noether's theorem, which states that for every continuously differentiable symmetry of the Lagrangian of a theory there is a corresponding conservation law~\cite{Noether:1918zz,doi:10.1080/00411457108231446}. An example of this is Poincar\'e invariance, the invariance of the laws of physics under translations and rotations in space and time, which leads through Noether's theorem to the conservation of energy, linear momentum and angular momentum. In addition to giving rise to conservation laws, some types of symmetry lead to additional fields being required to preserve invariance, this will be discussed further in \SectionRef{sec:gaugesym} \cite{PhysRev.96.191}.
 
@@ -87,7 +87,7 @@ Assuming the new gauge field to be massless the Lagrangian is now:
   \label{eq:diraclag}
   \mathcal{L}=i\bar{\psi}\slashed{\partial}\psi-m\bar{\psi}\psi+q(\bar{\psi}\gamma^{\mu}\psi) A_{\mu}-\frac{1}{4}F_{\mu\nu}F^{\mu\nu},
 \end{equation}
-where $F_{\mu\nu}$ is the field strength tensor of the vector field. For a gauge boson from a general gauge group is written as:
+where $F_{\mu\nu}$ is the field strength tensor of the vector field. For a gauge boson from a general gauge group $F_{\mu\nu}$ is written as:
 \begin{equation}
 F_{\mu\nu}^a=\partial_{\mu}A_{\nu}^a-\partial_{\nu}A_{\mu}^a+gf&{abc}A_{\mu}^{b}A_{\nu}^{c},
 \end{equation}
@@ -100,12 +100,12 @@ It is also interesting to note that \EquationRef{eq:diraclag} can be rewritten a
 \end{equation}
 where $\mathcal{D}_{\mu}=\partial_{\mu}+iqA_{\mu}$ and is referred to as the covariant derivative. Comparing \EquationRef{eq:globaldiraclagrangian} and \EquationRef{eq:localdiraclagrangian} it can be seen that to go from a globally invariant Lagrangian to a locally invariant one we have substituted the normal spacetime derivative for the covariant derivative and added the free term of the vector field.
 
-$U(1)$ transformations have one degree of freedom and can be described by one parameter, in the above case $\theta$, and in order to make the Lagrangian locally invariant one interacting gauge boson had to be added. This correspondence between the number of degrees of freedom and the number of gauge bosons holds generally. For each degree of freedom of a group's transformations there exists a generator of the group, and for each generator one interacting gauge boson must be added to achieve local invariance.
+In the case of $U(1)$ transformations, which have one degree of freedom so can be described by one parameter, in the above case $\theta$, in order to make the Lagrangian locally invariant one interacting gauge boson had to be added. This correspondence between the number of degrees of freedom and the number of gauge bosons holds generally. For each degree of freedom of a group's transformations there exists a generator of the group, and for each generator one interacting gauge boson must be added to achieve local invariance.
 
 %??give SM gauge group and fermion and vector representations 
 \section{The SM gauge group and fundamental particle representations}
 \label{sec:smgauge}
-The SM is gauge invariant under the group $SU\left(3\right)_{C}\otimes SU\left(2\right)_{L}\otimes U\left(1\right)_{Y}$. Fermions in the SM are spin half spinor representations of these symmetry groups. These spinors can be split into chirally left and right handed components using the projection operators $P_{\substack{L \\R}}=\frac{1}{2}(1\mp \gamma^{5})$. Chirally left and right handed fermions transform differently under $SU\left(2\right)_{L}$. The right handed spinors are not charged under $SU\left(2\right)_{L}$ and thus are represented as a singlet, while the left handed spinors transform as a doublet.
+The SM is locally gauge invariant under the group $SU\left(3\right)_{C}\otimes SU\left(2\right)_{L}\otimes U\left(1\right)_{Y}$. Fermions in the SM are spin half spinor representations of these symmetry groups. These spinors can be split into chirally left and right handed components using the projection operators $P_{\substack{L \\R}}=\frac{1}{2}(1\mp \gamma^{5})$. Chirally left and right handed fermions transform differently under $SU\left(2\right)_{L}$. The right handed spinors are not charged under $SU\left(2\right)_{L}$ and thus are represented as a singlet, while the left handed spinors transform as a doublet.
 
 The first generation of leptons can, therefore, be written as:
 \begin{equation}
@@ -151,25 +151,25 @@ A similar problem occurs for vector fields. In \SectionRef{sec:gaugesym} we didn
   \label{eq:vectorlagrangian}
   \mathcal{L}_{m_V}=\frac{1}{2}m_{V}^{2}A_{\mu}A^{\mu},
 \end{equation}
-which is not gauge invariant, so massive vector bosons are not possible on their own in gauge invariant theories either. The additional piece of the SM required to allow particles to have mass is the Higgs mechanism.
+which is not gauge invariant, so it is not possible to include the massive vector bosons on their own in gauge invariant theories either. The additional piece of the SM required to allow particles to have mass is the Higgs mechanism.
 
 \subsection{Spontaneous symmetry breaking and the Higgs mechanism}
 \label{sec:ssb}
 %??Introduce SSB
-The Higgs mechanism is a form of spontaneous symmetry breaking. A symmetry is said to be spontaneously broken when the Lagrangian remains invariant while the vacuum state, i.e. that with lowest energy, does not. Terms which are not gauge invariant can then be incorporated into the theory by adding a field which has a non-zero vacuum expectation value and coupling it to the other fields present in the term. For the Higgs mechanism this field is a complex scalar $SU\left(2\right)_{L}$ doublet, called the Higgs field:
+The Higgs mechanism is a form of spontaneous symmetry breaking~\cite{Englert:1964et,Higgs:1964ia,Higgs:1964pj,Guralnik:1964eu,Higgs:1966ev,Kibble:1967sv}. A symmetry is said to be spontaneously broken when the Lagrangian remains invariant while the vacuum state, i.e. that with lowest energy, does not~\cite{griffiths2008introduction}. Terms of the Lagrangian which are not gauge invariant can then be incorporated into the theory by adding a field which has a non-zero vacuum expectation value and coupling it to the other fields present in the term. For the Higgs mechanism this field is a complex scalar $SU\left(2\right)_{L}$ doublet, called the Higgs field:
 \begin{equation}
 \phi=\left(\begin{array}{c}\phi^+ \\ \phi^0 \end{array}\right).
 \end{equation}
 The main part of the Higgs field Lagrangian is:
 \begin{equation}
   \label{eq:higlag}
-\mathcal{L}=T-V=\left(\mathcal{D}_{\mu}\phi\right)^{\dag}\left(\mathcal{D}^{\mu}\phi\right)+\mu^{2}\phi^{\dag}\phi-\lambda\left(\phi^{\dag}\phi\right)^{2}.
+\mathcal{L}=T-V=\left(\mathcal{D}_{\mu}\phi\right)^{\dag}\left(\mathcal{D}^{\mu}\phi\right)+\mu^{2}\phi^{\dag}\phi-\lambda\left(\phi^{\dag}\phi\right)^{2},
 \end{equation}
-For $\mu^{2}>0$ the minima of the potential are non-zero and form a circle in phase space of $\phi$. All of these vacua are equivalent and a particular vucuum can be chosen with no physical effect. By convention we choose the following vacuum:
+Where the first two terms on the right hand side make up the kinetic part of the Higgs field Lagrangian, $T$, and the third term is the Higgs field potential, $V$. For $\mu^{2}>0$, the values of the Higgs field which minimise the Lagrangian are  non-zero and form a circle in phase space of $\phi$. All of these minima are equivalent and a particular minimum can be chosen with no physical effect. By convention we choose the following minimum:
 \begin{equation}
   \bra{0}\phi\ket{0}=\left(\begin{array}{c} 0 \\ \sqrt{\frac{\mu^{2}}{2\lambda}} \end{array}\right)=\frac{1}{\sqrt{2}}\left(\begin{array}{c} 0 \\ v \end{array}\right).
 \end{equation}
-Next we consider small perturbations around this vacuum, ignoring those that can be set to zero by gauge freedom gives:
+Next we consider small perturbations around this minimum. Ignoring perturbations that can be set to zero by gauge freedom gives:
 \begin{equation}
   \phi=\left(\begin{array}{c}0 \\ v+H \end{array}\right).
 \end{equation}
@@ -177,25 +177,111 @@ Inserting this into \EquationRef{eq:higlag} and ignoring terms with more than on
 \begin{equation}
   \mathcal{L}=\frac{1}{2}\partial_{\mu}H\partial^{\mu}H-\frac{1}{2}\mu^{2}H^{2}+\frac{v^{2}}{8}\left[g_{2}^{2}W_{\mu}^{+}W^{+\mu}+g_{2}^{2}W_{\mu}^{-}W^{-\mu}+\left(g_{1}^{2}+g_{2}^{2}\right)Z_{\mu}Z^{\mu}\right].
 \end{equation}
-As expected, the weak vector bosons $W_{\mu}^{\pm}$ and $Z_{\mu}$ aquire masses $\frac{gv}{2}$ and $\frac{v}{2}\sqrt{g_{1}^{2}+g_{1}^{2}}$ respectively. We also see an additional massive scalar $H$, which is the Higgs boson, which has mass $\sqrt{2}\mu$. The photon and gluons do not aquire masses as the particular choice of coupling constants and the structure of the group generators leads to the terms in $A_{\mu}$ and $G_{\mu a}$ being zero.
+As expected, the weak vector bosons $W_{\mu}^{\pm}$ and $Z_{\mu}$ aquire masses $\frac{g_{2}v}{2}$ and $\frac{v}{2}\sqrt{g_{1}^{2}+g_{1}^{2}}$ respectively. We also see an additional massive scalar $H$, which is the Higgs boson, which has mass $\sqrt{2}\mu$. The photon and gluons do not aquire masses as the particular choice of coupling constants and the structure of the group generators leads to the terms in $A_{\mu}$ and $G_{\mu a}$ being zero.
 
 The final part of the Higgs field Lagrangian is that giving rise to the fermion masses. These are generated by a Yukawa term in the Lagrangian for each fermion as follows:
 \begin{equation}
-  \mathcal{L}_{Yuk}=k_{f}\left(\bar{f}_{L}\phi f_{R}+\bar{f}_{R}\phi^{\dag}f_{L}\right).
+  \mathcal{L}_{Yuk}=k_{f}\left(\bar{f}_{L}\phi f_{R}+\bar{f}_{R}\phi^{\dag}f_{L}\right),
 \end{equation}
-The fermion's mass is then $\frac{k_{f}v}{\sqrt{2}}$.
+where $k_{f}$ is the Yukawa coupling. The fermion's mass is then $\frac{k_{f}v}{\sqrt{2}}$, so heavier fermions couple more strongly to the Higgs boson. The \ac{SM} provides no prediction of, or relationship between, the Yukawa couplings of the fermions, however they can be determined using the observed masses of the fermions.
 
-%??note about which of the above params are known/predicted and which are free and how this leaves room for BSM
+%??note about which of the above params are known/predicted and which are free and how this leaves room for BSM and ref
 
 
-%??References in all of the above??
+
 
 
 
 
 \subsection{Higgs boson production and decay at the LHC}
 \label{sec:higprod}
-%??LHC in full
+%LHC in full
+The Large Hadron Collider (\LHC) (discussed in detail in \SectionRef{sec:lhc}) collides protons at high energies. The dominant production mechanisms for Higgs bosons in high energy proton collisions are shown in \FigureRef{fig:smprodfeyn}, and they have the cross-sections shown in \FigureRef{fig:smprodfeyn}.
+
+\begin{figure}
+    %ggh
+  \subfloat[]{
+    \begin{fmfgraph*}(150,150)
+      \fmfleft{i0,i2,ix,i3,i5}
+      \fmfright{o0,o3,o1,o4,o6}
+      \fmf{phantom,tension=4/3}{i2,v1,o3}
+      \fmf{phantom,tension=4/3}{i3,v2,o4}
+      \fmffreeze
+      \fmf{gluon,tension=4/3}{i2,v1}
+      \fmf{gluon,tension=4/3}{i3,v2}
+      \fmf{fermion,tension=0}{v1,v2}
+      \fmf{fermion,tension=2/3}{v2,v3,v1}
+      \fmf{dashes}{v3,o1}
+      \fmflabel{$g$}{i2}
+      \fmflabel{$g$}{i3}
+      \fmflabel{$H$}{o1}
+  \end{fmfgraph*}}    
+  %vbf
+  \hspace{3.5cm}
+  \subfloat[]{
+    \begin{fmfgraph*}(150,150)
+      \fmfleft{i1,i2}
+      \fmfright{o1,o2,o3}
+      \fmf{fermion}{i1,v1,o1}
+      \fmf{fermion}{i2,v2,o3}
+      \fmf{photon,label=$W,,Z$}{v1,v3}
+      \fmf{photon,label=$W,,Z$}{v2,v3}
+      \fmf{dashes}{v3,o2}
+      \fmflabel{$q$}{i1}
+      \fmflabel{$q$}{i2}
+      \fmflabel{$q$}{o1}
+      \fmflabel{$q$}{o3}
+      \fmflabel{$H$}{o2}
+  \end{fmfgraph*}
+  \vspace{.5cm}
+}
+
+  \vspace{.5cm}
+  
+    %Higgstrahlung
+  \subfloat[]{
+    \begin{fmfgraph*}(150,150)
+      \fmfleft{i1,i2}
+      \fmfright{o1,o2}
+      \fmf{fermion}{i1,v1}
+      \fmf{fermion}{v1,i2}
+      \fmf{photon,label=$W,,Z$}{v1,v2}
+      \fmf{photon}{v2,o1}
+      \fmf{dashes}{v2,o2}
+      \fmflabel{$q$}{i1}
+      \fmflabel{$\bar{q}$}{i2}
+      \fmflabel{$W,Z$}{o1}
+      \fmflabel{$H$}{o2}
+  \end{fmfgraph*}
+  \vspace{.5cm}
+}
+  \hspace{3.5cm}
+  %tth
+  \subfloat[]{
+    \begin{fmfgraph*}(150,150)
+      \fmfleft{i0,i1,i4,i5,i6,i2,i3}
+      \fmfright{o0,o1,o2,o3,o4}
+      \fmf{gluon,tension=3/2}{i1,v1}
+      \fmf{gluon,tension=3/2}{i2,v2}
+      \fmf{fermion}{o1,v1,v3,v2,o3}
+      \fmf{dashes,tension=3/2}{v3,o2}
+      \fmflabel{$g$}{i1}
+      \fmflabel{$g$}{i2}
+      \fmflabel{$\bar{t}$}{o1}
+      \fmflabel{$t$}{o3}
+      \fmflabel{$H$}{o2}
+  \end{fmfgraph*}
+}
+  
+  \caption{Feynman diagrams for the four \ac{SM} Higgs boson production processes with the highest cross-sections: \ac{ggH} (a), \ac{VBF} (b), \ac{VH} (c) and top quark associated production (d).}
+  \label{fig:smprodfeyn}
+\end{figure}
+
+\begin{figure}
+  \includegraphics[width=\largefigwidth]{plots/theory/XS_8TeV.eps}
+  \caption{Cross-sections for Higgs production via the most common production processes at $\sqrt{s}=8 \TeV$ as a function of Higgs boson mass, $m_{H}$~\cite{Heinemeyer:1559921}. The widths of the lines represent the theoretical uncertainties on the cross-section calculation.}
+  \label{fig:smprod}
+\end{figure}
 %??CMS in full
 %??Detail Higgs production and decays in order to motivate searching for invisible decays in the VBF channel
 %??Mention ISR
@@ -213,7 +299,7 @@ The fermion's mass is then $\frac{k_{f}v}{\sqrt{2}}$.
 \label{sec:DM}
 %??Introduce dark matter and motivate search for it and other invisible final states in Higgs decays
 
-\section{Some extensions of the standard model incorporating dark matter}
+\subsection{Some extensions of the standard model incorporating dark matter}
 \label{sec:DMextensions}
 %??Introduce theories that are used for pheno work
 
