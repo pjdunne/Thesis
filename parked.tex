@@ -594,7 +594,7 @@ As in the prompt analysis, due to it being very small, the contribution to the s
 \label{sec:parkedsyst}
 Most systematic uncertainties are calculated using the same methods as in the prompt analysis (see \SectionRef{sec:promptsyst}). The changes to the calculation of systematic errors on the top, $\PW\rightarrow\tau\nu$, $\PZ\rightarrow\nu\nu$ and \ac{QCD} multijet backgrounds have already been discussed in Sections \ref{sec:parkedtop}, \ref{sec:parkedwtaunu}, \ref{sec:parkedznunu} and \ref{sec:parkedQCD} respectively.
 
-Despite the methods used being similar, in several cases the inputs to the methods have been updated to take into account improved measurements of various parameters using the full Run 1 dataset which were not available at the time of the prompt analysis. For example, the impacts of the \ac{JES}, \ac{JER} and unclustered energy scale uncertainties are still estimated by recalculating the \pt of all jets and the \MET after varying each parameter up and down by one standard deviation and reperforming the analysis. However, the total uncertainty from these is smaller, being 6\% of the total expected background yield for this analysis where it was 7\% in the prompt analysis.
+Despite the methods used being similar, in several cases the inputs to the methods have been updated to take into account improved measurements of various parameters using the full Run 1 dataset which were not available at the time of the prompt analysis. For example, the impacts of the \ac{JES}, \ac{JER} and \ac{UES} uncertainties are still estimated by recalculating the \pt of all jets and the \MET after varying each parameter up and down by one standard deviation and reperforming the analysis. However, the total uncertainty from these is smaller, being 6\% of the total expected background yield for this analysis where it was 7\% in the prompt analysis.
 
 In addition to these changes a study was undertaken to estimate the impact of the trigger efficiency measurement uncertainties on the expected limit. As described in \SectionRef{sec:parkedtrigger}, all \ac{MC} events are reweighted by the measured trigger efficiency as a function of the events sub-leading jet \pt, \METnoMU and \Mjj. The uncertainty due to the reweighting process cancels in all data driven background estimates, as a ratio of \ac{MC} event yields is taken. To estimate the size of the uncertainty that should be applied to processes not estimated with data driven methods, the bin with the largest uncertainties on its fit for each era was chosen. It was then assumed that all bins had this worst-case uncertainty. This assumption resulted in a 2.3\% uncertainty on these non-data driven processes. Given that this error is smaller than many of the other errors considered, and that the uncertainty on the efficiency in most of the fit bins is significantly lower than this worst case, this uncertainty was considered negligible.
 
@@ -609,12 +609,12 @@ The fractional uncertainties on the total signal and background estimates from e
     \hline
     Control region statistics & 9.3 & - \\
     MC statistics & 5.4 & 3.8 \\
-    Jet energy scale & 4.6 & 11 \\
+    \ac{JES} & 4.6 & 11 \\
     $\PW\rightarrow\tau\nu$ control region extrapolation & 4.3 & - \\
     QCD background estimation & 3.2 & - \\
-    Jet energy resolution & 3.0 & 1.8 \\
+    \ac{JER} & 3.0 & 1.8 \\
     Lepton ID efficiency & 2.4 & - \\
-    Unclustered energy scale & 1.9 & 1.6 \\
+    \ac{UES} & 1.9 & 1.6 \\
     Pileup weight & 1.1 & 1.5 \\
     Top MC scale factor unc. & 0.25 & - \\
     Luminosity & 0.02 & 2.6 \\
@@ -714,7 +714,5 @@ As an improved limit is seen in this analysis compared to the prompt analysis, i
 
 Applying the parked selection to the prompt data produces a worse limit than applying the prompt selection to the prompt data. Also, applying the prompt selection to the parked data produces a worse limit than applying the prompt selection to the prompt data. The only improvement seen is from applying the parked selection to the parked data, confirming that the improved analysis selection also requires the additional phase space made available by the trigger in order to result in an improved limit.
 
-
-
-
-
+\subsection{Conclusion}
+The sensitivity of the parked data analysis is significantly increased compared to that of the prompt data analysis by the use of parked data recorded with triggers with looser selection. These triggers allow the analysis selection requirements to be less driven by the trigger requirements and to focus on identifying significant \MET coming from genuine invisible particles, which is isolated from jet activity. The observed (expected) limit at 95\% \ac{CL} on \BRinv for a 125 \GeV Higgs boson is 0.57 (0.40).
