@@ -103,7 +103,7 @@ where $\mathcal{D}_{\mu}=\partial_{\mu}+iqA_{\mu}$ and is referred to as the cov
 In the case of $U(1)$ transformations, which have one degree of freedom so can be described by one parameter, in the above case $\theta$, in order to make the Lagrangian locally invariant one interacting gauge boson had to be added. This correspondence between the number of degrees of freedom and the number of gauge bosons holds generally. For each degree of freedom of a group's transformations there exists a generator of the group, and for each generator one interacting gauge boson must be added to achieve local invariance.
 
 %??give SM gauge group and fermion and vector representations 
-\section{The SM gauge group and fundamental particle representations}
+\subsection{The SM gauge group and fundamental particle representations}
 \label{sec:smgauge}
 The SM is locally gauge invariant under the group $SU\left(3\right)_{C}\otimes SU\left(2\right)_{L}\otimes U\left(1\right)_{Y}$. Fermions in the SM are spin half spinor representations of these symmetry groups. These spinors can be split into chirally left and right handed components using the projection operators $P_{\substack{L \\R}}=\frac{1}{2}(1\mp \gamma^{5})$. Chirally left and right handed fermions transform differently under $SU\left(2\right)_{L}$. The right handed spinors are not charged under $SU\left(2\right)_{L}$ and thus are represented as a singlet, while the left handed spinors transform as a doublet.
 
@@ -188,19 +188,36 @@ where $k_{f}$ is the Yukawa coupling. The fermion's mass is then $\frac{k_{f}v}{
 %??note about which of the above params are known/predicted and which are free and how this leaves room for BSM and ref
 
 
+\subsection{Challenges for the SM}
+\label{sec:SMchallenges}
 
 
+\section{Dark matter}
+\label{sec:DM}
+%??Introduce dark matter and motivate search for it and other invisible final states in Higgs decays
+
+\subsection{Searching for dark matter with Higgs bosons}
+\label{sec:higgsdm}
+%??mention collider searches for Dark matter use MET and need associated production
+%??Introduce jets and MET
+%??CMS in full
 
 
+\subsection{Some extensions of the standard model incorporating dark matter}
+\label{sec:DMextensions}
+%??Introduce theories that are used for pheno work
 
-\subsection{Higgs boson production and decay at the LHC}
+
+\section{Higgs boson production and decay at the LHC}
 \label{sec:higprod}
-%LHC in full
 %??Detail Higgs production and decays in order to motivate searching for invisible decays in the VBF channel
-The Large Hadron Collider (\LHC) (discussed in detail in \SectionRef{sec:lhc}) collides protons at high energies. The results of these collisions are referred to as ``events''. The dominant production mechanisms for Higgs bosons in high energy proton collisions are shown in \FigureRef{fig:smprodfeyn}, and they have the cross-sections shown in \FigureRef{fig:smprodfeyn}.
+The Large Hadron Collider (\LHC) (discussed in detail in \SectionRef{sec:lhc}) collides protons at high energies. The results of these collisions are referred to as ``events''. The dominant production mechanisms for Higgs bosons in high energy proton collisions are shown in \FigureRef{fig:smprodfeyn}, and they have the cross-sections shown in \FigureRef{fig:smprodfeyn}. It can be seen that \ac{ggH} production, where two gluons fuse via a quark loop to produce a Higgs boson (as shown in \FigureRef{fig:smprodfeyn}a), has the highest cross-section across the full Higgs boson mass range shown. Unfortunately, this production mode normally results in no visible particles in the final state and therefore most \ac{ggH} events cannot be used to search for invisibly decaying Higgs boson. In some \ac{ggH} events there is \ac{QCD} radiation from the initial state particles (\ac{ISR}), which can result in visible jets in the final state and thus allow invisibly decaying Higgs boson searches to be performed. However, the visible particles in these events are hard to distinguish from other similar \ac{QCD} background processes with much larger cross-sections, so \ac{ggH} is not the most promising channel for invisibly decaying Higgs boson searches.
 
-%??Mention BRINV
+The next highest cross-section production process is \ac{VBF}. As can be seen in \FigureRef{fig:smprodfeyn}b, this process involves two incoming quarks both radiating vector bosons which then fuse resulting in a Higgs boson. The two initial quarks form jets in the final state, providing visible particles with which to perform an invisibly decaying Higgs boson search. Furthermore, the lack of a strong force connection (referred to as ``colour connection'') between the two quarks means that the resulting jets have a distinctive topology, being well separated and also that there is very little other hadronic activity in \ac{VBF} events. This distinctive topology and high cross-section make \ac{VBF} the most sensitive production channel for invisibly decaying Higgs boson searches. For this reason, this thesis will focus on the \ac{VBF} channel.
 
+After \ac{VBF}, \ac{VH} production has the next highest cross-section. \ac{VH} production results in a Higgs boson and a vector boson, which decays resulting in visible particles in the final state allowing invisibly decaying Higgs boson searches to be carried out. In the case of leptonic vector boson decays, these final state particles can be relatively easy to identify resulting in lower backgrounds than in the case of searches in the \ac{VBF} and \ac{ggH} channels. However, the lower cross-section means that the \ac{VH} channel is not as sensitive as \ac{VBF}.
+
+Finally, the fourth highest cross-section Higgs boson production channel is top quark associated production, where the final state consists of two top quarks and a Higgs boson. Whilst, the top quarks do decay to visible particles which could be identified, the cross-section for this process is too low, and the backgrounds are too high for an invisibly decaying Higgs boson search to be carried out using the Run 1 \LHC data.
 
 \begin{figure}
     %ggh
@@ -287,32 +304,21 @@ The Large Hadron Collider (\LHC) (discussed in detail in \SectionRef{sec:lhc}) c
   \label{fig:smprod}
 \end{figure}
 
+%??talk about SM decays and what SM invisible branching fraction is, direct vs indirect
+As mentioned in \SectionRef{sec:higgsdm} limits can be placed on the Higgs boson's coupling to \ac{DM} by %??explain indirect
+%??Mention BRINV
+
+
 \begin{figure}
-  \subfloat{\includegraphics[width=\largefigwidth]{plots/theory/Higgs_BR.eps}}
-  \subfloat{\includegraphics[width=\largefigwidth]{plots/theory/SM_Width.eps}}
+  \subfloat{\includegraphics[width=.65\largefigwidth]{plots/theory/Higgs_BR.eps}}
+  \subfloat{\includegraphics[width=.65\largefigwidth]{plots/theory/SM_Width.eps}}
 
   \caption{Branching ratios for the dominant Higgs boson decays as a function of Higgs boson mass with the line widths representing the uncertainties (a), and the \ac{SM} Higgs boson total width, $\Gamma_{H}$, as a function of Higgs boson mass (b)~\cite{Heinemeyer:1559921}.}
   \label{fig:smdecay}
 \end{figure}
 
 
-%??CMS in full
-%??Mention ISR
 %??Mention proportionality of higgs coupling and mass
-%??VBF with two forward jets and no colour connection
-%??Introduce jets and MET
-
-\subsection{Challenges for the SM}
-\label{sec:SMchallenges}
-
-
-\section{Dark matter}
-\label{sec:DM}
-%??Introduce dark matter and motivate search for it and other invisible final states in Higgs decays
-
-\subsection{Some extensions of the standard model incorporating dark matter}
-\label{sec:DMextensions}
-%??Introduce theories that are used for pheno work
 
 \section{Simulation}
 \label{sec:sim}
