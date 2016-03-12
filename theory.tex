@@ -102,7 +102,7 @@ where $\mathcal{D}_{\mu}=\partial_{\mu}+iqA_{\mu}$ and is referred to as the cov
 
 In the case of $U(1)$ transformations, which have one degree of freedom so can be described by one parameter, in the above case $\theta$, in order to make the Lagrangian locally invariant one interacting gauge boson had to be added. This correspondence between the number of degrees of freedom and the number of gauge bosons holds generally. For each degree of freedom of a group's transformations there exists a generator of the group, and for each generator one interacting gauge boson must be added to achieve local invariance.
 
-%??give SM gauge group and fermion and vector representations 
+%give SM gauge group and fermion and vector representations 
 \subsection{The SM gauge group and fundamental particle representations}
 \label{sec:smgauge}
 The SM is locally gauge invariant under the group $SU\left(3\right)_{C}\otimes SU\left(2\right)_{L}\otimes U\left(1\right)_{Y}$. Fermions in the SM are spin half spinor representations of these symmetry groups. These spinors can be split into chirally left and right handed components using the projection operators $P_{\substack{L \\R}}=\frac{1}{2}(1\mp \gamma^{5})$. Chirally left and right handed fermions transform differently under $SU\left(2\right)_{L}$. The right handed spinors are not charged under $SU\left(2\right)_{L}$ and thus are represented as a singlet, while the left handed spinors transform as a doublet.
@@ -155,7 +155,7 @@ which is not gauge invariant, so it is not possible to include the massive vecto
 
 \subsection{Spontaneous symmetry breaking and the Higgs mechanism}
 \label{sec:ssb}
-%??Introduce SSB
+%Introduce SSB
 The Higgs mechanism is a form of spontaneous symmetry breaking~\cite{Englert:1964et,Higgs:1964ia,Higgs:1964pj,Guralnik:1964eu,Higgs:1966ev,Kibble:1967sv}. A symmetry is said to be spontaneously broken when the Lagrangian remains invariant while the vacuum state, i.e. that with lowest energy, does not~\cite{griffiths2008introduction}. Terms of the Lagrangian which are not gauge invariant can then be incorporated into the theory by adding a field which has a non-zero vacuum expectation value and coupling it to the other fields present in the term. For the Higgs mechanism this field is a complex scalar $SU\left(2\right)_{L}$ doublet, called the Higgs field:
 \begin{equation}
 \phi=\left(\begin{array}{c}\phi^+ \\ \phi^0 \end{array}\right).
@@ -186,43 +186,39 @@ The final part of the Higgs field Lagrangian is that giving rise to the fermion 
 where $k_{f}$ is the Yukawa coupling. The fermion's mass is then $\frac{k_{f}v}{\sqrt{2}}$, so heavier fermions couple more strongly to the Higgs boson. The \ac{SM} provides no prediction of, or relationship between, the Yukawa couplings of the fermions, however they can be determined using the observed masses of the fermions.
 
 
-
 \section{Dark matter}
 \label{sec:DM}
 %??Introduce dark matter and motivate search for it and other invisible final states in Higgs decays
 Despite its many successes, there are phenomena in nature which the \ac{SM} does not explain. It does not predict the non-zero neutrino mases which are necessary to explain neutrino oscillation experiments~\cite{pdg}. It also does not predict sufficient violation of CP symmetry to explain the large matter-anti-matter asymmetry observed in the universe. However, one of the most striking differences between observation and the \ac{SM} prediction is the existence of \ac{DM}.
 
-Evidence for \ac{DM} was first observed in studies of the rotation velocity of galaxy clusters as a function of distance from the centre of the cluster~\cite{Zwicky:1933gu}. As shown in \FigureRef{fig:dmevidence}a, these rotation velocities cannot be explained without the addition of significant additional non-luminous matter, or a modification of the laws of gravity. Further evidence
+Evidence for \ac{DM} was first observed in studies of the rotation velocity of galaxy clusters as a function of distance from the centre of the cluster~\cite{Zwicky:1933gu}. As shown in \FigureRef{fig:dmevidence}a, these rotation velocities cannot be explained without the addition of significant additional non-luminous matter, or a modification of the laws of gravity. Further evidence for dark matter is provided by gravitational lensing and X-ray images of galaxy clusters such as the bullet cluster, shown in \FigureRef{fig:dmevidence}b. The figure shows two galaxy clusters which have passed through each other. It can be seen that the visible mass of the galaxy, indicated by the colour-scale, is not in the same place as the majority of the gravitational mass, indicated by the green contours. This difference indicates that most of the mass in the clusters continues unimpeded on collision, and is not visible, i.e. it is \ac{DM}. Cosmological observations suggest that \ac{DM} makes up 25\% of the energy in the universe~\cite{refId0}.
 
 \begin{figure}
-  \subfloat[]{\includegraphics[width=.65\largefigwidth]{plots/theory/rotationcurve.png}}
-  \subfloat[]{\includegraphics[width=.65\largefigwidth]{plots/theory/bulletcluster.png}}
-  
+  \subfloat[]{\includegraphics[width=\largefigwidth]{plots/theory/rotationcurve.png}}
 
-  \caption{(a)~\cite{Freese:2008cz}. (b)~\cite{1538-4357-648-2-L109}}%??
+  \subfloat[]{\includegraphics[width=\largefigwidth]{plots/theory/bulletcluster.png}}
+  \caption{Rotation velocity in the galaxy NGC 6503 as a function of distance from the galactic centre (a)~\cite{Freese:2008cz}. The disk and gas components shown are made of visible matter, while the halo component shows the effect of adding an additional \ac{DM} halo to the galaxy. A superposition of X-ray (colour-scale) and gravitational lensing (green contours) images of the bullet cluster of galaxies. (b)~\cite{1538-4357-648-2-L109}}
   \label{fig:dmevidence}
 \end{figure}
-
-%??first observation, bullet cluster
-Cosmological observations suggest that \ac{DM} makes up 25\% of the energy in the universe~\cite{refId0}.
-
 
 \subsection{Some extensions of the standard model incorporating dark matter}
 \label{sec:DMextensions}
 %??Introduce theories that are used for pheno work
 
+As described in \SectionRef{sec:ssb} all known particles with mass couple to the Higgs boson. It might therefore be expected that \ac{DM}, which we know is massive, also couples to the Higgs boson.
+
 \section{Searching for dark matter with Higgs bosons}
 \label{sec:higgsdm}
-%??mention collider searches for Dark matter use MET and need associated production
-%??Introduce jets and MET
-%??CMS in full
-%??indirect searches and current Higgs properties limits
+%mention collider searches for Dark matter use MET and need associated production
+Observing decays of Higgs or Higgs-like bosons to \ac{DM} presents an experimental problem, in that the final state particles are not visible to the particle detectors used at the \LHC such as the Compact Muon Solenoid, CMS, which the data used in this thesis were collectd with. If a Higgs boson were to be created alone and decay to \ac{DM} there would therefore be no way to observe these decays. Fortunately, several Higgs boson production mechanisms (as described in \SectionRef{sec:higprod} below), lead to additional particles being created with the Higgs boson. By conservation of momentum, the vectorial sum of the momenta of these additional particles transverse to the \LHC beams will be non-zero due to the unobserved particles. This missing transverse momentum, \MET, can therefore be used to identify the presence of \ac{DM} particles in the event. This type of search is referred to as a direct search.
 
+%indirect searches and current Higgs properties limits
+Another indication of Higgs boson decays to unseen particles would be a difference between the total decay width of the Higgs boson and the sum of the decay widths of all visible decays. This type of search is referred to as an indirect search. For both direct and indirect searches it is necessary to understand how the Higgs boson is produced and how it decays.
 
 \subsection{Higgs boson production and decay at the LHC}
 \label{sec:higprod}
-%??Detail Higgs production and decays in order to motivate searching for invisible decays in the VBF channel
-The Large Hadron Collider (\LHC) (discussed in detail in \SectionRef{sec:lhc}) collides protons at high energies. The results of these collisions are referred to as ``events''. The dominant production mechanisms for Higgs bosons in high energy proton collisions are shown in \FigureRef{fig:smprodfeyn}, and they have the cross-sections shown in \FigureRef{fig:smprodfeyn}. It can be seen that \ac{ggH} production, where two gluons fuse via a quark loop to produce a Higgs boson (as shown in \FigureRef{fig:smprodfeyn}a), has the highest cross-section across the full Higgs boson mass range shown. Unfortunately, this production mode normally results in no visible particles in the final state and therefore most \ac{ggH} events cannot be used to search for invisibly decaying Higgs boson. In some \ac{ggH} events there is \ac{QCD} radiation from the initial state particles (\ac{ISR}), which can result in visible jets in the final state and thus allow invisibly decaying Higgs boson searches to be performed. However, the visible particles in these events are hard to distinguish from other similar \ac{QCD} background processes with much larger cross-sections, so \ac{ggH} is not the most promising channel for invisibly decaying Higgs boson searches.
+%Detail Higgs production and decays in order to motivate searching for invisible decays in the VBF channel
+The Large Hadron Collider (\LHC) (discussed in detail in \SectionRef{sec:lhc}) collides protons at high energies. The results of these collisions are referred to as ``events''. The dominant production mechanisms for Higgs bosons in high energy proton collisions are shown in \FigureRef{fig:smprodfeyn}, and they have the cross-sections shown in \FigureRef{fig:smprodfeyn}. It can be seen that \ac{ggH} production, where two gluons fuse via a quark loop to produce a Higgs boson (as shown in \FigureRef{fig:smprodfeyn}a), has the highest cross-section across the full Higgs boson mass range shown. Unfortunately, this production mode normally results in no visible particles in the final state and therefore most \ac{ggH} events cannot be used to search for invisibly decaying Higgs boson. In some \ac{ggH} events there is \ac{QCD} radiation from the initial state particles (\ac{ISR}). Due to asymptotic freedom ~\cite{PhysRevLett.30.1343,PhysRevLett.30.1346} these radiated quarks and gluons each result in a collimated ``jet'' of hadrons in the final state, and thus allow invisibly decaying Higgs boson searches to be performed. However, the visible particles in these events are hard to distinguish from other similar \ac{QCD} background processes with much larger cross-sections, so \ac{ggH} is not the most promising channel for invisibly decaying Higgs boson searches.
 
 The next highest cross-section production process is \ac{VBF}. As can be seen in \FigureRef{fig:smprodfeyn}b, this process involves two incoming quarks both radiating vector bosons which then fuse resulting in a Higgs boson. The two initial quarks form jets in the final state, providing visible particles with which to perform an invisibly decaying Higgs boson search. Furthermore, the lack of a strong force connection (referred to as ``colour connection'') between the two quarks means that the resulting jets have a distinctive topology, being well separated and also that there is very little other hadronic activity in \ac{VBF} events. This distinctive topology and high cross-section make \ac{VBF} the most sensitive production channel for invisibly decaying Higgs boson searches. For this reason, this thesis will focus on the \ac{VBF} channel.
 
@@ -315,21 +311,22 @@ Finally, the fourth highest cross-section Higgs boson production channel is top 
   \label{fig:smprod}
 \end{figure}
 
-%??talk about SM decays and what SM invisible branching fraction is, direct vs indirect
-As mentioned in \SectionRef{sec:higgsdm} limits can be placed on the Higgs boson's coupling to \ac{DM} by %??explain indirect
-%??Mention BRINV
+%talk about SM decays and what SM invisible branching fraction is, direct vs indirect
+As mentioned in \SectionRef{sec:higgsdm} limits can be placed on the Higgs boson's coupling to \ac{DM} by comparing the total decay width of the Higgs boson to the sum of the decay widths for all the visible Higgs boson final states. The branching ratio for the dominant Higgs boson decays as a function of the mass of the Higgs boson can be seen in \FigureRef{fig:smdecay}a. Because a particle's couplings to the Higgs boson are proportional to its mass, the heavier particles have larger branching ratios, with the caveat that particles above half the mass of the Higgs boson, have reduced couplings due to their being created virtually. The \ac{SM} total width of the Higgs boson is shown in \FigureRef{fig:smdecay}b. For a 125 \GeV Higgs boson, the width is only a few \MeV, which is below the current resolution with which it can be measured~\cite{}.%??most recent mass measurement cited by HIG-15-002
+In order to use the total visible decay width to constrain the invisible braching ratio, \BRinv, an assumption about the total decay width must be made. 
 
+The current measurements of the branching ratios of the Higgs boson to the 5 most frequent final states can be seen in \FigureRef{fig:smdecaymeasurement}a. The log-likelihood as a function of \BRinv, obtained from these measured branching ratios, assuming the \ac{SM} total Higgs boson decay width, is shown in \FigureRef{fig:smdecaymeasurement}b. %??most likely value
 
 \begin{figure}
   \subfloat{\includegraphics[width=.65\largefigwidth]{plots/theory/Higgs_BR.eps}}
-  \subfloat{\includegraphics[width=.65\largefigwidth]{plots/theory/SM_Width.eps}}
-
   \caption{Branching ratios for the dominant Higgs boson decays as a function of Higgs boson mass with the line widths representing the uncertainties (a), and the \ac{SM} Higgs boson total width, $\Gamma_{H}$, as a function of Higgs boson mass (b)~\cite{Heinemeyer:1559921}.}
   \label{fig:smdecay}
 \end{figure}
 
 
-%??Mention proportionality of higgs coupling and mass
+%??figs 12 and 15 from pas hig-15-002
+
+This limit leaves significant parameter space open for \ac{BSM} Higgs boson decays. Furthermore, as the above limit assumes the \ac{SM} Higgs boson total width, it is possible that the branching ratio to invisible final states is much larger, making the case for direct measurements even more compelling.
 
 \section{Simulation}
 \label{sec:sim}
@@ -343,7 +340,7 @@ As mentioned in \SectionRef{sec:higgsdm} limits can be placed on the Higgs boson
 
 \section{Statistics of exclusion limits}
 \label{sec:stats}
-%??introduce cls and limit setting
+%introduce cls and limit setting
 Limits on the parameters of theoretical models are presented throughout this thesis. The limits are set by performing a hypothesis test to discriminate between a null, background physics model only, hypothesis, $b$ and a test hypothesis, the signal process, $s$, plus background model. The particular procedure used is based on the CL$_{S}$ statistic and was developed by the LHC Higgs Combination Group and is used by both the ATLAS and CMS experiments~\cite{ATL-PHYS-PUB-2011-011}. 
 
 The procedure starts by defining a likelihood function, $\mathcal{L}$, which quantifies how likely a given observation is given the expectation under a given hypothesis. $\mathcal{L}$ takes the form:
