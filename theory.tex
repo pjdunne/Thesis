@@ -1,6 +1,6 @@
 \chapter{Introduction and theory}
 \label{chap:theory}
-In order to describe the search for invisible decays of the Higgs boson (``Higgs to invisible''), it is necessary to describe the theory behind them and also the statistical techniques used in carrying out the search. This chapter will start with an introduction to the current best theory of particle physics, the \ac{SM}, focussing on the Higgs mechanism, before outlining the motivations behind and some candidates for physics \ac{BSM}, then concluding with a discussion of the statistics of hypothesis testing. Natural units, where $\hbar=c=1$, Einstein summation convention and Feynman slash notation are used throughout. Four vector indices are labelled using greek letters, and gauge group generators using roman letters.
+In order to describe the search for invisible decays of the Higgs boson (``Higgs to invisible''), it is necessary to describe the theory behind them and also the statistical techniques used in carrying out the search. This chapter will start with an introduction to the current best theory of particle physics, the \ac{SM}, focusing on the Higgs mechanism, before outlining the motivations behind and some candidates for physics \ac{BSM}, then concluding with a discussion of the statistics of hypothesis testing. Natural units, where $\hbar=c=1$, Einstein summation convention and Feynman slash notation are used throughout. Four vector indices are labeled using Greek letters, and gauge group generators using roman letters.
 
 %??CHECK PLOT AXIS LABEL SIZES AND THAT LEGEND TERMS ARE STANDARD OR IN TEXT
 
@@ -60,7 +60,7 @@ The bosons in nature also have two types. The first type are vector bosons which
 
 \subsection{Introduction to gauge theories}
 \label{sec:gaugesym}
-Gauge symmetries are local transformations, i.e. the transformation can be different at different points in space and time, that form a symmetry group. To see the effect of imposing such a symmetry on a theory consider imposing local invariance under U(1) transformations on the Dirac Lagrangian for a masssive fermion:
+Gauge symmetries are local transformations, i.e. the transformation can be different at different points in space and time, that form a symmetry group. To see the effect of imposing such a symmetry on a theory consider imposing local invariance under U(1) transformations on the Dirac Lagrangian for a massive fermion:
 \begin{equation}
   \label{eq:globaldiraclagrangian}
   \mathcal{L}=i\bar{\psi}\slashed{\partial}\psi-m\bar{\psi}\psi~\cite{griffiths2008introduction}.
@@ -91,7 +91,7 @@ where $F_{\mu\nu}$ is the field strength tensor of the vector field. For a gauge
 \begin{equation}
 F_{\mu\nu}^a=\partial_{\mu}A_{\nu}^a-\partial_{\nu}A_{\mu}^a+gf&{abc}A_{\mu}^{b}A_{\nu}^{c},
 \end{equation}
-where $f^{abc}$ are the structure constants of the gauge group, which are a representation of the comutation relations between the group's generators. For $U(1)$ which only has one self-commuting generator the single structure constant is 0. However, for non-Abelian gauge groups (i.e. those with non-commuting generators) they can be non-zero causing the $F_{\mu\nu}F^{\mu\nu}$ term in the Lagrangian to include self-interaction terms of the vector bosons.
+where $f^{abc}$ are the structure constants of the gauge group, which are a representation of the commutation relations between the group's generators. For $U(1)$ which only has one self-commuting generator the single structure constant is 0. However, for non-Abelian gauge groups (i.e. those with non-commuting generators) they can be non-zero causing the $F_{\mu\nu}F^{\mu\nu}$ term in the Lagrangian to include self-interaction terms of the vector bosons.
 
 It is also interesting to note that \EquationRef{eq:diraclag} can be rewritten as:
 \begin{equation}
@@ -177,7 +177,7 @@ Inserting this into \EquationRef{eq:higlag} and ignoring terms with more than on
 \begin{equation}
   \mathcal{L}=\frac{1}{2}\partial_{\mu}H\partial^{\mu}H-\frac{1}{2}\mu^{2}H^{2}+\frac{v^{2}}{8}\left[g_{2}^{2}W_{\mu}^{+}W^{+\mu}+g_{2}^{2}W_{\mu}^{-}W^{-\mu}+\left(g_{1}^{2}+g_{2}^{2}\right)Z_{\mu}Z^{\mu}\right].
 \end{equation}
-As expected, the weak vector bosons $W_{\mu}^{\pm}$ and $Z_{\mu}$ aquire masses $\frac{g_{2}v}{2}$ and $\frac{v}{2}\sqrt{g_{1}^{2}+g_{1}^{2}}$ respectively. We also see an additional massive scalar $H$, which is the Higgs boson, which has mass $\sqrt{2}\mu$. The photon and gluons do not aquire masses as the particular choice of coupling constants and the structure of the group generators leads to the terms in $A_{\mu}$ and $G_{\mu a}$ being zero.
+As expected, the weak vector bosons $W_{\mu}^{\pm}$ and $Z_{\mu}$ acquire masses $\frac{g_{2}v}{2}$ and $\frac{v}{2}\sqrt{g_{1}^{2}+g_{1}^{2}}$ respectively. We also see an additional massive scalar $H$, which is the Higgs boson, which has mass $\sqrt{2}\mu$. The photon and gluons do not acquire masses as the particular choice of coupling constants and the structure of the group generators leads to the terms in $A_{\mu}$ and $G_{\mu a}$ being zero.
 
 The final part of the Higgs field Lagrangian is that giving rise to the fermion masses. These are generated by a Yukawa term in the Lagrangian for each fermion as follows:
 \begin{equation}
@@ -189,7 +189,7 @@ where $k_{f}$ is the Yukawa coupling. The fermion's mass is then $\frac{k_{f}v}{
 \section{Dark matter}
 \label{sec:DM}
 %??Introduce dark matter and motivate search for it and other invisible final states in Higgs decays
-Despite its many successes, there are phenomena in nature which the \ac{SM} does not explain. It does not predict the non-zero neutrino mases which are necessary to explain neutrino oscillation experiments~\cite{pdg}. It also does not predict sufficient violation of CP symmetry to explain the large matter-anti-matter asymmetry observed in the universe. However, one of the most striking differences between observation and the \ac{SM} prediction is the existence of \ac{DM}.
+Despite its many successes, there are phenomena in nature which the \ac{SM} does not explain. It does not predict the non-zero neutrino masses which are necessary to explain neutrino oscillation experiments~\cite{pdg}. It also does not predict sufficient violation of CP symmetry to explain the large matter-anti-matter asymmetry observed in the universe. However, one of the most striking differences between observation and the \ac{SM} prediction is the existence of \ac{DM}.
 
 Evidence for \ac{DM} was first observed in studies of the rotation velocity of galaxy clusters as a function of distance from the centre of the cluster~\cite{Zwicky:1933gu}. As shown in \FigureRef{fig:dmevidence}a, these rotation velocities cannot be explained without the addition of significant additional non-luminous matter, or a modification of the laws of gravity. Further evidence for dark matter is provided by gravitational lensing and X-ray images of galaxy clusters such as the bullet cluster, shown in \FigureRef{fig:dmevidence}b. The figure shows two galaxy clusters which have passed through each other. It can be seen that the visible mass of the galaxy, indicated by the colour-scale, is not in the same place as the majority of the gravitational mass, indicated by the green contours. This difference indicates that most of the mass in the clusters continues unimpeded on collision, and is not visible, i.e. it is \ac{DM}. Cosmological observations suggest that \ac{DM} makes up 25\% of the energy in the universe~\cite{refId0}.
 
@@ -210,7 +210,7 @@ As described in \SectionRef{sec:ssb} all known particles with mass couple to the
 \section{Searching for dark matter with Higgs bosons}
 \label{sec:higgsdm}
 %mention collider searches for Dark matter use MET and need associated production
-Observing decays of Higgs or Higgs-like bosons to \ac{DM} presents an experimental problem, in that the final state particles are not visible to the particle detectors used at the \LHC such as the Compact Muon Solenoid, CMS, which the data used in this thesis were collectd with. If a Higgs boson were to be created alone and decay to \ac{DM} there would therefore be no way to observe these decays. Fortunately, several Higgs boson production mechanisms (as described in \SectionRef{sec:higprod} below), lead to additional particles being created with the Higgs boson. By conservation of momentum, the vectorial sum of the momenta of these additional particles transverse to the \LHC beams will be non-zero due to the unobserved particles. This missing transverse momentum, \MET, can therefore be used to identify the presence of \ac{DM} particles in the event. This type of search is referred to as a direct search.
+Observing decays of Higgs or Higgs-like bosons to \ac{DM} presents an experimental problem, in that the final state particles are not visible to the particle detectors used at the \LHC such as the Compact Muon Solenoid, CMS, which the data used in this thesis were collected with. If a Higgs boson were to be created alone and decay to \ac{DM} there would therefore be no way to observe these decays. Fortunately, several Higgs boson production mechanisms (as described in \SectionRef{sec:higprod} below), lead to additional particles being created with the Higgs boson. By conservation of momentum, the vectorial sum of the momenta of these additional particles transverse to the \LHC beams will be non-zero due to the unobserved particles. This missing transverse momentum, \MET, can therefore be used to identify the presence of \ac{DM} particles in the event. This type of search is referred to as a direct search.
 
 %indirect searches and current Higgs properties limits
 Another indication of Higgs boson decays to unseen particles would be a difference between the total decay width of the Higgs boson and the sum of the decay widths of all visible decays. This type of search is referred to as an indirect search. For both direct and indirect searches it is necessary to understand how the Higgs boson is produced and how it decays.
@@ -313,7 +313,7 @@ Finally, the fourth highest cross-section Higgs boson production channel is top 
 
 %talk about SM decays and what SM invisible branching fraction is, direct vs indirect
 As mentioned in \SectionRef{sec:higgsdm} limits can be placed on the Higgs boson's coupling to \ac{DM} by comparing the total decay width of the Higgs boson to the sum of the decay widths for all the visible Higgs boson final states. The branching ratio for the dominant Higgs boson decays as a function of the mass of the Higgs boson can be seen in \FigureRef{fig:smdecay}a. Because a particle's couplings to the Higgs boson are proportional to its mass, the heavier particles have larger branching ratios, with the caveat that particles above half the mass of the Higgs boson, have reduced couplings due to their being created virtually. The \ac{SM} total width of the Higgs boson is shown in \FigureRef{fig:smdecay}b. For a 125 \GeV Higgs boson, the width is only a few \MeV, which is below the current resolution with which it can be measured~\cite{PhysRevLett.114.191803}.
-In order to use the total visible decay width to constrain the invisible braching ratio, \BRinv, an assumption about the total decay width must be made. 
+In order to use the total visible decay width to constrain the invisible branching ratio, \BRinv, an assumption about the total decay width must be made. 
 
 The current measurements of the branching ratios of the Higgs boson to the 5 most frequent final states can be seen in \FigureRef{fig:smdecaymeasurement}a. The log-likelihood as a function of \BRinv, obtained from these measured branching ratios, assuming the \ac{SM} total Higgs boson decay width, is shown in \FigureRef{fig:smdecaymeasurement}b. It can be seen that whilst the most likely value is approximately zero, values of \BRinv up to $\sim35\%$ are not excluded at the 95\% \ac{CL}. This limit leaves significant parameter space open for \ac{BSM} Higgs boson decays. Furthermore, as the above limit assumes the \ac{SM} Higgs boson total width, it is possible that the branching ratio to invisible final states is much larger, making the case for direct measurements even more compelling.
 
@@ -334,7 +334,13 @@ The current measurements of the branching ratios of the Higgs boson to the 5 mos
 
 \section{Simulation}
 \label{sec:sim}
-The simulation \LHC proton-proton collisions can be factorised into several distinct stages, as shown in \FigureRef{fig:factorisation}.
+The simulation of \LHC proton-proton collisions can be factorised into several distinct stages, as shown in \FigureRef{fig:factorisation}. First the hard-scattering of two incoming elements of the proton, called ``partons''. The momentum of each of these partons is sampled from a \ac{PDF}. These \ac{PDF}s give the probability for each incoming parton type to have a certain fraction of the proton's energy at the given hard-scatter energy scale, sometimes referred to as the \ac{QCD} scale. Due to the high energy nature of the hard-scatter perturbation theory at fixed order can be used for both \ac{QCD} and electroweak interactions at this stage of the simulation. Quantities calculated using the particles which result from the hard-scattering are referred to as ``parton level''.
+
+After the hard-scatter the resulting particles undergo ``parton showering'', which is an iterative process of repeated \ac{QCD} radiation until the particles reach an energy where perturbation theory is no longer valid. After parton showering particles then undergo hadronisation, where colourless hadrons are formed, and allowed to decay. The results of this hadronisation and decay process are four-momentum vectors for each particle which are referred to as the ``generator level'' particles. In most cases the generator level particles are then processed by a Geant 4 based simulation of the CMS detector~\cite{Agostinelli2003250}. For the work described in \ChapterRef{chap:interp} a Delphes based simulation of the CMS detector, which is only approximate, but greatly decreases the computational power needed to process the same number of events~\cite{Favereau2014}.
+
+Several so-called \ac{MC} generators are used to carry out the perturbative hard-scattering calculations. Some, such as pythia~\cite{Sjöstrand2008852}, are also able to provide the hard-scatter calculation for a wide ranges of processes as well as perform other stages of the factorisation. Others like \textsc{MadGraph}~\cite{Alwall2014} and Powheg~\cite{Nason:2004rx,Frixione:2007vw,Alioli:2010xd} only calculate the hard-scattering component. However, these generators produce more accurate results for certain processes they have been tuned to, or allow for a larger range of processes to be simulated than the multipurpose generators such as pythia. In all of the \ac{MC} samples used in this thesis, the results of the hard-scatter are then passed on to pythia for parton showering and hadronisation.
+
+Finally, some generators, such as MCFM~\cite{PhysRevD.68.094021}, VBFNLO~\cite{Baglio:2014uba,Arnold:2011wj,Arnold20091661} and FEWZ~\cite{PhysRevD.86.094034} are used only to calculate cross-sections very accurately at next to leading or next to next to leading order. These calculations are much more computationally intensive than the lower order calculations above, which renders them unsuitable for generating full \ac{MC} samples with a four vector for each final state particle.
 
 \begin{figure}
   \includegraphics[width=\largefigwidth]{plots/theory/factorisation.png}
@@ -342,11 +348,6 @@ The simulation \LHC proton-proton collisions can be factorised into several dist
   \label{fig:factorisation}
 \end{figure}
 
-%??introduce simulation
-%??pdf and qcd scale
-%??different generators including MCFM, VBFNLO, FEWZ, pythia, powheg, madgraph
-%??explain generator level, parton level
-%??output of four vectors of particles
 
 \section{Statistics of exclusion limits}
 \label{sec:stats}
