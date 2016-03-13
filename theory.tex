@@ -312,10 +312,11 @@ Finally, the fourth highest cross-section Higgs boson production channel is top 
 \end{figure}
 
 %talk about SM decays and what SM invisible branching fraction is, direct vs indirect
-As mentioned in \SectionRef{sec:higgsdm} limits can be placed on the Higgs boson's coupling to \ac{DM} by comparing the total decay width of the Higgs boson to the sum of the decay widths for all the visible Higgs boson final states. The branching ratio for the dominant Higgs boson decays as a function of the mass of the Higgs boson can be seen in \FigureRef{fig:smdecay}a. Because a particle's couplings to the Higgs boson are proportional to its mass, the heavier particles have larger branching ratios, with the caveat that particles above half the mass of the Higgs boson, have reduced couplings due to their being created virtually. The \ac{SM} total width of the Higgs boson is shown in \FigureRef{fig:smdecay}b. For a 125 \GeV Higgs boson, the width is only a few \MeV, which is below the current resolution with which it can be measured~\cite{}.%??most recent mass measurement cited by HIG-15-002
+As mentioned in \SectionRef{sec:higgsdm} limits can be placed on the Higgs boson's coupling to \ac{DM} by comparing the total decay width of the Higgs boson to the sum of the decay widths for all the visible Higgs boson final states. The branching ratio for the dominant Higgs boson decays as a function of the mass of the Higgs boson can be seen in \FigureRef{fig:smdecay}a. Because a particle's couplings to the Higgs boson are proportional to its mass, the heavier particles have larger branching ratios, with the caveat that particles above half the mass of the Higgs boson, have reduced couplings due to their being created virtually. The \ac{SM} total width of the Higgs boson is shown in \FigureRef{fig:smdecay}b. For a 125 \GeV Higgs boson, the width is only a few \MeV, which is below the current resolution with which it can be measured~\cite{PhysRevLett.114.191803}.
 In order to use the total visible decay width to constrain the invisible braching ratio, \BRinv, an assumption about the total decay width must be made. 
 
-The current measurements of the branching ratios of the Higgs boson to the 5 most frequent final states can be seen in \FigureRef{fig:smdecaymeasurement}a. The log-likelihood as a function of \BRinv, obtained from these measured branching ratios, assuming the \ac{SM} total Higgs boson decay width, is shown in \FigureRef{fig:smdecaymeasurement}b. %??most likely value
+The current measurements of the branching ratios of the Higgs boson to the 5 most frequent final states can be seen in \FigureRef{fig:smdecaymeasurement}a. The log-likelihood as a function of \BRinv, obtained from these measured branching ratios, assuming the \ac{SM} total Higgs boson decay width, is shown in \FigureRef{fig:smdecaymeasurement}b. It can be seen that whilst the most likely value is approximately zero, values of \BRinv up to $\sim35\%$ are not excluded at the 95\% \ac{CL}. This limit leaves significant parameter space open for \ac{BSM} Higgs boson decays. Furthermore, as the above limit assumes the \ac{SM} Higgs boson total width, it is possible that the branching ratio to invisible final states is much larger, making the case for direct measurements even more compelling.
+
 
 \begin{figure}
   \subfloat{\includegraphics[width=.65\largefigwidth]{plots/theory/Higgs_BR.eps}}
@@ -323,19 +324,28 @@ The current measurements of the branching ratios of the Higgs boson to the 5 mos
   \label{fig:smdecay}
 \end{figure}
 
+\begin{figure}
+  \subfloat[]{\includegraphics[width=.65\largefigwidth]{plots/theory/smdecaybrlimits.pdf}}
+  \subfloat[]{\includegraphics[width=.65\largefigwidth]{plots/theory/smbrbsmlikelihood.pdf}}
+  \caption{Best fit results for the decay signal strengths of the five highest branching ratio Higgs boson decays from a combination of CMS and ATLAS Run 1 data (a). The negative log-likelihood as a function of \BRinv, here denoted $\rm{BR_{BSM}}$ (b)~\cite{CMS-PAS-HIG-15-002}.}
+  \label{fig:smdecaymeasurement}
+\end{figure}
 
-%??figs 12 and 15 from pas hig-15-002
-
-This limit leaves significant parameter space open for \ac{BSM} Higgs boson decays. Furthermore, as the above limit assumes the \ac{SM} Higgs boson total width, it is possible that the branching ratio to invisible final states is much larger, making the case for direct measurements even more compelling.
 
 \section{Simulation}
 \label{sec:sim}
+The simulation \LHC proton-proton collisions can be factorised into several distinct stages, as shown in \FigureRef{fig:factorisation}.
+
+\begin{figure}
+  \includegraphics[width=\largefigwidth]{plots/theory/factorisation.png}
+  \caption{A schematic diagram of the factorised components of the simulation of proton-proton collisions. First the hard-scatter of two of the incoming partons (shown in blue) is simulated at the centre of the event. The results of this scatter then undergo parton showering (shown in red), followed by hadronisation (shown in green) when the energy of the quarks and gluons is low enough that bound states can be formed. Additional interactions between the initial state partons (shown in purple) for the underlying event \cite{krauss-diag}.}
+  \label{fig:factorisation}
+\end{figure}
+
 %??introduce simulation
 %??pdf and qcd scale
 %??different generators including MCFM, VBFNLO, FEWZ, pythia, powheg, madgraph
 %??explain generator level, parton level
-%??weights: W soup, pileup, lepton weights, cross-section, top reweighting
-\label{sec:mcweights}
 %??output of four vectors of particles
 
 \section{Statistics of exclusion limits}
