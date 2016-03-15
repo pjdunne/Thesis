@@ -186,7 +186,7 @@ The final part of the Higgs field Lagrangian is that giving rise to the fermion 
 where $k_{f}$ is the Yukawa coupling. The fermion's mass is then $\frac{k_{f}v}{\sqrt{2}}$, so heavier fermions couple more strongly to the Higgs boson. The \ac{SM} provides no prediction of, or relationship between, the Yukawa couplings of the fermions, however they can be determined using the observed masses of the fermions.
 
 
-\section{Dark matter}
+\subsection{Dark matter}
 \label{sec:DM}
 %??Introduce dark matter and motivate search for it and other invisible final states in Higgs decays
 Despite its many successes, there are phenomena in nature which the \ac{SM} does not explain. It does not predict the non-zero neutrino masses which are necessary to explain neutrino oscillation experiments~\cite{pdg}. It also does not predict sufficient violation of CP symmetry to explain the large matter-anti-matter asymmetry observed in the universe. However, one of the most striking differences between observation and the \ac{SM} prediction is the existence of \ac{DM}.
@@ -200,12 +200,6 @@ Evidence for \ac{DM} was first observed in studies of the rotation velocity of g
   \caption{Rotation velocity in the galaxy NGC 6503 as a function of distance from the galactic centre (a)~\cite{Freese:2008cz}. The disk and gas components shown are made of visible matter, while the halo component shows the effect of adding an additional \ac{DM} halo to the galaxy. A superposition of X-ray (colour-scale) and gravitational lensing (green contours) images of the bullet cluster of galaxies. (b)~\cite{1538-4357-648-2-L109}}
   \label{fig:dmevidence}
 \end{figure}
-
-\subsection{Some extensions of the standard model incorporating dark matter}
-\label{sec:DMextensions}
-%??Introduce theories that are used for pheno work
-
-As described in \SectionRef{sec:ssb} all known particles with mass couple to the Higgs boson. It might therefore be expected that \ac{DM}, which we know is massive, also couples to the Higgs boson.
 
 \section{Searching for dark matter with Higgs bosons}
 \label{sec:higgsdm}
@@ -331,6 +325,56 @@ The current measurements of the branching ratios of the Higgs boson to the 5 mos
   \label{fig:smdecaymeasurement}
 \end{figure}
 
+\subsection{Some extensions of the standard model incorporating dark matter}
+\label{sec:DMextensions}
+%??Introduce theories that are used for pheno work
+Whilst current evidence for \ac{DM} is gravitational, the majority of extensions to the \ac{SM} which include \ac{DM} also require other interactions of the proposed \ac{DM} particles. These interactions then allow the particle the \ac{DM} interacts with to act as a ``mediator'' between the \ac{SM} and \ac{DM} particles, for example as in \FigureRef{fig:simplifiedmodelfeynmandiag}a. As all known particles with mass interact with the Higgs boson, it might be expected that \ac{DM}, which we know is massive, also interacts with the Higgs boson or a Higgs-like particle. 
+
+\begin{figure}
+  \subfloat[]{
+    \begin{fmfgraph*}(150,150)
+      \fmfleft{i1,i2}
+      \fmfright{o1,o4,o2,o5,o3}
+      \fmf{fermion}{i1,v1,o1}
+      \fmf{fermion}{i2,v2,o3}
+      \fmf{photon,label=$W,,Z$}{v1,v3}
+      \fmf{photon,label=$W,,Z$}{v2,v3}
+      \fmf{dashes,label=$H$}{v3,v4}
+      \fmf{fermion}{v4,o4}
+      \fmf{fermion}{v4,o5}
+      \fmflabel{$q$}{i1}
+      \fmflabel{$q$}{i2}
+      \fmflabel{$q$}{o1}
+      \fmflabel{$q$}{o3}
+      \fmflabel{$\chi$}{o4}
+      \fmflabel{$\chi$}{o5}
+  \end{fmfgraph*}
+  \vspace{.5cm}
+}
+  \caption{}%??add b which is eft version
+  \label{fig:simplifiedmodelfeynmandiag}
+\end{figure}
+
+%??efts
+In \ChapterRef{chap:interp} two classes of these \ac{DM} interaction models are investigated. The first class is \ac{EFT} type models. In these models the mediator is assumed to be much heavier than the momentum transferred through it. This high mass allows the behaviour of the mediator to be replaced by a contact interaction between the \ac{SM} and \ac{DM} particles. Following the notation in \ReferenceRef{PhysRevD.88.116009}, the particular contact interaction operators considered in \ChapterRef{chap:interp}, which each represent a different Lorentz structure for the contact interaction, are:
+\begin{align}
+  \mathcal{L}_{\rm{D5a}} &=\frac{1}{\Lambda} \left[\bar{\chi}\chi\right] \left[\frac{\PZ_{\mu}\PZ^{\mu}}{2}+\PW_{\mu}^{+}\PW^{-\mu}\right],\\
+  \mathcal{L}_{\rm{D5b}} &=\frac{1}{\Lambda} \left[\bar{\chi}\gamma^{5}\chi\right] \left[\frac{\PZ_{\mu}\PZ^{\mu}}{2}+\PW_{\mu}^{+}\PW^{-\mu}\right],\\
+  \mathcal{L}_{\rm{D5c}} &=\frac{g_{2}}{\Lambda} \left[\bar{\chi}\sigma^{\mu\nu}\chi\right]\left[\frac{\partial_{\mu}\PZ_{\nu}-\partial_{\nu}\PZ_{\mu}}{cos\theta_{W}} - ig_{2} \left(\PW^{+}_{\mu}W^{-}_{\nu} - \PW^{+}_{\nu}W^{-}_{\mu}\right)\right],\\
+  \mathcal{L}_{\rm{D5d}} &=\frac{g_{2}}{\Lambda} \left[\bar{\chi}\sigma_{\mu\nu}\chi\right] \epsilon^{\mu\nu\rho\sigma}\left[\frac{\partial_{\sigma}\PZ_{\rho}-\partial_{\rho}\PZ_{\sigma}}{cos\theta_{W}} - ig_{2} \left(\PW^{+}_{\sigma}W^{-}_{\rho} - \PW^{+}_{\rho}W^{-}_{\sigma}\right)\right],\\
+  \mathcal{L}_{\rm{D6a}} &=\frac{g_{2}}{\Lambda^{2}}\partial^{\nu} \left[\bar{\chi}\gamma^{\mu}\chi\right] \left[\frac{\partial_{\mu}\PZ_{\nu}-\partial_{\nu}\PZ_{\mu}}{cos\theta_{W}} - ig_{2} \left(\PW^{+}_{\mu}W^{-}_{\nu} - \PW^{+}_{\nu}W^{-}_{\mu}\right)\right],\\
+  \mathcal{L}_{\rm{D6b}} &=\frac{g_{2}}{\Lambda^{2}}\partial_{\nu} \left[\bar{\chi}\gamma_{\mu}\chi\right] \epsilon^{\mu\nu\rho\sigma}\left[\frac{\partial_{\sigma}\PZ_{\rho}-\partial_{\rho}\PZ_{\sigma}}{cos\theta_{W}} - ig_{2} \left(\PW^{+}_{\sigma}W^{-}_{\rho} - \PW^{+}_{\rho}W^{-}_{\sigma}\right)\right],\\
+  \mathcal{L}_{\rm{D7a}} &=\frac{1}{\Lambda^{3}} \left[\bar{\chi}\chi\right] \PW^{i,\mu\nu}\PW_{\mu\nu}^{i},\\
+  \mathcal{L}_{\rm{D7b}} &=\frac{1}{\Lambda^{3}} \left[\bar{\chi}\gamma^{5}\chi\right] \PW^{i,\mu\nu}\PW_{\mu\nu}^{i},\\
+  \mathcal{L}_{\rm{D7c}} &=\frac{1}{\Lambda^{3}} \left[\bar{\chi}\chi\right] \epsilon^{\mu\nu\rho\sigma} \PW^{i}_{\mu\nu}\PW_{\rho\sigma}^{i},\\
+  \mathcal{L}_{\rm{D7d}} &=\frac{1}{\Lambda^{3}} \left[\bar{\chi}\gamma^{5}\chi\right] \epsilon^{\mu\nu\rho\sigma} \PW^{i}_{\mu\nu}\PW_{\rho\sigma}^{i},\\
+\end{align}
+Where the \ac{DM} particles, $\chi$, are assumed to be electromagnetically and colour neutral Dirac fermions, $\PW^{\mu}$ and $\PZ^{\mu}$ are the four-vectors of the \PW and \PW bosons respectively and $\PW^{i,\mu\nu}$ is the field strength tensor for the \PW boson %??clarify with Matt.
+$\Lambda$ is the ``scale'' of the interaction, which is a combination of the mass of the replaced mediator, $M$, and its couplings to both \ac{DM} and the \ac{SM}, $g$, such that $\Lambda\sim M/g^{2}$. %??advantages and disadvantages of efts. 
+
+The second class of models are so-called simplified models.
+%??simplified models
+%??higgs portal and problems
 
 \section{Simulation}
 \label{sec:sim}
@@ -347,7 +391,6 @@ Finally, some generators, such as MCFM~\cite{PhysRevD.68.094021}, VBFNLO~\cite{B
   \caption{A schematic diagram of the factorised components of the simulation of proton-proton collisions. First the hard-scatter of two of the incoming partons (shown in blue) is simulated at the centre of the event. The results of this scatter then undergo parton showering (shown in red), followed by hadronisation (shown in green) when the energy of the quarks and gluons is low enough that bound states can be formed. Additional interactions between the initial state partons (shown in purple) for the underlying event \cite{krauss-diag}.}
   \label{fig:factorisation}
 \end{figure}
-
 
 \section{Statistics of exclusion limits}
 \label{sec:stats}

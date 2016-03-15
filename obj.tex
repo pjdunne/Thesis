@@ -12,7 +12,7 @@ The \ac{CTF} starts with seeds generated from either two or three hits in the pi
 
 After the full set of iterations is complete the tracks are refitted again using another Kalman filter, initialised with the innermost hit on the track and proceeding to iteratively add the hits on the track from inside to outside. This refitting aims to reduce biases from the track's seed including those introduced for two hit seeds that include constraints from the beamspot. The refitted tracks are then smoothed by another Kalman filter, which is initialised with the current best fit track hypothesis and iterates from the outside of the detector inwards. 
 
-The smoothed tracks then have quality criteria, such as a requirement on the maximum number of layers the track traverses without leaving a hit, imposed to reject fake tracks. The efficiency of the \ac{CTF} is estimated in data using tracks from muons from Z decays, and is found to be greater than 99\% for muons with $1<\pt<100$ \GeV.
+The smoothed tracks then have quality criteria, such as a requirement on the maximum number of layers the track traverses without leaving a hit, imposed to reject fake tracks. The efficiency of the \ac{CTF} is estimated in data using tracks from muons from Z decays, and is found to be greater than 99\% for muons with $1<\pt<100$ \GeV. For muons with $\pt=100 \GeV$ the \pt resolution of the \ac{CTF} is found to be approximately 2.8\%~\cite{1748-0221-9-10-P10009}.
 
 \section{Primary vertex}
 \label{sec:PV}
@@ -36,7 +36,7 @@ This variable is highly correlated with the number of tracks compatible with the
 The \ac{PV} is defined to be the vertex with the highest sum of the squared \pt of all the tracks contributing to it. If there is no reconstructed vertex the nominal beam crossing point is used. In the analyses described in this thesis events are required to have a real vertex, which has $n_{dof}>4$ and a maximum displacement in the $z$-direction ($xy$-plane) direction from the centre of the detector of 24 cm (2 cm).
 
 %??Performance, make sure jet is defined in theory section
-The performance of the vertex reconstruction algorithm has been measured using events with at least one jet with $\pt>20$ GeV. The efficiency to reconstruct at least one primary vertex in these events is found to be greater than 99\% for vertices with at least three tracks. The position resolution is found to vary as a function of the number of tracks associated to the vertex, being approximately 100\micron\, for vertices with 5 tracks and approaching 10\micron\, for vertices with greater than 50 tracks.
+The performance of the vertex reconstruction algorithm has been measured using events with at least one jet with $\pt>20$ GeV~\cite{1748-0221-9-10-P10009}. The efficiency to reconstruct at least one primary vertex in these events is found to be greater than 99\% for vertices with at least three tracks. The position resolution is found to vary as a function of the number of tracks associated to the vertex, being approximately 100\micron\, for vertices with 5 tracks and approaching 10\micron\, for vertices with greater than 50 tracks.
 
 \section{Particle Flow}
 \label{sec:pf}
