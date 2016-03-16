@@ -337,9 +337,9 @@ Whilst current evidence for \ac{DM} is gravitational, the majority of extensions
       \fmfright{o1,o4,o2,o5,o3}
       \fmf{fermion}{i1,v1,o1}
       \fmf{fermion}{i2,v2,o3}
-      \fmf{photon,label=$W,,Z$}{v1,v3}
-      \fmf{photon,label=$W,,Z$}{v2,v3}
-      \fmf{dashes,label=$H$}{v3,v4}
+      \fmf{photon,label=$W,,Z$,label.side=left}{v1,v3}
+      \fmf{photon,label=$W,,Z$,label.side=right}{v2,v3}
+      \fmf{dashes,label=$H/A$}{v3,v4}
       \fmf{fermion}{v4,o4}
       \fmf{fermion}{v4,o5}
       \fmflabel{$q$}{i1}
@@ -351,12 +351,54 @@ Whilst current evidence for \ac{DM} is gravitational, the majority of extensions
   \end{fmfgraph*}
   \vspace{.5cm}
 }
-  \caption{}%??add b which is eft version
+  \subfloat[]{
+    \begin{fmfgraph*}(150,150)
+      \fmfleft{i1,i2}
+      \fmfright{o1,o4,o2,o5,o3}
+      \fmf{fermion}{i1,v1,o1}
+      \fmf{fermion}{i2,v2,o3}
+      \fmf{gluon}{v1,v3}
+      \fmf{gluon}{v2,v3}
+      \fmfdot{v3}
+      \fmf{dashes,label=$H/A$}{v3,v4}
+      \fmf{fermion}{v4,o4}
+      \fmf{fermion}{v4,o5}
+      \fmflabel{$q$}{i1}
+      \fmflabel{$q$}{i2}
+      \fmflabel{$q$}{o1}
+      \fmflabel{$q$}{o3}
+      \fmflabel{$\chi$}{o4}
+      \fmflabel{$\chi$}{o5}
+  \end{fmfgraph*}
+  \vspace{.5cm}
+}
+%\vspace{.5cm}
+  \subfloat[]{
+    \begin{fmfgraph*}(150,150)
+      \fmfleft{i1,i2}
+      \fmfright{o1,o4,o2,o5,o3}
+      \fmf{fermion}{i1,v1,o1}
+      \fmf{fermion}{i2,v2,o3}
+      \fmf{photon,label=$W,,Z$,label.side=left}{v1,v4}
+      \fmf{photon,label=$W,,Z$,label.side=right}{v2,v4}
+      \fmfdot{v4}
+      \fmf{fermion}{v4,o4}
+      \fmf{fermion}{v4,o5}
+      \fmflabel{$q$}{i1}
+      \fmflabel{$q$}{i2}
+      \fmflabel{$q$}{o1}
+      \fmflabel{$q$}{o3}
+      \fmflabel{$\chi$}{o4}
+      \fmflabel{$\chi$}{o5}
+  \end{fmfgraph*}
+  \vspace{.5cm}
+}
+  \caption{Feynman diagrams for the dark matter theories considered. (a) \ac{VBF} production of a scalar, $H$, or pseudoscalar $A$ mediator. (b) Gluon based production of an $H$ or $A$ mediator. (c) An effective field theory where the mediator has been replaced by a contact interaction between the vector bosons and a hypothetical \ac{DM} particle.}
   \label{fig:simplifiedmodelfeynmandiag}
 \end{figure}
 
 %??efts
-In \ChapterRef{chap:interp} two classes of these \ac{DM} interaction models are investigated. The first class is \ac{EFT} type models. In these models the mediator is assumed to be much heavier than the momentum transferred through it. This high mass allows the behaviour of the mediator to be replaced by a contact interaction between the \ac{SM} and \ac{DM} particles. Following the notation in \ReferenceRef{PhysRevD.88.116009}, the particular contact interaction operators considered in \ChapterRef{chap:interp}, which each represent a different Lorentz structure for the contact interaction, are:
+In \ChapterRef{chap:interp} two classes of these \ac{DM} interaction models are investigated. The first class is \ac{EFT} type models. In these models the mediator is assumed to be much heavier than the momentum transferred through it. This high mass allows the behaviour of the mediator to be replaced by a contact interaction between the \ac{SM} and \ac{DM} particles as shown in \FigureRef{fig:simplifiedmodelfeynmandiag}c. Following the notation in \ReferenceRef{PhysRevD.88.116009}, the particular contact interaction operators considered in \ChapterRef{chap:interp}, which each represent a different Lorentz structure for the contact interaction, are:
 \begin{align}
   \mathcal{L}_{\rm{D5a}} &=\frac{1}{\Lambda} \left[\bar{\chi}\chi\right] \left[\frac{\PZ_{\mu}\PZ^{\mu}}{2}+\PW_{\mu}^{+}\PW^{-\mu}\right],\\
   \mathcal{L}_{\rm{D5b}} &=\frac{1}{\Lambda} \left[\bar{\chi}\gamma^{5}\chi\right] \left[\frac{\PZ_{\mu}\PZ^{\mu}}{2}+\PW_{\mu}^{+}\PW^{-\mu}\right],\\
@@ -369,12 +411,29 @@ In \ChapterRef{chap:interp} two classes of these \ac{DM} interaction models are 
   \mathcal{L}_{\rm{D7c}} &=\frac{1}{\Lambda^{3}} \left[\bar{\chi}\chi\right] \epsilon^{\mu\nu\rho\sigma} \PW^{i}_{\mu\nu}\PW_{\rho\sigma}^{i},\\
   \mathcal{L}_{\rm{D7d}} &=\frac{1}{\Lambda^{3}} \left[\bar{\chi}\gamma^{5}\chi\right] \epsilon^{\mu\nu\rho\sigma} \PW^{i}_{\mu\nu}\PW_{\rho\sigma}^{i},\\
 \end{align}
-Where the \ac{DM} particles, $\chi$, are assumed to be electromagnetically and colour neutral Dirac fermions, $\PW^{\mu}$ and $\PZ^{\mu}$ are the four-vectors of the \PW and \PW bosons respectively and $\PW^{i,\mu\nu}$ is the field strength tensor for the \PW boson %??clarify with Matt.
-$\Lambda$ is the ``scale'' of the interaction, which is a combination of the mass of the replaced mediator, $M$, and its couplings to both \ac{DM} and the \ac{SM}, $g$, such that $\Lambda\sim M/g^{2}$. %??advantages and disadvantages of efts. 
+Where the \ac{DM} particles, $\chi$, are assumed to be electromagnetically and colour neutral Dirac fermions, $\PW^{\mu}$ and $\PZ^{\mu}$ are the four-vectors of the \PW and \PW bosons respectively and $\PW^{i,\mu\nu}$ is the field strength tensor for the unbroken $SU\left(2\right)_{L}$ gauge bosons. $\Lambda$ is the ``scale'' of the interaction, which is a combination of the mass of the replaced mediator, $M$, and its couplings to both \ac{DM} and the \ac{SM}, $g$, such that $\Lambda\sim M/g^{2}$. Whilst the \ac{EFT} models have the advantage of being simple to interpret, having only one parameter, the validity of the assumption that the momentum transferred through the interaction is much smaller than the mass of the mediator must be checked carefully, especially where the couplings between the mediator and the \ac{DM} are expected to be small. %??advantages and disadvantages of efts. 
 
-The second class of models are so-called simplified models.
-%??simplified models
-%??higgs portal and problems
+The second class of models are so-called simplified models. In these models an explicit choice of mediator is made, removing the need to make an assumption about the transferred momentum. The specific mediators considered are the 125 \GeV Higgs boson, and scalar and pseudoscalar mediators with heavier masses.
+
+In the case of the 125 \GeV Higgs boson mediator, the following term is added to the Lagrangian:
+\begin{equation}
+  \mathcal{L}_{H\chi\chi}=-g_{\chi}\left(\bar{\chi}\chi\right)H,
+\end{equation}
+where the \ac{DM} particles, $\chi$, are again assumed to be Dirac fermions, and $g_{\chi}$ is the Higgs boson coupling to \ac{DM}. As the mediator is very similar to the \ac{SM} Higgs boson all the production mechanisms described in \SectionRef{sec:higprod} are possible, with the most sensitive being \ac{VBF}. If the dark matter mass is below 62.5 \GeV, i.e. it can be created via a real mediator, this interaction leads to an increased invisible decay width of the Higgs boson:
+\begin{equation}
+  \Gamma\left(H\rightarrow\bar{\chi}\chi\right)=\frac{g_{\chi}^{2}m_{H}}{8\pi}\left(1-\frac{4m_{\chi}^{2}}{m_{H}^{2}}\right),
+\end{equation}
+where $m_{H}$ and $m_{\chi}$ are the masses of the Higgs boson and the dark matter particle respectively~\cite{??ourdmpaper}. For heavier \ac{DM} masses, production off-shell production, i.e. through a virtual mediator, is still possible, however there is no invisible branching fraction of the Higgs boson.
+
+For the heavier scalar and pseudoscalar mediators, as well as the free term for the mediator, the following terms added to the Lagrangian for the scalar, $H$, and the pseudoscalar, $A$, are:
+\begin{align}
+  \mathcal{L}_{H}&=-g_{\chi}H\bar{\chi}\chi-\sum_{f}\frac{g_{\rm{V}}y_{f}}{\sqrt{2}}H\bar{f}f\\
+  \mathcal{A}_{H}&=-ig_{\chi}A\bar{\chi}\gamma^{5}\chi-\sum_{f}\frac{ig_{\rm{V}}y_{f}}{\sqrt{2}}A\bar{f}\gamma^{5}f,\\
+\end{align}
+respectively, where $g_{\rm{V}}$ is the coupling of the mediator to visible particles, $f$ are the \ac{SM} fermions, and $y_{f}$ are the \ac{SM} fermion Yukawa couplings~\cite{PhysRevD.91.015017}. The couplings to the \ac{SM} fermions are chosen to be proportional to the \ac{SM} Yukawa couplings so as to avoid constraints from measurements of flavour physics observables~\cite{D'Ambrosio2002155}. Due to the vector boson couplings to the 125 \GeV Higgs boson being compatible with the \ac{SM}, the new mediators also have no vector boson couplings~\cite{CMS-PAS-HIG-15-002}. This lack of vector boson couplings makes \ac{VBF} production, as in \FigureRef{fig:simplifiedmodelfeynmandiag}a, not possible, and leads to the most common production channel for dark matter in association with two jets being the fusion of two gluons as shown in \FigureRef{fig:simplifiedmodelfeynmandiag}b. This gluon fusion occurs like that seen in the production of the \ac{SM} Higgs boson through a fermion loop, which is dominated by the top quark due to it having the largest Yukawa coupling.
+
+Similarly to the case of the mediator being the 125 \GeV Higgs boson, when the dark matter is less than half the mass of the mediator the mediator will have a non-zero invisible branching ratio. The dark matter production rate will be given by this branching ratio multiplied by the production rate of the mediator. For mediator masses below twice the top quark's mass, and dark matter masses much higher than the $b$ quark's mass, this branching ratio is approximately 100\%. The dark matter production rate is therefore, under the assumption that $g_{V}=g_{\chi}$, proportional to $g_{\chi}^{2}$. For mediator masses larger than twice the top quark's mass, still assuming $g_{V}=g_{\chi}$, the branching ratio becomes approximately 41\%~\cite{ourdmpaper} and the production rate remains proportional to $g_{\chi}^{2}$. For dark matter produced through an off-shell mediator the dark matter production rate becomes proportional to $g_{v}^{2}g_{\chi}^{2}$, which simplifies to $g_{\chi}^{4}$ under the assumption of equal \ac{DM} and visible couplings.
+
 
 \section{Simulation}
 \label{sec:sim}
