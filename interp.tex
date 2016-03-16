@@ -11,14 +11,19 @@ As well as combining the results of the \ac{VBF} searches with other channels, i
 %??validate against powheg plus delphes: when generated with same PU etc. found to agree to within 10%
 %??validate powheg plus delphes against mg plus delphes table from phenoplots281015.pdf
 \begin{table}
-  \caption{}%??
+  \caption{}%??explain cuts added and turn into standard notation from here
   \label{tab:mgvspowhegdelphes}
   \begin{tabular}{lcc}
     \hline
     \hline
-    
+    Cut added & Madgraph + Delphes & Powheg + Delphes \\
     \hline
-
+    Start point & 2653 & 2311 \\
+    jet 1 $p_{T}>50$ GeV, jet 2 $p_{T}>45$ GeV & 2056 & 1834 \\
+    MET$>90$ GeV & 2000 & 1793 \\
+    $M_{jj}>1200$ GeV & 704 & 689 \\
+    MET significance$>4$ & 539 & 519 \\
+    min$\Delta\phi(j,MET)>2.3$ & 244 & 248 \\
     \hline
     \hline
   \end{tabular}
