@@ -18,7 +18,7 @@ The smoothed tracks then have quality criteria, such as a requirement on the max
 \label{sec:PV}
 %Describe PV reconstruction
 %Relevance to analysis
-%??Check if hard scatter defined elsewhere
+%Check if hard scatter defined elsewhere
 The very high instantaneous luminosities present at the \LHC lead to a large probability of multiple proton-proton interactions occurring in each bunch crossing. It is therefore essential to identify the \ac{PV}, which relates to the highest energy interaction or ``hard scatter''. It is also useful to identify the \ac{PV} to distinguish ``prompt'' particles directly from the hard scatter from those resulting from processes which occur later such as heavy flavour hadron decay or photon conversion.
 
 %Algorithm
@@ -35,7 +35,7 @@ This variable is highly correlated with the number of tracks compatible with the
 
 The \ac{PV} is defined to be the vertex with the highest sum of the squared \pt of all the tracks contributing to it. If there is no reconstructed vertex the nominal beam crossing point is used. In the analyses described in this thesis events are required to have a real vertex, which has $n_{dof}>4$ and a maximum displacement in the $z$-direction ($xy$-plane) direction from the centre of the detector of 24 cm (2 cm).
 
-%??Performance, make sure jet is defined in theory section
+%Performance, make sure jet is defined in theory section
 The performance of the vertex reconstruction algorithm has been measured using events with at least one jet with $\pt>20$ GeV~\cite{1748-0221-9-10-P10009}. The efficiency to reconstruct at least one primary vertex in these events is found to be greater than 99\% for vertices with at least three tracks. The position resolution is found to vary as a function of the number of tracks associated to the vertex, being approximately 100\micron\, for vertices with 5 tracks and approaching 10\micron\, for vertices with greater than 50 tracks.
 
 \section{Particle Flow}
@@ -92,8 +92,8 @@ The efficiency of veto (tight) muon reconstruction has been found to be 98-99\% 
 %Describe jet reconstruction %Relevance to analysis
 As it is a hadron collider, quarks and gluons are very common at the \LHC. Furthermore, the presence of two final state quarks is one of the primary signatures of \ac{VBF} Higgs production which is one of the main focuses of this thesis. Ascertaining the momentum of these strongly interacting particles is therefore very important. As discussed in \SectionRef{sec:higprod}, the hadronisation of strongly interacting particles results in highly collimated jets of particles. The momentum of the original parton which gave rise to the jet can be reconstructed by combining all of the particles in the resulting jet.
 
-%??Algorithm
-%??Performance
+%Algorithm
+%Performance
 
 \subsection{Jet clustering}
 \label{sec:jetclustering}
@@ -135,7 +135,7 @@ Jets are also required to have $\eta<4.7$ so that they are fully contained withi
 
 \subsection{Jet energy corrections}
 \label{sec:jec}
-%??JEC
+%JEC
 The energy of the jets clustered and identified by the CMS jet reconstruction often does not match the energy of the particle that initiated the jet. This can have many causes such as additional energy from \ac{PU}, miscalibration of the energy response of the calorimeters or energy deposited in uninstrumented areas of the detector. To account for these mismatches a correction to the jet energy is applied that has the following functional form and is described in detail in \ReferenceRef{CMS-JME-10-011}: 
 \begin{equation}
   p_{\mu}^{\rm{cor}}=C_{\rm{offset}}\left(\pt^{\rm{raw}}\right)\cdot C_{\rm{rel}}\left(\eta\right)\cdot C_{\rm{abs}}\left(\pt'\right)\cdot C_{\rm{res}}\left(\pt'',\eta\right)\cdot p_{\mu}^{\rm{raw}}.
@@ -157,10 +157,10 @@ Finally $C_{\rm{res}}$, which is applied only to data and not \ac{MC}, corrects 
 \end{figure}
 \section{Missing transverse energy}
 \label{sec:MET}
-%??Describe MET reconstruction
+%Describe MET reconstruction
 Particles which interact only weakly with normal matter such as neutrinos and hypothetical \ac{DM} particles will pass through the CMS detector without interacting. The only signature that they leave is a momentum imbalance between the visible particles in an event. The high hermeticity of the CMS detector allows this imbalance, the \MET, first described in \SectionRef{sec:higprod}, to be measured accurately. As the analyses described in this thesis are searches for invisibly decaying Higgs bosons, the measurement of \MET is crucial.
 
-%??Algorithm
+%Algorithm
 The CMS \MET reconstruction algorithm defines the \MET as the negative vectorial sum of the \pt of all \ac{PF} candidates~\cite{CMS-PAS-JME-12-002}. For processes such as \PZ boson decays to muon pairs or $\gamma$+jets there should be no \MET as all the decay products are visible. However, as can be seen from \FigureRef{fig:metresponse}, these events often still appear to have \MET due to the resolution of the \pt measurements of the various objects making up the \ac{PF} candidates, primarily the jets which are numerous and do not have as good resolution as other objects.
 
 \begin{figure}
@@ -174,14 +174,14 @@ The jet energy corrections, described in \SectionRef{sec:jec}, alter the energy 
 
 In addition to the above corrections, filters are applied to reject events where detector or beam effects lead to a high probability of spurious \MET. Examples of the effects which are removed with these filters include particles directly hitting the photodetectors in the \ac{ECAL} or significant energy deposits from the halo of particles surrounding the \LHC beam.
 
-%??METNOMU
+%METNOMU
 In the \ac{VBF} invisible Higgs boson decay searches described below events with \PW or \PZ boson decays to muons are used to estimate the rate of some background processes. As part of this estimation the muons from the \PW or \PZ boson decays are ignored when calculating the \MET. The variable \METnoMU, which is the \MET calculated ignoring all tight muons, is used for this estimation.
 \section{Taus}
 \label{sec:taus}
-%??Describe tau reconstruction %??Relevance to analysis
+%Describe tau reconstruction %Relevance to analysis
 Approximately 35\% of taus decay to lighter charged leptons and neutrinos~\cite{pdg}. In this case, due to the short lifetime of the tau, the resulting charged leptons are reconstructed as prompt electrons or muons and the neutrinos cause \MET, therefore no specific tau reconstruction is necessary. However, the other $\sim$65\% of tau decays are so-called hadronic tau decays, where the decay products are hadrons and a tau neutrino. this section will describe the reconstruction of these tau decays.
 
-%??Algorithm
+%Algorithm
 CMS uses a \ac{HPS} algorithm for reconstructing hadronic tau decays, described in detail in \ReferenceRef{CMS-PAS-TAU-11-001}. Almost all hadronic tau decay modes consist of one or three charged hadrons and up to two neutral pions~\cite{pdg}. The \ac{HPS} algorithm aims to reconstruct both the charged hadrons and the photons which result from the neutral pion decays.
 
 The \ac{HPS} algorithm is seeded by a \ac{PF} jet, described in \SectionRef{sec:jets}, and starts by creating a strip with the four-momentum of the most energetic \ac{EM} \ac{PF} candidate, i.e. photon or electron, in the jet. Other \ac{EM} candidates are then searched for within  a window of 0.05 (0.2) in $\eta$ ($\phi$) of the strip's centre. The most energetic particle that is found is added to the strip and the four-momentum is updated. This process is repeated until no more particles are found, and if the strip has \pt$>1$\GeV\, at this point it is kept. Combinations of charged hadrons and strips consistent with tau decay modes are then searched for, and if one is found the resulting combination is taken to be a hadronic tau.
