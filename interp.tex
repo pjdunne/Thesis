@@ -10,8 +10,8 @@ The CMS \textsc{Geant} based detector simulation is very computing intensive, so
 
  Furthermore, whilst the signal process hard-scattering was simulated with Powheg in the CMS analysis, the studies described in this chapter use \textsc{MadGraph}. Both the internal CMS simulation and that described in this chapter use Pythia for parton-showering and hadronisation. Yields and kinematic distributions of events after selection criteria are applied are obtained from these simulations using an analysis framework developed and validated by the MasterCode collaboration~\cite{deVries:2015hva}.
 
-%??start with internal sample validate against powheg plus delphes: when generated with same PU etc. found to agree to within 10% phenoplots281015.pdf
-The validation of these simulations and the analysis framework was carried out in two steps. First, Powheg and pythia are used to simulate a \ac{VBF} produced 125 \GeV Higgs boson decaying to invisible final states, as in the internal CMS simulation. This sample of events is then processed using the \textsc{Delphes} based reconstruction and MasterCode analysis framework. The resulting event yields are compared to those obtained from a Powheg plus pythia sample processed using the full CMS reconstruction and analysis framework. The event yields were found to agree within 10\%.
+%start with internal sample validate against powheg plus delphes: when generated with same PU etc. found to agree to within 10% phenoplots281015.pdf
+The validation of these simulations and the analysis framework was carried out in two steps, both using a centre of mass energy of 8 \TeV. First, Powheg and pythia are used to simulate a \ac{VBF} produced 125 \GeV Higgs boson decaying to invisible final states, as in the internal CMS simulation. This sample of events is then processed using the \textsc{Delphes} based reconstruction and MasterCode analysis framework. The resulting event yields are compared to those obtained from a Powheg plus pythia sample processed using the full CMS reconstruction and analysis framework. The event yields were found to agree within 10\%.
 
 
 The second step was to compare the 125 \GeV \ac{VBF} produces invisibly decaying Higgs boson sample generated with Powheg to one generated with \textsc{MadGraph} with both samples being processed using \textsc{Delphes}. This comparison was carried out starting from the following requirements:
@@ -19,7 +19,7 @@ The second step was to compare the 125 \GeV \ac{VBF} produces invisibly decaying
   \label{eq:dmvalstart}
 \eta_{j1}\cdot\eta_{j2}, \METsig>3, \detajj>3.6, \rm{leading\,and\,sub-leading\,jet\,}\pt>35 \GeV, \Mjj>700 \GeV, \rm{L1} \MET>40 \GeV.
 \end{equation}
-Cuts were then sequentially added to this selection until the applied selection was the same as the full Run 1 parked data \ac{VBF} Higgs to invisible search signal region selection, which is listed in \EquationRef{eq:parkedsigsel}. The resulting event yields can be seen in \TableRef{tab:mgvspowhegdelphes}. It is important to note that the \textsc{MadGraph} samples include both \ac{VBF} and \ac{VH} production of the Higgs boson, which explains the difference between the two samples being larger at the starting point of the comparison, and then reducing to below 5\% at the tighter steps of the selection where very few \ac{VH} events are still present. Only event yields after the full selection are used in the results presented in \SectionRef{sec:dmresults}, so the level of agreement is considered good.
+Cuts were then sequentially added to this selection until the applied selection was the same as the full Run 1 parked data \ac{VBF} Higgs to invisible search signal region selection, which is listed in \EquationRef{eq:parkedsigsel}. The resulting event yields can be seen in \TableRef{tab:mgvspowhegdelphes}. It is important to note that the \textsc{MadGraph} samples include both \ac{VBF} and \ac{VH} production of the Higgs boson, while the Powheg samples only include \ac{VBF} production. This difference explains the \textsc{MadGraph} yield being larger than that from Powheg at the starting point of the comparison. As the selection is tightened the disagreement between Powheg and \textsc{MadGraph} can be seen to reduce until the difference in yield is below 5\% for the full selection, where very few \ac{VH} events are still present. Only event yields after the full selection are used in the results presented in \SectionRef{sec:dmresults}, so the level of agreement is considered good.
 
 %validate powheg plus delphes against mg plus delphes table from phenoplots281015.pdf
 \begin{table}
@@ -41,15 +41,24 @@ Cuts were then sequentially added to this selection until the applied selection 
   \end{tabular}
 \end{table}
 
-%??agreement can be seen to be good, the madgraph+delphes sim then used to generate samples at several mass points and for all the efts, met and eta for representative subsample of these shown in fig
-Using the \textsc{MadGraph} hard-scattering plus \textsc{Delphes} detector reconstruction simulation, events from the signal models described in \SectionRef{sec:DMextensions} were generated. The distributions of \MET and leading jet $\eta$ for a representative sample of these models are shown in \FigureRef{fig:dmmodelkinematics}. It can be seen that whilst all of these models result in large values of \MET.
+
+%??limit validation to show no effect of correlations
+
+%agreement can be seen to be good, the madgraph+delphes sim then used to generate samples at several mass points and for all the efts, met and eta for representative subsample of these shown in fig
+In order to carry out estimations of the sensitivity of \ac{VBF} produced invisible Higgs boson searches using the Run 2 LHC data, it is necessary both to simulate the events expected due to signal processes, and estimate the expected background yield at the higher centre of mass energies expected in Run 2. The validated \textsc{MadGraph} hard-scattering plus \textsc{Delphes} detector reconstruction simulation framework was therefore used to generate events from the signal models described in \SectionRef{sec:DMextensions} at a centre of mass energy of 13 \TeV. The distribution of \MET for a representative sample of these models are shown in \FigureRef{fig:dmmodelkinematics}. It can be seen that whilst all of these models result in large values of \MET compared to the selection present in the Run 1 \ac{VBF} produced invisibly decaying Higgs boson search, the \MET is typically less than 500 \GeV. The assumption that the momentum transferred through the mediator is less than the mediator's mass, that must be made in the case of the \ac{EFT} models, is therefore valid for mediators with masses above 500 \GeV.
 
 \begin{figure}
-  \subfloat[]{\includegraphics[width=.65\largefigwidth]{plots/interp/modelmet.pdf}}
-  \subfloat[]{\includegraphics[width=.65\largefigwidth]{plots/interp/modeleta.pdf}}
-  \caption{The \MET (a) and \eta of the leading jet (b), for two \ac{EFT} signal models (D5a and D6a), and spin-0 simplified models, described in \SectionRef{sec:DMextensions}, with representative model parameter values. For the \ac{EFT}s, heavier scalar (H) and pseudoscalar (A) models the dark matter mass, $m_{\chi}$ is assumed to be 100 \GeV, whereas for the 125 \GeV Higgs boson model $m_{\chi}$ is assumed to be 56.2 \GeV. For the scalar and pseudoscalar models the mass of the mediator is assumed to be 316.2 \GeV. It is important to note that the 125 \GeV Higgs boson model simulation includes \ac{VH} production of the Higgs boson as well as \ac{VBF}.}
+  \includegraphics[width=\largefigwidth]{plots/interp/modelmet.pdf}
+  \caption{The \MET, for two \ac{EFT} signal models (D5a and D6a), and spin-0 simplified models, described in \SectionRef{sec:DMextensions}, with representative model parameter values. For the \ac{EFT}s, heavier scalar (H) and pseudoscalar (A) models the dark matter mass, $m_{\chi}$ is assumed to be 100 \GeV, whereas for the 125 \GeV Higgs boson model $m_{\chi}$ is assumed to be 56.2 \GeV. For the scalar and pseudoscalar models the mass of the mediator is assumed to be 316.2 \GeV. It is important to note that the 125 \GeV Higgs boson model simulation includes \ac{VH} production of the Higgs boson as well as \ac{VBF}.}
   \label{fig:dmmodelkinematics}
 \end{figure}
+
+%background scaling
+In order to obtain the estimated yield of events from background processes at 13 \TeV, the yields from each background process at 8 \TeV, listed in \TableRef{tab:parkedresults}, were scaled by the cross-section ratio between 13 and 8 \TeV. These cross-section ratios were calculated using \textsc{Fewz} 3.1 for \PW and \PZ boson production, \textsc{Top++} v2.0 for top quark pair production and \textsc{MadGraph} for diboson production. Samples of \PW and \PZ bosons produced in association with jets were also produced at centre of mass energies of 8 and 13 \TeV, using the simulation framework used for the signal process simulation. The efficiency for these events to pass the full Run 1 parked data \ac{VBF} Higgs to invisible search selection was then calculated. The expected yields from \PW and \PZ boson plus jets backgrounds, which make up 94\% of the background events expected, were corrected using the ratio between this selection efficiency obtained at 8 and 13 \TeV. The resulting total expected yield from background processes is 741 events.
+
+%??systematic scaling
+
+
 
 \section{Results}
 \label{sec:dmresults}
