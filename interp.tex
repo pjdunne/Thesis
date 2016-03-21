@@ -4,7 +4,7 @@ As well as combining the results of the \ac{VBF} searches with other channels, i
 
 %??CHECK PLOT AXIS LABEL SIZES AND THAT LEGEND TERMS ARE STANDARD OR IN TEXT
 
-\section{Simulation Techniques and Validation}
+\section{Simulation techniques and validation}
 \label{sec:dmval}
 The CMS \textsc{Geant} based detector simulation is very computing intensive, so an alternative detector simulation with the \textsc{Delphes} fast reconstruction package was used. Whilst \textsc{Delphes} has been extensively validated by its authors against the CMS reconstruction~\cite{Favereau2014}, two of the variables used in the invisible Higgs boson decay searches described in this thesis are not implemented in the standard version of \textsc{Delphes}. Specifically, a calculation of the \MET ignoring objects with $|\eta>3|$ was added, to replicate the behaviour of the CMS \ac{L1} trigger. The total transverse energy calculated using all particles in the event with no minimum threshold on their energy, which is required for the calculation of \METsig, was also added.
 
