@@ -11,7 +11,6 @@ and some background estimation methods to be redesigned compared to the prompt a
 \section{Trigger}
 \label{sec:parkedtrigger}
 The triggers used to collect the parked data varied throughout Run 1, due both to the available trigger bandwidth changing, and to the rate of the triggers used varying as the LHC instantaneous luminosity increased during the run. Run 1 was split into 4 ``eras'': A, B, C and D, with 0.9, 3.9, 7.2 and 7.3 \invfb\, of integrated luminosity collected in each respectively. During era A data were not parked, so the prompt data are used. The two other triggers used, one for eras B and C, and one for era D, differed from the prompt trigger in that there was no requirement on the \MET present at the \ac{HLT} level and the jet \pt and \Mjj requirements were looser. The exact values of the trigger selection cuts are summarised in \TableRef{tab:parkedtrig}. These looser requirements allow the trigger driven selection applied in the prompt analysis to be relaxed, and more optimal signal and background control regions to be used. As the region accessible with the parked data includes the prompt data signal region as a subset, no improvement would be possible from applying the analysis designed for the prompt data to the parked data without modification. 
-
 \begin{table}
   \caption{A summary of the requirements of the triggers used for this analysis in each Run 1 era. All triggers require that there is at least one pair of jets in the event satisfying all of the jet requirements listed in this table. All requirements are on \ac{HLT} variables unless stated otherwise.}
   \label{tab:parkedtrig}
@@ -36,8 +35,7 @@ The triggers used to collect the parked data varied throughout Run 1, due both t
     \hline
   \end{tabular}
 \end{table}
-
-Measuring the trigger efficiency is essential for any analysis. However, it is particularly important in this analysis where several elements of the selection are chosen so as to avoid regions which are expected to contain significant numbers of signal events but the trigger is not fully efficient. Therefore, the more accurate the trigger efficiency measurement is, the looser this selection can be and the more signal events can be retained.
+Measuring the trigger efficiency is essential for any analysis. However, it is particularly important in this analysis, where several elements of the selection are chosen to avoid regions which are expected to contain significant numbers of signal events but the trigger is not fully efficient. Therefore, the more accurate the trigger efficiency measurement is, the looser this selection can be and the more signal events can be retained.
 
 As three different triggers are used the measurement of trigger efficiency must be performed separately for each one. Furthermore, as the LHC running conditions were different in each era, it is important to measure each trigger's efficiency using the data from the era that it ran in. Also, the variables used in the trigger are highly correlated with each other. These correlations mean it is important to either only use regions of phase space where the trigger is fully efficient, as was done in the prompt analysis, or to measure the trigger efficiency in a way that accurately models the effect of these correlations. The cuts required to ensure that each trigger is fully efficient throughout the region selected can be ascertained from \FigureRef{fig:prompttrigplots}, which shows the efficiencies of all three triggers as a function of \METnoMU, jet \pt and \Mjj.
 
@@ -129,7 +127,7 @@ Distributions of several variables after the full preselection are shown in \Fig
   
   \includegraphics[width=.65\largefigwidth]{plots/parked/AN-14-243-figs/output_presel/nunu_alljetsmetnomu_mindphi.pdf}
 
-  \caption{From top to bottom left to right distributions of \detajj, \Mjj, leading jet \pt, sub-leading jet \pt, \METnoMU, \METsig and \jetmetdphi for events passing the full preselection. No \ac{QCD} contribution is shown, which accounts for the difference between the data observation and background prediction. The last bin of each distribution contains the events above the range displayed.}
+  \caption{From top to bottom, left to right, distributions of \detajj, \Mjj, leading jet \pt, sub-leading jet \pt, \METnoMU, \METsig and \jetmetdphi for events passing the full preselection. No \ac{QCD} contribution is shown, which accounts for the difference between the data observation and background prediction. The last bin of each distribution contains the events above the range displayed.}
   \label{fig:parkedpostpresel}
 \end{figure}
 
@@ -138,7 +136,7 @@ Distributions of several variables after the full preselection are shown in \Fig
 
 \subsection{Signal region selection}
 \label{sec:parkedsigsel}
-As can be seen from \FigureRef{fig:parkedpostpresel}, there is still a significant difference between the data and the \ac{MC} background prediction. It is also evident that the main areas where disagreement occurs are where contributions from \ac{QCD} backgrounds (which are not included in the figure) would be expected to contribute, i.e. at low \METsig and low \jetmetdphi, i.e. with jets close to the \METnoMU. Outside these \ac{QCD}-like regions good agreement between data and \ac{MC} is seen, indicating very low numbers of \ac{QCD} events remaining. The approach taken was to place tight requirements on these two variables to reduce the \ac{QCD} background to be much smaller than the other backgrounds considered. The large uncertainty on any estimate of the number of events from \ac{QCD} multijet processes therefore also become negligible. A requirement that events have $\jetmetdphi>2$ and $\METsig>4$, was therefore imposed. The resulting relatively \ac{QCD}-free ``optimisation'' region was blinded (i.e. the data were not looked at) to use for studies to determine the final signal region selection. All of the studies described in this chapter from this point until the results section were performed blind unless stated otherwise.
+As can be seen from \FigureRef{fig:parkedpostpresel}, there is still a significant difference between the data and the \ac{MC} background prediction. It is also evident that the main areas where disagreement occurs are where contributions from \ac{QCD} backgrounds (which are not included in the figure) would be expected to contribute, at low \METsig and low \jetmetdphi, i.e. with jets close to the \METnoMU. Outside these \ac{QCD}-like regions good agreement between data and \ac{MC} is seen, indicating very low numbers of \ac{QCD} events remaining. The approach taken was to place tight requirements on these two variables to reduce the \ac{QCD} background to be much smaller than the other backgrounds considered. The large uncertainty on any estimate of the number of events from \ac{QCD} multijet processes therefore also become negligible. A requirement that events have $\jetmetdphi>2$ and $\METsig>4$, was therefore imposed. The resulting relatively \ac{QCD}-free ``optimisation'' region was blinded (i.e. the data were not looked at) to use for studies to determine the final signal region selection. All of the studies described in this chapter from this point until the results section were performed blind unless stated otherwise.
 
 Two methods to select the signal region were investigated. The first method was a cut based selection. Starting from the optimisation region the cuts on \METsig, \jetmetdphi, \detajj, sub-leading jet \pt and \Mjj were varied one at a time and the expected limit for each combination of cuts was calculated. The method described in \SectionRef{sec:stats} was used, with the background estimation techniques and systematic uncertainties described in Sections~\ref{sec:parkedbkg} and \ref{sec:parkedsyst} respectively, to calculate the expected limit. In the case of the \ac{QCD} background, which has only a very small contribution to the signal region, the background estimation was performed once for the optimisation selection and used for all cut values. The estimations for all other background processes were repeated for each set of cuts. After each variable was varied the selection was updated to use the cut value that gave the best expected limit. After all the variables had been varied the process was repeated until no improvement in the expected limit was seen so as to avoid ignoring other better sets of cuts. The cut values that gave the best expected limit define the signal region and are as follows:
 \begin{equation}
@@ -149,7 +147,7 @@ Two methods to select the signal region were investigated. The first method was 
     \METnoMU>90 \GeV, \METsig>4.0,\jetmetdphi>2.3.
   \end{split}
 \end{equation}
-After this selection was defined a second \ac{MVA} based method of optimising the selection was investigated to see if we could improve on the cut based selection. \ac{BDT} and fisher discriminants were trained using signal and background events passing the signal region selection~\cite{TMVA}. The signal region selection was used as the basis for this training so as to ensure that the number of events from the \ac{QCD} background in the studied region was small. The optimisation procedure defined above was then repeated with the value of the discriminant considered as an additional variable. One advantage of \ac{MVA} based selection over simple rectangular cut based selection is that information about the correlation between variables is taken into account. The correlation coefficients between the variables used as inputs to the \ac{MVA} are shown for signal and V+jets background events in \FigureRef{fig:parkedmvacorr}. These variables were chosen as they showed the most difference between signal and background distributions and correlations out of a wide range of variables investigated. Without the addition of any additional systematic uncertainties associated with the understanding of the variables input to the \ac{MVA} the largest improvement in the expected limit was less than 1\%. It was therefore decided to use the cut based selection as the final event selection.
+After this selection was defined a second \ac{MVA} based method of optimising the selection was investigated to see if we could improve on the cut based selection. \ac{BDT} and fisher discriminants were trained using signal and background events passing the signal region selection~\cite{TMVA}. The signal region selection was used as the basis for this training so as to ensure that the number of events from the \ac{QCD} background in the studied region was small. The optimisation procedure defined above was then repeated with the value of the discriminant considered as an additional variable. One advantage of \ac{MVA} based selection over simple rectangular cut based selection is that information about the correlation between variables is taken into account. The correlation coefficients between the variables used as inputs to the \ac{MVA} are shown for signal and V+jets background events in \FigureRef{fig:parkedmvacorr}. These variables were chosen as they showed the most difference between signal and background distributions and correlations out of a wide range of variables investigated. Without the addition of any additional systematic uncertainties associated with the understanding of the variables input to the \ac{MVA}, the largest improvement in the expected limit was less than 1\%. It was therefore decided to use the cut based selection as the final event selection.
 \begin{figure}
   \subfloat[]{\includegraphics[width=.65\largefigwidth]{plots/parked/AN-14-243-figs/inputcorrsig.pdf}}
   \subfloat[]{\includegraphics[width=.65\largefigwidth]{plots/parked/AN-14-243-figs/inputcorrbkg.pdf}}
@@ -172,7 +170,7 @@ The terms on the right hand side of this equation which multiply the estimation 
 \label{sec:parkedtop}
 Almost all top quarks decay to a \PW boson and a b quark. Top quarks are either created in pairs, or via ``single top'' production where only one top quark is created in association with  other quarks or a \PW boson. Top pair production results in two \PW bosons and two b quarks. Single top production results in some combination of \PW bosons and quarks. Either single or pair production of top quarks can result in the appearance of \MET and jets with no leptons, if at least one of the \PW bosons decays leptonically and the lepton is misreconstructed. The resulting jets can coincidentally have \ac{VBF}-like topology. Whilst the contribution from these processes is expected to be small in the signal region, making up around 1\% of events there, the presence of \PW bosons and jets makes these processes very likely to contribute to the control regions used to estimate the $\PW+$jets background contribution. In the $\PW\rightarrow\tau\nu$ control region approximately 15\% of events are estimated to come from top quark processes. Data driven methods for estimating the top quark background and its uncertainties were therefore investigated.
 
-Initially, a dilepton control region was investigated. This had the same cuts on the jet and \MET related variables as the signal region, but the lepton veto was replaced with a requirement that there is exactly one tight electron and one tight muon. This final state would be expected in the case of top quark pair production or single top production with a \PW boson, where both the resulting \PW bosons decay leptonically to different flavour leptons. This region had only single figure numbers of events expected, so the cut on \jetmetdphi was loosened to 0. It can be seen from \FigureRef{fig:parkedtopjetmetdphi} that the ratio between data and MC in this region does not depend significantly on \jetmetdphi. The data driven scale factor obtained from this dilepton region was, within the statistics available, consistent with 1 and a good agreement between data and \ac{MC} was seen in all variables studied. A modification of this control region where events with either two tight electrons or two tight muons, and no other leptons was also studied. This final state would also be expected where two \PW bosons from top quark production decayed leptonically, except this time to the same flavour of lepton. In order to avoid \PZ boson contributions the leptons' invariant mass was required to be incompatible with that of a \PZ boson, i.e. outside of the range from 60 to 120 \GeV. This control region also yielded good data-\ac{MC} agreement and a scale factor compatible with 1. 
+Initially, a dilepton control region was investigated. This had the same cuts on the jet and \MET related variables as the signal region, but the lepton veto was replaced with a requirement that there is exactly one tight electron and one tight muon. This final state would be expected in the case of top quark pair production or single top production with a \PW boson, where both the resulting \PW bosons decay leptonically to different flavour leptons. This region had only single figure numbers of events expected, so the cut on \jetmetdphi was loosened to 0. It can be seen from \FigureRef{fig:parkedtopjetmetdphi} that the ratio between data and MC in this region does not depend significantly on \jetmetdphi. The data driven scale factor obtained from this dilepton region was, within the statistics available, consistent with 1 and a good agreement between data and \ac{MC} was seen in all variables studied. A modification of this control region where events with either two tight electrons or two tight muons, and no other leptons were selected was also studied. This final state would also be expected where two \PW bosons from top quark production decayed leptonically, except this time to the same flavour of lepton. In order to avoid \PZ boson contributions the leptons' invariant mass was required to be incompatible with that of a \PZ boson, i.e. outside of the range from 60 to 120 \GeV. This control region also yielded good data-\ac{MC} agreement and a scale factor compatible with 1. 
 
 \begin{figure}
   \subfloat[]{\includegraphics[width=.65\largefigwidth]{plots/parked/topjetmetdphicut0.pdf}}
@@ -213,8 +211,8 @@ The $\PW\rightarrow e\nu$ background in the parked data analysis is estimated us
       \hline
       \hline
       $N_{Data}$&N/A&$68\pm 8.2$\stat\\
-      $N_{Bkg}$&N/A&$3.5\pm 1.2(\rm{MC stat})$\\
-      $N_{MC}$&$114.9\pm8.9(\rm{MC stat})$&$128.0\pm 8.0(\rm{MC stat})$\\
+      $N_{Bkg}$&N/A&$3.5\pm 1.2(\rm{MC\,stat})$\\
+      $N_{MC}$&$114.9\pm8.9(\rm{MC\,stat})$&$128.0\pm 8.0(\rm{MC\,stat})$\\
       \hline
       $\frac{N^{data}-N^{bkg}}{N^{W MC}_{C}}$ & \multicolumn{2}{c|}{$0.50\pm0.06$\stat$\pm0.03$(MC stat)} \\
       \hline
@@ -272,8 +270,8 @@ As for the $\PW\rightarrow e\nu$ background the $W\rightarrow \mu\nu$ background
       \hline
       \hline
       $N_{Data}$&N/A&$300\pm 17.3$\stat\\
-      $N_{Bkg}$&N/A&$14.8\pm 2.5(\rm{MC stat})$\\
-      $N_{MC}$&$143.7\pm10.2(\rm{MC stat})$&$399.9\pm 14.9(\rm{MC stat})$\\
+      $N_{Bkg}$&N/A&$14.8\pm 2.5(\rm{MC\,stat})$\\
+      $N_{MC}$&$143.7\pm10.2(\rm{MC\,stat})$&$399.9\pm 14.9(\rm{MC\,stat})$\\
       \hline
       $\frac{N^{data}-N^{bkg}}{N^{MC}_{C}}$ & \multicolumn{2}{c|}{$0.71\pm0.04$\stat$\pm0.03$(MC stat)} \\
       \hline
@@ -322,8 +320,8 @@ The single tau control region with a \jetmetdphileading cut and no \jetmetdphi c
       \hline
       \hline
       $N_{Data}$&N/A&$76\pm 8.7$\stat\\
-      $N_{Bkg}$&N/A&$13.3\pm 2.8(\rm{MC stat})$\\
-      $N_{MC}$&$121.9\pm 8.7(\rm{MC stat})$&$80.8\pm 6.4(\rm{MC stat})$\\
+      $N_{Bkg}$&N/A&$13.3\pm 2.8(\rm{MC\,stat})$\\
+      $N_{MC}$&$121.9\pm 8.7(\rm{MC\,stat})$&$80.8\pm 6.4(\rm{MC\,stat})$\\
       \hline
       $\frac{N^{data}-N^{bkg}}{N^{MC}_{C}}$ & \multicolumn{2}{c|}{$0.78\pm 0.11$\stat$\pm 0.07$(MC stat)} \\
       \hline
@@ -432,13 +430,13 @@ Although it is not used in the \Znunu background estimation method, the ratio be
     \hline
     \hline
     $N_{Data}$ & N/A & $18\pm 4.2\stat$ \\
-    $N_{Bkg}$ & N/A & $0.2\pm 0.1 (\rm{MC stat})$ \\
-    $N_{MC}\left(EWK\right)$ & $7.9\pm 0.2 (\rm{MC stat})$& $6.0\pm 0.2 (\rm{MC stat})$ \\
-    $N_{MC}\left(QCD\right)$ & $29.5\pm 3.0 (\rm{MC stat})$ & $20.5\pm 2.5 (\rm{MC stat})$ \\
+    $N_{Bkg}$ & N/A & $0.2\pm 0.1 (\rm{MC\,stat})$ \\
+    $N_{MC}\left(EWK\right)$ & $7.9\pm 0.2 (\rm{MC\,stat})$& $6.0\pm 0.2 (\rm{MC\,stat})$ \\
+    $N_{MC}\left(QCD\right)$ & $29.5\pm 3.0 (\rm{MC\,stat})$ & $20.5\pm 2.5 (\rm{MC\,stat})$ \\
     \hline
-    $\frac{N^{C}_{Data}-N^{C}_{Bkg}}{N^{C}_{MC}\left(EWK\right)+N^{C}_{MC}\left(QCD\right)}$ & \multicolumn{2}{c}{$0.67\pm 0.16\stat\pm 0.06 (\rm{MC stat})$} \\
+    $\frac{N^{C}_{Data}-N^{C}_{Bkg}}{N^{C}_{MC}\left(EWK\right)+N^{C}_{MC}\left(QCD\right)}$ & \multicolumn{2}{c}{$0.67\pm 0.16\stat\pm 0.06 (\rm{MC\,stat})$} \\
     \hline
-    $N_{\PZ\rightarrow \nu\nu/\PZ\rightarrow/\gamma^{*}\rightarrow\mu\mu}$ & $\textcolor{red}{158.1\pm 37.8\stat\pm 21.2\syst}$ & $17.8\pm 4.2\stat\pm 0.1 (\rm{MC stat})$ \\
+    $N_{\PZ\rightarrow \nu\nu/\PZ\rightarrow/\gamma^{*}\rightarrow\mu\mu}$ & $\textcolor{red}{158.1\pm 37.8\stat\pm 21.2\syst}$ & $17.8\pm 4.2\stat\pm 0.1 (\rm{MC\,stat})$ \\
     \hline
     \hline
   \end{tabular}
@@ -560,7 +558,7 @@ To ensure the \ac{QCD} shape derived from non-isolated \MET is adequate to descr
 %sideband
 To obtain the \ac{QCD} normalisation in the signal region several sideband regions were investigated. As has been described above the regions obtained by inverting the requirement on one of the two main anti-\ac{QCD} discriminant variables, \jetmetdphi and \METsig, have non-negligible signal contributions. However by inverting the requirements on both variables a \ac{QCD} dominated sideband can be obtained. This region is called ``sideband 1'' and the specific differences from the signal region are that we require $3<\METsig<4$ and $1<\jetmetdphileading<2$.  
 
-Whilst the regions obtained from inverting only one of the \jetmetdphi or \METsig requirements have signal contributions of approximately 10\% for a \ac{SM} produced 125 \GeV Higgs boson with \BRinv$=100\%$, an invisible branching fraction of 100\% has already been ruled out so the actual signal contribution in these regions is expected to be smaller. Therefore, two further sideband regions which are not used in the final estimate, but are used to validate the method are defined. Sideband 2 is the same as sideband 1, except that we require \jetmetdphileading$>2$. Sideband 3 is the same as sideband 1, except that we require \METsig$>4$. 
+Whilst the regions obtained from inverting only one of the \jetmetdphi or \METsig requirements have signal contributions of approximately 10\% for a \ac{SM} produced 125 \GeV Higgs boson with \BRinv$=100\%$, an invisible branching fraction of 100\% has already been ruled out so the actual signal contribution in these regions is expected to be smaller. Therefore, two further sideband regions which are not used in the final estimate, but which are used to validate the method are defined. Sideband 2 is the same as sideband 1, except that we require \jetmetdphileading$>2$. Sideband 3 is the same as sideband 1, except that we require \METsig$>4$. 
 
 
 
