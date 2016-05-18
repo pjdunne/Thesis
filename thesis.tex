@@ -83,19 +83,18 @@ colorlinks=false
 %% Start the content body of the thesis
 \begin{mainmatter}
   %% Actually, more semantic chapter filenames are better, like "chap-bgtheory.tex"
-  \import{}{theory}
-  \import{}{detector}
-  \import{}{obj}
-  \import{}{prompt}
-  \import{}{parked}
-  \import{}{comb}
-  \import{}{interp}
-  \import{}{conclusions}
+  \input{theory}
+  \input{detector}
+  \input{obj}
+  \input{prompt}
+  \input{parked}
+  \input{comb}
+  \input{interp}
+  \input{conclusions}
   %\import{}{run2} %relegated to declaration
 
   %% To ignore a specific chapter while working on another,
   %% making the build faster, comment it out like this:
-  %\input{chap4}
 \end{mainmatter}
 
 %% Produce the appendices
