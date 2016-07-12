@@ -71,7 +71,7 @@ Finally, the values of the cuts are optimised to provide the best expected limit
 
 \section{Background estimation}
 \label{sec:promptbkg}
-As discussed in \SectionRef{sec:promptsel} there are several background processes which are capable of producing VBF-like jets in association with \MET. The event selection removes most of these events, however a significant number still remain and it is important to estimate this number precisely. Data-driven methods, with data ``control regions'' which are similar to the signal region, are used to estimate the most significant backgrounds. This data-driven approach is particularly important as the very stringent kinematic requirements placed on the tag jets lead to large uncertainties on estimates taken from \ac{MC} alone. The particular method used to estimate each of the backgrounds will be described in this section.
+As discussed in \SectionRef{sec:promptsel} there are several background processes which are capable of producing VBF-like jets in association with \MET. The event selection removes most of these events, however a significant number still remain and it is important to estimate this number precisely. Data-driven methods, with data ``control regions'' which are similar to the signal region, are used to estimate the most significant backgrounds. This data-driven approach is particularly important as the very stringent kinematic requirements placed on the tag jets lead to large uncertainties on estimates taken from \ac{MC} alone. The particular method used to estimate each of the backgrounds will be described in this section. As described in the declaration, I performed a cross-check of the $\PW+$jets background estimation. The tables of the results of and inputs to the $\PW+$jets background estimation in this section are taken from this cross-check. Therefore, whilst the agreement with the published results is good, exact agreement is not expected.
 
 \subsection{\PW$\rightarrow e\nu$ + jets}
 \label{sec:promptwenu}
@@ -86,7 +86,7 @@ where $N^{S}_{Exp}$ is the number of expected events in the signal region from t
 
 %tables from AN-13-205
 \begin{table}
-  \caption{The inputs to, and results of, the $\PW\rightarrow e\nu$ background estimation. $N_{\PW\rightarrow e\nu}$ is, for the signal region the number of events expected from $\PW\rightarrow e\nu$ backgrounds, and for the control region the number of events remaining in the region after the subtraction of other backgrounds.}
+  \caption{The inputs to, and results of, the cross-check performed by the author of the $\PW\rightarrow e\nu$ background estimation. $N_{\PW\rightarrow e\nu}$ is, for the signal region the number of events expected from $\PW\rightarrow e\nu$ backgrounds, and for the control region the number of events remaining in the region after the subtraction of other backgrounds.}
   \label{tab:promptwenu}
   \begin{tabular}{lcc}
     \hline
@@ -97,6 +97,8 @@ where $N^{S}_{Exp}$ is the number of expected events in the signal region from t
     $N_{Data}$ & N/A & 64\\
     $N_{Bkg}$ & N/A & $7.42\pm2.78$(\ac{MC} stat.) \\
     $N_{MC}$& $105\pm10$(\ac{MC} stat.) & $86.6\pm 7.1$(\ac{MC} stat.) \\
+    \hline
+    $\frac{N^{data}-N^{bkg}}{N^{C}_{MC}}$ & \multicolumn{2}{c|}{0.65$\pm$0.09\stat$\pm$0.06(MC stat)} \\
     \hline
     $N_{\PW\rightarrow e\nu}$& \textcolor{red}{$68.7\pm 10.3\stat\pm 8.8$(MC stat.)} & $56.6\pm 8.5\stat$ \\
     \hline
@@ -129,6 +131,8 @@ The method used to estimate the background from $\PW$+jets where the $\PW$ boson
     $N_{Data}$ & N/A & 216\\
     $N_{Bkg}$ & N/A & $30.1\pm 4.5$(\ac{MC} stat.) \\
     $N_{MC}$& $108\pm 10$(\ac{MC} stat.) & $306\pm 15$(\ac{MC} stat.) \\
+    \hline
+    $\frac{N^{data}-N^{bkg}}{N^{C}_{MC}}$ & \multicolumn{2}{c|}{$0.61\pm$0.05\stat$\pm$0.03(MC stat)} \\
     \hline
     $N_{\PW\rightarrow \mu\nu}$& \textcolor{red}{$65.8\pm 5.4\stat\pm 6.7$(MC stat.)} & $186\pm 15\stat$ \\
     \hline
@@ -168,6 +172,8 @@ The final estimation of the background from $W\rightarrow\tau\nu$ is carried out
     $N_{Data}$ & N/A & 32\\
     $N_{Bkg}$ & N/A & $14.7\pm 3.4$(\ac{MC} stat.) \\
     $N_{MC}$& $95.6\pm 8.5$(\ac{MC} stat.) & $29.2\pm 3.6$(\ac{MC} stat.) \\
+    \hline
+    $\frac{N^{data}-N^{bkg}}{N^{C}_{MC}}$ & \multicolumn{2}{c|}{$0.59\pm$0.19\stat$\pm$0.10(MC stat)} \\
     \hline
     $N_{\PW\rightarrow \tau\nu}$& \textcolor{red}{$56.5\pm 21.5\stat\pm 8.6$(MC stat.)} & $17.3\pm 3.9 \stat$ \\
     \hline
