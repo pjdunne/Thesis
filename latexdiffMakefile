@@ -1,0 +1,17 @@
+.PHONY: clean
+
+EXTRASTYS = abhepexpt.sty abhep.sty  abmath.sty lineno.sty SIunits.sty varwidth.sty
+
+latexdiff.pdf: latexdiff.tex thesis.cls theory.tex detector.tex obj.tex prompt.tex parked.tex comb.tex interp.tex conclusions.tex frontmatter.tex appparkedtrigeff.tex backmatter.tex
+	@rm -f $(EXTRASTYS)
+	unzip extrastyles.zip
+	@rm -f latexdiff.{aux,toc,lof,lot}
+	(rm -f thesisfeynmandiags.* && pdflatex latexdiff && mpost thesisfeynmandiags.mp && bibtex latexdiff && pdflatex latexdiff && pdflatex latexdiff) || rm -f $(EXTRASTYS) latexdiff.pdf
+	@rm -f latexdiff.{aux,toc,lof,lot}
+	@rm -f $(EXTRASTYS)
+
+clean:
+	@rm -f $(EXTRASTYS)
+	@rm -f latexdiff.pdf latexdiff.log latexdiff.aux
+	@rm -f *.bbl *.blg *.lof *.cut
+	@rm -f *.lot *.out *.toc
